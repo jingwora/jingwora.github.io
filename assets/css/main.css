@@ -3124,6 +3124,7 @@ input, select, textarea {
 
 				#header nav a[href="#menu"] {
 					text-decoration: none;
+					font-size: 20px;
 					-moz-transition: background-color 0.2s ease-in-out;
 					-webkit-transition: background-color 0.2s ease-in-out;
 					-ms-transition: background-color 0.2s ease-in-out;
