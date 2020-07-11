@@ -1,0 +1,14 @@
+.my-list li:first-child{
+    background-color: orange;
+}
+.my-list li:last-child{
+    background-color: orange;
+}
+.my-list li:nth-child(5){
+    background-color: orange;
+}
+.my-list li:nth-child(even){
+    background-color: lightgray;
+}
+
+

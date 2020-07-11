@@ -1,0 +1,2928 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../resources/styles/mainStyles.css">
+        <title>JS</title>
+        <link rel="icon" type="image/png" href="../resources/icons/logo_js.png">
+
+    </head>
+    <body>
+      <div class="navbar">
+          <a class="main" href="#navh00"> <img src ="../resources/icons/logo_js.png" width="15"> </a>
+          <a href="#nav01">INTRO</a>
+          <div class="dropdown">
+            <button class="dropbtn">BASIC ▾
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#nav02"> Output</a>
+                <a href="#nav03"> Statement</a>
+                <a href="#nav04"> Syntax</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">DATATYPES ▾
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#nav0501"> Numbers</a>
+                <a href="#nav0502"> Strings</a>
+                <a href="#nav0503"> Booleans</a>
+                <a href="#nav0504"> Arrays</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">OBJECTS ▾
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#nav0505"> Objects</a>
+                <a href="#nav0506"> Date Objects</a>
+                <a href="#nav0507"> Math Objects</a>
+            </div>
+          </div>
+          <div class="dropdown">
+              <button class="dropbtn">FUNCTION ▾
+                  <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                  <a href="#nav06"> Functions</a>
+                  <a href="#nav07"> Loops</a>
+                  <a href="#nav08"> Events</a>
+              </div>
+           </div>
+           <div class="dropdown">
+            <button class="dropbtn">DOM ▾
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#nav09"> DOM</a>
+                <a href="#nav10"> xxx</a>
+            </div>
+         </div>
+           <a href="#nav11">EXAMPLES</a>
+      </div>
+
+<div id = "home"></div>
+<p style="padding:20px"></p>
+<img src="../resources/icons/logo_js.png" style="float:left;width:30px;"> 
+<h1> Javascript Essentials</h1>
+<br><br>
+<p>
+  JavaScript and Java are completely different languages, both in concept and design.<br>
+  JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997.<br>
+  <br>
+  Hight level, interpreted programming Language.<br>
+  Conforms to the ECMAScript Specification<br>
+  Mutli-paradigm - can write in many ways (object oriented, Funtion,...)<br>
+  Runs on the clinent/browser as well as on the server (Node.js)<br>
+  Build very interactive user interfaces with frameworks like React<br>
+  <br>
+  What is JavaScript Used For?<br>
+  - Adding interactivity to websites<br>
+  - Developing mobile applications (React Native, NativeScript, Ionic)<br>
+  - Creating web browser based games<br>
+  - Back end web development<br>
+  - Desktop application development (electron JS)
+</p>
+<br>
+
+<div id="nav01"></div>
+<h2> 1. Introduction </h2>
+<h3> 1.1 The &lt;script&gt;  Tag </h3>
+Scripts can be placed in the &lt;body&gt;, or in the &lt;head&gt; section of an HTML page, or in both.
+<p id="0101"></p>
+<textarea class="ta2">
+  <p id="0101"></p>
+  <script>
+      document.getElementById("0101").innerHTML = "The script Tag";
+  </script>
+</textarea>
+<br>
+
+<h3> 1.2 Javascript Function </h3>
+A JavaScript function is placed in the &lt;body&gt; section of an HTML page.<br>
+The function is invoked (called).<br>
+<br>
+<button type="button" onclick="function0102()">js button</button>
+<p id="0102" style="color:#649d66"> Original content </p>
+<textarea class="ta3">
+  <body>
+    <script>
+      function function0102() {
+        document.getElementById("0102").innerHTML = "Content changed.";
+      }
+    </script>
+    <button type="button" onclick="function0102()">js button</button>
+    <p id="0102">Original content</p>
+  </body>
+</textarea>
+<br>
+
+<h3> 1.3 External Javascript </h3>
+<p>
+Scripts can also be placed in external files:<br>
+JavaScript files have the file extension .js.<br>
+To use an external script, put the name of the script file in the src (source) attribute of a &lt;script&gt tag:<br>
+<br>
+advantages:<br>
+- It separates HTML and code<br>
+- It makes HTML and JavaScript easier to read and maintain<br>
+- Cached JavaScript files can speed up page loads
+</p>
+<button type="button" onclick="function0103()">External Javascript</button>
+<p id="0103" style="color:#649d66">Original content</p>
+<textarea class="ta4">
+-- main.js
+function function0103() {
+  document.getElementById("0103").innerHTML = "Paragraph changed";
+ }
+ ---
+<body>
+  <script src="myScript.js"></script>
+  <button type="button" onclick="function0103()">External Javascript</button>
+  <p id="0103">Original content</p>
+  <script src="main.js"></script>
+</body>
+</textarea>
+<br>
+
+<h3> 1.4 External References</h3>
+<p>
+External scripts can be referenced with a full URL or with a path relative to the current web page.
+</p>
+<button type="button" onclick="myFunction()">External References</button>
+<p id="demo" style="color:#649d66">Original content</p>
+<textarea class="ta2">
+  <body>
+    <button type="button" onclick="myFunction()">External References</button>
+    <script src="https://www.w3schools.com/js/myScript.js"></script>
+    <p id="demo">Original content</p>
+  </body>
+</textarea>
+<br>
+
+<div id="nav02"></div>
+<h2> 2. JavaScript Output </h2>
+<p>
+  JavaScript can "display" data in different ways:<br>
+  <br>
+  Writing into an HTML element, using innerHTML.<br>
+  Writing into the HTML output using document.write().<br>
+  Writing into an alert box, using window.alert().<br>
+  Writing into the browser console, using console.log().<br>
+</p>
+<br>
+
+<h3> 2.1 Using innerHTML </h3>
+<p id="0201"  style="color:#649d66"></p>
+<textarea class="ta1">
+  <p id="0201"  style="color:#649d66"></p>
+  document.getElementById("0201").innerHTML = 5 + 6
+</textarea>
+<br><br>
+
+<h3> 2.2 Using document.write() </h3>
+<p  style="color:#649d66">
+<script>
+document.write(5 + 6);
+</script>
+</p>
+<button type="button" onclick="document.write(5 + 6)">document.write</button>
+<br><br>
+<textarea>
+  <button type="button" onclick="document.write(5 + 6)">document.write</button>
+</textarea>
+<br><br>
+
+<h3> 2.3 Using window.alert() </h3>
+<p>
+You can use an alert box to display data.
+</p>
+<button type="button" onclick="window.alert(5 + 6)">window.alert</button>
+<br><br>
+<textarea>
+  <button type="button" onclick="window.alert(5 + 6)">window.alert</button>
+</textarea>
+<br><br>
+
+<h3> 2.4 Using console.log()</h3>
+<p> 
+  For debugging purposes, you can call the console.log() method in the browser to display data.<br>
+  console.error(" ") console.warn(" ")
+</p>
+<textarea class="ta1">
+  <script>
+    console.log(5 + 6);
+  </script>
+</textarea>
+<br>
+
+<h3> 2.5 JavaScript Print</h3>
+<p>
+  JavaScript does not have any print object or print methods.<br>
+  You cannot access output devices from JavaScript.<br>
+  The only exception is that you can call the window.print() method in the browser to print the content of the current window.<br>
+</p>
+<button onclick="window.print()">Print this page</button>
+<br><br>
+<textarea>
+  <button onclick="window.print()">Print this page</button>
+</textarea>
+<br><br><br>
+
+<div id="nav03"></div>
+<h2> 3. JavaScript Statements </h2>
+<p id="0300" style="color:#649d66"></p>
+<textarea class="ta3">
+<p id="0300" style="color:#649d66"></p>
+<script>
+  var x, y, z; //Statement 1
+  x = 5        //Statement 2
+  y = 6        //Statement 3
+  z = x + y;   //Statement 4
+  document.getElementById("0300").innerHTML = "Value = " + z;
+</script>
+</textarea>
+
+<h3> 3.1 JavaScript Programs </h3>
+A JavaScript program is a list of programming statements.<br>
+JavaScript statements are composed of:<br>
+Values, Operators, Expressions, Keywords, and Comments.<br>
+The statements are executed, one by one, in the same order as they are written.<br>
+
+<h4>Breaking Long Code Lines</h4>
+If a JavaScript statement does not fit on one line, the best place to break it is after an operator.<br>
+Breakup text string with a single baskslash.<br>
+A safer way to break up a string, is to use string addition.
+<br><br>
+<textarea class="ta2">
+  document.getElementById("v0301_01").innerHTML =
+  "This is my content";
+  document.getElementById("v0301_01").innerHTML = "This is \
+  my content";  
+  document.getElementById("demo").innerHTML = "Thi is " +
+  "my content";
+</textarea>
+
+<h4>Guidelines:</h4>
+- Semicolons separate JavaScript statements.<br>
+- Ending statements with semicolon is not required, but highly recommended.<br>
+- When separated by semicolons, multiple statements on one line are allowed.<br>
+- JavaScript ignores multiple spaces.<br>
+- A good practice is to put spaces around operators ( = + - * / )<br>
+- For best readability, programmers often like to avoid code lines longer than 80 characters.<br>
+<p id="0301" style="color:#649d66"></p>
+<textarea class="ta2">
+  <script>
+    var a, b, c;
+    a = 5; b = 6; c = a + b;
+    document.getElementById("0301").innerHTML = 
+    "Value = " + c;
+  </script>
+</textarea>
+<br>
+
+<h3> 3.2 JavaScript Code Blocks ;</h3>
+<p>
+  JavaScript statements can be grouped together in code blocks, inside curly brackets {...}.<br>
+  The purpose of code blocks is to define statements to be executed together.
+</p>
+<button type="dbutton" onclick="myFunction3_2()">Run Function</button>
+<p id="0302a" style="color:#649d66"></p>
+<p id="0302b" style="color:#649d66"></p>
+<textarea class="ta2">
+  <script>
+    function myFunction3_2() {
+      document.getElementById("0302a").innerHTML = "Value 1";
+      document.getElementById("0302b").innerHTML = "Value 2";
+    }
+  </script>
+</textarea>
+<br>
+
+<h3> 3.3 JavaScript Keywords</h3>
+<p>
+  JavaScript statements often start with a keyword to identify the JavaScript action to be performed.<br>
+  <br>
+  <table class="t1">
+    <tr>
+      <th>Keywords</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>break</td>
+      <td>Terminates a switch or a loop</td>
+    </tr>
+    <tr>
+      <td>continue</td>
+      <td>Jumps out of a loop and starts at the top</td>
+    </tr>
+    <tr>
+      <td>debugger</td>
+      <td>Stops the execution of JavaScript, and calls (if available) the debugging function</td>
+    </tr>
+    <tr>
+      <td>do ... while</td>
+      <td>Executes a block of statements, and repeats the block, while a condition is true<br></td>
+    </tr>
+    <tr>
+      <td>for</td>
+      <td>Marks a block of statements to be executed, as long as a condition is true</td>
+    </tr>
+    <tr>
+      <td>function</td>
+      <td>Declares a function</td>
+    </tr>
+    <tr>
+      <td>if ... else</td>
+      <td>Marks a block of statements to be executed, depending on a condition</td>
+    </tr>
+    <tr>
+      <td>return</td>
+      <td>Exits a function</td>
+    </tr>
+    <tr>
+      <td>switch</td>
+      <td>Marks a block of statements to be executed, depending on different cases</td>
+    </tr>
+    <tr>
+      <td>try ... catch</td>
+      <td>Implements error handling to a block of statements</td>
+    </tr>
+    <tr>
+      <td>var</td>
+      <td>Declares a variable</td>
+    </tr>  
+  </table>
+<br>
+
+<div id="nav04"></div>
+<h2> 4.JavaScript Syntax</h2>
+<p>
+ var x, y, z;       // How to declare variables<br>
+ x = 5; y = 6;      // How to assign values<br>
+ z = x + y;         // How to compute values<br>
+<br>
+The JavaScript syntax defines two types of values: Fixed values and variable values.<br>
+Fixed values are called literals. Variable values are called variables.<br>
+Strings are written inside double or single quotes. Numbers are written without quotes.
+<br>
+
+<h3> 4.1 Variables</h3>
+<p>
+  An equal sign is used to assign values to variables.<br>
+  You can declare many variables in one statement.<br>
+  Strings are written inside double or single quotes. Numbers are written without quotes.<br>
+  It's a good programming practice to declare all variables at the beginning of a script.<br>
+  A variable declared without a value will have the value undefined.<br>
+  If you re-declare a JavaScript variable, it will not lose its value.
+</p>
+<p id="0401_01" style="color:#649d66"></p>
+<p id="0401_02" style="color:#649d66"></p>
+<textarea class="ta2">
+  <script>
+    var v0401_01, v0401_02;
+    v0401_01 = 6;
+    document.getElementById("0401_01").innerHTML = "Value =" + v0401_01;
+    document.getElementById("0401_02").innerHTML = "Undefined value = " + v0401_02;
+  </script>
+</textarea>
+<br>
+
+<h3>var let con</h3>
+<table class="t1">
+  <tr>
+    <th> </th>
+    <th>var</th>
+    <th>const</th>
+    <th>let</th>
+  </tr>
+  <tr>
+    <td>Global Scope</td>
+    <td>Yes</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Function Scope</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>Block Scope</td>
+    <td>No</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>Reassign</td>
+    <td>Yes</td>
+    <td>No</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>Redeclared</td>
+    <td>Yes</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Need initializer</td>
+    <td>No</td>
+    <td>Yes</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Refer before declaration</td>
+    <td>Yes</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+</table>
+
+<p>
+  <code>var </code>
+  <code>let score = 30;</code><br>
+  <code>score = 31;</code><br>
+  <br>
+  <code>const name;  ERROR</code>
+  <code>const name = 'Tom';</code><br>
+  <code>const = 'Jim'; ERROR</code><br>
+</p>
+
+<h3>Global Scope, Local Scope, Function Scope, Block Scope</h3>
+<h4>Global Scope</h4>
+<p>
+  The area outside all the functions is consider the global scope and the variables defined inside the global scope can be accessed and altered in any other scopes.
+</p>
+<textarea class="ta3">
+// Global Scope
+var vg = 1;
+const cg = 2;
+let lg = 3;
+console.log(vg, cg, lg) // 1 2 3
+
+// Function Scope
+function getData(){
+    console.log(vg, cg, lg);
+}
+getData() // 1 2 3
+</textarea>
+
+<h4>Local Scope</h4>
+<p>
+  Variables declared inside the functions become Local to the function and are considered in the corresponding local scope. <br>
+  Local scope can be divided into function scope and block scope.<br>
+</p>
+
+<h4>Function Scope</h4>
+<p>
+  Whenever you declare a variable in a function, the variable is visible only within the function. You can't access it outside the function.
+</p>
+
+<h4>Block Scope</h4>
+<p>
+  A block scope is the area within if, switch conditions or for and while loops. {curly brackets}<br>
+  const and let keywords allow developers to declare variables in the block scope, which means those variables exist only within the corresponding block.
+</p>  
+
+<textarea class="ta3">
+function getData3(){
+  if(true){
+      var vb = 100;
+      const cb = 200;
+      let lb = 300;
+  }
+  console.log(vb);
+  console.log(cd);
+  console.log(lb);
+}
+
+getData3() 
+// 100
+// error: variable is not defined
+// error: variable is not defined
+</textarea>
+
+<h3> 4.2 Operators</h3>
+<p>
+  Arithmetic operators ( + - * / ) to compute values.<br>
+  The "equal to" operator is written like == in JavaScript.<br>
+  Operator Precedence: Multiplication (*) and division (/) have higher precedence than addition (+) and subtraction (-).
+</p>
+<p id="0402_01" style="color:#649d66"></p>
+<p id="0402_02" style="color:#649d66"></p>
+<p id="0402_03" style="color:#649d66"></p>
+<p id="0402_04" style="color:#649d66"></p>
+<p id="0402_05" style="color:#649d66"></p>
+<p id="0402_06" style="color:#649d66"></p>
+<textarea class="ta3">
+var v0402_01, v0402_02, v0402_03, v0402_04, v0402_05, v0402_06;
+v0402_01 = 5 + 6;
+v0402_02 = "5" + 2 + 3;
+v0402_03 = 5 + 2 + "3";
+v0402_04 = 12 % 5;
+v0402_05 = 10;
+v0402_05++;
+v0402_06 = 5;
+v0402_06 = Math.pow(v0402_06,2)
+document.getElementById("0402_01").innerHTML = "5 + 6 = " + v0402_01;
+document.getElementById("0402_02").innerHTML = "'5' + 2 + 3 = " + v0402_02;
+document.getElementById("0402_03").innerHTML = "5 + 2 + '3' = " + v0402_03;
+document.getElementById("0402_04").innerHTML = "12 % 5 = " + v0402_04;
+document.getElementById("0402_05").innerHTML = "10++ = " + v0402_05;
+document.getElementById("0402_06").innerHTML = "Math.pow(5,2) = " + v0402_06;
+</textarea>
+<br>
+<p>4.2.1 JavaScript Arithmetic Operators</p>
+<table class="t1">
+  <tr>
+    <th>Operator</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>+</td>
+    <td>Addition</td>
+  </tr>
+  <tr>
+    <td>-</td>
+    <td>Subtraction</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>Multiplication</td>
+  </tr>
+  <tr>
+    <td>**</td>
+    <td>Exponentiation</td>
+  </tr>
+  <tr>
+    <td>/</td>
+    <td>Division</td>
+  </tr>
+  <tr>
+    <td>%</td>
+    <td>Modulus (Division Remainder)</td>
+  </tr>
+  <tr>
+    <td>++</td>
+    <td>Increment</td>
+  </tr>
+  <tr>
+    <td>--</td>
+    <td>Decrement</td>
+  </tr>
+  <tr>
+    <td>=</td>
+    <td>x = y	</td>
+  </tr>
+</table>
+
+<p>4.2.2 JavaScript Assignment Operators</p>
+<table class="t1">
+  <tr>
+    <th>Operator</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td>+=</td>
+    <td>x += y, x = x + y</td>
+  </tr>
+  <tr>
+    <td>-=</td>
+    <td>x -= y, x = x - y</td>
+  </tr>
+  <tr>
+    <td>*=</td>
+    <td>x *= y, x = x * y</td>
+  </tr>
+  <tr>
+    <td>/=</td>
+    <td>x /= y, x = x / y</td>
+  </tr>
+  <tr>
+    <td>%=</td>
+    <td>x %= y, x = x % y</td>
+  </tr>
+  <tr>
+    <td>**=	</td>
+    <td>x **= y, 	x = x ** y</td>
+  </tr>   
+</table>
+
+<p>4.2.3 JavaScript Comparison Operators</p>
+<table class="t1">
+  <tr>
+    <th>Operator</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>==</td>
+    <td>equal to</td>
+  </tr>
+  <tr>
+    <td>===</td>
+    <td>equal value and equal type</td>
+  </tr>
+  <tr>
+    <td>!=</td>
+    <td>not equal</td>
+  </tr>
+  <tr>
+    <td>!==</td>
+    <td>not equal value or not equal type</td>
+  </tr>
+  <tr>
+    <td>></td>
+    <td>greater than</td>
+  </tr>
+  <tr>
+    <td><</td>
+    <td>less than</td>
+  </tr>
+  <tr>
+    <td>>=</td>
+    <td>greater than or equal to</td>
+  </tr>
+  <tr>
+    <td><=</td>
+    <td>less than or equal to</td>
+  </tr>
+  <tr>
+    <td>?</td>
+    <td>ternary operator</td>
+  </tr>
+  <tr>
+    <td>? :</td>
+    <td>Condition  ? "Yes" : "No"</td>
+  </tr> 
+</table>
+
+<p>4.2.4 JavaScript Logical Operators</p>
+<table class="t1">
+  <tr>
+    <th>Operator</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>&&	</td>
+    <td>logical and</td>
+  </tr>
+  <tr>
+    <td>||</td>
+    <td>logical or</td>
+  </tr>
+  <tr>
+    <td>!</td>
+    <td>logical not</td>
+  </tr>
+</table>
+
+<p>4.2.5 JavaScript Type Operators</p>
+<table class="t1">
+  <tr>
+    <th>Operator</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>typeof</td>
+    <td>Returns the type of a variable</td>
+  </tr>
+  <tr>
+    <td>instanceof</td>
+    <td>Returns true if an object is an instance of an object type</td>
+  </tr>
+</table>
+
+<p>4.2.6 JavaScript Operator Precedence Values</p>
+<table class="t1">
+  <tr>
+    <th>Operator</th>
+    <th>Description</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td>( )</td>
+    <td>Expression grouping</td>
+    <td>(3 + 4)</td>
+  </tr>
+  <tr>
+    <td>.</td>
+    <td>Member</td>
+    <td>person.name</td>
+  </tr>
+  <tr>
+    <td>[]</td>
+    <td>Member</td>
+    <td>person["name"]</td>
+  </tr>
+  <tr>
+    <td>()</td>
+    <td>Function call</td>
+    <td>myFunction()</td>
+  </tr>
+  <tr>
+    <td>new</td>
+    <td>Create</td>
+    <td>new Date()</td>
+  </tr>
+  <tr>
+    <td><<</td>
+    <td>Shift left</td>
+    <td>x << 2</td>
+  </tr>
+  <tr>
+    <td>>></td>
+    <td>Shift right</td>
+    <td>x >> 2</td>
+  </tr>
+  <tr>
+    <td>in</td>
+    <td>Property in Object</td>
+    <td>"PI" in Math</td>
+  </tr>
+  <tr>
+    <td>instanceof</td>
+    <td>Instance of Object</td>
+    <td>instanceof Array</td>
+  </tr>
+</table>
+<br>
+
+<h3> 4.3 Expression</h3>
+<p>
+  An expression is a combination of values, variables, and operators, which computes to a value.<br>
+  The computation is called an evaluation.<br>
+  Expressions can also contain variable values<br>
+  The values can be of various types, such as numbers and strings.
+</p>
+<p id="0403_01" style="color:#649d66"></p>
+<p id="0403_02" style="color:#649d66"></p>
+<textarea class="ta2">
+  <script>
+    var v0403;
+    v0403 = 5;
+    document.getElementById("0403_01").innerHTML = "Value = " + v0403;
+    document.getElementById("0403_02").innerHTML = "Calculated Value = " + v0403 * 10;
+  </script>
+</textarea>
+<br>
+
+<h3> 4.4 Comments</h3>
+<p>
+  Code after double slashes // or between /* and */ is treated as a comment.<br>
+  Using Comments to Prevent Execution
+</p>
+<p id="0404" style="color:#649d66"></p>
+<textarea class="ta3">
+  <script>
+    // a single-line comment before each code line
+    var v0404;
+    v0404 = "Comment" // Single Line Comments
+    /*
+    Multi-line Comments
+    */
+    document.getElementById("0404").innerHTML = v0404
+  </script>
+</textarea>
+<br>
+
+<h3> 4.5 Indentifiers</h3>
+<p>
+  In JavaScript, the first character must be a letter, or an underscore (_), or a dollar sign ($).<br>
+  Subsequent characters may be letters, digits, underscores, or dollar signs.<br>
+  JavaScript is Case Sensitive.<br>
+  Hyphens are not allowed in JavaScript. They are reserved for subtractions.<br>
+  All JavaScript variables must be identified with unique names.
+  Reserved words (like JavaScript keywords) cannot be used as names<br>
+  JavaScript treats underscore as a letter.<br>
+  Using the dollar sign is not very common in JavaScript, but professional programmers often use it as an alias for the main function in a JavaScript library.
+</p>
+<p id="0405_01" style="color:#649d66"></p>
+<p id="0405_02" style="color:#649d66"></p>
+<textarea class="ta2">
+  <script>
+    var v0405, V0405;
+    v0405 = "name1";
+    V0405 = "name2";
+    document.getElementById("0405_01").innerHTML = "v0405 = " + v0405;
+    document.getElementById("0405_02").innerHTML = "V0405 = " + V0405;
+  </script>
+</textarea>
+<br>
+
+<h3> 4.6 Variable name</h3>
+<p>
+JavaScript programmers tend to use camel case that starts with a lowercase letter.<br>
+Underscore: first_name, last_name, master_card, inter_city.<br>
+Upper Camel Case (Pascal Case): FirstName, LastName, MasterCard, InterCity.<br>
+Lower Camel Case: firstName, lastName, masterCard, interCity.<br>
+<br>
+
+<h3> 4.7 Character Set</h3>
+JavaScript uses the Unicode character set.
+</p>
+<br>
+
+<div id="nav05"></div>
+<h2>5 Date Types</h2>
+<p>
+  JavaScript variables can hold many data types: numbers, strings, objects and more.<br>
+  JavaScript has dynamic types. This means that the same variable can be used to hold different data types.<br>
+  Undefined and null are equal in value but different in type.<br>
+  - var length = 16;                               // Number<br>
+  - var lastName = "Johnson";                      // String<br>
+  - var x = {firstName:"John", lastName:"Doe"};    // Object
+</p>
+<h4>Primitive Data</h4> 
+<p>
+  A single simple data value with no additional properties and methods.
+</p>
+<h4>Complex Data</h4> 
+<p>
+  The typeof operator can return one of two complex types: function or object.
+</p>
+<h4>typeof</h4> 
+  <p id="0500_01" style="color:#649d66"></p>
+  <p id="0500_02" style="color:#649d66"></p>
+  <p id="0500_03" style="color:#649d66"></p>
+  <p id="0500_04" style="color:#649d66"></p>
+  <p id="0500_05" style="color:#649d66"></p>
+  <p id="0500_06" style="color:#649d66"></p>
+  <p id="0500_07" style="color:#649d66"></p>
+   <textarea class="ta3">
+    <script>
+      var v0500_01 = typeof("Name");
+      var v0500_02 = typeof(12.3);
+      var v0500_03;
+      var v0500_04 = typeof("");
+      var v0500_05 = typeof(null);
+      var v0500_06 = typeof {n1:"v1", n2:12} ;
+      var v0500_07 = typeof function myFunc(){};
+      document.getElementById("0500_01").innerHTML = 'typeof("Name") = ' + v0500_01;
+      document.getElementById("0500_02").innerHTML = 'typeof(12.3) = ' + v0500_02;
+      document.getElementById("0500_03").innerHTML = 'typeof(undefined) = ' + typeof(v0500_03);
+      document.getElementById("0500_04").innerHTML = 'typeof("") = ' + v0500_04;
+      document.getElementById("0500_05").innerHTML = 'typeof(null) = ' + v0500_05;
+      document.getElementById("0500_06").innerHTML = 'typeof {n1:"v1", n2:12} = ' + v0500_06;
+      document.getElementById("0500_07").innerHTML = 'typeof function myFunc(){} = ' + v0500_07;
+    </script>
+  </textarea>
+  <br>
+
+<div id="nav0501"></div>
+  <h3> 5.1 Numbers</h3>
+  <p>
+    Numbers are written with or without decimals.<br>
+    Extra large or extra small numbers can be written with scientific (exponential) notation.<br>
+    JavaScript Numbers are Always 64-bit Floating Point.<br>
+    Integers (numbers without a period or exponent notation) are accurate up to 15 digits.<br>
+    The maximum number of decimals is 17, but floating point arithmetic is not always 100% accurate.<br>
+    JavaScript will try to convert strings to numbers in all numeric operations.<br>
+    NaN is a JavaScript reserved word indicating that a number is not a legal number.<br>
+    NaN is a number: typeof NaN returns number.<br>
+    Infinity (or -Infinity) is the value JavaScript will return if a number is outside the largest possible number.<br>
+    But numbers can also be defined as objects with the keyword new.<br>
+  </p>
+  <p id="0501_01" style="color:#649d66"></p>
+  <p id="0501_02" style="color:#649d66"></p>
+  <p id="0501_03" style="color:#649d66"></p>
+  <p id="0501_04" style="color:#649d66"></p>
+  <p id="0501_05" style="color:#649d66"></p>
+  <textarea class="ta3">
+    <script>
+      var v0501_01 = 10;
+      var v0501_02 = 10.5;
+      var v0501_03 = 12e6;
+      var v0501_04 = 100 / "string";
+      var v0501_05 = 2 / 0;
+      document.getElementById("0501_01").innerHTML = "Number value = " + v0501_01;
+      document.getElementById("0501_02").innerHTML = "Number value with decimals = " + v0501_02;
+      document.getElementById("0501_03").innerHTML = "12e6 = " + v0501_03;
+      document.getElementById("0501_04").innerHTML = '100 / "string" = ' + v0501_04;
+      document.getElementById("0501_05").innerHTML = '2 / 0 = ' + v0501_05;
+    </script>
+  </textarea>
+  <br>
+
+  <h4> 5.1.1 Number Methods</h4>
+  <table class="t1">
+    <tr>
+      <th>Code</th>  
+      <th>Description</th>  
+      <th>Sample</th>  
+      <th>Result</th>
+    </tr>
+    <tr>
+      <td>Number.isNaN()</td> 
+      <td>To find out if a value is a number</td>
+      <td>var input = 100<br>input.isNaN()</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Number.toString()</td> 
+      <td>To convert to number to string</td>
+      <td>var input = 123;<br>input.toString();</td>
+      <td>"123"</td>
+    </tr>
+    <tr>
+      <td>Number.toString(base)</td> 
+      <td>To convert to specified base</td>
+      <td>var input = 32;<br>input.toString(32);</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>Number.toExponential()</td> 
+      <td>Return a string with a number rounded and written using exponential notation.</td>
+      <td>var input = 9.656;<br>input.toExponential(2);</td>
+      <td>9.66e+0</td>
+    </tr>
+    <tr>
+      <td>Number.toFixed()</td> 
+      <td>Return a string with the number written with a specified number of decimals.</td>
+      <td>var input = 9.1543;<br>input.toFixed(2);</td>
+      <td>9.15</td>
+    </tr>
+    <tr>
+      <td>Number.toPrecision()</td> 
+      <td>Return a string with a number written with a specified length.</td>
+      <td>var input = 9.1543;<br>input.toPrecision(2);</td>
+      <td>9.2</td>
+    </tr>
+    <tr>
+      <td>Number.valueOf()</td> 
+      <td>Return a number as a number.</td>
+      <td>var input = 123;<br>input.valueOf();</td>
+      <td>123</td>
+    </tr>
+    <tr>
+      <td>Number.Number()</td> 
+      <td>Convert variables to numbers.</td>
+      <td>Number(true);<br>Number("10");<br>Number("10.33");<br>Number("John");</td>
+      <td>1<br>10<br>10.33<br>NaN</td>
+    </tr>
+    <tr>
+      <td>Number.Number()</td> 
+      <td>Convert date to numbers.(number of milliseconds since 1.1.1970)</td>
+      <td>Number(new Date("2017-09-30"));</td>
+      <td>1506729600000</td>
+    </tr>
+    <tr>
+      <td>Number.parseInt()</td> 
+      <td>Returns a whole number</td>
+      <td>parseInt("10.33");<br>parseInt("10 20 30");<br>parseInt("years 10");</td>
+      <td>10<br>10<br>NaN</td>
+    </tr>
+    <tr>
+      <td>Number.parseFloat()</td> 
+      <td>Returns a number</td>
+      <td>parseFloat("10.33");<br>parseFloat("10 20 30");<br>parseFloat("years 10");</td>
+      <td>10<br>10<br>NaN</td>
+    </tr>
+    <tr>
+      <td>Number.MIN_VALUE</td> 
+      <td>Returns the smallest possible number in JavaScript.</td>
+      <td>var x = Number.MIN_VALUE;</td>
+      <td>5e-324</td>
+    </tr>
+    <tr>
+      <td>Number.MAX_VALUE</td> 
+      <td>Returns the smallest possible number in JavaScript.</td>
+      <td>var x = Number.MIN_VALUE;</td>
+      <td>5e-324</td>
+    </tr>
+  </table>
+
+<dev id="nav0502"></dev>
+<h3> 5.2 Strings</h3>
+    Strings are text, written within double or single quotes.<br>
+    You can also add strings, but strings will be concatenated:.<br>
+    Strings are written inside double or single quotes. Numbers are written without quotes.
+  <p id="0502_01" style="color:#649d66"></p>
+  <p id="0502_02" style="color:#649d66"></p>
+  <textarea class="ta2">
+    <script>
+      var v0502_01 = "name";
+      var v0502_02 = "surname";
+      document.getElementById("0502_01").innerHTML = "name + surname = " + v0502_01 + v0502_02; 
+      document.getElementById("0502_02").innerHTML = 'name + " " + surname = ' + v0502_01 + " " + v0502_02;
+    </script>
+  </textarea>
+  <br>
+
+  <h4>String with varibale</h4>
+  <p>
+  There are two way to show string with variable.<br>
+  1. Use + between string and variable <br>
+  2. Use Template Strings in `backticks ${variable}` <br>
+  </p>
+  <textarea class="ta2">
+const name = 'John';
+const age = 25;
+
+console.log(name + ' is ' + age + " years old.") //John is 25 years old.
+console.log(`${name} is ${age} years old.`) //John is 25 years old.
+  </textarea>
+
+
+  <h4> 5.2.1 String Length</h4>
+  To find the length of a string, use the built-in length property:
+  <p id="050201_01" style="color:#649d66"></p>
+  <p id="050201_02" style="color:#649d66"></p>
+  <p id="050201_03" style="color:#649d66"></p>
+  <textarea class="ta3">
+const v050201_01 = "ABCDE"
+const v050201_02 = "AB DE"
+const v050201_03 = "AB/12"
+document.getElementById("050201_01").innerHTML = "ABCDE length = " + v050201_01.length;
+document.getElementById("050201_02").innerHTML = "AB DE lenght = " + v050201_02.length;
+document.getElementById("050201_03").innerHTML = "富士山 lenght = " + v050201_03.length;
+  </textarea>
+
+  <h4> 5.2.2 Escape Character</h4>
+  The backslash (\) escape character turns special characters into string characters:
+  <br><br>
+  <table class="t1">
+    <tr>
+      <th>Code</th>
+      <th>Result</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>\'</td>
+      <td>'</td>
+      <td>Single quote</td>
+    </tr>
+    <tr>
+      <td>\"</td>
+      <td>"</td>
+      <td>Double quote</td>
+    </tr>
+    <tr>
+      <td>\\</td>
+      <td>\</td>
+      <td>Backslash</td>
+    </tr>
+    <tr>
+      <td>\b</td>
+      <td></td>
+      <td>Backspace</td>
+    </tr>
+    <tr>
+      <td>\f</td>
+      <td></td>
+      <td>Form Feed</td>
+    </tr>
+    <tr>
+      <td>\n</td>
+      <td></td>
+      <td>New Line</td>
+    </tr>
+    <tr>
+      <td>\r</td>
+      <td></td>
+      <td>Carriage Return</td>
+    </tr>
+    <tr>
+      <td>\t</td>
+      <td></td>
+      <td>Horizontal Tabulator</td>
+    </tr>
+    <tr>
+      <td>\v</td>
+      <td></td>
+      <td>Vertical Tabulator</td>
+    </tr>
+  </table>
+
+<h4> 5.2.3 Finding a String in a String</h4>
+  The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string.<br>
+  The lastIndexOf() method returns the index of the last occurrence of a specified text in a string.<br>
+  Both indexOf(), and lastIndexOf() return -1 if the text is not found.<br>
+  The search() method searches a string for a specified value and returns the position of the match.<br>
+  The search() method cannot take a second start position argument.<br>
+  The indexOf() method cannot take powerful search values (regular expressions).<br>
+<p id="050203_00" style="color:#649d66"></p>
+<p id="050203_01" style="color:#649d66"></p>
+<p id="050203_02" style="color:#649d66"></p>
+<p id="050203_03" style="color:#649d66"></p>
+<p id="050203_04" style="color:#649d66"></p>
+<textarea class="ta3">
+  <script>
+    var v050203_00 = "one two three one two";
+    var v050203_01 = v050203_00.indexOf("two");
+    var v050203_02 = v050203_00.lastIndexOf("two");
+    var v050203_03 = v050203_00.lastIndexOf("four");
+    var v050203_04 = v050203_00.search("two");
+    document.getElementById("050203_00").innerHTML = 'v050203_00 = ' + v050203_00;
+    document.getElementById("050203_01").innerHTML = 'v050203_00.indexOf("two") =' + v050203_01;
+    document.getElementById("050203_02").innerHTML = 'v050203_00.lastIndexOf("two") =' + v050203_02;
+    document.getElementById("050203_03").innerHTML = 'v050203_00.lastIndexOf("four") =' + v050203_03;
+    document.getElementById("050203_04").innerHTML = 'v050203_00.search("two") =' + v050203_04;
+</script>
+</textarea>
+
+<h4> 5.2.4 Extracting String Parts</h4>
+There are 3 methods for extracting a part of a string:<br>
+slice(start, end)<br>
+slice() extracts a part of a string and returns the extracted part in a new string.<br>
+If a parameter is negative, the position is counted from the end of the string.<br>
+If you omit the second parameter, the method will slice out the rest of the string.<br>
+<br>
+substring(start, end)<br>
+substring() is similar to slice().<br>
+The difference is that substring() cannot accept negative indexes.<br>
+If you omit the second parameter, the method will slice out the rest of the string<br>
+<br>
+substr(start, length)<br>
+substr() is similar to slice().<br>
+The difference is that the second parameter specifies the length of the extracted part.<br>
+If you omit the second parameter, substr() will slice out the rest of the string.<br>
+<p id="050204_00" style="color:#649d66"></p>
+<p id="050204_01" style="color:#649d66"></p>
+<p id="050204_02" style="color:#649d66"></p>
+<p id="050204_03" style="color:#649d66"></p>
+<p id="050204_04" style="color:#649d66"></p>
+<textarea class="ta3">
+  <script>
+    var v050204_00 = "one two three one two";
+    var v050204_01 = v050204_00.slice(4, 7);
+    var v050204_02 = v050204_00.slice(-7, -4);
+    var v050204_03 = v050204_00.substring(8);
+    var v050204_04 = v050204_00.substr(4,3);
+    document.getElementById("050204_00").innerHTML = 'v050204_00 = ' + v050204_00;
+    document.getElementById("050204_01").innerHTML = 'v050204_00.slice(4, 6) = ' + v050204_01;
+    document.getElementById("050204_02").innerHTML = 'v050204_00.slice(-7, -4) = ' + v050204_02;
+    document.getElementById("050204_03").innerHTML = 'v050204_00.substring(8) = ' + v050204_03;
+    document.getElementById("050204_04").innerHTML = 'v050204_00.substr(4,3) = ' + v050204_04;
+</script>
+</textarea>
+<br>
+
+<h4> 5.2.5 String Methods</h4>
+<table class="t1">
+  <tr>
+    <th>Code</th>  
+    <th>Description</th>  
+    <th>Sample</th>  
+    <th>Result</th>
+  </tr>
+  <tr>
+    <td>String.concat(string)</td> 
+    <td>Join String</td>
+    <td>var input1 = "Hello"<br>var input2 = "World!"<br>input1.concat(" ", input2)</td>
+    <td>Hello World!</td>
+  </tr>
+  <tr>
+    <td>String.toLowerCase()</td>
+    <td>Converting to Lower Case</td>
+    <td>var input = "one Two THREE"<br>input.toLowerCase()</td>
+    <td>one two three</td>
+  </tr>
+  <tr>
+    <td>String.toUpperCase()</td>
+    <td>Converting to Upper Case</td>
+    <td>var input = "one Two THREE"<br>input.toUpperCase()</td>
+    <td>ONE TWO THREE</td>
+  </tr>
+  <tr>
+    <td>String.trim()</td>
+    <td>Removed whitespace</td>
+    <td>var input = " Hello World! "<br>input.trim()</td>
+    <td>Hello World!</td>
+  </tr>
+  <tr>
+    <td>String.charAt()</td>
+    <td>Return the character at a specified index in a string</td>
+    <td>var input = "Hello World!"<br>input.charAt(0)</td>
+    <td>H</td>
+  </tr>
+  <tr>
+    <td>String.charCodeAt(index)</td>
+    <td>Return the unicode of the character at a specified index in a string</td>
+    <td>var input = "Hello World!"<br>input.charAt(0)</td>
+    <td>72</td>
+  </tr>
+  <tr>
+    <td>String[index]</td>
+    <td>Property Access<br>If no character is found, [ ] returns undefined<br>It is read only. str[0] = "A" (do not assign)</td>
+    <td>var input = "Hello World!"<br>input[0]</td>
+    <td>H</td>
+  </tr>
+  <tr>
+    <td>String.split(charactor)</td>
+    <td>Converting a String to an Array</td>
+    <td>var input = "a, b, c, d"<br>var output = input.split(",")<br>output[1]</td>
+    <td>b</td>
+  </tr>
+</table>
+
+<dev id="nav0503"></dev>
+  <h3> 5.3 Booleans</h3>
+  <p> 
+    Booleans can only have two values: true or false.
+  </p>
+  <p id="0503_01" style="color:#649d66"></p>
+  <textarea class="ta2">
+    <script>
+      var v0503_01 = 5;
+      var v0503_02 = 6;
+      var v0503_03 = (v0503_01 == v0503_02);
+      document.getElementById("0503_01").innerHTML = "5 == 6 " + v0503_03;
+    </script>
+  </textarea>
+  <br>
+
+  <h3>Boolean Values</h3>
+  JavaScript has a Boolean data type. It can only take the values true or false.<br>
+  <table class="t1">
+    <tr>
+      <th>Code</th>  
+      <th>Description</th>  
+      <th>Sample</th>  
+      <th>Result</th>
+    </tr>
+    <tr>
+      <td>Boolean()</td> 
+      <td>to find out if an expression (or a variable) is true</td>
+      <td>Boolean(10 > 9);<br>(10 > 9);<br>10 > 9;</td>
+      <td>true<br>true<br>true</td>
+    </tr>
+    <tr>
+      <td>comparison operators</td> 
+      <td>to take the values true or false</td>
+      <td>Boolean(100);<br>Boolean(3.14);<br>Boolean(-15);<br>Boolean("Hello");<br>Boolean('false');<br></td>
+      <td>true<br>true<br>true<br>true<br>true</td>
+    </tr>
+  </table>
+
+<dev id="nav0504"></dev>
+  <h3> 5.4 Arrays</h3>
+  <p> 
+    JavaScript arrays are written with square brackets and items are separated by commas.<br>
+    Array indexes are zero-based, which means the first item is [0], second is [1], and so on.<br>
+    An array is a special variable, which can hold more than one value at a time.<br>
+    JavaScript does not support arrays with named indexes.<br>
+    In JavaScript, arrays always use numbered indexes.<br>
+  </p>
+  <p id="0504_01" style="color:#649d66"></p>
+  <p id="0504_02" style="color:#649d66"></p>
+  <p id="0504_03" style="color:#649d66"></p>
+  <p id="0504_04" style="color:#649d66"></p>
+  <textarea class="ta2">
+  const v0504_01 = ["item1", "item2", "item3"];
+  v0504_01[2] = "newitem3";
+  document.getElementById("0504_01").innerHTML = 'v0504_01 = ["item1", "item2", "item3"]';
+  document.getElementById("0504_02").innerHTML = "v0504_01[1] = " + v0504_01[1];
+  document.getElementById("0504_03").innerHTML = "v0504_01[v0504_01.length -1] = " + v0504_01[v0504_01.length -1];
+  </textarea>
+  <br>
+
+  <h4> 5.4.1 for Loop Array Elements</h4>
+  for (iterator; condition; increment) {action}
+  <p id="050401_01" style="color:#649d66"></p>
+  <textarea class="ta3">
+    let v050401_01, v050401_02, v050401_03; 
+    v050401_01 = ["item1", "item2", "item3"];
+    v050401_02 = v050401_01.length;
+    v050401_03 = "";
+    for (i =0; i < v050401_02; i++){   
+      v050401_03 += v050401_01[i] + "<br>";
+    }
+    document.getElementById("050401_01").innerHTML = v050401_03;
+  </textarea>
+  <br>
+
+  <h4> 5.4.1 for of Array Elements</h4>
+  for (object of  object) {action}
+  <textarea class="ta2">
+    let v050401_01, v050401_02, v050401_03; 
+    v050401_01 = ["item1", "item2", "item3"];
+    v050401_02 = v050401_01.length;
+    v050401_03 = "";
+    for (i =0; i < v050401_02; i++){   
+      v050401_03 += v050401_01[i] + "<br>";
+    }
+    document.getElementById("050401_01").innerHTML = v050401_03;
+  </textarea>
+  <br>
+
+  <h4> 5.4.2 forEach Loop Array Elements</h4>
+  Array.forEach (function)
+  <p id="050402_01" style="color:#649d66"></p>
+  <textarea class="ta3">
+    let v050402_01, v050402_02; 
+    v050402_01 = ["item1", "item2", "item3"];
+    v050402_02 = ""                     //Create empty text
+    v050402_01.forEach(function050402);     //forEach loop
+    function function050402(value){
+      v050402_02 += value + "<br>"; //Add text
+    }
+    document.getElementById("050402_01").innerHTML = v050402_02;
+  </textarea>
+  <br>
+
+  <h4> 5.4.3 Array Random order</h4>
+  Fisher Yates shuffle
+  <br><br>
+  <button onclick="myArrayShuffle(v050403_01)">Random</button>
+  <p id="050403_01" style="color:#649d66"></p>
+  <textarea class="ta3">
+    let v050403_01 = [3, 2, 1, 5, 4];
+    function myArrayShuffle(arr) {
+    let i, j, k;
+      for (i = arr.length -1; i > 0; i--) {
+        j = Math.floor(Math.random() * i)
+        k = arr[i]
+        arr[i] = arr[j]
+        arr[j] = k
+      }
+      document.getElementById("050403_01").innerHTML = v050403_01;
+    }
+  </textarea>
+  <br>
+
+  <h4> 5.4.4 Array Iteration</h4>
+  <h4> 5.4.4.1 Array.forEach(function)</h4>
+  Perform a function on each array element.<br>
+  <p id="050404_01" style="color:#649d66"></p>
+  <textarea class="ta3">
+    let result = "";
+    let v050404_01, v050404_02, v050404_03, v050404_04, v050404_05;
+    let v050404_06, v050404_07, v050404_08, v050404_09, v050404_10;
+    let v050404_11, v050404_12;
+    v050404_01 = [3, 2, 1, 5, 4];
+    //Array.forEach()
+    v050404_01.forEach(function050404_01);
+    document.getElementById("050404_01").innerHTML = result;
+    function function050404_01(value, index, array) {
+      result = result + value + "---";
+    }
+  </textarea>
+  <br><br>
+  
+  <h4> 5.4.4.2 Array.map(function)</h4>
+  Create a new array by performing a function on each array element.<br>
+  <p id="050404_02" style="color:#649d66"></p>
+  <textarea class="ta3">
+    result = "";
+    v050404_01 = [3, 2, 1, 5, 4];
+    v050404_02 = v050404_01.map(function050404_02)
+    document.getElementById("050404_02").innerHTML = v050404_02;
+    function function050404_02(value, index, array) {
+      return value * 2;
+    }
+  </textarea>
+  <br><br>
+
+  <h4> 5.4.4.3 Array.filter(function)</h4>
+  Create a new array with array elements that passes a test.<br>
+  <p id="050404_03" style="color:#649d66"></p>
+  <textarea class="ta3">
+    result = "";
+    v050404_01 = [3, 2, 1, 5, 4];
+    v050404_03 = v050404_01.filter(function050404_03);
+    document.getElementById("050404_03").innerHTML = v050404_03;
+    function function050404_03(value, index, array) {
+    return value > 2;
+    }    
+  </textarea>
+  <br><br>
+
+  <h4> 5.4.4.4 Array.reduce(function)</h4>
+  Run a function on each array element to produce a single value. (left-to-right)<br>
+  <p id="050404_04" style="color:#649d66"></p>
+  <textarea class="ta3">
+    result = "";
+    v050404_01 = [3, 2, 1, 5, 4];
+    v050404_04 = v050404_01.reduce(function050404_04, 100);
+    document.getElementById("050404_04").innerHTML = v050404_04;
+    function function050404_04(total, value, index, array) {
+    return total + value;
+    }
+  </textarea>
+  <br><br>
+
+  <h4> 5.4.4.5 Array.reduceRight(function)</h4>
+  Run a function on each array element to produce a single value. (right-to-left)<br>
+  <p id="050404_05" style="color:#649d66"></p>
+  <textarea class="ta3">
+    result = "";
+    v050404_01 = [3, 2, 1, 5, 4];
+    v050404_05 = v050404_01.reduceRight(function050404_05);
+    document.getElementById("050404_05").innerHTML = v050404_05;
+    function function050404_05(total, value, index, array) {
+    return total + value;
+    }
+  </textarea>
+  <br><br>
+
+  <h4> 5.4.4.6 Array.every(function)</h4>
+  Check if all array values pass a test.<br>
+  <p id="050404_06" style="color:#649d66"></p>
+  <textarea class="ta3">
+    result = "";
+    v050404_01 = [3, 2, 1, 5, 4];
+    v050404_06 = v050404_01.every(function050404_06);
+    document.getElementById("050404_06").innerHTML = v050404_06;
+    function function050404_06(value, index, array) {
+    return value > 2;
+    }
+  </textarea>
+  <br><br>
+
+  <h4> 5.4.4.7 Array.some(function)</h4>
+  Check if some array values pass a test.<br>
+  <p id="050404_07" style="color:#649d66"></p>
+  <textarea class="ta3">
+    result = "";
+    v050404_01 = [3, 2, 1, 5, 4];
+    v050404_07 = v050404_01.some(function050404_07);
+    document.getElementById("050404_07").innerHTML = v050404_07;
+    function function050404_07(value, index, array) {
+    return value > 2;
+    }
+  </textarea>
+  <br><br>
+
+  <h4> 5.4.4.8 Array.indexOf()</h4>
+  Search an array for an element value and returns its position.<br>
+  Array.indexOf() returns -1 if the item is not found.<br>
+  <p id="050404_08" style="color:#649d66"></p>
+  <textarea class="ta2">
+    result = "";
+    v050404_01 = ["item1", "item2", "item3", "item2", "item1"];
+    v050404_08 = v050404_01.indexOf("item2");
+    document.getElementById("050404_08").innerHTML = v050404_08;
+  </textarea>
+  <br><br>
+
+  <h4> 5.4.4.9 Array.lastIndexOf()</h4>
+  Search an array for an element value and returns last position.<br>
+  Array.lastIndexOf() returns -1 if the item is not found.<br>
+  <p id="050404_09" style="color:#649d66"></p>
+  <textarea class="ta2">
+    result = "";
+    v050404_01 = ["item1", "item2", "item3", "item2", "item1"];
+    v050404_09 = v050404_01.lastIndexOf("item2");
+    document.getElementById("050404_09").innerHTML = v050404_09;
+  </textarea>
+  <br><br>
+
+  <h4> 5.4.4.10 Array.find(function)</h4>
+  Return the value of the first array element that passes a test function.<br>
+  <p id="050404_10" style="color:#649d66"></p>
+  <textarea class="ta3">
+    result = "";
+    v050404_00 = [2, 3, 5, 1, 2];
+    v050404_10 = v050404_00.find(function05010410);
+    document.getElementById("050404_10").innerHTML = v050404_10;
+    function function05010410(value, index, array) {
+      return value > 2;
+    }
+  </textarea>
+  <br><br>
+
+  <h4> 5.4.4.11 Array.findIndex(function)</h4>
+  Return the index of the first array element that passes a test function.<br>
+  <p id="050404_11" style="color:#649d66"></p>
+  <textarea class="ta3">
+    result = "";
+    v050404_00 = [2, 3, 5, 1, 2];
+    v050404_11 = v050404_00.findIndex(function05010411);
+    document.getElementById("050404_11").innerHTML = v050404_11;
+    function function05010411(value, index, array) {
+      return value > 2;
+    }
+  </textarea>
+  <br><br>
+
+  <h4> 5.4.5 Array Methods</h4>
+  <table class="t1">
+    <tr>
+      <th>Code</th>  
+      <th>Description</th>  
+      <th>Sample</th>  
+      <th>Result</th>
+    </tr>
+    <tr>
+      <td>Array.push()</td> 
+      <td>Add a new element to an array at last</td>
+      <td>const input = ["item1", "item2"];<br>input.push("item3");</td>
+      <td>item1, item2, item3</td>
+    </tr>
+    <tr>
+      <td>Array[Array.length] = "item"</td> 
+      <td>Add a new element to an array</td>
+      <td>const input = ["item1", "item2"];<br>input[input.length] = "item3";</td>
+      <td>["item1", "item2", "item3"]</td>
+    </tr>
+    <tr>
+      <td>Array.unshift()</td> 
+      <td>Add a new element to an array at the beginning</td>
+      <td>const input = ["item1", "item2"];<br>input.unshift("item3");</td>
+      <td>item3, item1, item2</td>
+    </tr>
+    <tr>
+      <td>Array.pop()</td> 
+      <td>Remove the last element from an array</td>
+      <td>const input = ["item1", "item2"];<br>input.pop();</td>
+      <td>item1, item2</td>
+    </tr>
+    <tr>
+      <td>Array.shift()</td> 
+      <td>Remove the first element from an array</td>
+      <td>const input = ["item1", "item2"];<br>input.shift();</td>
+      <td>item2, item3</td>
+    </tr>
+    <tr>
+      <td>Array[index] = item</td> 
+      <td>Change element in an array</td>
+      <td>const input = ["item1", "item2"];<br>input[1] = "newItem";</td>
+      <td>item1, newItem</td>
+    </tr>
+    <tr>
+      <td>Array.splice()</td> 
+      <td>Add new items to an array<br>
+          parameter1: position to add<br>
+          parameter2: no. of elements to removed.<br>
+          The rest parameters: new elements </td>
+      <td>const input = ["item1", "item2"];<br>input.splice(2, 0, "newItem1", "newItem2");</td>
+      <td>item1, newItem1, newItem2</td>
+    </tr>
+    <tr>
+      <td>Array.isArray()</td> 
+      <td>Return true if the argument is an array.</td>
+      <td>const input = ["item1", "item2"];<br>Array.isArray(input);</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td>Array instanceof Array</td> 
+      <td>Return true if the argument is an array.</td>
+      <td>const input = ["item1", "item2"];<br>input instanceof Array;</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td>Array.toString()</td> 
+      <td>Convert an array to a string of (comma separated) array values</td>
+      <td>const input = ["item1", "item2"];<br>input.toString();</td>
+      <td>item1,item2</td>
+    </tr>
+    <tr>
+      <td>Array.join()</td> 
+      <td>Join all array elements into a string</td>
+      <td>const input = ["item1", "item2"];<br>input.join(" - ");</td>
+      <td>item1 - item2</td>
+    </tr>
+    <tr>
+      <td>Array.concat()</td> 
+      <td>Create a new array by merging existing arrays</td>
+      <td>const input1 = ["item1", "item2"];<br>const input2 = ["item3", "item4"];<br>output = input1.concat(input2);</td>
+      <td>item1,item2,item3,item4</td>
+    </tr>
+    <tr>
+      <td>Array.slice()</td> 
+      <td>Slice out a piece of an array into a new array<br>
+          parameter1: start element<br>
+          parameter2: end element</td>
+      <td>const input1 = ["item1", "item2", "item3", "item4"];<br>output = input1.slice(1, 3);</td>
+      <td>item2,item3</td>
+    </tr>
+    <tr>
+      <td>Array.sort()</td> 
+      <td>Sort an array alphabetically.<br>
+      <td>const input1 = ["b", "a", "c"];<br>const input2 = [3, 1, 2];<br>input1.sort();<br>input2.sort();</td>
+      <td>a,b,c<br>1,2,3</td>
+    </tr>
+    <tr>
+      <td>Array.reverse()</td> 
+      <td>Reverse the elements in an array.<br>
+      <td>conts input = ["a", "b", "c"];<br>output = input.reverse();</td>
+      <td>c,b,a</td>
+    </tr>
+    <tr>
+      <td>Math.max()</td> 
+      <td>Find the highest number in an array.<br>
+      <td>conts input = [3, 5, 4];<br>
+          myArrayMax(input);<br>
+          function myArrayMax(arr) {<br>
+          return Math.max.apply(null, arr);<br>
+          }
+      </td>
+      <td>5</td>
+    </tr>
+  </table>
+
+<dev id="nav0505"></dev>
+  <h3> 5.5 Objects</h3>
+  <p> 
+    JavaScript objects are written with curly braces {}.<br>
+    Object properties are written as name:value pairs, separated by commas.<br>
+    In JavaScript, arrays use numbered indexes.<br>  
+    In JavaScript, objects use named indexes.<br>
+  </p>
+
+  <h4> Objects, Properties, and Methods</h4>
+  <p>
+    You define (and create) a JavaScript object with an object literal.<br>
+    The name:values pairs in JavaScript objects are called properties.<br>
+    Methods are actions that can be performed on objects.<br>
+    Methods are stored in properties as function definitions.<br>
+    Avoid String, Number, and Boolean objects. They complicate your code and slow down execution speed.
+  </p>
+
+  <p id="0505_01" style="color:#649d66"></p>
+  <p id="0505_02" style="color:#649d66"></p>
+  <p id="0505_03" style="color:#649d66"></p>
+  <p id="0505_04" style="color:#649d66"></p>
+  <p id="0505_05" style="color:#649d66"></p>
+  <p id="0505_06" style="color:#649d66"></p>
+  <p id="0505_07" style="color:#649d66"></p>
+  <textarea class="ta4">
+  const myObject = {
+    firstName:"Tom", 
+    lastName:"Hanks",
+    age:45,
+    hobbies: ['music', 'movies'],
+    address: {
+        street: '42West',
+        city: 'Los Angeles',
+        state: 'CA'
+    },
+    getFullName() {
+        return "firstName = " + this.firstName 
+        + ", lastName = " + this.lastName 
+        }
+    };
+  const person = [myObject.firstName, myObject.lastName] ;
+  const profile = [myObject.firstName, myObject.lastName, myObject.address.state];
+  document.getElementById("0505_01").innerHTML = `myObject["firstName"] = ${myObject["firstName"]}`;
+  document.getElementById("0505_02").innerHTML = `myObject.age = ' ${myObject.age}`;
+  document.getElementById("0505_03").innerHTML = `myObject.hobbies[1] = ' ${myObject.hobbies[1]}`;
+  document.getElementById("0505_04").innerHTML = `myObject.address.state = ${myObject.address.state}`;
+  document.getElementById("0505_05").innerHTML = `person = ' ${person}`;
+  document.getElementById("0505_06").innerHTML = `profile = ${profile}`;
+  document.getElementById("0505_07").innerHTML = `myObject.getFullName() = ${myObject.getFullName()}`; 
+  </textarea>
+  <br>
+
+  <h4>Accessing JavaScript Properties</h4>
+  <p>The syntax for accessing the property of an object is:</p>
+  <code>objectName.property         // person.age</code><br>
+  <code>objectName["property"]      // person["age"]</code><br>
+  <code>objectName[expression]      // x = "age"; person[x]</code><br>
+
+  <h4>Adding New Properties</h4>
+  <p>
+    You can add new properties to an existing object by simply giving it a value.
+  </p>
+  <code>person.nationality = "English";</code>
+
+  <h4>Deleting Properties</h4>
+  <p>
+    The delete keyword deletes a property from an object.<br>
+    The delete operator should not be used on predefined JavaScript object properties. It can crash your application.
+  </p>
+  <code>delete person.age;   // or delete person["age"];</code>
+
+  <h3>Object Methods</h3>
+  <p>
+    In a function definition, this refers to the "owner" of the function.
+  </p>
+  <textarea class="ta3">
+  const person = {
+      firstName: "John",
+      lastName : "Doe",
+      id       : 5566,
+      fullName : function() {
+          return this.firstName + " " + this.lastName;
+      }
+  };
+  console.log(person.fullName())
+  //John Doe
+  </textarea>
+
+  <h4>Accessing Object Methods</h4>
+  <code>objectName.methodName()</code>
+
+  <h4>Using Built-In Methods</h4>
+  <code>const variable = object.toUpperCase();</code>
+
+  <h4>Adding a Method to an Object</h4>
+  <textarea class="ta1">
+  object.functionName = function () {
+    return this.firstName + " " + this.lastName;
+  };
+  </textarea>
+
+  <h4>Display JavaScript Objects</h4>
+  <p>Displaying the Object Properties by name</p>
+  <p id="05_dp01" style="color:#649d66"></p>
+  <textarea class="ta1">
+  let member = {id: "1001", name:"John", city:"New York"};
+  document.getElementById("05_dp01").innerHTML = `memmber.id = ${member.id}`;
+  </textarea>
+
+  <p>Displaying the Object Properties in a Loop</p>
+  <p id="05_dp02" style="color:#649d66"></p>
+  <textarea class="ta2">
+  let x, txt = "";
+  for (x in member) {
+      txt += member[x] + " ";
+  }
+  document.getElementById("05_dp02").innerHTML = txt;
+  </textarea>
+
+  <p>Displaying the Object using Object.values()</p>
+  <p id="05_dp03" style="color:#649d66"></p>
+  <textarea class="ta1">
+  let myArray = Object.values(member);
+  document.getElementById("05_dp03").innerHTML = myArray;
+  </textarea>
+
+  <p>Displaying the Object using JSON.stringify()</p>
+  <p>JSON.stringify will not stringify functions.</p>
+  <p id="05_dp04" style="color:#649d66"></p>
+  <textarea class="ta1">  
+  let myString = JSON.stringify(member);
+  document.getElementById("05_dp04").innerHTML = myString;
+  </textarea>
+
+  <h3>Using get, set, defineProperty</h3>
+  <p>
+  Benetits
+  - Simpler syntax<br>
+  - Syntax for properties and methods<br>
+  - Secure better data quality<br>
+  - To do things behind-the-scenes
+  </p>
+
+  <h4>get</h4>
+  <textarea class="ta3">
+  member = {
+      id: 1001,
+      language: "en",
+      get lang() {
+          return this.language.toUpperCase();
+      }
+  }
+  console.log(member.lang)
+  //EN
+  </textarea>
+
+  <h4>set</h4>
+  <textarea class="ta3">
+  member = {
+      id: 1001,
+      language: "",
+      set setLang(lang) {
+          this.language = lang.toUpperCase();
+      }
+  }
+  member.setLang = "en";
+  console.log(member.language)
+  //EN
+  </textarea>
+
+  <h4>defineProperty</h4>
+  <textarea class="ta4">
+  let scoreObj = {score: 0};
+  Object.defineProperty(scoreObj, "reset", {
+      get : function() {this.score = 0}
+  });
+  Object.defineProperty(scoreObj, "up", {
+      get : function() {this.score++;}
+  });
+  Object.defineProperty(scoreObj, "down", {
+      get : function() {this.score--;}
+  })
+  Object.defineProperty(scoreObj, "add", {
+      set : function (value) {this.score += value;}
+  });
+  Object.defineProperty(scoreObj, "subtract", {
+      set: function (value) {this.score -= value;}
+  });
+  scoreObj.reset;
+  scoreObj.add = 4;
+  scoreObj.subtract = 2;
+  scoreObj.up;
+  scoreObj.down;
+  console.log(scoreObj);
+  //{score: 2}
+  // 0 +4 -2 +1 -1
+  </textarea>
+
+  <div id="nav0506"></div>
+  <h3> 5.6 Date Obeject</h3>
+  By default, JavaScript will use the browser's time zone and display a date as a full text string.<br>
+  Date(year, month, day, hours, minutes, seconds, milliseconds)<br>
+  new Date()<br>
+  One and two digit years will be interpreted as 19xx <br>
+  Date(milliseconds)<br>
+  01 January 1970 plus x milliseconds<br>
+  <p id="0506_01" style="color:#649d66"></p>
+  <p id="0506_02" style="color:#649d66"></p>
+  <p id="0506_03" style="color:#649d66"></p>
+  <p id="0506_04" style="color:#649d66"></p>
+  <p id="0506_05" style="color:#649d66"></p>
+  <p id="0506_06" style="color:#649d66"></p>
+  <p id="0506_07" style="color:#649d66"></p>
+  <textarea class="ta3">
+  var v0506_01 = new Date();
+  var v0506_02 = new Date(2019, 10, 24, 10, 33, 30, 0);
+  var v0506_03 = new Date(99, 11, 24);
+  var v0506_04 = new Date(1000000000000);
+  var v0506_05 = new Date(-1000000000000);
+  var v0506_06 = new Date("October 15, 2020 11:13:00");
+  var v0506_07 = new Date().toUTCString();
+  document.getElementById("0506_01").innerHTML = "new Date() = " + v0506_01;
+  document.getElementById("0506_02").innerHTML = "new Date(2019, 10, 24, 10, 33, 30, 0) = " + v0506_02;
+  document.getElementById("0506_03").innerHTML = "new Date(99, 11, 24) = " + v0506_03;
+  document.getElementById("0506_04").innerHTML = "new Date(1000000000000) = " + v0506_04;
+  document.getElementById("0506_05").innerHTML = "new Date(-1000000000000) = " + v0506_05;
+  document.getElementById("0506_06").innerHTML = 'new Date("October 15, 2020 11:13:00") = ' + v0506_06;
+  document.getElementById("0506_07").innerHTML = 'new Date().toUTCString() = ' + v0506_07;
+  </textarea>
+
+  <h4> 5.6.1 Date Formats</h4>
+  There are generally 3 types of JavaScript date input formats.<br>
+  <li>ISO Date	  "2015-03-25" (The International Standard)<br></li>
+  <li>Short Date	"03/25/2015"<br></li>
+  <li>Long Date	  "Mar 25 2015" or "25 Mar 2015"<br></li>
+  <br>
+  Parsing Dates<br>
+  Date.parse() method to convert it to milliseconds.<br>
+  <p id="050601_01" style="color:#649d66"></p>
+  <p id="050601_02" style="color:#649d66"></p>
+  <p id="050601_03" style="color:#649d66"></p>
+  <textarea class="ta2">
+  var v050601_01 = Date.parse("March 10, 2020");;
+  var v050601_02 = new Date(2019, 10, 24, 10, 33, 30, 0);
+  var v050601_03 = new Date(99, 11, 24);
+  document.getElementById("050601_01").innerHTML = 'Date.parse("March 21, 2012"); = ' + v050601_01;
+  document.getElementById("050601_02").innerHTML = 'Date(2019, 10, 24, 10, 33, 30, 0); = ' + v050601_02;
+  document.getElementById("050601_03").innerHTML = 'new Date(99, 11, 24); = ' + v050601_03;
+  </textarea>
+
+<h4> 5.6.2 Get Date Methods</h4>
+<table class="t1">
+  <tr>
+    <th>Code</th>  
+    <th>Description</th>  
+    <th>Sample</th>  
+    <th>Result</th>
+  </tr>
+  <tr>
+    <td>getFullYear()</td> 
+    <td>Get the year as a four digit number (yyyy)</td>
+    <td>var input = new Date();<br>input.getFullYear();</td>
+    <td>2020</td>
+  </tr>
+  <tr>
+    <td>getMonth()</td> 
+    <td>Get the month as a number (0-11)</td>
+    <td>var input = new Date();<br>input.getMonth();</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>getMonth()</td> 
+    <td>Get the month as a number (0-11)</td>
+    <td>var input = new Date();<br>var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];<br>months[input.getMonth]();</td>
+    <td>May</td>
+  </tr>
+  <tr>
+    <td>getDate()</td> 
+    <td>Get the day as a number (1-31)</td>
+    <td>var input = new Date();<br>input.getDate();</td>
+    <td>16</td>
+  </tr>
+  <tr>
+    <td>getHours()</td> 
+    <td>Get the hour (0-23)</td>
+    <td>var input = new Date();<br>input.getHours();</td>
+    <td>15</td>
+  </tr>
+  <tr>
+    <td>getMinutes()</td> 
+    <td>Get the minute (0-59)</td>
+    <td>var input = new Date();<br>input.getMinutes();</td>
+    <td>54</td>
+  </tr>
+  <tr>
+    <td>getSeconds()</td> 
+    <td>Get the second (0-59)</td>
+    <td>var input = new Date();<br>input.getSeconds();</td>
+    <td>17</td>
+  </tr>
+  <tr>
+    <td>getMilliseconds()</td> 
+    <td>Get the millisecond (0-999)</td>
+    <td>var input = new Date();<br>input.getMilliseconds();</td>
+    <td>278</td>
+  </tr>
+  <tr>
+    <td>getTime()</td> 
+    <td>Get the time (milliseconds since January 1, 1970)</td>
+    <td>var input = new Date();<br>input.getTime();</td>
+    <td>1589611666674</td>
+  </tr>
+  <tr>
+    <td>getDay()</td> 
+    <td>Get the weekday as a number (0-6)</td>
+    <td>var input = new Date();<br>input.getDay();</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>getDay()</td> 
+    <td>Get the weekday as a number (0-6)</td>
+    <td>var input = new Date();<br>var days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];<br>days[input.getDay()];</td>
+    <td>Sat</td>
+  </tr>
+</table>
+<br>
+UTC Date Methods<br>
+UTC date methods are used for working with UTC dates (Universal Time Zone dates).<br>
+getUTCDate()	getUTCDay()	getUTCFullYear() getUTCHours() getUTCMilliseconds()	 getUTCMinutes() getUTCMonth() getUTCSeconds()
+<br>
+
+<h4> 5.6.4 Set Date Methods</h4>
+Set Date methods let you set date values (years, months, days, hours, minutes, seconds, milliseconds) for a Date Object.<br><br>
+<table class="t1">
+  <tr>
+    <th>Code</th>  
+    <th>Description</th>  
+    <th>Sample</th>  
+    <th>Result</th>
+  </tr>
+    <td>setFullYear()</td> 
+    <td>Set the year (optionally month and day)<br>The setFullYear() method can optionally set month and day.</td>
+    <td>var input = new Date();<br>input.setFullYear(2030);<br>input.setFullYear(2030, 11, 3);</td>
+    <td>Thu May 16 2030 17:00:27 GMT+0900 (Japan Standard Time)<br>Tue Dec 03 2030 17:03:11 GMT+0900 (Japan Standard Time)</td>
+  </tr>
+  <tr>
+    <td>setMonth()</td> 
+    <td>Set the month (0-11)</td>
+    <td>var input = new Date();<br>input.setMonth(11);</td>
+    <td>Wed Dec 16 2020 17:09:54 GMT+0900 (Japan Standard Time)</td>
+  </tr>
+  <tr>
+    <td>setDate()</td> 
+    <td>Set the day as a number (1-31)</td>
+    <td>var input = new Date();<br>input.setDate(15);</td>
+    <td>Fri May 15 2020 17:14:45 GMT+0900 (Japan Standard Time)</td>
+  </tr>
+  <tr>
+    <td>setHours()</td> 
+    <td>Set the hour (0-23)</td>
+    <td>var input = new Date();<br>input.setHours(22);</td>
+    <td>Sat May 16 2020 22:17:16 GMT+0900 (Japan Standard Time)</td>
+  </tr>
+  <tr>
+    <td>setMinutes()</td> 
+    <td>Set the minutes (0-59)</td>
+    <td>var input = new Date();<br>input.setMinutes(30);</td>
+    <td>Sat May 16 2020 17:30:23 GMT+0900 (Japan Standard Time)</td>
+  </tr>
+  <tr>
+    <td>setSeconds()</td> 
+    <td>Set the seconds (0-59)</td>
+    <td>var input = new Date();<br>input.setSeconds(30);</td>
+    <td>Sat May 16 2020 17:19:30 GMT+0900 (Japan Standard Time)</td>
+  </tr>
+  </table>
+
+  <div id="nav0507"></div>
+  <h4> 5.7.1 Math Properties (Constants)</h4>
+  Mathematical constants that can be accessed with the Math object<br>
+  <table class="t1">
+    <tr>
+      <th>Code</th>  
+      <th>Description</th>  
+      <th>Sample</th>  
+      <th>Result</th>
+    </tr>
+    <tr>
+      <td>Math.E</td> 
+      <td>returns Euler's number</td>
+      <td>Math.E;</td>
+      <td>2.718281828459045</td>
+    </tr>
+    <tr>
+      <td>Math.PI</td> 
+      <td>returns PI</td>
+      <td>Math.PI;</td>
+      <td>3.141592653589793</td>
+    </tr>
+    <tr>
+      <td>Math.SQRT2</td> 
+      <td>returns the square root of 2</td>
+      <td>Math.SQRT2;</td>
+      <td>1.4142135623730951</td>
+    </tr>
+    <tr>
+      <td>Math.SQRT1_2</td> 
+      <td>returns the square root of 1/2</td>
+      <td>Math.SQRT1_2;</td>
+      <td>0.7071067811865476</td>
+    </tr>
+    <tr>
+      <td>Math.LN2</td> 
+      <td>returns the natural logarithm of 2</td>
+      <td>Math.LN2;</td>
+      <td>0.6931471805599453</td>
+    </tr>
+    <tr>
+      <td>Math.LN10</td> 
+      <td>returns the natural logarithm of 10</td>
+      <td>Math.LN2;</td>
+      <td>2.302585092994046</td>
+    </tr>
+    <tr>
+      <td>Math.LOG2E</td> 
+      <td>returns base 2 logarithm of E</td>
+      <td>Math.LOG2E;</td>
+      <td>1.4426950408889634</td>
+    </tr>
+    <tr>
+      <td>Math.LOG10E</td> 
+      <td>returns base 10 logarithm of E</td>
+      <td>Math.LOG10E;</td>
+      <td>0.4342944819032518</td>
+    </tr>
+    </table>
+
+  <h4> 5.7.2 Math Constructor</h4>
+  Unlike other global objects, the Math object has no constructor. Methods and properties are static.<br>
+  All methods and properties (constants) can be used without creating a Math object first.<br>
+  <br>
+    <li>abs(x)	Returns the absolute value of x</li>
+    <li>acos(x)	Returns the arccosine of x, in radians</li>
+    <li>acosh(x)	Returns the hyperbolic arccosine of x</li>
+    <li>asin(x)	Returns the arcsine of x, in radians</li>
+    <li>asinh(x)	Returns the hyperbolic arcsine of x</li>
+    <li>atan(x)	Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians</li>
+    <li>atan2(y, x)	Returns the arctangent of the quotient of its arguments</li>
+    <li>atanh(x)	Returns the hyperbolic arctangent of x</li>
+    <li>cbrt(x)	Returns the cubic root of x</li>
+    <li>ceil(x)	Returns x, rounded upwards to the nearest integer</li>
+    <li>cos(x)	Returns the cosine of x (x is in radians)</li>
+    <li>cosh(x)	Returns the hyperbolic cosine of x</li>
+    <li>exp(x)	Returns the value of Ex</li>
+    <li>floor(x)	Returns x, rounded downwards to the nearest integer</li>
+    <li>log(x)	Returns the natural logarithm (base E) of x</li>
+    <li>max(x, y, z, ..., n)	Returns the number with the highest value</li>
+    <li>min(x, y, z, ..., n)	Returns the number with the lowest value</li>
+    <li>pow(x, y)	Returns the value of x to the power of y</li>
+    <li>random()	Returns a random number between 0 and 1</li>
+    <li>round(x)	Rounds x to the nearest integer</li>
+    <li>sin(x)	Returns the sine of x (x is in radians)</li>
+    <li>sinh(x)	Returns the hyperbolic sine of x</li>
+    <li>sqrt(x)	Returns the square root of x</li>
+    <li>tan(x)	Returns the tangent of an angle</li>
+    <li>tanh(x)	Returns the hyperbolic tangent of a number</li>
+    <li>trunc(x)	Returns the integer part of a number (x)</li>
+
+  <div id="nav06"></div>
+  <h2> 6 Functions</h2>
+  <p> 
+    A JavaScript function is a block of code designed to perform a particular task.<br>
+    A JavaScript function is executed when "something" invokes it (calls it).<br>
+    A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().<br>
+    Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).<br>  
+    The parentheses may include parameter names separated by commas:(parameter1, parameter2, ...)<br>
+    The code to be executed, by the function, is placed inside curly brackets: {} <br>
+    Inside the function, the arguments (the parameters) behave as local variables.<br>
+    You can reuse code: Define the code once, and use it many times.<br>
+    JavaScript functions can be called before they are declared.
+  </p>
+  <code>function functionName(parameter1, parameter2, parameter3) {<br>
+      // code to be executed<br>
+  }</code>
+  <h4>Function Invocation</h4>
+  <p>
+    When an event occurs (when a user clicks a button)<br>
+    When it is invoked (called) from JavaScript code<br>
+    Automatically (self invoked)
+  </p>
+  <p id="0600_01" style="color:#649d66"></p>
+  <p id="0600_02" style="color:#649d66"></p>
+  <p id="0600_03" style="color:#649d66"></p>
+  <p id="0600_04" style="color:#649d66"></p>
+  <textarea class="ta3">
+  function multiply_function(p1, p2){
+    return p1 * p2
+  };
+  document.getElementById("0600_01").innerHTML = 'multiply_function(2,3) = ' + multiply_function(2,3);
+  document.getElementById("0600_02").innerHTML = '"Value" + multiply_function(2,3) = ' + "Value" + multiply_function(2,3);
+  document.getElementById("0600_03").innerHTML = 'multiply_function = ' + multiply_function;
+  document.getElementById("0600_04").innerHTML = 'multiply_function() = ' + multiply_function();
+  </textarea>
+  
+  <h3>Anonymouse Function</h3>
+  <p>Function without a name</p>
+  <textarea class="ta1">
+  const myFunction = function(p1, p2){
+    return p1 * p2
+  };
+  </textarea>
+
+  <p>anonymous function</p>
+  <code>(function () { console.log('Hallo') });</code>
+  <p>self invoked anonymous function</p>
+  <code>(function () { console.log('Hallo') })();</code>
+  <p>self invoked anonymous function with a parameter called "$"</p>
+  <code>
+    var jQuery = 'I\'m not jQuery.';<br>
+    (function ($) { console.log($) })(jQuery);
+  </code>
+
+  <h3>Function Constructor</h3>
+  <p>Functions can also be defined with a built-in JavaScript function constructor.</p>
+  <textarea >
+  const myFunction = new Function("a", "b", "return a * b");
+  </textarea>
+
+  <h3>Self-Invoking Functions</h3>
+  <p>Function expressions can be made "self-invoking".</p>
+  <textarea style="ta2">
+  (function () {
+    var x = console.log("Hello!"); 
+  })();
+  //Hello!
+  </textarea>
+
+  <h3>Arrow Function</h3>
+  <p>
+    Arrow functions allow us to write shorter function syntax:<br>
+    Arrow functions were introduced in ES6.
+  </p>
+  <textarea class="ta2">
+  let a = 1;
+  let b = 2;
+  const addNums = (num1, num2) => num1 + num2;
+  console.log(addNums(a,b));
+  //3
+  </textarea>
+  <p>
+    Arrow function with one statement dont need return.
+  </p>
+  <textarea class="ta1">
+  hello = () => "Hello World!";
+  console.log(hello());
+  //Hello World!
+  </textarea>
+  <p>Arrow function with forEach</p>
+  <textarea class="ta1">
+  let afList = [1, 2, 3]
+  afList.forEach((afList) => console.log(afList));
+  //1
+  //2
+  //3
+  </textarea>
+
+  <h3>Constructor function</h3>
+  <p>
+    Objects of the same type are created by calling the constructor function with the new keyword.<br>
+    Good practice to name constructor functions with an upper-case first letter.<br>
+    It is return function when run individual varibale. (Need to use prototypes)<br>
+    You can not add a new property to an existing object constructor
+  <p>
+  <textarea class="ta4">
+  function Person(id, firstName, lastName){
+      this.id = id;
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.getFullName = function() {
+          return `${this.firstName} ${this.lastName}`;
+      }
+  }
+  const person1 = new Person(1001, "Tom", "Hank");
+  const person2 = new Person(1002, "Jim", "Cook");
+  console.log(person1.id);
+  //1001
+  console.log(person1.getFullName())
+  //Tom Hank
+  </textarea>
+
+  <h3>Prototypes</h3>
+  <p>
+    All JavaScript objects inherit properties and methods from a prototype.<br>
+    Array objects inherit from Array.prototype.<br>
+    The Object.prototype is on the top of the prototype inheritance chain.<br>
+    Prototype property allows you to add new properties to object constructors.
+  </p>
+  <textarea class="ta4">
+  function Person(id, firstName, lastName){
+      this.id = id;
+      this.firstName = firstName;
+      this.lastName = lastName;
+  }
+  Person.prototype.getFullName = function() {
+      return `${this.firstName} ${this.lastName}`;
+  }
+  const person1 = new Person(1001, "Tom", "Hank");
+  const person2 = new Person(1002, "Jim", "Cook");
+  console.log(person1);
+  //Person {id: 1001, firstName: "Tom", lastName: "Hank"}
+  console.log(person1.getFullName())
+  //Tom Hank
+  </textarea>
+
+  <h3>Class Function</h3>
+  <textarea class="ta4">
+  class Person {
+      constructor(id, firstName, lastName){
+          this.id = id;
+          this.firstName = firstName;
+          this.lastName = lastName;
+      }
+      getFullName() {
+          return `${this.firstName} ${this.lastName}`;
+      }
+  }
+  const person1 = new Person(1001, "Tom", "Hank");
+  const person2 = new Person(1002, "Jim", "Cook");
+  console.log(person1);
+  //Person {id: 1001, firstName: "Tom", lastName: "Hank"}
+  console.log(person1.getFullName())
+  //Tom Hank
+  </textarea>
+
+  <h3>Call()</h3>
+  <p>With call(), an object can use a method belonging to another object.</p>
+  <textarea class="ta3">
+  const person = {
+    fullName: function(city, country) {
+      return this.firstName + " " + this.lastName + "," + city + "," + country;
+    }
+  }
+  const person1 = {
+    firstName:"John",
+    lastName: "Doe"
+  }
+  console.log(person.fullName.apply(person1, ["Oslo", "Norway"]))
+  //John Doe,Oslo,Norway
+  </textarea>
+
+  <h3>Apply()</h3>
+  <p>The apply() method is similar to the call() method.</p>
+  <p>The apply() method takes arguments as an array.</p>
+  <textarea class="ta3">
+  const person = {
+    fullName: function(city, country) {
+      return this.firstName + " " + this.lastName + "," + city + "," + country;
+    }
+  }
+  const person1 = {
+    firstName:"John",
+    lastName: "Doe"
+  }
+  console.log(person.fullName.call(person1, "Oslo", "Norway"))
+  </textarea>
+
+  <div id="nav07"></div>
+  <h3>7. LOOP</h3>
+  <h4>For Loop</h4>
+  <p>
+    for (iterator; condition; increment) {action}
+  </p>
+  <textarea class="ta2">
+    for (let i = 0; i < 2; i++){
+      console.log(`Value = ${i}`)
+  }
+  // Value = 0
+  // Value = 1
+  </textarea>
+  <br>
+
+  <h4>For in</h4>
+  <p>for(let item in list) {function;}</p>
+  <textarea class="ta3">
+const itemList = [
+    {
+        id: 1,
+        item: "apple"
+    },
+    {
+        id: 2,
+        item: "banana"
+    }
+];
+for (let i of itemList) {
+    console.log(i.item);
+}
+//apple
+//banana
+  </textarea>
+
+  <h4>While Loop</h4>
+  <p>
+    while (condition){action;, increment;}
+  </p>
+  <textarea class="ta2">
+    let i = 0;
+    while(i < 2){
+      console.log(`value ${i}`);
+      i++;
+    }
+    // value 0
+    // value 1
+  </textarea>
+
+  <h3>Conditions</h3>
+  <p>
+    Conditional statements are used to perform different actions based on different conditions.<br>
+    Use if to specify a block of code to be executed, if a specified condition is true<br>
+    Use else to specify a block of code to be executed, if the same condition is false<br>
+    Use else if to specify a new condition to test, if the first condition is false<br>
+    Use switch to specify many alternative blocks of code to be executed<br>
+  </p>
+
+  <h4>The if Statement</h4>
+  <p>if(condition) {function}</p>
+  <textarea class="ta2">
+  let logInTime = 10;
+  if(logInTime > 5){
+      console.log("Blocked")
+  }
+  //Blocked
+  </textarea>
+  <br>
+  <h4>The if else Statement</h4>
+  <p>if(condition) {function} else {function}</p>
+  <textarea class="ta3">
+  let userID = 1001;
+  let member = [1000, 1001, 1002];
+  if(member.includes(userID)) {
+      console.log("Welcome back");
+  } 
+  else {
+      console.log("Please log in");
+  }
+  // Welcome back
+  </textarea>
+
+  <h4>The if else if else Statement</h4>
+  <p>if(condition) {function} else if() {function} else {function}</p>
+  <textarea class="ta3">
+  let timeNow = new Date().getHours();
+  console.log(timeNow);
+  if(timeNow < 13) {
+      console.log("Good morning")
+  } else if(timeNow < 19) {
+      console.log("Good afternoon")
+  }
+  else {
+      console.log("Good evening")
+  }
+  //7
+  //Good morning
+  </textarea>
+
+  <h3>Switch statement</h3>
+  <p>
+    Use the switch statement to select one of many code blocks to be executed.<br>
+    Switch(expression) { case a: code_block break; case b: code_block break; default: code_block}
+  </p>
+  <textarea class="ta3">
+  let promoCode = "P103";
+  let discount;
+  switch (promoCode) {
+      case "P101":
+          discount = "10% discount";
+          break;
+      case "P102":
+      case "P103":
+          discount = "20% discount";
+          break;
+      default:
+          discount = "No discount";
+  }
+  console.log(discount);
+  //20% discount
+  </textarea>
+
+  <h3>Ternary Operator</h3>
+  <p>
+    A conditional operator that assigns a value to a variable based on some condition.
+  </p>
+  <textarea class="ta3">
+  const age = 0;
+  age = Number(age);
+  if (age || age === 0) {
+      voteable = (age < 18) ? "Too young" : "Old enough";
+  } else {
+      voteable = "Input is not a number";
+  }
+  console.log(voteable)
+  //Too young
+  // (value){} To check value is notnull, undefined, NaN, empty string (""), 0, false
+  </textarea>
+
+
+  <div id="nav08"></div>
+  <h2> 8 Events</h2>
+  <p>
+    HTML events are "things" that happen to HTML elements.<br>
+    When JavaScript is used in HTML pages, JavaScript can "react" on these events.<br>
+    Here are some examples of HTML events:<br>
+    - An HTML web page has finished loading<br>
+    - An HTML input field was changed<br>
+    - An HTML button was clicked<br>
+  </p>
+  <h4>Event</h4>
+  <p>
+    Event handlers can be used to handle, and verify, user input, user actions, and browser actions:<br>
+    page loads<br>
+    page is closed<br>
+    clicks a button<br>
+    inputs data
+    And more ...
+  </p>
+  <h4>Even Methods</h4>
+  <p>
+    HTML event attributes can execute JavaScript code directly<br>
+    HTML event attributes can call JavaScript functions<br>
+    You can assign your own event handler functions to HTML elements<br>
+    You can prevent events from being sent or being handled<br>
+    And more ...
+  </p>
+  <h3>Common HTML Events</h3>
+  <table class="t1">
+    <tr>
+      <th>Event</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>onchange</td>
+      <td>An HTML element has been changed</td>
+    </tr>
+    <tr>
+      <td>onclick</td>
+      <td>The user clicks an HTML element</td>
+    </tr>
+    <tr>
+      <td>onmouseover</td>
+      <td>The user moves the mouse over an HTML element</td>
+    </tr>
+    <tr>
+      <td>onmouseout</td>
+      <td>The user moves the mouse away from an HTML element</td>
+    </tr>
+    <tr>
+      <td>onkeydown</td>
+      <td>The user pushes a keyboard key</td>
+    </tr>
+    <tr>
+      <td>onload</td>
+      <td>The browser has finished loading the page</td>
+    </tr>
+  </table>
+  <br>
+
+  <h3>8.1 onclick event</h3>
+  <button onclick="document.getElementById('0800_01').innerHTML = 'Content changed'">Event: onclick change content</button>
+  <p id="0800_01" style="color:#649d66">Content</p>
+  <textarea>
+    <button onclick="document.getElementById('0800_01').innerHTML = 'Content changed'">Event: onclick change content</button>
+  </textarea>
+  <br>
+
+  <h3>8.2 onclick this</h3>
+  <button onclick="this.innerHTML = 'Element changed'">Event: onclick change element</button>
+  <br><br>
+  <textarea>
+    <button onclick="this.innerHTML = 'Element changed'">Event: onclick change element</button>
+  </textarea>
+  <br>
+
+  <h3>8.3 onmouseover | onmouseout event</h3>
+  <button onmouseover="document.getElementById('0803_01').innerHTML = 'onmouseover'" 
+    onmouseout="document.getElementById('0803_01').innerHTML = 'onmouseout'">
+    Event: onmouseover | onmouseout</button>
+  <p id="0803_01" style="color:#649d66">Content</p>
+  <textarea>
+    <button onmouseover="document.getElementById('0803_01').innerHTML = 'onmouseover'">Event: onmouseover</button>
+  </textarea>
+  <br>
+
+  <h3>8.4 onkeydown event</h3>
+  Press a key inside the text field to set a lightgray background color.<br>
+  <br>
+  <input type="text" id="0804_01" onkeydown="function0804_01()">
+  <br><br>
+  In HTML:
+  <textarea class="ta2">
+    <input type="text" id="0804_01" onkeydown="function0804_01()">
+    <script>
+      function function0804_01() {
+        document.getElementById("0804_01").style.backgroundColor = "lightgray";
+      }
+    </script>
+  </textarea>
+  <br><br>
+
+  <input type="text" id="0804_02">
+  <br><br>
+  In JavaScript:
+  <textarea class="ta2">
+    <input type="text" id="0804_02">
+    <script>
+      document.getElementById("0804_02").onkeydown = function() {function0804_02()};
+      function function0804_02() {
+        document.getElementById("0804_02").style.backgroundColor = "lightgray";
+      }
+    </script>  
+  </textarea>
+  <br>
+
+  <div id="nav09"></div>
+  <h2> 9 DOM</h2>
+  <p>
+    When a web page is loaded, the browser creates a Document Object Model of the page.<br>
+    The HTML DOM model is constructed as a tree of Objects.<br>
+    To change, remove, add, all HTML elements, attributes, sytles, events in the page.<br>
+    Core DOM - standard model for all document types<br>
+    XML DOM - standard model for XML documents<br>
+    HTML DOM - standard model for HTML documents<br>
+    A property is a value that you can get or set<br>
+    A method is an action you can do
+  </p>
+
+  <h4>getElement</h4>
+  <table class="t1">
+    <tr>
+      <th>Methods</th>
+      <th>HTML</th>
+      <th>JS</th>
+      <th>Result</th>
+    </tr>
+    <tr>
+      <td>
+        document.getElementById(id)
+      </td>
+      <td>
+        <code>
+          &lt;p id="p01"&gt; &lt;/p&gt;
+        </code>
+      </td>
+      <td>
+        <code>
+          document.getElementById("p01").innerHTML = "Hello!";
+        </code>
+      </td>
+      <td>
+        Hello!
+      </td>
+    </tr>
+    <tr>
+      <td>
+        document.getElementsByClassName(name)	
+      </td>
+      <td>
+        <code>
+          &lt;p class="book"&gt; &lt;/p&gt;<br>
+        </code>
+      </td>
+      <td>
+        <code>
+          bookElement = document.getElementsByClassName("book");<br>
+          console.log(bookElement);
+        </code>
+      </td>
+      <td>
+        HTMLCollection [p.book]
+      </td>
+    </tr>
+    <tr>
+      <td>
+        document.getElementsByTagName(name)	
+      </td>
+      <td>
+        <code>
+          &lt;h1&gt; Title &lt;/h1&gt;<br>
+        </code>
+      </td>
+      <td>
+        <code>
+          document.getElementsByTagName("H1")[0].innerHTML = "New title";
+        </code>
+      </td>
+      <td>
+        New title
+      </td>
+    </tr>
+    <tr>
+      <td>
+        document.querySelector(#id)	
+      </td>
+      <td>
+        <code>
+          &lt;p id="p01"&gt; Title &lt;/p&gt;<br>
+        </code>
+      </td>
+      <td>
+        <code>
+          document.querySelector("#p01").innerHTML = "New title";
+        </code>
+      </td>
+      <td>
+        New title
+      </td>
+    </tr>
+    <tr>
+      <td>
+        document.querySelector(.class)	
+      </td>
+      <td>
+        <code>
+          &lt;p class="book"&gt; Title &lt;/p&gt;
+        </code>
+      </td>
+      <td>
+        <code>
+          document.querySelector(".book").innerHTML = "New title";
+        </code>
+      </td>
+      <td>
+        New title
+      </td>
+    </tr>
+    <tr>
+      <td>
+        document.querySelector("a[attribute]")	
+      </td>
+      <td>
+        <code>
+          &lt;a href="http://www.disney.com" target="_blank"&gt;disney.com&lt;/a&gt;
+        </code>
+      </td>
+      <td>
+        <code>
+          document.querySelector("a[target]").style.backgroundColor = "lightyellow";
+        </code>
+      </td>
+      <td>
+        <a href="http://www.disney.com" target="_blank" style="background-color:lightyellow;">disney.com</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        document.querySelectorAll("tag")	
+      </td>
+      <td>
+        <code>
+          &lt;p&gt;Content1&lt;/p&gt;<br>
+          &lt;p&gt;Content2&lt;/p&gt;
+        </code>
+      </td>
+      <td>
+        <code>
+          const allP = document.querySelectorAll("p");<br>
+          allP[1].style.backgroundColor = "lightyellow"; 
+        </code>
+      </td>
+      <td>
+        <p>Content1</p>
+        <p style="background-color: lightyellow;">Content2</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        document.querySelectorAll("tag")	
+      </td>
+      <td>
+        <code>
+          &lt;p&gt;Content1&lt;/p&gt;<br>
+          &lt;p&gt;Content2&lt;/p&gt;
+        </code>
+      </td>
+      <td>
+        <code>
+          const allP = document.querySelectorAll("p");<br>
+          for(i = 0; i < allP.length; i++) {<br>
+            allP[i].style.backgroundColor = "lightyellow"; 
+          }
+        </code>
+      </td>
+      <td>
+        <p style="background-color: lightyellow;">Content1</p>
+        <p style="background-color: lightyellow;">Content2</p>
+      </td>
+    </tr>
+  </table>
+
+  <h4>Change property</h4>
+  <table class="t1">
+    <tr>
+      <th>Property</th>
+      <th>HTML</th>
+      <th>JS</th>
+      <th>Result</th>
+    </tr>
+    <tr>
+      <td>
+        element.innerHTML =  new html content
+      </td>
+      <td>
+        <code>
+          &lt;p id="p01"&gt; &lt;/p&gt;
+        </code>
+      </td>
+      <td>
+        <code>
+          document.getElementById("p01").innerHTML = "Hello!";
+        </code>
+      </td>
+      <td>
+        Hello!
+      </td>
+    </tr>
+    <tr>
+      <td>
+        element.attribute.name
+      </td>
+      <td>
+        <code>
+          &lt;p id="p01"&gt;content1&lt;/p&gt;
+        </code>
+      </td>
+      <td>
+        <code>
+          const x = document.getElementById("p01").attributes[0].name;<br>
+          console.log(x)
+        </code>
+      </td>
+      <td>
+        id
+      </td>
+    </tr>
+    <tr>
+      <td>
+        element.attribute.length
+      </td>
+      <td>
+        <code>
+          &lt;p id="p01" class="c01"&gt;content1&lt;/p&gt;
+        </code>
+      </td>
+      <td>
+        <code>
+          const x = document.getElementById("p01").attributes.length;<br>
+          console.log(x)
+        </code>
+      </td>
+      <td>
+        2
+      </td>
+    </tr>
+    <tr>
+      <td>
+        element.style.backgroundColor = "color"
+      </td>
+      <td>
+        <code>
+          &lt;p id="p01"&gt;Content1&lt;/p&gt;
+        </code>
+      </td>
+      <td>
+        <code>
+          const e = document.getElementById("p01");<br>
+          e.style.backgroundColor = "lightyellow"; 
+        </code>
+      </td>
+      <td>
+        <p style="background-color: lightyellow;">Content1</p>
+      </td>
+    </tr>
+  </table>
+
+  <div id="nav11"></div>
+  <h2> 11. Examples </h2>
+  <h3> 11.1 Change HTML Content </h3>
+  <button type="button" onclick='document.getElementById("1101").innerHTML = "new content1"'>new content1</button>
+  <button type="button" onclick='document.getElementById("1101").innerHTML = "new content2"'>new content2</button>
+  <p id="1101" style="color:#649d66"> Content </p>
+  <br>
+
+  <h3> 11.2 Change HTML Attribute Value </h3>
+  <button onclick="document.getElementById('1102').src='https://upload.wikimedia.org/wikipedia/commons/b/b6/Felis_catus-cat_on_snow.jpg'">Image1</button> 
+  <button onclick="document.getElementById('1102').src='https://upload.wikimedia.org/wikipedia/commons/9/9c/Tamaskan_dog.jpg'">Image2</button> 
+  <br><br>
+  <img id="1102" src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Tamaskan_dog.jpg" style="width:100px">
+  <br><br>
+
+  <h3> 11.3 Change HTML Styles </h3>
+  <button onclick="document.getElementById('1103').style.fontSize='35px'">Large font size</button>
+  <button onclick="document.getElementById('1103').style.fontSize='15px'">Small font size</button>
+  <p id="1103" style="color:#649d66"> Content </p>
+  <br>
+
+  <h3> 11.4 Hide HTML Elements </h3>
+  <button onclick="document.getElementById('1104').style.display='none'">Hide element</button>
+  <button onclick="document.getElementById('1104').style.display='block'">Show element</button>
+  <p id="1104" style="color:#649d66"> Content </p>
+  <br>
+
+  <h3> 11.5 Random Number in range </h3>
+  Min Value: <input id="1105_min" type="text" value="0">
+  Max Value: <input id="1105_max" type="text" value="10">
+  <br><br>
+  <button onclick="document.getElementById('1105').innerHTML = function1105()">Get Random Number</button>
+  <p id="1105"style="color:#649d66">Random Number</p>
+  <br>
+
+  <h3>11.6 Random Condition Result</h3>
+  <button onclick="randomMath(); 
+                   document.getElementById('110601').innerHTML=`Plyer1 Score = ${player1}`; 
+                   document.getElementById('110602').innerHTML=`Plyer2 Score = ${player2}`;
+                   document.getElementById('110603').innerHTML=matchResult;">Random Match</button>
+  <p id ="110601"style="color:#649d66">Player1</p>
+  <p id ="110602"style="color:#649d66">Player2</p>
+  <p id ="110603"style="color:#649d66">Result</p>
+
+  <h3>11.7 Greeting</h3>
+  <button onclick="whatTime();
+                   document.getElementById('110701').innerHTML=greeting; 
+                   document.getElementById('110702').innerHTML=`It is ${nowTime}`;">What time is it?</button>
+  <p id ="110701"style="color:#649d66">Greeing</p>
+  <p id ="110702"style="color:#649d66">Time</p>
+
+  <h3>11.8 Get Rewards based on Rank (Stacked)</h3>
+  <button onclick="getReward('bronze');
+                   document.getElementById('110801').innerHTML=`Gold: ${myStock.gold} Item: ${myStock.items}`;">Bronze</button>
+  <button onclick="getReward('silver');
+                   document.getElementById('110801').innerHTML=`Gold: ${myStock.gold} Item: ${myStock.items}`;">Silver</button>
+  <button onclick="getReward('gold');
+                   document.getElementById('110801').innerHTML=`Gold: ${myStock.gold} Item: ${myStock.items}`;">Gold</button>
+  <p id ="110801"style="color:#649d66">My Stock</p>
+
+  <h3>11.9 Calculator</h3>  
+  <div class="calculator">
+    <p style="text-align:center;">JS Calculator</p>
+    <input style="font-size: 20px;text-align:right;" type="text" class="calculator-screen" value="" disabled />
+    <div class="calculator-keys">
+      <table>
+        <tr>
+          <th> <button type="button" class="all-clear" value="all-clear">AC</button> </th>
+        </tr>
+        <tr>
+          <td> <button type="button" class="number" value="7">7</button> </td>
+          <td> <button type="button" class="number" value="8">8</button> </td>
+          <td> <button type="button" class="number" value="9">9</button> </td>
+          <td> <button type="button" class="operator" value="/">&divide;</button> </td>
+        </tr>
+        <tr>
+          <td> <button type="button" class="number" value="4">4</button> </td>
+          <td> <button type="button" class="number" value="5">5</button> </td>
+          <td> <button type="button" class="number" value="6">6</button> </td>
+          <td> <button type="button" class="operator" value="*">&times;</button> </td>
+        </tr>
+        <tr>
+          <td> <button type="button" class="number" value="1">1</button> </td>
+          <td> <button type="button" class="number" value="2">2</button> </td>
+          <td> <button type="button" class="number" value="3">3</button> </td>
+          <td> <button type="button" class="operator" value="-">-</button> </td>
+        </tr>
+        <tr>
+          <td> <button type="button" class="number" value="0">0</button> </td>
+          <td> <button type="button" class="decimal" value=".">.</button> </td>
+          <td> <button type="button" class="equal-sign operator" value="=">=</button> </td>
+          <td> <button type="button" class="operator" value="+">+</button> </td>
+        </tr>
+      </table>  
+    </div>
+  </div>
+
+  <h3> 11.10 Sorting Object Arrays</h3>
+  <button onclick="sortProduct(v1110)">Sort Product</button>
+  <button onclick="sortYear(v1110)">Sort Year</button>
+   <p id="1110" style="color:#649d66"></p>
+
+
+<!-- End of page -->
+
+  <p style="padding:100px"></p>
+  <script src="main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
