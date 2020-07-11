@@ -2,9 +2,9 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="/resources/styles/mainStyles.css">
+        <link rel="stylesheet" href="/contents_resources/styles/mainStyles.css">
         <title>HTML</title>
-        <link rel="icon" type="image/png" href="/resources/icons/logo_html.png">
+        <link rel="icon" type="image/png" href="/contents_resources/icons/logo_html.png">
         <meta name="description" content="HTML coding summary">
         <meta name="keywards" content="HTML, coding, HTML summary">
         <meta name="author" content="Kritdikoon Woraitthinan">
@@ -29,7 +29,7 @@
 
     <body>
          <div class="navbar">
-             <a class="main" href="#navh00"> <img src ="/resources/icons/logo_html.png" width="15"> </a>
+             <a class="main" href="#navh00"> <img src ="/contents_resources/icons/logo_html.png" width="15"> </a>
              <a href="#navh-html">HTML</a>
              <a href="#navh-head">HEAD</a>
              <div class="dropdown">
@@ -72,8 +72,9 @@
 
         <div id = "navh-html_summary"></div>
         <p style="padding:20px"></p>
-        <img src="/resources/icons/logo_html.png" style="float:left;width:30px;"> 
+        <img src="/contents_resources/icons/logo_html.png" style="float:left;width:50px;"> <br>
         <h1>HTML Essentials</h1>
+        <br>
         <p>HTML is the standard markup language for Web pages.</p>
         <p>HTML consists of a series of elements.</p>
         <p>An HTML element is defined by a start tag, some content, and an end tag.</p>
@@ -642,9 +643,9 @@
         <p><a href="about.html" target="_top"> LINK </a></p>
         <p><code>&lt;a href="#html"&gt; LINK &lt;/a&gt;</code> Link to create a Bookmark </p> 
         <p><a href="#html"> LINK </a></p>
-        <p><code>&lt;a href="about.html" target="_blank"&gt; &lt;img src="../resources/icons/click-here.png"&gt; &lt;/a&gt;</code> Image as a Link</p> 
+        <p><code>&lt;a href="about.html" target="_blank"&gt; &lt;img src="/contents_resources/icons/click-here.png"&gt; &lt;/a&gt;</code> Image as a Link</p> 
         <p><a href="about.html" target="_blank"> 
-        <img src="../resources/icons/click-here.png">
+        <img src="/contents_resources/icons/click-here.png">
         </a></p>
         <br>
         <p><code>&lt;button onclick="document.location = 'about.html'"&gt; Button &lt;/button&gt;</code> Button as a Link</p> 
@@ -659,26 +660,26 @@
         <p style="padding:20px"></p>
         <h3>Image</h3>
         <h4>img src</h4>
-        <p><code>&lt;img src="../resources/images/bird.jpg"&gt;</code></p> 
-        <p><img src="../resources/images/bird.jpg"></p>
+        <p><code>&lt;img src="/contents_resources/images/bird.jpg"&gt;</code></p> 
+        <p><img src="/contents_resources/images/bird.jpg"></p>
 
         <h4>alt</h4>
-        <p><code>&lt;img src="../resources/images/bird.jpg" alt="Message when cannot display" &gt;</code></p> 
-        <p><img src="../resources/images/bird.jpg" alt="bird_img"></p>
+        <p><code>&lt;img src="/contents_resources/images/bird.jpg" alt="Message when cannot display" &gt;</code></p> 
+        <p><img src="/contents_resources/images/bird.jpg" alt="bird_img"></p>
 
         <h4>width height</h4>
-        <p><code>&lt;img src="../resources/images/bird.jpg" width="160" height="115" &gt;</code></p> 
-        <p><img src="../resources/images/bird.jpg" width="160" height="115"></p>
+        <p><code>&lt;img src="/contents_resources/images/bird.jpg" width="160" height="115" &gt;</code></p> 
+        <p><img src="/contents_resources/images/bird.jpg" width="160" height="115"></p>
 
         <h4>style="float"</h4>
-        <p><code>&lt;img src="../resources/images/bird.jpg" style="float:left;width:160px;height:115px;" &gt;</code></p> 
-        <p><img src="../resources/images/bird.jpg" style="float:left;width:160px;height:115px;"> Text <br> Text <br> Text </p>
+        <p><code>&lt;img src="/contents_resources/images/bird.jpg" style="float:left;width:160px;height:115px;" &gt;</code></p> 
+        <p><img src="/contents_resources/images/bird.jpg" style="float:left;width:160px;height:115px;"> Text <br> Text <br> Text </p>
         <br><br><br>
 
         <h4>Image Map</h4>
         <p>Create clickable areas on an image.</p>
         <textarea class="ta3">
-        <img src="../resources/images/card.png" usemap="#cardmap">
+        <img src="/contents_resources/images/card.png" usemap="#cardmap">
         <map name="cardmap">
            <area shape="rect" coords="20, 20, 220, 300" alt="jack" title="JACK" href="about.html" target="_blank">
            <area shape="rect" coords="220, 20, 420, 300" alt="jack" title="QUEEN" href="about.html" target="_blank">
@@ -686,7 +687,7 @@
         </map>
         </textarea>        
         <p>
-            <img src="../resources/images/card.png" usemap="#cardmap">
+            <img src="/contents_resources/images/card.png" usemap="#cardmap">
             <map name="cardmap">
                 <area shape="rect" coords="20, 20, 220, 300" alt="jack" title="JACK" href="about.html" target="_blank">
                 <area shape="rect" coords="220, 20, 420, 300" alt="jack" title="QUEEN" href="about.html" target="_blank">
@@ -701,7 +702,7 @@
         <p><code>background-attachment: fixed;</code> To make sure the entire element is always covered.</p>
         <p><code>background-size: cover;</code> image will cover the entire element.</p>
 
-        <div style="background-image: url('../resources/images/bg_box2.jpg');">
+        <div style="background-image: url('/contents_resources/images/bg_box2.jpg');">
             <br>
             You can specify background images<br>
             for any visible HTML element.<br>
@@ -714,29 +715,29 @@
         <p>Tto display different pictures for different devices or screen sizes.</p>
         <textarea class="ta2">
         <picture>
-            <source media="(min-width: 700px)" srcset="../resources/images/screen_desktop.png">
-            <source media="(min-width: 600px)" srcset="../resources/images/screen_laptop.png">
-            <source media="(min-width: 500px)" srcset="../resources/images/screen_phone.png">
-            <img src="../resources/images/screen_phone.png"> 
+            <source media="(min-width: 700px)" srcset="/contents_resources/images/screen_desktop.png">
+            <source media="(min-width: 600px)" srcset="/contents_resources/images/screen_laptop.png">
+            <source media="(min-width: 500px)" srcset="/contents_resources/images/screen_phone.png">
+            <img src="/contents_resources/images/screen_phone.png"> 
         </picture>
         </textarea>
         <picture>
-            <source media="(min-width: 700px)" srcset="../resources/images/screen_desktop.png">
-            <source media="(min-width: 600px)" srcset="../resources/images/screen_laptop.png">
-            <source media="(min-width: 500px)" srcset="../resources/images/screen_phone.png">
-            <img src="../resources/images/screen_phone.png"> <!--browsers that do not support the picture-->
+            <source media="(min-width: 700px)" srcset="/contents_resources/images/screen_desktop.png">
+            <source media="(min-width: 600px)" srcset="/contents_resources/images/screen_laptop.png">
+            <source media="(min-width: 500px)" srcset="/contents_resources/images/screen_phone.png">
+            <img src="/contents_resources/images/screen_phone.png"> <!--browsers that do not support the picture-->
         </picture>
 
         <div id = "navh-medias"></div>
         <p style="padding:20px"></p>
         <h3>Medias</h3>
         <h3>Audio</h3>
-        <p><code>&lt;audio src="../resources/audios/coin.wav" controls&gt; Message when cannot display &lt;/audio&gt;</code></p>
-        <p><audio src="../resources/audios/coin.wav" controls>Error message</audio></p>
+        <p><code>&lt;audio src="/contents_resources/audios/coin.wav" controls&gt; Message when cannot display &lt;/audio&gt;</code></p>
+        <p><audio src="/contents_resources/audios/coin.wav" controls>Error message</audio></p>
 
         <h3>Videos</h3>
-        <p><code>&lt;video src="../resources/videos/globe.mp4" controls&gt; Message when cannot display &lt;/video&gt;</code></p>
-        <p><video src="../resources/videos/globe.mp4" controls>Error message</video></p>
+        <p><code>&lt;video src="/contents_resources/videos/globe.mp4" controls&gt; Message when cannot display &lt;/video&gt;</code></p>
+        <p><video src="/contents_resources/videos/globe.mp4" controls>Error message</video></p>
 
         <div id = "navh-form"></div>
         <p style="padding:20px"></p>
