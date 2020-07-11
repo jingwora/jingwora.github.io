@@ -194,7 +194,6 @@ input, select, textarea {
 			font-weight: 700;
 			letter-spacing: 0.1em;
 			margin: 0 0 2em 0;
-			text-transform: uppercase;
 		}
 
 			a.special:not(.button):before {
@@ -256,7 +255,6 @@ input, select, textarea {
 		font-weight: 700;
 		letter-spacing: 0.1em;
 		margin: 0 0 1em 0;
-		text-transform: uppercase;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -2172,7 +2170,6 @@ input, select, textarea {
 		font-weight: 700;
 		letter-spacing: 0.1em;
 		margin: 0 0 0.7em 0;
-		text-transform: uppercase;
 	}
 
 	input[type="text"],
@@ -2879,7 +2876,6 @@ input, select, textarea {
 		padding: 0 2.25em;
 		text-align: center;
 		text-decoration: none;
-		text-transform: uppercase;
 		white-space: nowrap;
 	}
 
@@ -3112,7 +3108,6 @@ input, select, textarea {
 			line-height: 3em;
 			position: absolute;
 			right: 0.7em;
-			text-transform: uppercase;
 			top: 0.7em;
 		}
 
@@ -3333,7 +3328,6 @@ input, select, textarea {
 					letter-spacing: 0.1em;
 					line-height: 1.85em;
 					padding: 0.75em 0;
-					text-transform: uppercase;
 				}
 
 					#menu .links li a:hover {
@@ -3458,7 +3452,6 @@ input, select, textarea {
 			font-weight: 200;
 			letter-spacing: 0.1em;
 			line-height: 2;
-			text-transform: uppercase;
 		}
 
 		@media screen and (max-width: 1280px) {
@@ -3570,7 +3563,6 @@ input, select, textarea {
 			font-weight: 200;
 			letter-spacing: 0.1em;
 			line-height: 2;
-			text-transform: uppercase;
 		}
 
 	@media screen and (max-width: 1280px) {
