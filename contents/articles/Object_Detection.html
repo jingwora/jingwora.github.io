@@ -2,33 +2,94 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Wrap-up Object Detection" />
+    <meta
+      name="keywards"
+      content="Object Detection, Object Classification, Object Segmentation"
+    />
+    <meta name="author" content="Kritdikoon Woraitthinan" />
+    <title>WRAP-UP: Object Detection</title>
     <link rel="stylesheet" href="/contents_resources/styles/mainStyles.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="/images/J_favicon/favicon.ico"
-    /> 
+    <link rel="icon" type="image/png" href="/images/J_favicon/favicon.ico" />
   </head>
 
   <body>
+    <!-- NAVNIGATION BAR -->
+    <p style="padding: 20px;"></p>
+
+    <div class="navbar">
+      <a class="main" href="#navh00">
+        <img src="/images/J_favicon/favicon.ico" width="15" />
+      </a>
+      <a href="#Object Detection">Object Detection</a>
     </div>
 
+    <!-- CONTENT -->
+
     <h1>
-      <img src="../img/article.svg" width="30" /> WRAP-UP: Image Detection
+      <img src="/contents_resources/icons/wrap-up.png" width="60" />
+      WRAP-UP: <br />
+      Object Detection
     </h1>
-    <p>Summary of Object Detection Tasks.</p>
-   
-    <img src="../img/object_detection_summary.png" width="270" /> 
+    <p>
+      In computer vision, object detection is one of tasks that AI show
+      remarable result. Each object detection task has different models and
+      create different level of output. This is my wrap-up of Object detection
+      tasks.
+    </p>
+    <h2>Image Classification</h2>
+
+    <p>
+      Image Classification detect class from image input and return class with
+      probability.
+    </p>
+
+    <img src="Object_Detection/01_Image Classification.png" width="280" />
+
+    <h3>Models</h3>
+    <p>
+      Xception<br />
+      VGG <br />
+      ResNet<br />
+      MobileNet<br />
+      DenseNet<br />
+    </p>
+    <h3>Model Validation</h3>
+    <p>Confusion Matrix, Accuracy, Precision, Recall, F-measure</p>
+
+    <h2>Image Classification・Localization</h2>
+
+    <p>
+      Image Classification with Localization create wondows to detect class from
+      image input and return class, probability and bounding box.
+    </p>
+
+    <img
+      src="Object_Detection/02_Image_Classification_Localization.png"
+      width="280"
+    />
+
+    <h3>Models</h3>
+    <p>
+      Xception<br />
+      VGG <br />
+      ResNet<br />
+      MobileNet<br />
+      DenseNet<br />
+    </p>
+    <h3>Model Validation</h3>
+    <p>Confusion Matrix, Accuracy, Precision, Recall, F-measure</p>
+
+    <h2>Summary</h2>
+    <img src="./Object_Detection/object_detection_summary.png" width="280" />
 
     <!-- END OF CONTENT -->
 
     <p style="padding: 10px;"></p>
 
-    <hr>
+    <hr />
     <p>&copy; Jingwora All rights reserved.</p>
-    <br>
-
+    <br />
   </body>
 </html>
