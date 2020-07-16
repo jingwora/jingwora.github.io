@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+METHOD:PUBLISH
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+BEGIN:VEVENT
+UID:40815f0fb7bf2f8a2
+DTSTAMP:20200716T021319Z
+DTSTART:20200718T103000Z
+DTEND:20200718T133000Z
+SUMMARY:Microsoft Azure Virtual Training Day: Fundamentals
+LOCATION:การสัมมนาผ่านเว็บ
+DESCRIPTION:Microsoft Azure Virtual Training Day - Fundamentals เรียนรู้พื้นฐานการใช้คลาวด์แพลตฟอร์มบน Microsoft Azure พร้อมรับ voucher สอบ AZ-900 ซึ่งเป็น certificate เกี่ยวกับพื้นฐานการทำงานบนคลาวด์ โดยเปิดโอกาสให้ทีมไอที ผู้ที่เริ่มต้นเรียนรู้ และผู้ที่สนใจเกี่ยวกับคลาวด์ อย่าง Azure Cloud Services อีกทั้ง Container Services และ Storage เพื่อเตรียมความพร้อมสำหรับ Hybrid Cloud\nสำหรับผู้เรียนที่เข้าเรียนครบทั้ง 2 วันจะได้รับ AZ-900 voucher เพื่อทำการสอบแบบออนไลน์หรือติดต่อศูนย์สอบเพื่อขอทำการสอบ
+END:VEVENT
+END:VCALENDAR
