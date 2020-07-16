@@ -19,21 +19,21 @@
     <p style="padding: 20px;"></p>
 
     <div class="navbar">
-      <a class="main" href="#navh00">
+      <a class="main" href="https://jingwora.github.io">
         <img src="/images/J_favicon/favicon.ico" width="15" />
       </a>
-      <a href="#Object Detection">Object Detection</a>
+      <a href="https://jingwora.github.io/contents.html">Contents</a>
     </div>
 
     <!-- CONTENT -->
 
     <h1>
       <img src="/contents_resources/icons/wrap-up.png" width="60" />
-      WRAP-UP: <br />
+      WRAP-UP <br />
       Object Detection
     </h1>
     <p>
-      In computer vision, object detection is one of tasks that AI show
+      In computer vision, object detection is one of tasks that AI shows
       remarable result. Each object detection task has different models and
       create different level of output. This is my wrap-up of Object detection
       tasks.
@@ -45,11 +45,17 @@
     <h2>Image Classification</h2>
 
     <p>
-      Image Classification detect class from image input and return class with
-      probability.
+      Image Classification detect class from overall image input and returns
+      class with probability.
     </p>
 
     <img src="Object_Detection/01_Image Classification.png" />
+    <p>
+      <code>
+        classes = [“dog”, “cat”, “nothing”] <br />
+        prediction = [ 0.8 , 0.1 , 0.15]
+      </code>
+    </p>
 
     <h3>Models</h3>
     <p>
@@ -61,32 +67,138 @@
     </p>
     <h3>Model Validation</h3>
     <p>Confusion Matrix, Accuracy, Precision, Recall, F-measure</p>
+    <hr />
+
+    <!-- Image Classification・Localization -->
 
     <h2>Image Classification・Localization</h2>
 
     <p>
-      Image Classification with Localization create wondows to detect class from
-      image input and return class, probability and bounding box.
+      Image Classification with Localization creates windows to detect class
+      from image input and returns class, probability and bounding box.
     </p>
 
-    <img
-      src="Object_Detection/02_Image_Classification_Localization.png"
-      width="280"
-    />
+    <img src="Object_Detection/02_Image_Classification_Localization.png" />
+    <p>
+      <code>
+        # class label<br />
+        classes = [“dog”]<br />
+        prediction = [ 0.8] <br />
+        # Bounding Box<br />
+        legend = [ “X-Position", "Y-Position", "Length", Height”]<br />
+        prediction = [130, 285, 100, 185]<br />
+      </code>
+    </p>
 
     <h3>Models</h3>
     <p>
-      Xception<br />
-      VGG <br />
-      ResNet<br />
-      MobileNet<br />
-      DenseNet<br />
+      HOG<br />
+      BOF <br />
+      PASCAL VOC<br />
     </p>
     <h3>Model Validation</h3>
-    <p>Confusion Matrix, Accuracy, Precision, Recall, F-measure</p>
+    <p>mAP(mean Average Precision)、IoU(Intersection over Union)</p>
+    <hr />
+
+    <!-- Object Detection -->
+
+    <h2>Object Detection</h2>
+
+    <p>
+      Object Detection creates windows to detect multiple objects and returns
+      those class, probablity and bounding box.
+    </p>
+
+    <img src="Object_Detection/03_Object Detection.png" />
+    <p>
+      <code>
+        # class label<br />
+        classes = [“dog”, “dog”]<br />
+        prediction = [ 0.98, 0.97] <br />
+        # Bounding Box<br />
+        legend = [ “X-Position", "Y-Position", "Length", Height”]<br />
+        prediction = [130, 285, 100, 185], [130, 285, 100, 185] <br />
+      </code>
+    </p>
+
+    <h3>Models</h3>
+    <p>
+      R-CNN <br />
+      Fast R-CNN <br />
+      SSD: Single Shot MultiBox Detector <br />
+      Mask R-CNN <br />
+      YOLO<br />
+    </p>
+    <h3>Model Validation</h3>
+    <p>mAP(mean Average Precision)、IoU(Intersection over Union)</p>
+    <hr />
+
+    <!-- Semantic Segmentation -->
+
+    <h2>Semantic Segmentation</h2>
+
+    <p>
+      Semantic Segmentation detects and provides class at pixel level. Same
+      class is detected as same object.
+    </p>
+
+    <img src="Object_Detection/04_Semantic Segmentation.png" />
+
+    <h3>Models</h3>
+    <p>
+      U-NET <br />
+      MULTISCALE <br />
+      HYBRID CNN-CRF <br />
+    </p>
+    <h3>Model Validation</h3>
+    <p>IoU and per-pixel accuracy</p>
+    <hr />
+
+    <!-- Instant Segmentation -->
+
+    <h2>Instant Segmentation</h2>
+
+    <p>
+      Instant Segmentation detects objects in the image and assigns class at
+      pixel level.
+    </p>
+
+    <img src="Object_Detection/05_Instant Segmentation.png" />
+
+    <h3>Models</h3>
+    <p>
+      Mask R-CNN <br />
+      DeepMask <br />
+      FCIS <br />
+    </p>
+    <h3>Model Validation</h3>
+    <p>Average precision over different IoU thresholds</p>
+    <hr />
+
+    <!-- Panoptic Segmentation -->
+
+    <h2>Panoptic Segmentation</h2>
+
+    <p>
+      Panoptic Segmentation detects objects at pixel level and assigns class for
+      objects and background.
+    </p>
+
+    <img src="Object_Detection/06_Panoptic Segmentation.png" />
+
+    <h3>Models</h3>
+    <p>
+      Panoptic Feature Pyramid Network <br />
+      UPSNet <br />
+    </p>
+    <h3>Model Validation</h3>
+    <p>Panoptic Quality (PQ)</p>
+    <hr />
+
+    <!-- SUMMARY -->
 
     <h2>Summary</h2>
-    <img src="./Object_Detection/object_detection_summary.png" width="180" />
+    <img src="./Object_Detection/object_detection_summary.png" />
 
     <!-- END OF CONTENT -->
 
