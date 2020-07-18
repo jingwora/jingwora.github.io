@@ -272,3 +272,8 @@ strong {
 img {
   max-width: 100%;
 }
+
+/* Video */
+video {
+  max-width: 100%;
+}
