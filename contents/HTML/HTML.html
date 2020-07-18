@@ -52,20 +52,11 @@
                   <a href="#navh-link"> Links</a>
                   <a href="#navh-image"> Images</a>
                   <a href="#navh-medias"> Medias</a>
+                  <a href="#navh-form"> Form</a>
+                  <a href="#navh-btn"> Button</a>
+                  <a href="#navh-semantic"> Semantic Tags</a>
               </div>
           </div>
-          <div class="dropdown">
-            <button class="dropbtn">BODY3 ▾
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="#navh-form"> Form</a>
-                <a href="#navh-btn"> Button</a>
-                <a href="#navh-semantic"> Semantic Tags</a>
-                <a href="#navh039"> xxx</a>
-                <a href="#navh0310"> xxx</a>
-            </div>
-        </div>
      </div>
 
          <!-- CONTENT -->
@@ -73,7 +64,7 @@
         <div id = "navh-html_summary"></div>
         <p style="padding:20px"></p>
         <img src="/contents_resources/icons/logo_html.png" style="width:50px;"> <br>
-        <h1>HTML Essentials</h1>
+        <h1>HTML ESSENCE</h1>
         <br>
         <p>HTML is the standard markup language for Web pages.</p>
         <p>HTML consists of a series of elements.</p>
@@ -679,19 +670,19 @@
         <h4>Image Map</h4>
         <p>Create clickable areas on an image.</p>
         <textarea class="ta3">
-        <img src="/contents_resources/images/card.png" usemap="#cardmap">
+        <img src="/contents_resources/images/card.png" usemap="#cardmap" width="300">
         <map name="cardmap">
-           <area shape="rect" coords="20, 20, 220, 300" alt="jack" title="JACK" href="about.html" target="_blank">
-           <area shape="rect" coords="220, 20, 420, 300" alt="jack" title="QUEEN" href="about.html" target="_blank">
-           <area shape="rect" coords="420, 20, 620, 300" alt="jack" title="KING" href="about.html" target="_blank">
+          <area shape="rect" coords="10, 10, 80, 140" alt="jack" title="JACK" href="about.html" target="_blank">
+          <area shape="rect" coords="80, 10, 190, 140" alt="jack" title="QUEEN" href="about.html" target="_blank">
+          <area shape="rect" coords="190, 10, 290, 140" alt="jack" title="KING" href="about.html" target="_blank">
         </map>
         </textarea>        
         <p>
-            <img src="/contents_resources/images/card.png" usemap="#cardmap">
+            <img src="/contents_resources/images/card.png" usemap="#cardmap" width="300">
             <map name="cardmap">
-                <area shape="rect" coords="20, 20, 220, 300" alt="jack" title="JACK" href="about.html" target="_blank">
-                <area shape="rect" coords="220, 20, 420, 300" alt="jack" title="QUEEN" href="about.html" target="_blank">
-                <area shape="rect" coords="420, 20, 620, 300" alt="jack" title="KING" href="about.html" target="_blank">
+                <area shape="rect" coords="10, 10, 80, 140" alt="jack" title="JACK" href="about.html" target="_blank">
+                <area shape="rect" coords="80, 10, 190, 140" alt="jack" title="QUEEN" href="about.html" target="_blank">
+                <area shape="rect" coords="190, 10, 290, 140" alt="jack" title="KING" href="about.html" target="_blank">
             </map>
         </p>
 
@@ -739,61 +730,133 @@
         <p><code>&lt;video src="/contents_resources/videos/globe.mp4" controls&gt; Message when cannot display &lt;/video&gt;</code></p>
         <p><video src="/contents_resources/videos/globe.mp4" controls>Error message</video></p>
 
+        <!-- Form -->
+
         <div id = "navh-form"></div>
         <p style="padding:20px"></p>
         <h3>Form</h3>
+        <p>
+          <code>
+            &lt;form&gt; <br>
+            &lt;/form&gt;
+          </code>
+        </p>  
 
         <form action="process.php" method="POST">
+          <p>
+            <code>
+              &lt;label&gt;First Name&lt;/label&gt;<br>
+              &lt;input type="text" name="firstName" placeholder="Enter first name"&gt;<br>
+             </code>
+          </p>
           <div>
             <label>First Name</label>
             <input type="text" name="firstName" placeholder="Enter first name">
           </div>
           <br>
+
+          <p>
+            <code>
+              &lt;label&gt;Last Name&lt;/label&gt;<br>
+              &lt;input type="text" name="lastName"&gt;<br>
+             </code>
+          </p>
           <div>
             <label>Last Name</label>
             <input type="text" name="lastName">
           </div>
           <br>
+
+          <p>
+            <code>
+              &lt;label&gt;Email&lt;/label&gt;<br>
+              &lt;input type="email" name="email"&gt;<br>
+             </code>
+          </p>
           <div>
             <label>Email</label>
             <input type="email" name="email">
           </div>
           <br>
+
+          <p>
+            <code>
+              &lt;label&gt;Message&lt;/label&gt;<br>
+              &lt;textarea name="message"&gt; &lt;/textarea&gt;<br>
+             </code>
+          </p>
           <div>
             <label>Message</label>
             <textarea name="message"></textarea>
           </div>
           <br>
+
+          <p>
+            <code>
+              &lt;label&gt;Gender&lt;/label&gt;<br>
+              &lt;select name="gender"&gt;<br>
+              &nbsp; &lt;option value="male"&gt;Male&lt;/option&gt;<br>
+              &nbsp; &lt;option value="female"&gt;Female&lt;/option&gt;<br>
+              &nbsp; &lt;option value="other"&gt;Other&lt;/option&gt;<br>
+              &lt;/select&gt;<br>
+             </code>
+          </p>
           <div>
             <label>Gender</label>
             <select name="gender">
               <option value="male">Male</option>
-              <option value="male">Female</option>
-              <option value="male">Other</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
             </select>
           </div>
           <br>
+
+          <p>
+            <code>
+              &lt;label&gt;Age&lt;/label&gt;<br>
+              &lt;input type="number" name="age" value="30"&gt;<br>
+             </code>
+          </p>
           <div>
             <label>Age</label>
             <input type="number" name="age" value="30">
           </div>
           <br>
+
+          <p>
+            <code>
+              &lt;label&gt;Birthday&lt;/label&gt;<br>
+              &lt;input type="date" name="birthday"&gt;<br>
+             </code>
+          </p>
           <div>
             <label>Birthday</label>
             <input type="date" name="birthday">
           </div>
           <br>
+
+          <p>
+            <code>
+              &lt;input type="submit" name="submit" value="submit"&gt;<br>
+             </code>
+          </p>
           <input type="submit" name="submit" value="submit">
         </form>
 
         <div id = "navh-btn"></div>
         <p style="padding:20px"></p>
+
+
         <h3>Button</h3>
+        <p>
+          <code>&lt;button&gt;	&lt;/button&gt;</code>
+        </p>       
 
         <button>Click Me</button>
 
-        
-        <div id = "navh-block"></div>
+        <!-- Semantic Tags -->
+
+        <div id = "navh-semantic"></div>
         <p style="padding:20px"></p>
         <h3>Semantic Tags</h3>
         <section class="top-block">
@@ -807,14 +870,18 @@
         <section class="content-block">
           <article class="sub">
             <p><code>&lt;article&gt;</code></p>
-            <h3>Title <code>&lt;h3&gt;	&lt;/h3&gt;</code></h3>
-            <p>content <code>&lt;p&gt;	&lt;/p&gt;</code></p>
+            <h3>Title </h3>
+            <code>&lt;h3&gt;	&lt;/h2&gt;</code>
+            <p>content </p>
+            <code>&lt;p&gt;	&lt;/p&gt;</code>
             <p><code>&lt;/article&gt;</code></p>
           </article class="sub">
           <article class="sub">
             <p><code>&lt;article&gt;</code></p>
-            <h3>Title <code>&lt;h3&gt;	&lt;/h2&gt;</code></h3>
-            <p>content <code>&lt;p&gt;	&lt;/p&gt;</code></p>
+            <h3>Title </h3>
+            <code>&lt;h3&gt;	&lt;/h2&gt;</code>
+            <p>content </p>
+            <code>&lt;p&gt;	&lt;/p&gt;</code>
             <p><code>&lt;/article&gt;</code></p>
           </article class="sub">
         </section>
@@ -822,9 +889,12 @@
           <nav>
               <ul>
                 <li><code>&lt;aside&gt;	&lt;ul&gt;</code></li>
-                <li>category 1 <code>&lt;li&gt;	&lt;/li&gt;</code></li>
-                <li>category 2 <code>&lt;li&gt;	&lt;/li&gt;</code></li>
-                <li>category 3 <code>&lt;li&gt;	&lt;/li&gt;</code></li>
+                <li>category 1</li>
+                <code>&lt;li&gt;	&lt;/li&gt;</code>
+                <li>category 2</li>
+                <code>&lt;li&gt;	&lt;/li&gt;</code>
+                <li>category 3 </li>
+                <code>&lt;li&gt;	&lt;/li&gt;</code>
                 <li><code>&lt;/ul&gt;	&lt;/aside&gt;</code></li>
               </ul>
           </nav>
