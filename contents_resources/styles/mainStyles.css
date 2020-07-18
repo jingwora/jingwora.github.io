@@ -277,3 +277,13 @@ img {
 video {
   max-width: 100%;
 }
+
+/* Footer */
+
+footer {
+  padding: 0.5em 1em 5em 1em;
+  display: block;
+  width: 100%;
+  color: gray;
+  font-size: 90%;
+}
