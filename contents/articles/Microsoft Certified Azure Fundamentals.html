@@ -58,6 +58,41 @@
     <h2>Cloud Concepts</h2>
     <p><a href="#TOP">[TOP]</a></p>
 
+    <h3>Azure Fundamentals (AZ-900)</h3>
+    <p>
+      The AZ-900, Microsoft Azure Fundamentals , certification exam is designed
+      for candidates looking to demonstrate foundational level knowledge of
+      cloud services and how those services are provided with Microsoft Azure.
+      The exam is intended for candidates with non-technical backgrounds, such
+      as candidates involved in selling or purchasing cloud-based solutions and
+      services.
+    </p>
+
+    <table class="t1">
+      <tr>
+        <th>AZ-900 Study Areas</th>
+        <th>Weights</th>
+      </tr>
+      <tr>
+        <td>Understand cloud concepts</td>
+        <td>15-20%</td>
+      </tr>
+      <tr>
+        <td>Understand core Azure services</td>
+        <td>30-35%</td>
+      </tr>
+      <tr>
+        <td>Understand security, privacy, compliance, and trust</td>
+        <td>25-30%</td>
+      </tr>
+      <tr>
+        <td>
+          Understand Azure pricing, service level agreements, and lifecycle
+        </td>
+        <td>20-25%</td>
+      </tr>
+    </table>
+
     <h3>Cloud Computing</h3>
 
     <p>
@@ -654,41 +689,6 @@
       governments, and startups.
     </p>
 
-    <h3>Azure Fundamentals (AZ-900)</h3>
-    <p>
-      The AZ-900, Microsoft Azure Fundamentals , certification exam is designed
-      for candidates looking to demonstrate foundational level knowledge of
-      cloud services and how those services are provided with Microsoft Azure.
-      The exam is intended for candidates with non-technical backgrounds, such
-      as candidates involved in selling or purchasing cloud-based solutions and
-      services.
-    </p>
-
-    <table class="t1">
-      <tr>
-        <th>AZ-900 Study Areas</th>
-        <th>Weights</th>
-      </tr>
-      <tr>
-        <td>Understand cloud concepts</td>
-        <td>15-20%</td>
-      </tr>
-      <tr>
-        <td>Understand core Azure services</td>
-        <td>30-35%</td>
-      </tr>
-      <tr>
-        <td>Understand security, privacy, compliance, and trust</td>
-        <td>25-30%</td>
-      </tr>
-      <tr>
-        <td>
-          Understand Azure pricing, service level agreements, and lifecycle
-        </td>
-        <td>20-25%</td>
-      </tr>
-    </table>
-
     <h3>Create an Azure account</h3>
     <p>
       You can purchase Azure access directly from Microsoft by signing up on the
@@ -993,7 +993,9 @@
       </li>
     </ul>
 
-    <h3>Compute power</h3>
+    <hr />
+
+    <h2>Compute power</h2>
     <p>
       Cloud-based servers that are processing each request and returning a
       response.
@@ -1119,6 +1121,14 @@
       >
     </p>
 
+    <p>
+      <a
+        href="https://docs.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree"
+        target="_blank"
+        >&#127760; Overview of Azure compute options
+      </a>
+    </p>
+
     <h3>Serverless computing</h3>
     <p>
       Serverless computing lets you run application code without creating,
@@ -1137,7 +1147,9 @@
       />
     </a>
 
-    <h3>Storage</h3>
+    <hr />
+
+    <h2>Storage</h2>
     <p>
       Cloud providers typically offer storage services that can handle all of
       these types of data.The advantage to using cloud-based data storage is you
@@ -1145,7 +1157,226 @@
       and contract automatically.
     </p>
 
-    <h3>Azure network services</h3>
+    <h3>Azure data categories</h3>
+    <p>
+      You can generally think of data as structured, semi-structured, and
+    </p>
+
+    <p>
+      <b>Structured data </b>
+      <br />
+      Structured data is also known as relational data. The data's schema
+      defines the table of data, the fields in the table, and the clear
+      relationship between the two. Structured data can be stored in a database
+      table with rows and columns. Structured data is easy to enter, query, and
+      analyze because all the data follows the same format.
+      <br /><b>Examples</b> of structured data include sensor data or financial
+      data.
+    </p>
+
+    <p>
+      <b>Structured data </b>
+      <br />
+      Semi-structured data is also known as non-relational or NoSQL data.
+      Semi-structured data is less organized than structured data.
+      Semi-structured data is not stored in a relational format, meaning the
+      fields do not neatly fit into tables, rows, and columns. Semi-structured
+      data contains tags that make the organization and hierarchy of the data
+      apparent.
+      <br />
+      <b>Examples</b> of semi-structured data include books, blogs, and HTML
+      documents.
+    </p>
+
+    <p>
+      <b>Unstructured data </b>
+      <br />
+      Unstructured data has no designated structure. Unstructured data can hold
+      any kind of data. Unstructured data is becoming more prominent as
+      businesses try to tap into new data sources.
+
+      <br />
+      <b>Examples</b> Examples of unstructured data include a PDF document, a
+      JPG image, a JSON file, and video content.
+    </p>
+
+    <h2>Azure Storage</h2>
+    <p>
+      Azure Storage is a service that you can use to store files, messages,
+      tables, and other types of information. Azure Storage is also used by IaaS
+      virtual machines, and PaaS cloud services. Some of the most common storage
+      service types in Azure are disks, files, objects, queues, and tables.
+    </p>
+
+    <h3>Disk storage</h3>
+    <p>
+      Disk storage provides disks for virtual machines, applications, and other
+      services to access and use as they need, similar to how they would in
+      on-premises scenarios. Disks come in many different sizes and performance
+      levels, from solid-state drives (SSDs) to traditional spinning hard disk
+      drives (HDDs), with varying performance abilities.
+    </p>
+
+    <h3>Containers (Blobs)</h3>
+    <p>
+      Azure Blob storage is Microsoft's object storage solution for the cloud.
+      Blob storage is optimized for storing massive amounts of unstructured
+      data, such as text or binary data.
+    </p>
+    <p>Blob storage is ideal for:</p>
+    <ul>
+      <li>Serving images or documents directly to a browser.</li>
+      <li>Storing files for distributed access.</li>
+      <li>Streaming video and audio.</li>
+      <li>
+        Storing data for backup and restore, disaster recovery, and archiving.
+      </li>
+      <li>
+        Storing data for analysis by an on-premises or Azure-hosted service.
+      </li>
+    </ul>
+
+    <h3>Files</h3>
+    <p>
+      Azure Files enables you to set up highly available network file shares
+      that can be accessed by using the standard Server Message Block (SMB)
+      protocol. That means that multiple VMs can share the same files with both
+      read and write access. You can also read the files using the REST
+      interface or the storage client libraries.
+    </p>
+    <p>
+      One thing that distinguishes Azure Files from files on a corporate file
+      share is that you can access the files from anywhere in the world using a
+      URL that points to the file and includes a shared access signature (SAS)
+      token.
+    </p>
+    <p>File shares can be used for many common scenarios:</p>
+    <ul>
+      <li>
+        Many on-premises applications use file shares. This feature makes it
+        easier to migrate those applications that share data to Azure.
+      </li>
+      <li>
+        Configuration files can be stored on a file share and accessed from
+        multiple VMs. Tools and utilities used by multiple developers in a group
+        can be stored on a file share, ensuring that everybody can find them,
+        and that they use the same version.
+      </li>
+      <li>
+        Diagnostic logs, metrics, and crash dumps are just three examples of
+        data that can be written to a file share and processed or analyzed
+        later.
+      </li>
+    </ul>
+
+    <h3>Queues</h3>
+    <p>
+      The Azure Queue service is used to store and retrieve messages. Queue
+      messages can be up to 64 KB in size, and a queue can contain millions of
+      messages. Queues are generally used to store lists of messages to be
+      processed asynchronously.
+    </p>
+    <p>
+      For example, say you want your customers to be able to upload pictures,
+      and you want to create thumbnails for each picture. When the customer
+      finishes their upload, write a message to the queue. Then have an Azure
+      Function retrieve the message from the queue and create the thumbnails.
+    </p>
+
+    <h3>Tables</h3>
+    <p>
+      Azure Table storage stores large amounts of structured data. The service
+      is a NoSQL datastore which accepts authenticated calls from inside and
+      outside the Azure cloud. Azure tables are ideal for storing structured,
+      non-relational data. Common uses of Table storage include:
+    </p>
+    <p>Common uses of Table storage include:</p>
+    <ul>
+      <li>
+        Storing TBs of structured data capable of serving web scale
+        applications.
+      </li>
+      <li>
+        Storing datasets that don't require complex joins, foreign keys, or
+        stored procedures and can be denormalized for fast access.
+      </li>
+      <li>Quickly querying data using a clustered index.</li>
+    </ul>
+
+    <p>
+      Walkthrough - Create blob storage
+      <br />
+      <a
+        href="https://docs.microsoft.com/en-us/learn/modules/define-core-azure-services-products/11-walkthrough-create-blob-storage"
+        target="_blank"
+        >Link</a
+      >
+    </p>
+    <hr />
+
+    <h2>Azure Database Services</h2>
+    <p>
+      Azure database services are fully managed PaaS database services.
+      Developers can take advantage of industry-leading innovations such as
+      built-in security with automatic monitoring and threat detection,
+      automatic tuning for improved performance, and turnkey global
+      distribution.
+    </p>
+    <p>Some of the most common data service types in Azure as follows:</p>
+
+    <h3>Azure Cosmos DB</h3>
+    <p>
+      Microsoft Azure Cosmos DB is a globally distributed database service that
+      enables you to elastically and independently scale throughput and storage
+      across any number of Azure's geographic regions. It supports schema-less
+      data that lets you build highly responsive and Always On applications to
+      support constantly changing data. You can use Cosmos DB to store data that
+      is updated and maintained by users around the world. It makes it easy to
+      build scalable, highly responsive applications at global scale.
+    </p>
+
+    <h3>Azure SQL Database</h3>
+    <p>
+      Azure SQL Database is a relational database as a service (DaaS) based on
+      the latest stable version of Microsoft SQL Server database engine.
+    </p>
+
+    <h3>Azure Database Migration</h3>
+    <p>
+      The Azure Database Migration Service is a fully managed service designed
+      to enable seamless migrations from multiple database sources to Azure data
+      platforms with minimal downtime (online migrations). The service uses the
+      Microsoft Data Migration Assistant to generate assessment reports that
+      provide recommendations to help guide you through required changes prior
+      to performing a migration. Once you assess and perform any remediation
+      required, you're ready to begin the migration process.
+    </p>
+
+    <p>
+      Walkthrough - Create a SQL database
+      <br />
+      <a
+        href="https://docs.microsoft.com/en-us/learn/modules/define-core-azure-services-products/13-walkthrough-create-sql-database"
+        target="_blank"
+        >Link</a
+      >
+    </p>
+    <hr />
+
+    <h2>Azure Marketplace</h2>
+    <p>
+      Azure Marketplace is a service on Azure that helps connect end users with
+      Microsoft partners, independent software vendors (ISVs), and start-ups
+      that are offering their solutions and services, which are optimized to run
+      on Azure. Azure Marketplace allows customers—mostly IT professionals and
+      cloud developers—to find, try, purchase, and provision applications and
+      services from hundreds of leading service providers, all certified to run
+      on Azure.
+    </p>
+
+    <hr />
+
+    <h2>Azure network services</h2>
     <p>
       Azure networking components offer a range of functionality and services
       that can help organizations design and build cloud infrastructure services
@@ -1163,6 +1394,16 @@
       resources, routing and filtering of network traffic.
     </p>
 
+    <p>
+      Walkthrough - Create a virtual network
+      <br />
+      <a
+        href="https://docs.microsoft.com/en-us/learn/modules/define-core-azure-services-products/8-walkthrough-create-virtual-network"
+        target="_blank"
+        >Link</a
+      >
+    </p>
+
     <h3>Azure Load Balancer</h3>
     <p>
       Azure Load Balancer can provide scale for your applications and create
@@ -1176,6 +1417,31 @@
     </p>
 
     <h3>Virtual Private Network (VPN) gateway</h3>
+    <p>
+      A VPN gateway is a specific type of virtual network gateway that is used
+      to send encrypted traffic between an Azure Virtual Network and an
+      on-premises location over the public internet. It provides a more secure
+      connection from on-premises to Azure over the internet.
+    </p>
+
+    <h3>Azure Application Gateway</h3>
+    <p>
+      Azure Application Gateway is a web traffic load balancer that enables you
+      to manage traffic to your web applications. It is the connection through
+      which users connect to your application. With Application Gateway you can
+      route traffic based on source IP address and port to a destination IP
+      address and port.
+    </p>
+
+    <h3>Content Delivery Network</h3>
+    <p>
+      A Content Delivery Network (CDN) is a distributed network of servers that
+      can efficiently deliver web content to users. It is a way to get content
+      to users in their local region to minimize latency. CDN can be hosted in
+      Azure or any other location. You can cache content at strategically placed
+      physical nodes across the world and provide better performance to end
+      users.
+    </p>
 
     <hr />
     <!-- Security, Privary, Compliance, and trust -->
@@ -1251,7 +1517,7 @@
       </a>
     </p>
 
-    <div style="padding-top: 10em;"></div>
+    <div style="padding-top: 1em;"></div>
 
     <!-- Ending of Content -->
     <hr />
