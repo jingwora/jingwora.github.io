@@ -188,6 +188,7 @@
     >
       <img
         src="./Microsoft Certified Azure Fundamentals/3-c-capex-versus-opex.png"
+        width="800px"
       />
     </a>
 
@@ -414,6 +415,7 @@
     >
       <img
         src="./Microsoft Certified Azure Fundamentals/shared-responsibility.png"
+        width="700px"
       />
     </a>
     <ul>
@@ -721,6 +723,250 @@
 
     <hr />
 
+    <h3>Core Azure architectural components</h3>
+
+    <h3>Regions</h3>
+    <p>
+      A region is a geographical area on the planet containing at least one, but
+      potentially multiple datacenters that are in close proximity and networked
+      together with a low-latency network. A few examples of regions are West
+      US, Canada Central, West Europe, Australia East, and Japan West. At the
+      time of writing this, Azure is generally available in 55 regions and
+      available in 140 countries.
+    </p>
+    <ul>
+      <li>Azure has more global regions than any other cloud provider.</li>
+      <li>
+        Regions provide customers the flexibility and scale needed to bring
+        applications closer to their users.
+      </li>
+      <li>
+        Regions preserve data residency and offer comprehensive compliance and
+        resiliency options for customers.
+      </li>
+    </ul>
+    <p><b>Special Azure regions </b></p>
+    <ul>
+      <li>
+        US DoD Central, US Gov Virginia, US Gov Iowa and more: These are
+        physical and logical network-isolated instances of Azure for US
+        government agencies and partners.
+      </li>
+      <li>
+        China East, China North and more: These regions are available through a
+        unique partnership between Microsoft and 21Vianet, whereby Microsoft
+        does not directly maintain the datacenters.
+      </li>
+    </ul>
+
+    <h3>Region Pairs</h3>
+    <p>
+      Each Azure region is paired with another region within the same geography
+      (such as US, Europe, or Asia) at least 300 miles away, which together make
+      a region pair.
+    </p>
+    <a href="./Microsoft Certified Azure Fundamentals/regional-pairs.png">
+      <img
+        src="./Microsoft Certified Azure Fundamentals/regional-pairs.png"
+        width="400px"
+      />
+    </a>
+    <p><b>Benefits</b></p>
+    <ul>
+      <li>
+        Physical isolation - Physical datacenter separation reduces the
+        likelihood of natural disasters, civil unrest, power outages, or
+        physical network outages affecting both regions at once.
+      </li>
+      <li>Platform-provided replication</li>
+      <li>Region recovery order</li>
+      <li>Sequential updates</li>
+      <li></li>
+      <li>Planned Azure updates</li>
+      <li>Tax and law enforcement jurisdiction purposes</li>
+    </ul>
+
+    <h3>Geographies</h3>
+    <p>
+      Azure divides the world into geographies that are defined by geopolitical
+      boundaries or country borders. An Azure geography is a discrete market
+      typically containing two or more regions that preserves data residency and
+      compliance boundaries.
+    </p>
+
+    <p><b>Benefits</b></p>
+    <ul>
+      <li>
+        Geographies allow customers with specific data residency and compliance
+        needs to keep their data and applications close.
+      </li>
+      <li>
+        Geographies ensure that data residency, sovereignty, compliance, and
+        resiliency requirements are honored within geographical boundaries.
+      </li>
+      <li>
+        Geographies are fault-tolerant to withstand complete region failure
+        through their connection to dedicated high-capacity networking
+        infrastructure.
+      </li>
+    </ul>
+
+    <p>Geographies are broken up into the following areas:</p>
+    <ul>
+      <li>Americas</li>
+      <li>Europe</li>
+      <li>Asia Pacific</li>
+      <li>Middle East and Africa</li>
+    </ul>
+    <hr />
+
+    <h3>Availability Options</h3>
+
+    <a href="./Microsoft Certified Azure Fundamentals/availability-options.png">
+      <img
+        src="./Microsoft Certified Azure Fundamentals/availability-options.png"
+      />
+    </a>
+    <ul>
+      <li>
+        A single virtual machine with premium storage has an SLA of 99.9%.
+      </li>
+      <li>
+        By placing virtual machines in an availability set, you protect against
+        datacenter failures and increases the SLA to 99.95%.
+      </li>
+      <li>
+        Adding virtual machines to availability zones protects from entire
+        datacenter failures and increases the SLA to 99.99%, which is highest
+        level of protection that is provided.
+      </li>
+      <li>
+        For multi-region disaster recovery, region pairs protect and provide
+        data residency boundaries.
+      </li>
+    </ul>
+
+    <h3>Availability sets</h3>
+    <p>
+      Availability sets are a way for you to ensure your application remains
+      online if a high-impact maintenance event is required, or if a hardware
+      failure occurs.
+    </p>
+    <p>
+      Availability sets are made up of Update domains (UD) and Fault domains
+      (FD).
+      <br />
+      <b>Update domains</b> - When a maintenance event occurs.
+      <br />
+      <b>Fault domains</b>
+      provide for the physical separation of your workload across different
+      hardware in the datacenter.
+    </p>
+    <h3>Availability Zones</h3>
+    <p>
+      Availability zones are physically separate locations within an Azure
+      region that use availability sets to provide additional fault tolerance.
+      The availability zones are typically connected to each other through very
+      fast, private fiber-optic networks.
+    </p>
+    <p>
+      You can co-locating your compute, storage, networking, and data resources
+      within a zone and replicating in other zones.
+      <br />
+      Zonal services – you pin the resource to a specific zone
+      <br />
+      Zone-redundant services – platform replicates automatically across zones
+    </p>
+
+    <hr />
+    <h3>Resource groups</h3>
+    <p>
+      A resource group is a unit of management for your resources in Azure. You
+      can manage and apply the following resources at resource group level:
+    </p>
+    <ul>
+      <li><Metering and billing /li></li>
+      <li>Policies</li>
+      <li>Monitoring and alerts</li>
+      <li>Quotas</li>
+      <li>Access control</li>
+    </ul>
+    <p>
+      Remember that when you delete a resource group you delete all resources
+      contained within it.
+    </p>
+
+    <p><b>Considerations </b></p>
+    <ul>
+      <li>Each resource must exist in one, and only one, resource group.</li>
+      <li>
+        A resource group can contain resources that reside in different regions.
+      </li>
+      <li>You can add or remove a resource to a resource group at any time.</li>
+      <li>You can move a resource from one resource group to another.</li>
+      <li>
+        It is recommended that you keep an application in the same resource
+        group for ease of management.
+      </li>
+      <li></li>
+    </ul>
+
+    <p><b>Logical grouping </b></p>
+    <p>
+      By placing resources of similar usage, type, or location, you can provide
+      some order and organization to resources you create in Azure.
+    </p>
+
+    <p><b>Life cycle </b></p>
+    <p>
+      Resource groups make it easy to remove a set of resources at once which
+      can be useful in non-production environments.
+    </p>
+
+    <p><b>Authorization </b></p>
+    <p>
+      Resource groups are also a scope for applying role-based access control
+      (RBAC) permissions.
+    </p>
+
+    <p><b>Create a resource group </b></p>
+    <ul>
+      <li>Azure portal</li>
+      <li>Azure PowerShell</li>
+      <li>Azure CLI</li>
+      <li>Templates</li>
+      <li>Azure SDKs (like .NET, Java)</li>
+    </ul>
+
+    <h3>Guidelines</h3>
+    <p>Consistent naming convention</p>
+    <p>Resource groups can be organized in a number of ways.</p>
+    <ul>
+      <li>By resource type - vnet-rg, vm-rg, db-rg</li>
+      <li>By environment - dev-rg, prod-rg, qa-rg</li>
+      <li>By department - finance-rg, marketing-rg, hr-rg</li>
+      <li>
+        Combination of these strategies and organize by environment and
+        department - prod-finance-rg, dev-finance-rg
+      </li>
+    </ul>
+
+    <h3>Azure Resource Manager</h3>
+    <p>
+      Azure Resource Manager is a management layer in which resource groups and
+      all the resources within it are created, configured, managed, and deleted.
+    </p>
+    <ul>
+      <li>
+        Deploy Application resources
+      </li>
+      <li>
+        Organize resources
+      </li>
+      <li>Control access and resources</li>
+    </ul>
+    <hr />
+
     <!-- Core Azure Service -->
 
     <div id="navh02"></div>
@@ -728,7 +974,12 @@
     <h2>Core Azure services</h2>
     <p><a href="#TOP">[TOP]</a></p>
 
-    <p>Typically, cloud services include:</p>
+    <p>
+      <b>Azure compute</b> is an on-demand computing service for running
+      cloud-based applications. It provides computing resources such as disks,
+      processors, memory, networking and operating systems.Typically, cloud
+      services include:
+    </p>
 
     <ul>
       <li><b>Compute power</b> - such as Linux servers or web applications.</li>
@@ -747,37 +998,137 @@
       Cloud-based servers that are processing each request and returning a
       response.
     </p>
+
+    <h3>Virtual machine (VM)</h3>
+    <p>
+      A VM is an emulation of a computer - just like your desktop or laptop
+      you're using now. Each VM includes an operating system and hardware that
+      appears to the user like a physical computer running Windows or Linux. You
+      can then install whatever software you need to do the tasks you want to
+      run in the cloud.
+    </p>
+    <p>
+      Azure supports a wide range of computing solutions for development and
+      testing, running applications, and extending your datacenter, including
+      Linux, Windows Server, Microsoft SQL Server, Oracle, IBM, and SAP.
+    </p>
+    <p>
+      <b>Virtual machine scale sets </b>
+      <br />
+      Virtual machine scale sets are an Azure compute resource that you can use
+      to deploy and manage a set of identical VMs to support true autoscale and
+      containerized workloads.
+    </p>
+
+    <p>
+      <b>App services </b>
+      <br />
+      With App services , you can quickly build, deploy, and scale
+      enterprise-grade web, mobile, and API apps running on any platform. App
+      Services is a platform as a service (PaaS) offering.
+    </p>
+
+    <p>
+      <b>Azure Functions </b>
+      <br />
+      Azure Functions are ideal when you're concerned only about the code
+      running your service and not the underlying platform or infrastructure.
+    </p>
+
+    <p>
+      Walkthrough - Create a virtual machine
+      <br />
+      <a
+        href="https://docs.microsoft.com/en-us/learn/modules/define-core-azure-services-products/4-walkthrough-create-virtual-machine"
+        target="_blank"
+        >Link</a
+      >
+    </p>
+
+    <h3>Container services</h3>
+    <p>
+      Containers provide a consistent, isolated execution environment for
+      applications. They're similar to VMs except they don't require a guest
+      operating system. Instead, the application and all its dependencies is
+      packaged into a "container" and then a standard runtime environment is
+      used to execute the app. The open-source project, Docker, is one of the
+      leading platforms for managing containers. VM virtualises machine,
+      container virtualises OS.
+    </p>
+    <p>
+      There are two ways to manage both Docker and Microsoft-based containers in
+      Azure.
+    </p>
     <ul>
       <li>
-        <b>Virtual machine (VM)</b>
-        <br />
-        A VM is an emulation of a computer - just like your desktop or laptop
-        you're using now. Each VM includes an operating system and hardware that
-        appears to the user like a physical computer running Windows or Linux.
-        You can then install whatever software you need to do the tasks you want
-        to run in the cloud.
+        <b>Azure Container Instances</b> offers the fastest and simplest way to
+        run a container in Azure without having to manage any virtual machines
+        or adopt any additional services. It is a PaaS offering that allows you
+        to upload your containers, which it will run for you.
       </li>
       <li>
-        <b>Containers</b>
-        <br />
-        Containers provide a consistent, isolated execution environment for
-        applications. They're similar to VMs except they don't require a guest
-        operating system. Instead, the application and all its dependencies is
-        packaged into a "container" and then a standard runtime environment is
-        used to execute the app. The open-source project, Docker, is one of the
-        leading platforms for managing containers.
-      </li>
-      <li>
-        <b>Serverless computing</b>
-        <br />
-        Serverless computing lets you run application code without creating,
-        configuring, or maintaining a server. The core idea is that your
-        application is broken into separate functions that run when triggered by
-        some action. This is ideal for automated tasks - for example, you can
-        build a serverless process that automatically sends an email
-        confirmation after a customer makes an online purchase.
+        <b>Azure Kubernetes Service (AKS)</b> is a complete orchestration
+        service for containers with distributed architectures and large volumes
+        of containers. Orchestration is the task of automating and managing a
+        large number of containers and how they interact.
       </li>
     </ul>
+
+    <h3>Microservice architecture</h3>
+    <p>
+      This architecture is where you break solutions into smaller, independent
+      pieces. For example, you may split a website into a container hosting your
+      front end, another hosting your back end, and a third for storage. This
+      split allows you to separate portions of your app into logical sections
+      that can be maintained, scaled, or updated independently.
+    </p>
+
+    <h3>Migrate apps to containers</h3>
+
+    <a
+      href="./Microsoft Certified Azure Fundamentals/4-kubernetes-migration.png"
+    >
+      <img
+        src="./Microsoft Certified Azure Fundamentals/4-kubernetes-migration.png"
+      />
+    </a>
+    <ul>
+      <li>
+        You convert an existing application to one or more containers and then
+        publish one or more container images to the Azure Container Registry.
+      </li>
+      <li>
+        By using the Azure portal or the command line, you deploy the containers
+        to an AKS cluster.
+      </li>
+      <li>Azure AD controls access to AKS resources.</li>
+      <li>
+        You access SLA-backed Azure services, such as Azure Database for MySQL,
+        via OSBA.
+      </li>
+      <li>Optionally, AKS is deployed with a virtual network.</li>
+    </ul>
+
+    <p>
+      Walkthrough - Deploy Azure Container Instances
+      <br />
+      <a
+        href="https://docs.microsoft.com/en-us/learn/modules/define-core-azure-services-products/6-walkthrough-deploy-azure-container-instances"
+        target="_blank"
+        >Link</a
+      >
+    </p>
+
+    <h3>Serverless computing</h3>
+    <p>
+      Serverless computing lets you run application code without creating,
+      configuring, or maintaining a server. The core idea is that your
+      application is broken into separate functions that run when triggered by
+      some action. This is ideal for automated tasks - for example, you can
+      build a serverless process that automatically sends an email confirmation
+      after a customer makes an online purchase.
+    </p>
+
     <a
       href="./Microsoft Certified Azure Fundamentals/2-virtual-machine-versus-container-versus-serverless.png"
     >
@@ -793,8 +1144,40 @@
       can scale to meet your needs. In some cases, the storage can even expand
       and contract automatically.
     </p>
-    <hr />
 
+    <h3>Azure network services</h3>
+    <p>
+      Azure networking components offer a range of functionality and services
+      that can help organizations design and build cloud infrastructure services
+      that meet their requirements.
+    </p>
+
+    <h3>Azure Virtual Network</h3>
+    <p>
+      Azure Virtual Network enables many types of Azure resources such as Azure
+      VMs to securely communicate with each other, the internet, and on-premises
+      networks. A virtual network is scoped to a single region; however,
+      multiple virtual networks from different regions can be connected using
+      virtual network peering. With Azure Virtual Network you can provide
+      isolation, segmentation, communication with on-premises and cloud
+      resources, routing and filtering of network traffic.
+    </p>
+
+    <h3>Azure Load Balancer</h3>
+    <p>
+      Azure Load Balancer can provide scale for your applications and create
+      high availability for your services. Load Balancer supports inbound and
+      outbound scenarios, provides low latency and high throughput, and scales
+      up to millions of flows for all Transmission Control Protocol (TCP) and
+      User Datagram Protocol (UDP) applications. You can use Load Balancer with
+      incoming internet traffic, internal traffic across Azure services, port
+      forwarding for specific traffic, or outbound connectivity for VMs in your
+      virtual network.
+    </p>
+
+    <h3>Virtual Private Network (VPN) gateway</h3>
+
+    <hr />
     <!-- Security, Privary, Compliance, and trust -->
 
     <div id="navh03"></div>
@@ -830,6 +1213,13 @@
         href="./Microsoft Certified Azure Fundamentals/Microsoft Azure Virtual Training Day Fundamentals Day1.pdf"
         target="_blank"
         >&#128229; Microsoft Azure Virtual Training Day Fundamentals Day1.pdf</a
+      >
+    </p>
+    <p>
+      <a
+        href="./Microsoft Certified Azure Fundamentals/Microsoft Azure Virtual Training Day Fundamentals Day2.pdf"
+        target="_blank"
+        >&#128229; Microsoft Azure Virtual Training Day Fundamentals Day2.pdf</a
       >
     </p>
     <p>
