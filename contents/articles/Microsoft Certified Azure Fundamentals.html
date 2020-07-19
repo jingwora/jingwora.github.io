@@ -70,84 +70,226 @@
       <br />
       The company providing these services is referred to as a cloud provider.
       Some example providers are Microsoft Azure, Amazon Web Services (AWS), and
-      the Google Cloud Platform (GCP). Typically, cloud services include:
+      the Google Cloud Platform (GCP).
+    </p>
+
+    <h3>Key cloud concepts</h3>
+    <p>
+      Cloud services have characteristics and considerations, some of which are
+      outlined and explained below:
     </p>
     <ul>
-      <li><b>Compute power</b> - such as Linux servers or web applications.</li>
-      <li><b>Storage</b> - such as files and databases.</li>
       <li>
-        <b>Networking</b> - such as secure connections between the cloud
-        provider and your company.
+        <b>High availability</b> - The ability to keep services up and running
+        for long periods of time, with very little downtime.
       </li>
       <li>
-        <b>Analytics</b> - such as visualizing telemetry and performance data.
+        <b>Scalability</b> - The ability to increase or decrease resources for
+        any given workload.
+        <br />
+        <b>Scaling out</b> - To add additional resources to service a workload
+        <br />
+        <b>Scaling up</b> - To add additional capabilities to manage an increase
+        in demand to the existing resource. A distinction between scalability
+        and elasticity is that elasticity is done automatically.
+      </li>
+      <li>
+        <b>Elasticity</b> - The ability to automatically or dynamically increase
+        or decrease resources as needed.
+      </li>
+      <li>
+        <b>Agility</b> - The ability to react quickly. Cloud services can
+        allocate and deallocate resources quickly.
+      </li>
+      <li>
+        <b>Fault tolerance</b> - The ability to remain up and running even in
+        the event of a component (or service) no longer functioning. Typically,
+        redundancy is built into cloud services architecture, so if one
+        component fails, a backup component takes its place. This type of
+        service is said to be tolerant of faults.
+      </li>
+      <li>
+        <b>Disaster recovery</b> - The ability to recover from an event which
+        has taken down a cloud service. Cloud services disaster recovery can
+        happen very quickly, with automation and services being readily
+        available to use.
+      </li>
+      <li>
+        <b>Global reach</b> - The ability to reach audiences around the globe.
+      </li>
+      <li>
+        <b>Customer latency capabilities</b> - Cloud services have the ability
+        to deploy resources in datacenters around the globe, which addresses any
+        customer latency issues.
+      </li>
+      <li>
+        <b>Predictive cost considerations</b> - The ability for users to predict
+        the costs they will incur for a particular cloud service.
+      </li>
+      <li>
+        <b>Technical skill requirements and considerations</b> - Cloud services
+        can provide and manage hardware and software for workloads. Getting a
+        workload up and running with cloud services demands less technical
+        resources than having IT teams build and maintain a physical
+        infrastructure for handling the same workload.
+      </li>
+      <li>
+        <b>Increased productivity</b> - On-site datacenters typically require a
+        lot of hardware setup (otherwise known as racking and stacking),
+        software patching, and other time-consuming IT management chores.
+      </li>
+      <li>
+        <b>Security</b> Cloud providers offer a broad set of policies,
+        technologies, controls, and expert technology skills that can provide
+        better security than most organizations can otherwise achieve.
       </li>
     </ul>
 
-    <h3>Compute power</h3>
+    <h3>CapEx vs OpEx</h3>
     <p>
-      Cloud-based servers that are processing each request and returning a
-      response.
+      <b>Capital Expenditure (CapEx)</b> - This is the up front spending of
+      money on physical infrastructure, and then deducting that up front expense
+      over time.
+    </p>
+    <p>
+      <b>Operational Expenditure (OpEx)</b> - This is spending money on services
+      or products now and being billed for them now. You can deduct this expense
+      in the same year you spend it. There is no up front cost, as you pay for a
+      service or product as you use it.
+    </p>
+    <p>
+      Today, organizations can sign up for a service from a cloud provider to
+      get up and running without the need for a significant investment into up
+      front costs.
+    </p>
+    <p>
+      A typical on-premises datacenter includes costs such as: Server costs ,
+      Storage costs, Network costs, Backup and archive costs, continuity and
+      disaster recovery costs, datacenter infrastructure costs, Technical
+      personnel.
+    </p>
+    <p>
+      <b>Benefits of CapEx</b>
+      <br />
+      With capital expenditures, you plan your expenses at the start of a
+      project or budget period.
+    </p>
+    <p>
+      <b>Benefits of OpEx</b>
+      <br />
+      Demand and growth can be unpredictable and can outpace expectation, which
+      is a challenge for the CapEx model as shown in the following graph. OpEx
+      is particularly appealing if the demand fluctuates or to try a new product
+      or service.
+    </p>
+    <a
+      href="./Microsoft Certified Azure Fundamentals/3-c-capex-versus-opex.png"
+    >
+      <img
+        src="./Microsoft Certified Azure Fundamentals/3-c-capex-versus-opex.png"
+      />
+    </a>
+
+    <h3>Consumption-based models</h3>
+    <p>
+      Users only pay for the resources that they use. A consumption-based model
+      has many benefits, including:
+    </p>
+    <ul>
+      <li>No upfront costs.</li>
+      <li>No need to purchase and manage costly infrastructure.</li>
+      <li>The ability to pay for additional resources when they are needed.</li>
+      <li>
+        The ability to stop paying for resources that are no longer needed.
+      </li>
+    </ul>
+
+    <h3>Types of cloud models</h3>
+    <p>There are three different cloud deployment models.</p>
+
+    <h3>Public cloud</h3>
+    <p>
+      A public cloud is owned by the cloud services provider. Public cloud
+      models have the following characteristics:
     </p>
     <ul>
       <li>
-        <b>Virtual machine (VM)</b>
-        <br />
-        A VM is an emulation of a computer - just like your desktop or laptop
-        you're using now. Each VM includes an operating system and hardware that
-        appears to the user like a physical computer running Windows or Linux.
-        You can then install whatever software you need to do the tasks you want
-        to run in the cloud.
+        <b>Ownership</b> - Resources are owned and operated by a third party,
+        such as the cloud service provider.
       </li>
       <li>
-        <b>Containers</b>
-        <br />
-        Containers provide a consistent, isolated execution environment for
-        applications. They're similar to VMs except they don't require a guest
-        operating system. Instead, the application and all its dependencies is
-        packaged into a "container" and then a standard runtime environment is
-        used to execute the app. The open-source project, Docker, is one of the
-        leading platforms for managing containers.
+        <b>Multiple end users</b> - Public cloud modes may make their resources
+        available to multiple organizations.
       </li>
       <li>
-        <b>Serverless computing</b>
-        <br />
-        Serverless computing lets you run application code without creating,
-        configuring, or maintaining a server. The core idea is that your
-        application is broken into separate functions that run when triggered by
-        some action. This is ideal for automated tasks - for example, you can
-        build a serverless process that automatically sends an email
-        confirmation after a customer makes an online purchase.
+        <b>Public access</b> - Public access allows the public to access the
+        desired cloud services.
+      </li>
+      <li>
+        <b>Availability</b> - Public cloud is the most common cloud-type
+        deployment model.
+      </li>
+      <li>
+        <b>Connectivity</b> - Users and organizations are typically connected to
+        the public cloud over the internet using a web browser.
+      </li>
+      <li>
+        <b>Skills</b> - Public clouds do not require deep technical knowledge to
+        set up and use its resources.
       </li>
     </ul>
-    <a
-      href="./Microsoft Certified Azure Fundamentals/2-virtual-machine-versus-container-versus-serverless.png"
-    >
-      <img
-        src="./Microsoft Certified Azure Fundamentals/2-virtual-machine-versus-container-versus-serverless.png"
-      />
-    </a>
+
+    <h3>Private cloud</h3>
+    <p>
+      A private cloud is owned and operated by the organization that uses the
+      resources from that cloud. Private cloud models have the following
+      characteristics:
+    </p>
+    <ul>
+      <li>
+        <b>Ownership</b> - The owner and user of the cloud services are the
+        same.
+      </li>
+      <li>
+        <b>Hardware</b> - The owner is entirely responsible for the purchase,
+        maintenance, and management of the cloud hardware.
+      </li>
+      <li>
+        <b>Users</b> - A private cloud operates only within one organization and
+        cloud computing resources are used exclusively by a single business or
+        organization.
+      </li>
+      <li>
+        <b>Connectivity</b> - A connection to a private cloud is typically made
+        over a private network that is highly secure.
+      </li>
+      <li><b>Public access</b> - Does not provide access to the public.</li>
+      <li>
+        <b>Skills</b> - Requires deep technical knowledge to set up, manage, and
+        maintain.
+      </li>
+    </ul>
 
     <h3>Why Azure</h3>
     <p>Azure Benefits</p>
     <p>
-      Be future ready - Continuous innovation from Microsoft supports your
-      development today, and your product visions for tomorrow.
+      <b>Be future ready</b> - Continuous innovation from Microsoft supports
+      your development today, and your product visions for tomorrow.
     </p>
     <p>
-      Build on your terms - You have choices. With a commitment to open source,
-      and support for all languages and frameworks, build how you want, and
-      deploy where you want to.
+      <b>Build on your terms</b> - You have choices. With a commitment to open
+      source, and support for all languages and frameworks, build how you want,
+      and deploy where you want to.
     </p>
     <p>
-      Operate hybrid seamlessly - On-premises, in the cloud, and at the
+      <b>Operate hybrid seamlessly</b> - On-premises, in the cloud, and at the
       edge—we’ll meet you where you are. Integrate and manage your environments
       with tools and services designed for hybrid cloud.
     </p>
     <p>
-      Trust your cloud - Get security from the ground up, backed by a team of
-      experts, and proactive compliance trusted by enterprises, governments, and
-      startups.
+      <b>Trust your cloud</b> - Get security from the ground up, backed by a
+      team of experts, and proactive compliance trusted by enterprises,
+      governments, and startups.
     </p>
 
     <h3>Azure Fundamentals (AZ-900)</h3>
@@ -226,8 +368,70 @@
     <h2>Core Azure services</h2>
     <p><a href="#TOP">[TOP]</a></p>
 
+    <p>Typically, cloud services include:</p>
+
+    <ul>
+      <li><b>Compute power</b> - such as Linux servers or web applications.</li>
+      <li><b>Storage</b> - such as files and databases.</li>
+      <li>
+        <b>Networking</b> - such as secure connections between the cloud
+        provider and your company.
+      </li>
+      <li>
+        <b>Analytics</b> - such as visualizing telemetry and performance data.
+      </li>
+    </ul>
+
+    <h3>Compute power</h3>
     <p>
-      xxx
+      Cloud-based servers that are processing each request and returning a
+      response.
+    </p>
+    <ul>
+      <li>
+        <b>Virtual machine (VM)</b>
+        <br />
+        A VM is an emulation of a computer - just like your desktop or laptop
+        you're using now. Each VM includes an operating system and hardware that
+        appears to the user like a physical computer running Windows or Linux.
+        You can then install whatever software you need to do the tasks you want
+        to run in the cloud.
+      </li>
+      <li>
+        <b>Containers</b>
+        <br />
+        Containers provide a consistent, isolated execution environment for
+        applications. They're similar to VMs except they don't require a guest
+        operating system. Instead, the application and all its dependencies is
+        packaged into a "container" and then a standard runtime environment is
+        used to execute the app. The open-source project, Docker, is one of the
+        leading platforms for managing containers.
+      </li>
+      <li>
+        <b>Serverless computing</b>
+        <br />
+        Serverless computing lets you run application code without creating,
+        configuring, or maintaining a server. The core idea is that your
+        application is broken into separate functions that run when triggered by
+        some action. This is ideal for automated tasks - for example, you can
+        build a serverless process that automatically sends an email
+        confirmation after a customer makes an online purchase.
+      </li>
+    </ul>
+    <a
+      href="./Microsoft Certified Azure Fundamentals/2-virtual-machine-versus-container-versus-serverless.png"
+    >
+      <img
+        src="./Microsoft Certified Azure Fundamentals/2-virtual-machine-versus-container-versus-serverless.png"
+      />
+    </a>
+
+    <h3>Storage</h3>
+    <p>
+      Cloud providers typically offer storage services that can handle all of
+      these types of data.The advantage to using cloud-based data storage is you
+      can scale to meet your needs. In some cases, the storage can even expand
+      and contract automatically.
     </p>
     <hr />
 

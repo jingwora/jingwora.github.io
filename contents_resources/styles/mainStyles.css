@@ -5,6 +5,9 @@ body {
   margin-right: 40px;
   line-height: 1.7em;
 }
+b {
+  color: Navy;
+}
 
 /* Class tab Style */
 
@@ -109,7 +112,7 @@ hr.dash {
 
 /* Headline Style */
 h1 {
-  color: #00415a;
+  color: #d0d3d4;
 }
 h2 {
   color: #00719c;
