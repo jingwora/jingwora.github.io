@@ -1943,46 +1943,882 @@
 
     <h3>Physical security</h3>
     <p>
-      Physical building security and controlling access to computing hardware
+      ・Physical building security and controlling access to computing hardware
       within the data center is the first line of defense.
+      <br />
+      ・With physical security, the intent is to provide physical safeguards
+      against access to assets. These safeguards ensure that other layers can't
+      be bypassed, and loss or theft is handled appropriately.
     </p>
     <br />
 
-    <h3>Identity and access
-
-    </h3>
+    <h3>Identity and access</h3>
     <p>
       ・Control access to infrastructure and change control.
-      <br>
+      <br />
       ・Use single sign-on and multi-factor authentication.
-      <br>
+      <br />
       ・Audit events and changes.
-      <br>
-      The identity and access layer is all about ensuring identities are secure, access granted is only what is needed, and changes are logged.
+      <br />
+      ・The identity and access layer is all about ensuring identities are
+      secure, access granted is only what is needed, and changes are logged.
+    </p>
+    <br />
+
+    <h3>Perimeter</h3>
+    <p>
+      ・Use distributed denial of service (DDoS) protection to filter
+      large-scale attacks before they can cause a denial of service for end
+      users.
+      <br />
+      ・Use perimeter firewalls to identify and alert on malicious attacks
+      against your network.
+      <br />
+      ・At the network perimeter, it's about protecting from network-based
+      attacks against your resources. Identifying these attacks, eliminating
+      their impact, and alerting you when they happen are important ways to keep
+      your network secure.
+    </p>
+    <br />
+
+    <h3>Networking</h3>
+    <p>
+      ・Limit communication between resources.
+      <br />
+      ・Deny by default.
+      <br />
+      ・Restrict inbound internet access and limit outbound, where appropriate.
+      <br />
+      ・Implement secure connectivity to on-premises networks.
+      <br />
+      ・At this layer, the focus is on limiting the network connectivity across
+      all your resources to allow only what is required. By limiting this
+      communication, you reduce the risk of lateral movement throughout your
+      network.
+    </p>
+    <br />
+
+    <h3>Compute</h3>
+    <p>
+      ・Secure access to virtual machines.
+      <br />
+      ・Implement endpoint protection and keep systems patched and current.
+      <br />
+      ・Malware, unpatched systems, and improperly secured systems open your
+      environment to attacks. The focus in this layer is on making sure your
+      compute resources are secure, and that you have the proper controls in
+      place to minimize security issues.
+    </p>
+    <br />
+
+    <h3>Application</h3>
+    <p>
+      ・Ensure applications are secure and free of vulnerabilities.
+      <br />
+      ・Store sensitive application secrets in a secure storage medium.
+      <br />
+      ・Make security a design requirement for all application development.
+      <br />
+      ・Integrating security into the application development life cycle will
+      help reduce the number of vulnerabilities introduced in code. We encourage
+      all development teams to ensure their applications are secure by default,
+      and that they're making security requirements non-negotiable.
+    </p>
+    <br />
+
+    <h3>Data</h3>
+    <p>
+      ・In almost all cases, attackers are after data in a database, on disk
+      inside virtual machines, on a SaaS application such as Office 365, in
+      cloud and more.
+      <br />
+      ・It's the responsibility of those storing and controlling access to data
+      to ensure that it's properly secured. Often, there are regulatory
+      requirements that dictate the controls and processes that must be in place
+      to ensure the confidentiality, integrity, and availability of the data.
+    </p>
+    <br />
+
+    <hr />
+
+    <h2>Shared security</h2>
+    <p>
+      Azure helps alleviate your security concerns. But security is still a
+      shared responsibility. How much of that responsibility falls on us depends
+      on which model we use with Azure. We use the defense in depth rings as a
+      guideline for considering what protections are adequate for our data and
+      environments.
+    </p>
+    <p>
+      Microsoft applies a layered approach to security, both in our physical
+      datacenters and across Azure services.
+    </p>
+    <p>
+      Security of the operational environment is now a concern shared by both
+      cloud providers and customers. By shifting these responsibilities to a
+      cloud service like Azure, organizations can reduce focus on activities
+      that aren't core business competencies.
     </p>
 
+    <a href="./Microsoft Certified Azure Fundamentals/shared-security.png">
+      <img
+        src="./Microsoft Certified Azure Fundamentals/shared-security.png"
+        width="500px"
+      />
+    </a>
 
+    <hr />
 
-  
-    
+    <h2>Azure Firewall</h2>
+    <p>
+      A Firewall is a service that grants server access based on the originating
+      IP address of each request. Firewall rules also include specific network
+      protocol and port information.
+    </p>
+    <p>
+      You can create, enforce, and log, application and network connectivity
+      policies across subscriptions, and virtual networks, centrally.
+    </p>
+
+    <p>Azure Firewall provides many features, including:</p>
+    <ul>
+      <li>Built-in high availability</li>
+      <li>Unrestricted cloud scalability</li>
+      <li>Inbound and outbound filtering rules</li>
+      <li>Azure Monitor logging.</li>
+    </ul>
+
+    <h3>Common usage scenarios</h3>
+
+    <ul>
       <li>
-        Perimeter layer uses distributed denial-of-service (DDoS) protection to
-        filter large-scale attacks before they can cause a denial of service for
-        end users.
+        You typically deploy Azure Firewall on a central virtual network to
+        control general network access.
       </li>
       <li>
-        Networking layer limits communication between resources through
-        segmentation and access controls.
+        Application rules that define fully qualified domain names (FQDNs) that
+        can be accessed from a subnet.
       </li>
-      <li>Compute layer secures access to virtual machines.</li>
       <li>
-        Application layer ensures applications are secure and free of
-        vulnerabilities.
+        Network rules that define source address, protocol, destination port,
+        and destination address.
+      </li>
+      <li>
+        Azure Application Gateway also provides a firewall, called the Web
+        Application Firewall (WAF).
       </li>
     </ul>
 
     <hr />
 
+    <h2>Azure Distributed Denial of Service protection</h2>
+    <p>
+      Distributed Denial of Service (DDoS) attacks attempt to overwhelm and
+      exhaust an application’s resources, making the application slow or
+      unresponsive to legitimate users. DDoS attacks can be targeted at any
+      endpoint that is publicly reachable through the internet.
+    </p>
+    <p>
+      The Azure DDoS Protection service protects your Azure applications by
+      scrubbing traffic at the Azure network edge before it can impact your
+      service's availability.
+    </p>
+
+    <h3>Azure Distributed Denial of Service (DDoS) protection service tiers</h3>
+
+    <p>
+      Basic - The Basic service tier is automatically enabled as part of the
+      Azure platform.
+    </p>
+    <p>
+      Standard - The Standard service tier provides additional mitigation
+      capabilities that are tuned specifically to Microsoft Azure Virtual
+      Network resources. Protection policies are tuned through dedicated traffic
+      monitoring and machine learning algorithms.
+    </p>
+
+    <h3>Distributed Denial of Service (DDoS) standard protection</h3>
+    <ul>
+      <li>
+        Volumetric attacks. The attack's goal is to flood the network layer with
+        a substantial amount of seemingly legitimate traffic.
+      </li>
+      <li>
+        Protocol attacks. These attacks render a target inaccessible, by
+        exploiting a weakness in the layer 3 and layer 4 protocol stack.
+      </li>
+      <li>
+        Resource (application) layer attacks. These attacks target web
+        application packets to disrupt the transmission of data between hosts.
+      </li>
+    </ul>
+    <hr />
+
+    <h2>Network Security Groups</h2>
+    <p>
+      Network Security Groups (NSG) allow you to filter network traffic to and
+      from Azure resources in an Azure virtual network. An NSG can contain
+      multiple inbound and outbound security rules that enable you to filter
+      traffic to and from resources by source and destination IP address, port,
+      and protocol.
+    </p>
+
+    <h3>Network security rule properties</h3>
+
+    <table class="t1">
+      <tr>
+        <th>Property</th>
+        <th>Explanation</th>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td>Unique name of the Network Security Group (NSG).</td>
+      </tr>
+      <tr>
+        <td>Priority</td>
+        <td>
+          A number between 100 and 4096. Rules are processed in priority order,
+          with lower numbers processed before higher numbers
+        </td>
+      </tr>
+      <tr>
+        <td>Source or Destination</td>
+        <td>
+          Individual IP address or IP address range, service tag, or application
+          security group
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Protocol
+        </td>
+        <td>
+          TCP*(Transmission Control Protocal), UDP(User Datagram Protocal), or
+          Any
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Direction
+        </td>
+        <td>Whether the rule applies to inbound or outbound traffic</td>
+      </tr>
+      <tr>
+        <td>
+          Port Range
+        </td>
+        <td>An individual port or range of ports</td>
+      </tr>
+      <tr>
+        <td>
+          Action
+        </td>
+        <td>Allow or Deny</td>
+      </tr>
+    </table>
+    <br />
+
+    <hr />
+
+    <h2>Application Security Groups</h2>
+    <p>
+      Application security groups (ASG) enable you to configure network security
+      as a natural extension of an application's structure, allowing you to
+      group virtual machines and define network security policies based on those
+      groups.
+    </p>
+    <p>
+      Application Security Groups help simplify how you can filter and control
+      network traffic coming into your organization and how that network traffic
+      is allowed to move. They allow you to isolate multiple workloads and
+      provide additional levels of protection for your virtual network in a more
+      easily manageable way.
+    </p>
+    <p>
+      For example, we have ASGs defined for Web Servers, App Servers, and DB
+      Servers and green and red arrows indicating which network traffic paths
+      are allowable and which are not.
+    </p>
+    <hr />
+
+    <h2>Choose Azure network security solutions</h2>
+    <p>
+      When considering your Azure security solution consider all the elements of
+      defense in depth.
+    </p>
+
+    <h3>Perimeter layer</h3>
+    <p>
+      Use Azure DDoS Protection to filter large-scale attacks before they can
+      cause a denial of service for end users.
+      <br />
+      Use perimeter firewalls with Azure Firewall to identify and alert on
+      malicious attacks against your network.
+    </p>
+
+    <h3>Network layer</h3>
+    <p>
+      Use NSGs to create rules about inbound and outbound communication at this
+      layer.
+    </p>
+    <ul>
+      <li>
+        Limit communication between resources through segmenting your network
+        and configuring access controls.
+      </li>
+      <li>Deny by default.</li>
+      <li>
+        Restrict inbound internet access and limit outbound where appropriate.
+      </li>
+      <li>Implement secure connectivity to on-premises networks.</li>
+    </ul>
+
+    <h3>Combine services</h3>
+    <p>
+      You can also combine multiple Azure networking and security services to
+      manage your network security and provide increased layered protection. The
+      following are examples of combined services:
+    </p>
+
+    <p>
+      <b>Network security groups and Azure Firewall</b>
+      <br />
+      Network security groups provide distributed network layer traffic
+      filtering to limit traffic to resources within virtual networks in each
+      subscription.
+      <br />
+      Azure Firewall is a fully stateful, centralized network
+      firewall-as-a-service, which provides network and application-level
+      protection across different subscriptions and virtual networks.
+    </p>
+
+    <p>
+      <b>Application Gateway WAF and Azure Firewall</b>
+      <br />
+      WAF is a feature of Application Gateway that provides your web
+      applications with centralized, inbound protection against common exploits
+      and vulnerabilities.
+      <br />
+      Azure Firewall provides inbound protection for non-HTTP/S protocols (for
+      example, RDP, SSH, FTP), outbound network-level protection for all ports
+      and protocols, and application-level protection for outbound HTTP/S.
+    </p>
+    <br />
+
+    <p>
+      Walkthrough - Secure network traffic
+      <br />
+      <a
+        href="https://docs.microsoft.com/en-us/learn/modules/secure-network-connectivity/9-walkthrough-traffic"
+        target="_blank"
+        >Link</a
+      >
+    </p>
+
+    <hr />
+    <h2>Authentication and Authorization</h2>
+    <p>
+      <b>Authentication (AuthN)</b> - Authentication is the process of
+      establishing the identity of a person or service looking to access a
+      resource. It establishes if they are who they say they are.
+    </p>
+    <p>
+      <b>Authorization (AuthZ)</b> - Authorization is the process of
+      establishing what level of access an authenticated person or service has.
+      It specifies what data they're allowed to access and what they can do with
+      it.
+    </p>
+    <br />
+
+    <h3>Azure Active Directory</h3>
+    <p>
+      Azure Active Directory is a Microsoft cloud-based identity and access
+      management service. Azure AD helps employees of an organization sign in
+      and access resources:
+    </p>
+    <p>
+      <b>External resources</b> might include Microsoft Office 365, the Azure
+      portal, and thousands of other software as a service (SaaS) applications.
+    </p>
+    <p>
+      <b>Internal resources</b> might include apps on your corporate network and
+      intranet, along with any cloud apps developed by your own organization.
+    </p>
+
+    <p>Azure AD provides services such as:</p>
+    <ul>
+      <li>
+        Authentication. This includes verifying identity to access applications
+        and resources, and providing functionality such as self-service password
+        reset, multi-factor authentication (MFA), a custom banned password list,
+        and smart lockout services.
+      </li>
+      <li>
+        Single sign-on (SSO). Enables users to remember only one ID and one
+        password to access multiple applications.
+      </li>
+      <li>
+        Application management. You can manage your cloud and on-premises apps
+        using Azure AD Application Proxy, single sign-on, the My apps portal
+        (also referred to as Access panel), and SaaS apps.
+      </li>
+      <li>
+        Business to business (B2B) identity services. Manage your guest users
+        and external partners while maintaining control over your own corporate
+        data
+      </li>
+      <li>
+        Business-to-customer (B2C) identity services. Customize and control how
+        users sign up, sign in, and manage their profiles when using your apps
+        with services.
+      </li>
+      <li>
+        Device management. Manage how your cloud or on-premises devices access
+        your corporate data.
+      </li>
+    </ul>
+    <p>Azure AD is intended for:</p>
+    <ul>
+      <li>
+        IT administrators. Administrators can use Azure AD to control access to
+        apps and their resources, based on your business requirements.
+      </li>
+      <li>
+        App developers. Developers can use Azure AD to provide a standards-based
+        approach for adding functionality to applications that you build, such
+        as adding Single-Sign-On functionality to an app, or allowing an app to
+        work with a user's pre-existing credentials and other functionality.
+      </li>
+      <li>
+        Microsoft 365, Microsoft Office 365, Azure, or Microsoft Dynamics CRM
+        Online subscribers. These subscribers are already using Azure AD.
+      </li>
+    </ul>
+
+    <h3>Single sign-on</h3>
+    <p>
+      With single sign-on (SSO), users need to remember only one ID and one
+      password. Access across applications is granted to a single identity tied
+      to a user, simplifying the security model.
+    </p>
+    <p>
+      By using a centralized identity provider, you'll have centralized the
+      security controls, reporting, alerting, and administration of your
+      identity infrastructure.
+    </p>
+
+    <hr />
+
+    <h2>Azure Multi-Factor Authentication</h2>
+    <p>
+      Azure Multi-Factor Authentication provides additional security for your
+      identities by requiring two or more elements for full authentication.
+      These elements fall into three categories:
+    </p>
+    <ul>
+      <li>
+        Something you know could be a password or the answer to a security
+        question.
+      </li>
+
+      <li>
+        Something you possess might be a mobile app that receives a
+        notification, or a token-generating device.
+      </li>
+      <li>
+        Something you are is typically some sort of biometric property, such as
+        a fingerprint or face scan used on many mobile devices.
+      </li>
+    </ul>
+
+    <p>
+      Multi-factor authentication (MFA) comes as part of the following Azure
+      service offerings:
+    </p>
+    <ul>
+      <li>Azure Active Directory premium licenses</li>
+      <li>Multi-factor authentication for Office 365</li>
+      <li>Azure Active Directory global administrators</li>
+    </ul>
+    <hr />
+
+    <h2>Azure Security Center</h2>
+    <p>
+      Azure Security Center is a monitoring service that provides threat
+      protection across all of your services both in Azure, and on-premises.
+      Security Center can:
+    </p>
+    <ul>
+      <li>
+        Provide security recommendations based on your configurations,
+        resources, and networks.
+      </li>
+      <li>
+        Monitor security settings across on-premises and cloud workloads, and
+        automatically apply required security to new services as they come
+        online.
+      </li>
+      <li>
+        Continuously monitor all your services and perform automatic security
+        assessments to identify potential vulnerabilities before they can be
+        exploited.
+      </li>
+      <li>
+        Use machine learning to detect and block malware from being installed on
+        your virtual machines and services. You can also define a list of
+        allowed applications to ensure that only the apps you validate can
+        execute.
+      </li>
+      <li>
+        Analyze and identify potential inbound attacks and help to investigate
+        threats and any post-breach activity that might have occurred.
+      </li>
+      <li>
+        Provide just-in-time access control for ports, reducing your attack
+        surface by ensuring the network only allows traffic that you require.
+      </li>
+    </ul>
+
+    <p>Azure Security Center versions</p>
+    <ul>
+      <li>
+        Free. Available as part of your Azure subscription, this tier is limited
+        to assessments and recommendations of Azure resources only.
+      </li>
+      <li>
+        Standard. This tier provides a full suite of security-related services
+        including continuous monitoring, threat detection, just-in-time access
+        control for ports, and more. To access the full suite of Azure Security
+        Center services you will need to upgrade to a Standard tier
+        subscription.
+      </li>
+    </ul>
+
+    <h3>Stages of an incident response</h3>
+
+    <a
+      href="./Microsoft Certified Azure Fundamentals/security-center-response.png"
+    >
+      <img
+        src="./Microsoft Certified Azure Fundamentals/security-center-response.png"
+        width="300px"
+      />
+    </a>
+    <ul>
+      <li>
+        Detect - Review the first indication of an event investigation. For
+        example, use the Security Center dashboard to review the initial
+        verification that a high-priority security alert was raised.
+      </li>
+      <li>
+        Assess - Perform the initial assessment to obtain more information about
+        the suspicious activity. For example, obtain more information about the
+        security alert.
+      </li>
+      <li>
+        Diagnose - Conduct a technical investigation and identify containment,
+        mitigation, and workaround strategies. For example, follow the
+        remediation steps described by Security Center in that particular
+        security alert.
+      </li>
+    </ul>
+
+    <p>
+      Walkthrough - Azure security center usage scenario
+      <br />
+      <a
+        href="https://docs.microsoft.com/en-us/learn/modules/review-security-tools-features/3-walkthrough-azure-security-center-usage-scenario"
+        target="_blank"
+        >Link</a
+      >
+    </p>
+
+    <hr />
+
+    <h2>Key Vault</h2>
+
+    <p>
+      Azure Key Vault is a centralized cloud service for storing your
+      applications' secrets. Key Vault helps you control your applications'
+      secrets by keeping them in a single, central location and by providing
+      secure access, permissions control, and access logging capabilities.
+    </p>
+
+    <p>Usage scenarios</p>
+    <ul>
+      <li>
+        Secrets management. You can use Key Vault to securely store and tightly
+        control access to tokens, passwords, certificates, Application
+        Programming Interface (API) keys, and other secrets.
+      </li>
+      <li>
+        Key management. You also can use Key Vault as a key management solution.
+        Key Vault makes it easier to create and control the encryption keys used
+        to encrypt your data.
+      </li>
+      <li>
+        Certificate management. Key Vault lets you provision, manage, and deploy
+        your public and private Secure Sockets Layer/ Transport Layer Security
+        (SSL/ TLS) certificates for your Azure, and internally connected,
+        resources more easily.
+      </li>
+      <li>
+        Store secrets backed by hardware security modules (HSMs). The secrets
+        and keys can be protected either by software, or by FIPS 140-2 Level 2
+        validated HSMs.
+      </li>
+    </ul>
+
+    <p>Key Vault benefits</p>
+    <ul>
+      <li>
+        Centralized application secrets. Centralizing storage for application
+        secrets allows you to control their distribution and reduces the chances
+        that secrets may be accidentally leaked.
+      </li>
+      <li>
+        Securely stored secrets and keys. Azure uses industry-standard
+        algorithms, key lengths, and HSMs, and access requires proper
+        authentication and authorization.
+      </li>
+      <li>
+        Monitor access and use. Using Key Vault, you can monitor and control
+        access to company secrets.
+      </li>
+      <li>
+        Simplified administration of application secrets. Key Vault makes it
+        easier to enroll and renew certificates from public Certificate
+        Authorities (CAs). You can also scale up and replicate content within
+        regions and use standard certificate management tools.
+      </li>
+      <li>
+        Integrate with other Azure services. You can integrate Key Vault with
+        storage accounts, container registries, event hubs and many more Azure
+        services.
+      </li>
+    </ul>
+
+    <p>
+      Walkthrough - Implement Azure Key Vault
+      <br />
+      <a
+        href="https://docs.microsoft.com/en-us/learn/modules/review-security-tools-features/5-walkthrough-implement-azure-key-vault"
+        target="_blank"
+        >Link</a
+      >
+    </p>
+
+    <hr />
+
+    <h2>Azure Information Protection (AIP)</h2>
+
+    <p>
+      Azure Information Protection is a cloud-based solution that helps
+      organizations classify and (optionally) protect its documents and emails
+      by applying labels. Labels can be applied automatically (by administrators
+      who define rules and conditions), manually (by users), or with a
+      combination of both (where users are guided by recommendations).
+    </p>
+    <p>
+      You can purchase MSIP either as a standalone solution, or through one of
+      the following Microsoft licensing suites: Enterprise Mobility + Security,
+      or Microsoft 365 Enterprise.
+    </p>
+
+    <hr />
+
+    <h2>Azure Advanced Threat Protection (ATP)</h2>
+    <p>
+      Azure Advanced Threat Protection is a cloud-based security solution that
+      identifies, detects, and helps you investigate advanced threats,
+      compromised identities, and malicious insider actions directed at your
+      organization. Azure ATP is capable of detecting known malicious attacks
+      and techniques, security issues, and risks against your network.
+    </p>
+    <p>
+      Azure Advanced Threat Protection is available as part of the Enterprise
+      Mobility + Security 5 suite (EMS E5), and as a standalone license.
+    </p>
+
+    <hr />
+
+    <h2>Define Azure policy</h2>
+    <p>
+      Azure Policy is a service in Azure that you use to create, assign, and,
+      manage policies. These policies enforce different rules and effects over
+      your resources, so those resources stay compliant with your corporate
+      standards and service-level agreements (SLAs).
+    </p>
+    <p>
+      It runs evaluations of your resources and scans for those not compliant
+      with the policies you have created. Azure Policy also can automatically
+      remediate resources and configurations that are deemed non-compliant, thus
+      ensuring the integrity of the state of the resources.
+    </p>
+
+    <p>There are three steps to creating an implementing an Azure policy.</p>
+
+    <ul>
+      <li>
+        Create a policy definition - A policy definition expresses what to
+        evaluate and what action to take. For example, Allowed storage account
+        SKUs, Allowed resource type, Allowed locations, Allowed Virtual Machine
+        SKUs, etc.
+      </li>
+      <li>
+        Assign a definition to a scope of resources. This specific scope could
+        range from a management group to a resource group.
+      </li>
+      <li>
+        Review the policy evaluation results - You can review the non-compliant
+        policy results and take any action that is needed.
+      </li>
+    </ul>
+
+    <h3>policy initiatives</h3>
+
+    <p>
+      An initiative definition is a set of policy definitions to help track your
+      compliance state for a larger goal. Initiative assignments reduce the need
+      to make several initiative definitions for each scope.
+    </p>
+
+    <p>
+      Walkthrough - Create an Azure policy
+      <br />
+      <a
+        href="https://docs.microsoft.com/en-us/learn/modules/describe-azure-governance-methodologie/5-walkthrough-create-azure-policy"
+        target="_blank"
+        >Link</a
+      >
+    </p>
+
+    <hr />
+
+    <h2>Role-Based Access Control (RBAC)</h2>
+
+    <p>
+      Role-based access control provides fine-grained access management for
+      Azure resources, enabling you to grant users only the rights they need to
+      perform their jobs. RBAC is provided at no additional cost to all Azure
+      subscribers.
+    </p>
+
+    <p>
+      To view access permissions, access the Access Control (IAM) blade in the
+      Azure portal. This blade, shows who has access to an area and their role.
+      Using this same blade, you can also grant or remove access.
+    </p>
+
+    <a
+      href="./Microsoft Certified Azure Fundamentals/role-based-access-control-diagram.png"
+    >
+      <img
+        src="./Microsoft Certified Azure Fundamentals/role-based-access-control-diagram.png"
+        width="500px"
+      />
+    </a>
+
+    <h3>Best practices</h3>
+    <p>
+      Using RBAC, segregate duties within your team and grant only the amount of
+      access to users that they need to perform their jobs.
+    </p>
+    <p>
+      When planning your access control strategy, grant users the lowest
+      privilege level that they need to do their work.
+    </p>
+
+    <p>
+      Walkthrough - Manage access with RBAC
+      <br />
+      <a
+        href="https://docs.microsoft.com/en-us/learn/modules/describe-azure-governance-methodologie/7-walkthrough-manage-access"
+        target="_blank"
+        >Link</a
+      >
+    </p>
+
+    <hr />
+
+    <h2>Resource locks</h2>
+
+    <p>
+      Resource locks help you prevent accidental deletion or modification of
+      your Azure resources. You can manage these locks from within the Azure
+      portal.
+    </p>
+
+    <p>
+      Walkthrough - Manage resource locks
+      <br />
+      <a
+        href="https://docs.microsoft.com/en-us/learn/modules/describe-azure-governance-methodologie/9-walkthrough-manage-resource-locks"
+        target="_blank"
+        >Link</a
+      >
+    </p>
+    <hr />
+
+    <h2>Azure blueprints</h2>
+    <p>
+      Azure Blueprints enable cloud architects to define a repeatable set of
+      Azure resources that implement and adhere to an organization's standards,
+      patterns, and requirements.
+    </p>
+
+    <p>
+      Azure Blueprint is a declarative way to orchestrate the deployment of
+      various resource templates and other artifacts, such as: Role assignments,
+      Policy assignments, Azure Resource Manager templates, Resource groups
+    </p>
+
+    <h3>Blueprint process</h3>
+    <ul>
+      <li>Create an Azure Blueprint.</li>
+      <li>Assign the blueprint.</li>
+      <li>Track the blueprint assignments.</li>
+    </ul>
+
+    <p>
+      Azure Blueprints are different from Azure Resource Manager Templates. When
+      Azure Resource Manager Templates deploy resources, they have no active
+      relationship with the deployed resources (they exist in a local
+      environment or in source control). By contrast, with Azure Blueprint, each
+      deployment is tied to an Azure Blueprint package. This means that the
+      relationship with resources will be maintained, even after deployment.
+      Maintaining relationships, in this way, improves auditing and tracking
+      capabilities.
+    </p>
+
+    <hr />
+
+    <h2>Subscription governance</h2>
+
+    <p>
+      There are mainly three aspects to consider in relation to creating and
+      managing subscriptions: Billing, Access Control, and Subscription limits.
+    </p>
+
+    <ul>
+      <li>
+        Billing: Reports can be generated by subscriptions, if you have multiple
+        internal departments and need to do "chargeback", a possible scenario is
+        to create subscriptions by department or project.
+      </li>
+      <li>
+        Access Control: A subscription is a deployment boundary for Azure
+        resources and every subscription is associated with an Azure AD tenant
+        that provides administrators the ability to set up role-based access
+        control (RBAC).
+      </li>
+      <li>
+        Subscription Limits: Subscriptions are also bound to some hard
+        limitations.
+      </li>
+    </ul>
+
+    <hr />
     <!-- Azure pricing Service Level Agreements, and Lifecycles -->
 
     <div id="navh04"></div>
