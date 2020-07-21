@@ -1891,8 +1891,95 @@
 
     <div id="navh03"></div>
     <div style="padding-top: 2em;"></div>
-    <h2>Security, privacy, compliance, and trust</h2>
+    <h2>Microsoft Azure security, privacy, compliance, and trust</h2>
     <p><a href="#TOP">[TOP]</a></p>
+    <p>
+      Every system, architecture, and application needs to be designed with
+      security in mind, whether on-premises or in the cloud.
+    </p>
+
+    <h2>Defense in depth</h2>
+    <p>
+      Defense in depth is a strategy that employs a series of mechanisms to slow
+      the advance of an attack aimed at acquiring unauthorized access to data.
+      The objective of defense in depth is to protect and prevent information
+      from being stolen by individuals not authorized to access it. The common
+      principles used to define a security posture are confidentiality,
+      integrity, and availability, known collectively as CIA.
+    </p>
+    <ul>
+      <li>
+        <b>Confidentiality</b> - The Principle of least privilege restricts
+        access to information only to individuals explicitly granted access.
+        This information includes protection of user passwords, remote access
+        certificates, and email content.
+      </li>
+      <li>
+        <b>Integrity</b> - The prevention of unauthorized changes to information
+        at rest or in transit. A common approach used in data transmission is
+        for the sender to create a unique fingerprint of the data using a
+        one-way hashing algorithm.
+      </li>
+      <li>
+        <b>Availability</b> - Ensure services are available to authorized users.
+        Denial of service attacks are a prevalent cause of loss of availability
+        to users.
+      </li>
+    </ul>
+
+    <p>
+      Defense in depth can be visualized as a set of layers, with the Data to be
+      secured at the center. Each layer provides protection so that if one layer
+      is breached, a subsequent layer is already in place to prevent further
+      exposure.
+    </p>
+
+    <a href="./Microsoft Certified Azure Fundamentals/defense-depth.png">
+      <img
+        src="./Microsoft Certified Azure Fundamentals/defense-depth.png"
+        width="250px"
+      />
+    </a>
+
+    <h3>Physical security</h3>
+    <p>
+      Physical building security and controlling access to computing hardware
+      within the data center is the first line of defense.
+    </p>
+    <br />
+
+    <h3>Identity and access
+
+    </h3>
+    <p>
+      ・Control access to infrastructure and change control.
+      <br>
+      ・Use single sign-on and multi-factor authentication.
+      <br>
+      ・Audit events and changes.
+      <br>
+      The identity and access layer is all about ensuring identities are secure, access granted is only what is needed, and changes are logged.
+    </p>
+
+
+
+  
+    
+      <li>
+        Perimeter layer uses distributed denial-of-service (DDoS) protection to
+        filter large-scale attacks before they can cause a denial of service for
+        end users.
+      </li>
+      <li>
+        Networking layer limits communication between resources through
+        segmentation and access controls.
+      </li>
+      <li>Compute layer secures access to virtual machines.</li>
+      <li>
+        Application layer ensures applications are secure and free of
+        vulnerabilities.
+      </li>
+    </ul>
 
     <hr />
 
