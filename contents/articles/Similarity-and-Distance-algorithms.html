@@ -74,8 +74,8 @@
     <p><a href="#TOP">[TOP]</a></p>
 
     <p>
-      Similarity algorithms determine the most similaar object with the highest
-      similarity metrics.
+      Similarity algorithms determine the most similar object with the highest
+      similarity metric score.
     </p>
 
     <h3>Cosine Similarity</h3>
@@ -83,9 +83,21 @@
       The cosine similarity calculates the cosine of the angle between two
       vectors.
     </p>
+    <p>
+      Two vectors with the same orientation have a cosine similarity of 1, two
+      vectors oriented at 90° relative to each other have a similarity of 0, and
+      two vectors diametrically opposed have a similarity of -1
+    </p>
+    <a href="./Similarity-and-Distance-algorithms/Cosine_p.png">
+      <img
+        src="./Similarity-and-Distance-algorithms/Cosine_p.png"
+        width="250"
+      />
+    </a>
+
     <p>Formula:</p>
-    <a href="./Similarity-and-Distance-algorithms/Cosine.png">
-      <img src="./Similarity-and-Distance-algorithms/Cosine.png" />
+    <a href="./Similarity-and-Distance-algorithms/Cosine.svg">
+      <img src="./Similarity-and-Distance-algorithms/Cosine.svg" />
     </a>
 
     <p>Python Script:</p>
@@ -103,6 +115,13 @@
       Cosine similarity is for comparing two real-valued vectors, but Jaccard
       similarity is for comparing two binary vectors (sets).
     </p>
+    <a href="./Similarity-and-Distance-algorithms/Jaccard-Similarity_p.png">
+      <img
+        src="./Similarity-and-Distance-algorithms/Jaccard-Similarity_p.png"
+        width="250"
+      />
+    </a>
+
     <p>Formula:</p>
     <a href="./Similarity-and-Distance-algorithms/Jaccard-Similarity.png">
       <img src="./Similarity-and-Distance-algorithms/Jaccard-Similarity.png" />
