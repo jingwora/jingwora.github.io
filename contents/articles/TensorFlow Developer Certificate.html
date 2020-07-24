@@ -124,7 +124,16 @@
     <h3>Regression</h3>
     <p>A machine learning model used to predict continuous value.</p>
 
-    <h3>Regression algorithms</h3>
+    <p>
+      <b>Regression algorithms</b> - predict one or more continuous numeric
+      variables.
+    </p>
+    <p>
+      <b>Association algorithms</b>
+      - find correlations between different attributes in a dataset. The most
+      common application of this kind of algorithm is for creating association
+      rules, which can be used in a market basket analysis.
+    </p>
 
     <h3>Classification</h3>
     <p>
@@ -192,8 +201,10 @@
         src="./TensorFlow Developer Certificate/img/machine-learning-flow.png"
       />
     </a>
+    <hr />
+    <br />
 
-    <h3>Create First ML Model</h3>
+    <h2>Colab: Notebook</h2>
     <p>
       <a
         href="./TensorFlow Developer Certificate/nb/l02c01_celsius_to_fahrenheit_wrap_up.html"
@@ -201,6 +212,27 @@
         >&#128212; Notebook: Celsius_to_fahrenheit_wrap_up</a
       >
     </p>
+    <a href="./TensorFlow Developer Certificate/img/celsius_to_fahrenheit.png">
+      <img
+        src="./TensorFlow Developer Certificate/img/celsius_to_fahrenheit.png"
+        width="300"
+      />
+    </a>
+
+    <p>
+      <a
+        href="./TensorFlow Developer Certificate/nb/l03c01_classifying_images_of_clothing_warp_up.html"
+        target="_blank"
+        >&#128212; Notebook: classifying_images_of_clothing_warp_up</a
+      >
+    </p>
+    <a href="./TensorFlow Developer Certificate/img/fashion_MNIST.png">
+      <img
+        src="./TensorFlow Developer Certificate/img/fashion_MNIST.png"
+        width="500"
+      />
+    </a>
+
     <br />
 
     <h3>The Training Process</h3>
@@ -267,13 +299,6 @@
       this example we used the Adam optimizer.
     </p>
 
-    <p>One neuron neural network</p>
-
-    <a href="./TensorFlow Developer Certificate/img/dense-layer-one-neuron.png">
-      <img
-        src="./TensorFlow Developer Certificate/img/dense-layer-one-neuron.png"
-      />
-    </a>
     <hr />
     <br />
 
@@ -316,6 +341,7 @@
     </p>
 
     <hr />
+    <br />
 
     <h3>Key Neural Network Terminology</h3>
     <p>
@@ -332,6 +358,17 @@
       a bit at a time to gradually reduce the loss function.
     </p>
     <p>
+      <b>Stochastic gradient descent (SGD)</b> - uses only a single example (a
+      batch size of 1) per iteration. Given enough iterations, SGD works but is
+      very noisy.
+    </p>
+    <p>
+      <b>Mini-batch stochastic gradient descent (mini-batch SGD)</b> - is a
+      compromise between full-batch iteration and SGD. A mini-batch is typically
+      between 10 and 1,000 examples, chosen at random. Mini-batch SGD reduces
+      the amount of noise in SGD but is still more efficient than full-batch.
+    </p>
+    <p>
       <b>Optimizer</b> - A specific implementation of the gradient descent
       algorithm.
     </p>
@@ -340,9 +377,10 @@
       gradient descent.
     </p>
     <p>
-      <b>Batch</b> - The set of examples used during training of the neural
-      network.
+      <b>Batch</b> - The set of examples used during training in a single
+      iteration.
     </p>
+    <p></p>
     <p><b>Epoch</b> - How many times this cycle should be run?</p>
     <p><b>Forward pass</b> - The computation of output values from input.</p>
     <p>
@@ -386,16 +424,6 @@
     <hr />
     <br />
 
-    <h2>Model Evaluation</h2>
-    <h3>Model Evaluation: Regression</h3>
-
-    <p>
-      <b>MSE: Mean squared error</b>
-      <br />
-      A type of loss function that counts a small number of large discrepancies
-      as worse than a large number of small ones.
-    </p>
-
     <h2>Training and Test Sets: Splitting Data</h2>
 
     <p>Make sure that your test set meets the following two conditions:</p>
@@ -406,6 +434,17 @@
         a test set with different characteristics than the training set.
       </li>
     </ul>
+
+    <hr />
+
+    <h2>Model Evaluation</h2>
+    <h3>Model Evaluation: Regression</h3>
+
+    <p>
+      <b>Mean square error (MSE)</b>
+      <br />
+      The average squared loss per example over the whole dataset.
+    </p>
 
     <h3>Model Evaluation: Classification</h3>
 
