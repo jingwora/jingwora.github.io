@@ -83,6 +83,7 @@
       make computers achieve human-style intelligence. There are many approaches
       to reaching this goal, including machine learning and deep learning.
     </p>
+
     <ul>
       <li>
         <b>Machine Learning:</b>
@@ -109,38 +110,304 @@
       />
     </a>
 
-    <h2>Supervised, Unsupervised, & Reinforcement Learning</h2>
+    <h1>Types of Machine Learning</h1>
 
+    <h2>Supervised Learning</h2>
+    <p>
+      In supervised learning, the machine uses labeled training data. It is told
+      the correct output and it compares its own output which informs the
+      subsequent steps, adjusting itself along the way.
+    </p>
+
+    <p>The Supervised Learning mainly divided into two parts:</p>
+
+    <h3>Regression</h3>
+    <p>A machine learning model used to predict continuous value.</p>
+
+    <h3>Regression algorithms</h3>
+
+    <h3>Classification</h3>
+    <p>
+      A machine learning model used for distinguishing among two or more output
+      categories.
+    </p>
+
+    <h2>Unsupervised Learning</h2>
+    <p>
+      In unsupervised learning, the data isn't labeled. The machine must figure
+      out the correct answer without being told and must therefore discover
+      unknown patterns in the data.
+    </p>
+    <p>
+      Some popular examples of unsupervised learning include GANs and
+      Autoencoders.
+    </p>
+    <p>The Unsupervised Learning mainly divided into two parts:</p>
+
+    <h3>Clustering</h3>
+    <p>
+      Clustering is a Machine Learning technique that involves the grouping of
+      data points. Given a set of data points, we can use a clustering algorithm
+      to classify each data point into a specific group.
+    </p>
+
+    <h3>Dimensionality Reduction</h3>
+    <p>
+      Machine Learning technique reduces the dimensionality of training data.
+      The module analyzes input data and creates a reduced feature set that
+      captures all the information contained in the dataset, but in a smaller
+      number of features.
+    </p>
+
+    <h2>Semi-Supervised Learning</h2>
+    <p>
+      In Semi-Supervised Learning: Input data is a mixture of labeled and
+      unlabeled examples.
+    </p>
+
+    <h2>Reinforcement Learning</h2>
+    <p>
+      Reinforcement Learning allows the machine the most freedom. It uses trial
+      and error to discover the actions that yield the greatest rewards. AlphaGo
+      is a famous example of RL.
+    </p>
+    <hr />
+    <br />
+
+    <h3>Machine learning vs Traditional programming</h3>
+    <p>
+      Traditional programming languages typically take data and rules as input
+      and apply the rules to the data in order to come up with answers as
+      output.
+      <br />
+      On the other hand, in machine learning paradigm the data and answers (or
+      labels) go in as input and the learned rules (models) come out as output.
+      Machine learning paradigm is uniquely valuable because it lets computer to
+      learn new rules in complex and high dimensional space, a space harder to
+      comprehend by humans.
+    </p>
+
+    <a href="./TensorFlow Developer Certificate/img/machine-learning-flow.png">
+      <img
+        src="./TensorFlow Developer Certificate/img/machine-learning-flow.png"
+      />
+    </a>
+
+    <h3>Create First ML Model</h3>
+    <p>
+      <a
+        href="./TensorFlow Developer Certificate/nb/l02c01_celsius_to_fahrenheit_wrap_up.html"
+        target="_blank"
+        >&#128212; Notebook: Celsius_to_fahrenheit_wrap_up</a
+      >
+    </p>
+    <br />
+
+    <h3>The Training Process</h3>
+    <p>
+      The training process (happening in model.fit(...)) is really about tuning
+      the internal variables of the networks to the best possible values, so
+      that they can map the input to the output. This is achieved through an
+      optimization process called Gradient Descent, which uses Numeric Analysis
+      to find the best possible values to the internal variables of the model.
+    </p>
+    <p>
+      <b>Gradient descent</b> iteratively adjusts parameters, nudging them in
+      the correct direction a bit at a time until they reach the best values. In
+      this case “best values” means that nudging them any more would make the
+      model perform worse.
+    </p>
+    <p>
+      The function that measures how good or bad the model is during each
+      iteration is called the <b>“loss function”</b>, and the goal of each nudge
+      is to “minimize the loss function.
+    </p>
+
+    <p>
+      The training process starts with a forward pass, where the input data is
+      fed to the neural network (see Fig.1). Then the model applies its internal
+      math on the input and internal variables to predict an answer ("Model
+      Predicts a Value" in Fig. 1). In our example, the input was the degrees in
+      Celsius, and the model predicted the corresponding degrees in Fahrenheit.
+    </p>
+
+    <a href="./TensorFlow Developer Certificate/img/tensorflow-l2f2.png">
+      <img
+        src="./TensorFlow Developer Certificate/img/tensorflow-l2f2.png"
+        width="700"
+      />
+    </a>
+
+    <p>
+      Once a value is predicted, the difference between that predicted value and
+      the correct value is calculated. This difference is called the loss, and
+      it's a measure of how well the model performed the mapping task. The value
+      of the loss is calculated using a loss function, which we specified with
+      the loss parameter when calling model.compile().
+    </p>
+
+    <p>
+      After the loss is calculated, the internal variables (weights and biases)
+      of all the layers of the neural network are adjusted, so as to minimize
+      this loss — that is, to make the output value closer to the correct value
+      (see Fig. 2).
+    </p>
+
+    <a href="./TensorFlow Developer Certificate/img/tensorflow-l2f3.png">
+      <img
+        src="./TensorFlow Developer Certificate/img/tensorflow-l2f3.png"
+        width="700"
+      />
+    </a>
+
+    <p>
+      This optimization process is called Gradient Descent. The specific
+      algorithm used to calculate the new value of each internal variable is
+      specified by the optimizer parameter when calling model.compile(...). In
+      this example we used the Adam optimizer.
+    </p>
+
+    <p>One neuron neural network</p>
+
+    <a href="./TensorFlow Developer Certificate/img/dense-layer-one-neuron.png">
+      <img
+        src="./TensorFlow Developer Certificate/img/dense-layer-one-neuron.png"
+      />
+    </a>
+    <hr />
+    <br />
+
+    <h3>Key Machine Learning Terminology</h3>
+
+    <p><b>Feature</b> - The input(s) to our model.</p>
+
+    <p><b>Labels</b> - The output our model predicts.</p>
+
+    <p>
+      <b>Examples</b> - An input/output pair used for training. We break
+      examples into two categories:
+    </p>
     <ul>
       <li>
-        <b>Supervised Learning:</b>
-        In supervised learning, the machine uses labeled training data. It is
-        told the correct output and it compares its own output which informs the
-        subsequent steps, adjusting itself along the way.
-      </li>
-      <li>
-        <b>Unsupervised Learning:</b>
-        In unsupervised learning, the data isn't labeled. The machine must
-        figure out the correct answer without being told and must therefore
-        discover unknown patterns in the data.
+        Labeled example includes both feature(s) and the label.
         <br />
-        Some popular examples of unsupervised learning include GANs and
-        Autoencoders.
+        <code>labeled examples: {features, label}: (x, y) </code>
       </li>
       <li>
-        <b>Semi-Supervised Learning:</b>
-        In Semi-Supervised Learning: Input data is a mixture of labeled and
-        unlabeled examples.
-      </li>
-      <li>
-        <b>Reinforcement Learning:</b>
-        Reinforcement Learning allows the machine the most freedom. It uses
-        trial and error to discover the actions that yield the greatest rewards.
-        AlphaGo is a famous example of RL.
+        Unlabeled example contains features but not the label.
+        <br />
+        <code>unlabeled examples: {features, ?}: (x, ?) </code>
       </li>
     </ul>
 
-    <h3>Machine Learning terminology</h3>
+    <p>
+      <b>Model</b> - A model defines the relationship between features and
+      label.
+    </p>
+    <p>
+      <b>Training</b> - Training means creating or learning the model. That is,
+      you show the model labeled examples and enable the model to gradually
+      learn the relationships between features and label.
+    </p>
+    <p>
+      <b>Inference</b> - Inference means applying the trained model to unlabeled
+      examples. That is, you use the trained model to make useful predictions
+      (y').
+    </p>
+
+    <hr />
+
+    <h3>Key Neural Network Terminology</h3>
+    <p>
+      <b>Layer</b> - A collection of nodes connected together within a neural
+      network.
+    </p>
+    <p><b>Weights and biases</b> - The internal variables of model.</p>
+    <p>
+      <b>Loss</b> - The discrepancy between the desired output and the actual
+      output
+    </p>
+    <p>
+      <b>Gradient Descent</b> - An algorithm that changes the internal variables
+      a bit at a time to gradually reduce the loss function.
+    </p>
+    <p>
+      <b>Optimizer</b> - A specific implementation of the gradient descent
+      algorithm.
+    </p>
+    <p>
+      <b>Learning rate</b> - The “step size” for loss improvement during
+      gradient descent.
+    </p>
+    <p>
+      <b>Batch</b> - The set of examples used during training of the neural
+      network.
+    </p>
+    <p><b>Epoch</b> - How many times this cycle should be run?</p>
+    <p><b>Forward pass</b> - The computation of output values from input.</p>
+    <p>
+      <b>Backward pass (backpropagation)</b> - The calculation of internal
+      variable adjustments according to the optimizer algorithm, starting from
+      the output layer and working back through each layer to the input.
+    </p>
+    <p>
+      <b>Verbose</b> - Argument controls how much output the method produces.
+    </p>
+    <p>
+      <b>Flattening</b> - The process of converting a 2d image into 1d vector.
+    </p>
+    <p>
+      <b>Softmax</b> - A function that provides probabilities for each possible
+      output class.
+    </p>
+
+    <p><b>xxxx</b> - xxxx</p>
+
+    <hr />
+    <br />
+
+    <h2>Neural Network Structures</h2>
+
+    <h3>Dense and Fully Connected (FC)</h3>
+    <p>
+      Each node in one layer is connected to each node in the previous layer.
+    </p>
+    <hr />
+    <br />
+
+    <h2>Activations</h2>
+
+    <h3>The Rectified Linear Unit (ReLU)</h3>
+    <p>
+      ReLU function gives an output of 0 if the input is negative or zero, and
+      if input is positive, then the output will be equal to the input.
+    </p>
+    <p>ReLU gives the network the ability to solve nonlinear problems.</p>
+    <hr />
+    <br />
+
+    <h2>Model Evaluation</h2>
+    <h3>Model Evaluation: Regression</h3>
+
+    <p>
+      <b>MSE: Mean squared error</b>
+      <br />
+      A type of loss function that counts a small number of large discrepancies
+      as worse than a large number of small ones.
+    </p>
+
+    <h2>Training and Test Sets: Splitting Data</h2>
+
+    <p>Make sure that your test set meets the following two conditions:</p>
+    <ul>
+      <li>Is large enough to yield statistically meaningful results.</li>
+      <li>
+        Is representative of the data set as a whole. In other words, don't pick
+        a test set with different characteristics than the training set.
+      </li>
+    </ul>
+
+    <h3>Model Evaluation: Classification</h3>
 
     <hr />
 
@@ -196,18 +463,25 @@
       <tr>
         <th>xxxx</th>
         <th>xxxx</th>
-        <th>xxxx</th>
-        <th>xxxx</th>
       </tr>
       <tr>
-        <td>xxxx</td>
-        <td>xxxx</td>
         <td>xxxx</td>
         <td>xxxx</td>
       </tr>
     </table>
     <br />
-    <hr />
+
+    <ul>
+      <li>
+        <b>xxx</b>
+        xxx
+      </li>
+      <li>
+        <b>xxx</b>
+        xxx
+      </li>
+    </ul>
+    <br />
 
     <div id="navh_resources"></div>
     <div style="padding-top: 2em;"></div>
@@ -244,9 +518,17 @@
 
     <p>
       <a
-        href="https://www.udacity.com/course/intro-to-tensorflow-for-deep-learning--ud187"
+        href="https://www.coursera.org/specializations/tensorflow-in-practice#howItWorks"
         target="_blank"
-        >&#127760; Course: Intro to TensorFlow for Deep Learning by TensorFlow
+        >&#127760; Course: Deeplearning.ai TensorFlow in Practice Specialization
+      </a>
+    </p>
+
+    <p>
+      <a
+        href="https://developers.google.com/machine-learning/crash-course/ml-intro"
+        target="_blank"
+        >&#127760; Course: Machine Learning Crash Course
       </a>
     </p>
 
