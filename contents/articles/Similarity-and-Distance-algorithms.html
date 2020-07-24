@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Wrap-up DSimilarity and Distance algorithms"
+    />
+    <meta name="keywards" content="Similarity and Distance algorithms" />
+    <meta name="author" content="Kritdikoon Woraitthinan" />
+    <title>WRAP-UP: Similarity and Distance algorithms</title>
+    <link rel="stylesheet" href="/contents_resources/styles/mainStyles.css" />
+    <link rel="icon" type="image/png" href="/images/J_favicon/favicon.ico" />
+  </head>
+
+  <body>
+    <!-- NAVNIGATION BAR -->
+    <p style="padding: 20px;"></p>
+
+    <div class="navbar">
+      <a class="main" href="https://jingwora.github.io">
+        <img src="/images/J_favicon/favicon.ico" width="15" />
+      </a>
+      <a href="https://jingwora.github.io/contents.html">◀ CONTENTS</a>
+    </div>
+
+    <!-- CONTENT -->
+
+    <h1>
+      <img src="/contents_resources/icons/wrap-up.png" width="80" />
+      WRAP-UP: <br /><br />
+      Similarity and Distance algorithms
+    </h1>
+
+    <!-- Table of Contents -->
+
+    <h2>TOC</h2>
+    <p><a href="#navh01">Overview▸</a></p>
+    <p><a href="#navh02">Similariy algorithms▸</a></p>
+    <p><a href="#navh03">Distance algorithms▸</a></p>
+    <p><a href="#navh_resources">Resources▸</a></p>
+    <hr />
+
+    <!-- Overview -->
+
+    <div id="navh01"></div>
+    <div style="padding-top: 2em;"></div>
+    <h2>Overview</h2>
+    <p><a href="#TOP">[TOP]</a></p>
+
+    <p>
+      In machine learning, measuring similarity and distnace of data is core in
+      many machine learning tasks. In unspervised classification task, distance
+      is used to assign classes. In recommendation engines, recommended list can
+      be created from similarity of used contents (Content-Based
+      Recommendations) or similarity of user profile (User-based Collaborative
+      Filtering). In Natural Language Processing (NLP) task, key words in
+      document is extracted based on similarity algorithm.
+    </p>
+
+    <p>
+      By understanding similarity and distance algorithms, we can improve
+      machine learning performance. This is my wrap-up of Similarity and
+      distance algorithms.
+    </p>
+    <hr />
+
+    <!-- Similarity -->
+
+    <div id="navh02"></div>
+    <div style="padding-top: 2em;"></div>
+    <h2>Similarity algorithms</h2>
+    <p><a href="#TOP">[TOP]</a></p>
+
+    <p>
+      Similarity algorithms determine the most similaar object with the highest
+      similarity metrics.
+    </p>
+
+    <h3>Cosine Similarity</h3>
+    <p>
+      The cosine similarity calculates the cosine of the angle between two
+      vectors.
+    </p>
+    <p>Formula:</p>
+    <a href="./Similarity-and-Distance-algorithms/Cosine.png">
+      <img src="./Similarity-and-Distance-algorithms/Cosine.png" />
+    </a>
+
+    <p>Python Script:</p>
+    <textarea class="ta2">
+      import scipy.spatial.distance as dist
+      A = [1, 2, 4, 5, 2]
+      B = [1, 3, 5, 6, 2]
+      cosine_distance = dist.cosine(A, B)
+      print("Cosine distance is {:.4f}".format(cosine_distance))
+      >>>Cosine distance is 0.0039
+    </textarea>
+
+    <h3>Jaccard Similarity</h3>
+    <p>
+      Cosine similarity is for comparing two real-valued vectors, but Jaccard
+      similarity is for comparing two binary vectors (sets).
+    </p>
+    <p>Formula:</p>
+    <a href="./Similarity-and-Distance-algorithms/Jaccard-Similarity.png">
+      <img src="./Similarity-and-Distance-algorithms/Jaccard-Similarity.png" />
+    </a>
+
+    <p>Python Script:</p>
+    <textarea class="ta2">
+    import scipy.spatial.distance as dist
+    A = [1, 1, 1, 0, 0]
+    B = [1, 1, 0, 1, 0]
+    jaccard_distance = dist.jaccard(A, B)
+    print("Jaccard distance is {:.4f}".format(jaccard_distance))
+    >>> Jaccard distance is 0.5000
+    </textarea>
+
+    <hr />
+
+    <!-- Distance -->
+
+    <div id="navh03"></div>
+    <div style="padding-top: 2em;"></div>
+    <h2>Distance algorithms</h2>
+    <p><a href="#TOP">[TOP]</a></p>
+
+    <p>
+      xxx
+    </p>
+    <hr />
+
+    <table class="t1">
+      <tr>
+        <th>xxxx</th>
+        <th>xxxx</th>
+      </tr>
+      <tr>
+        <td>xxxx</td>
+        <td>xxxx</td>
+      </tr>
+    </table>
+    <br />
+
+    <ul>
+      <li>
+        <b>xxx</b>
+        xxx
+      </li>
+      <li>
+        <b>xxx</b>
+        xxx
+      </li>
+    </ul>
+    <hr />
+    <br />
+
+    <div id="navh_resources"></div>
+    <div style="padding-top: 2em;"></div>
+    <h2>Resources</h2>
+    <p><a href="#TOP">[TOP]</a></p>
+
+    <p>
+      <a
+        href="https://docs.scipy.org/doc/scipy/reference/stats.html"
+        target="_blank"
+        >&#127760; SciPy Reference Guide: Scipy Statistical functions</a
+      >
+    </p>
+
+    <p>
+      <a
+        href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.cdist.html"
+        target="_blank"
+        >&#127760; SciPy Reference Guide: Scipy Distance functions</a
+      >
+    </p>
+
+    <p>
+      <a href="#" target="_blank">&#127760; Link</a>
+    </p>
+    <p>
+      <a href="#" target="_blank">&#128229; Download</a>
+    </p>
+    <p>
+      <a href="#" target="_blank">&#128212; Contents</a>
+    </p>
+
+    <div style="padding-top: 10em;"></div>
+
+    <!-- Ending of Content -->
+    <hr />
+    <footer>
+      &copy; Jingwora All rights reserved.
+    </footer>
+
+    <!-- Script -->
+  </body>
+</html>
