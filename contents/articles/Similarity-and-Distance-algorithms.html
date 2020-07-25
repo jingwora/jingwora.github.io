@@ -254,6 +254,10 @@
       perfect positive relationship. A value of -1 implies perfect negative
       relationship. A value of 0 implies no linear relationship.
     </p>
+    <p>
+      correlation-based distance is suitable for when you want to identify
+      clusters of observations with the same overall profiles.
+    </p>
     <a href="./Similarity-and-Distance-algorithms/Pearsons-Correlation_p.png">
       <img
         src="./Similarity-and-Distance-algorithms/Pearsons-Correlation_p.png"
@@ -283,7 +287,11 @@
       Spearman's correlation is the nonparametric version of the Pearson
       product-moment correlation. It is calculated similarly to Pearson’s
       correlation but uses ranked data values. It determines the strength and
-      direction of the monotonic relationship.
+      direction of the monotonic relationship (whether linear or not).
+    </p>
+    <p>
+      Spearman’s measure is more computationally efficient compared to Kendall’s
+      Tau.
     </p>
     <a href="./Similarity-and-Distance-algorithms/Spearmans-Correlation_p.png">
       <img
@@ -303,10 +311,39 @@
     <textarea class="ta2">
     from scipy import stats
     A = [1, 2, 3, 4, 5]
-    B = [0, 1, 4, 10, 15]
-    spearman_correlation, _ = stats.spearmanr(A, B)
-    print("Spearmans correlation is {:.4f}".format(spearman_correlation))
-    >>> Spearmans correlation is 1.0000
+    B = [0, 1, 4, 10, 7]
+    pearson_correlation, _ = stats.pearsonr(A, B)
+    print("Pearson's correlation is {:.4f}".format(pearson_correlation))
+    >>> Spearmans correlation is 0.8743
+    </textarea>
+
+    <h3>Kendall’s Tau correlation distance</h3>
+    <p>
+      Kendall tau rank distance (or bubble-sort distance) is a metric that
+      counts the number of pairwise disagreements between two ranking lists. The
+      larger the distance, the more dissimilar the two lists are.
+    </p>
+    <p>Kendall’s Tau has smaller variability when using larger sample sizes.</p>
+    <a href="./Similarity-and-Distance-algorithms/Kendall-Correlation_p.png">
+      <img
+        src="./Similarity-and-Distance-algorithms/Kendall-Correlation_p.png"
+        width="250"
+      />
+    </a>
+
+    <p>Formula:</p>
+    <a href="./Similarity-and-Distance-algorithms/Kendall-Correlation.png">
+      <img src="./Similarity-and-Distance-algorithms/Kendall-Correlation.png" />
+    </a>
+
+    <p>Python Script:</p>
+    <textarea class="ta2">
+    from scipy import stats
+    A = [1, 2, 3, 4, 5]
+    B = [0, 1, 4, 10, 7]
+    kendall_correlation, _ = stats.kendalltau(A, B)
+    print("Kendall tau correlation is {:.4f}".format(kendall_correlation))
+    >>> Kendall tau correlation is 0.8000
     </textarea>
 
     <h3>Cosine distances</h3>
