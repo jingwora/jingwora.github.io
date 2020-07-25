@@ -113,7 +113,13 @@
     <h3>Jaccard Similarity</h3>
     <p>
       Cosine similarity is for comparing two real-valued vectors, but Jaccard
-      similarity is for comparing two binary vectors (sets).
+      similarity is for comparing two binary vectors (sets). Jaccard similarity
+      divides the size of the intersection by the size of the union of the
+      sample sets.
+    </p>
+    <p>
+      It’s a measure of similarity for the two sets of data, with a range from 0
+      to 1. The higher the value, the more similar the two sets.
     </p>
     <a href="./Similarity-and-Distance-algorithms/Jaccard-Similarity_p.png">
       <img
@@ -147,8 +153,102 @@
     <p><a href="#TOP">[TOP]</a></p>
 
     <p>
-      xxx
+      Distance algorithms prioritize objects with the lowest values to detect
+      similarity amongst them.
     </p>
+
+    <h3>Euclidean Distance</h3>
+    <p>
+      The Euclidean distance (or Euclidean metric) is a straight-line distance
+      between two vectors.
+    </p>
+    <p>
+      The Euclidean distance between points p and q is the length of the line
+      segment connecting them.
+    </p>
+    <a href="./Similarity-and-Distance-algorithms/Euclidean-Distance_p.png">
+      <img
+        src="./Similarity-and-Distance-algorithms/Euclidean-Distance_p.png"
+        width="250"
+      />
+    </a>
+
+    <p>Formula:</p>
+    <a href="./Similarity-and-Distance-algorithms/Euclidean-Distance.svg">
+      <img src="./Similarity-and-Distance-algorithms/Euclidean-Distance.svg" />
+    </a>
+
+    <p>Python Script:</p>
+    <textarea class="ta2">
+    import scipy.spatial.distance as dist
+    A = [(1, 1)]
+    B = [(4, 5)]
+    euclidean_distance = dist.euclidean(A, B)
+    print("Euclidean distance is {:.4f}".format(euclidean_distance))
+    >>> Euclidean distance is 5.0000
+    </textarea>
+
+    <h3>Manhattan Distance</h3>
+    <p>
+      The Manhattan Distance (or taxicab metric) is the sum of the horizontal
+      and vertical distances between points on a grid.
+    </p>
+    <p>
+      You can imagine this metric as a way to compute the distance between two
+      points when you are not able to go through buildings.
+    </p>
+    <a href="./Similarity-and-Distance-algorithms/Manhattan-Distance_p.png">
+      <img
+        src="./Similarity-and-Distance-algorithms/Manhattan-Distance_p.png"
+        width="250"
+      />
+    </a>
+
+    <p>Formula:</p>
+    <a href="./Similarity-and-Distance-algorithms/Manhattan-Distance.svg">
+      <img src="./Similarity-and-Distance-algorithms/Manhattan-Distance.svg" />
+    </a>
+
+    <p>Python Script:</p>
+    <textarea class="ta2">
+    import scipy.spatial.distance as dist
+    A = [(1, 1)]
+    B = [(4, 5)]
+    manhattan_distance = dist.cityblock(A, B)
+    print("Manhattan distance is {:.4f}".format(manhattan_distance))
+    >>> Manhattan distance is 7.0000
+    </textarea>
+
+    <h3>Minkowski Distance</h3>
+    <p>
+      Minkowski distance (or Minkowski metric) is a metric in a normed vector
+      space which can be considered as a generalization of both the Euclidean
+      distance and the Manhattan distance.
+    </p>
+
+    <a href="./Similarity-and-Distance-algorithms/Minkowski-Distance_p.png">
+      <img
+        src="./Similarity-and-Distance-algorithms/Minkowski-Distance_p.png"
+        width="250"
+      />
+    </a>
+
+    <p>Formula:</p>
+    <a href="./Similarity-and-Distance-algorithms/Minkowski-Distance.svg">
+      <img src="./Similarity-and-Distance-algorithms/Minkowski-Distance.svg" />
+    </a>
+
+    <p>Python Script:</p>
+    <textarea class="ta3">
+    import scipy.spatial.distance as dist
+    A = [(1, 1)]
+    B = [(4, 5)]
+    minkowskin_distance = dist.minkowski(A, B, w=(0.5,1.5))
+    # w = The weights for each value in A and B.
+    print("Minkowski distance is {:.4f}".format(minkowskin_distance))
+    >>> Minkowski distance is 5.3385
+    </textarea>
+
     <hr />
 
     <table class="t1">
