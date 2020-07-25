@@ -37,8 +37,9 @@
 
     <h2>TOC</h2>
     <p><a href="#navh01">Overview▸</a></p>
-    <p><a href="#navh02">Similariy algorithms▸</a></p>
-    <p><a href="#navh03">Distance algorithms▸</a></p>
+    <p><a href="#navh02">Geometry-based distances▸</a></p>
+    <p><a href="#navh03">Similarity-based distances▸</a></p>
+
     <p><a href="#navh_resources">Resources▸</a></p>
     <hr />
 
@@ -66,95 +67,16 @@
     </p>
     <hr />
 
-    <!-- Similarity -->
+    <!-- Geometry-based distances -->
 
     <div id="navh02"></div>
     <div style="padding-top: 2em;"></div>
-    <h2>Similarity algorithms</h2>
+    <h2>Geometry-based distances</h2>
     <p><a href="#TOP">[TOP]</a></p>
 
     <p>
-      Similarity algorithms determine the most similar object with the highest
-      similarity metric score.
-    </p>
-
-    <h3>Cosine Similarity</h3>
-    <p>
-      The cosine similarity calculates the cosine of the angle between two
-      vectors.
-    </p>
-    <p>
-      Two vectors with the same orientation have a cosine similarity of 1, two
-      vectors oriented at 90° relative to each other have a similarity of 0, and
-      two vectors diametrically opposed have a similarity of -1
-    </p>
-    <a href="./Similarity-and-Distance-algorithms/Cosine_p.png">
-      <img
-        src="./Similarity-and-Distance-algorithms/Cosine_p.png"
-        width="250"
-      />
-    </a>
-
-    <p>Formula:</p>
-    <a href="./Similarity-and-Distance-algorithms/Cosine.svg">
-      <img src="./Similarity-and-Distance-algorithms/Cosine.svg" />
-    </a>
-
-    <p>Python Script:</p>
-    <textarea class="ta2">
-      import scipy.spatial.distance as dist
-      A = [1, 2, 4, 5, 2]
-      B = [1, 3, 5, 6, 2]
-      cosine_distance = dist.cosine(A, B)
-      print("Cosine distance is {:.4f}".format(cosine_distance))
-      >>>Cosine distance is 0.0039
-    </textarea>
-
-    <h3>Jaccard Similarity</h3>
-    <p>
-      Cosine similarity is for comparing two real-valued vectors, but Jaccard
-      similarity is for comparing two binary vectors (sets). Jaccard similarity
-      divides the size of the intersection by the size of the union of the
-      sample sets.
-    </p>
-    <p>
-      It’s a measure of similarity for the two sets of data, with a range from 0
-      to 1. The higher the value, the more similar the two sets.
-    </p>
-    <a href="./Similarity-and-Distance-algorithms/Jaccard-Similarity_p.png">
-      <img
-        src="./Similarity-and-Distance-algorithms/Jaccard-Similarity_p.png"
-        width="250"
-      />
-    </a>
-
-    <p>Formula:</p>
-    <a href="./Similarity-and-Distance-algorithms/Jaccard-Similarity.png">
-      <img src="./Similarity-and-Distance-algorithms/Jaccard-Similarity.png" />
-    </a>
-
-    <p>Python Script:</p>
-    <textarea class="ta2">
-    import scipy.spatial.distance as dist
-    A = [1, 1, 1, 0, 0]
-    B = [1, 1, 0, 1, 0]
-    jaccard_distance = dist.jaccard(A, B)
-    print("Jaccard distance is {:.4f}".format(jaccard_distance))
-    >>> Jaccard distance is 0.5000
-    </textarea>
-
-    <hr />
-
-    <!-- Distance -->
-
-    <div id="navh03"></div>
-    <div style="padding-top: 2em;"></div>
-    <h2>Distance algorithms</h2>
-    <p><a href="#TOP">[TOP]</a></p>
-
-    <p>
-      Distance algorithms prioritize objects with the lowest values to detect
-      similarity amongst them.
+      Geometry-based distances measure of how far part points are based on
+      geometrical distance.
     </p>
 
     <h3>Euclidean Distance</h3>
@@ -249,32 +171,210 @@
     >>> Minkowski distance is 5.3385
     </textarea>
 
-    <hr />
+    <h3>Chebyshev Distance</h3>
+    <p>
+      Chebyshev distance (or Tchebychev distance, maximum metric, chessboard
+      distance) is a distance metric which is the maximum absolute distance in
+      one dimension of two N dimensional points. It has real world applications
+      in Chess, Warehouse logistics and many other fields.
+    </p>
 
-    <table class="t1">
-      <tr>
-        <th>xxxx</th>
-        <th>xxxx</th>
-      </tr>
-      <tr>
-        <td>xxxx</td>
-        <td>xxxx</td>
-      </tr>
-    </table>
+    <a href="./Similarity-and-Distance-algorithms/Chebyshev-Distance_p.png">
+      <img
+        src="./Similarity-and-Distance-algorithms/Chebyshev-Distance_p.png"
+        width="250"
+      />
+    </a>
+
+    <p>Formula:</p>
+    <a href="./Similarity-and-Distance-algorithms/Chebyshev-Distance.svg">
+      <img src="./Similarity-and-Distance-algorithms/Chebyshev-Distance.svg" />
+    </a>
+
+    <p>Python Script:</p>
+    <textarea class="ta2">
+    import scipy.spatial.distance as dist
+    A = [(1, 1)]
+    B = [(4, 5)]
+    chebyshev_distance = dist.chebyshev(A, B)
+    print("Chebyshev distance is {:.4f}".format(chebyshev_distance))
+    >>> Chebyshev distance is 4.0000
+    </textarea>
+
+    <h3>Canberra Distance</h3>
+    <p>
+      The Canberra distance is a weighted version of Manhattan distance. It
+      measures the sum of absolute fractional differences between the features
+      of a pair of data points and is very sensitive to a small change when both
+      coordinates are nearest to zero.
+    </p>
+    <p>
+      The Canberra distance has been used as a metric for comparing ranked
+      lists[3] and for intrusion detection in computer security.
+    </p>
+
+    <p>Formula:</p>
+    <a href="./Similarity-and-Distance-algorithms/Canberra-Distance.svg">
+      <img src="./Similarity-and-Distance-algorithms/Canberra-Distance.svg" />
+    </a>
+
+    <p>Python Script:</p>
+    <textarea class="ta2">
+    import scipy.spatial.distance as dist
+    A = [(1, 1)]
+    B = [(4, 5)]
+    canberra_distance = dist.canberra(A, B)
+    print("Canberra distance is {:.4f}".format(canberra_distance))
+    >>> Canberra distance is 1.2667
+    </textarea>
+
+    <hr />
     <br />
 
-    <ul>
-      <li>
-        <b>xxx</b>
-        xxx
-      </li>
-      <li>
-        <b>xxx</b>
-        xxx
-      </li>
-    </ul>
+    <!-- Similarity-based distances -->
+
+    <div id="navh03"></div>
+    <div style="padding-top: 2em;"></div>
+    <h2>Similarity-based distances</h2>
+    <p><a href="#TOP">[TOP]</a></p>
+
+    <p>
+      Similarity-based distances considers two objects to be similar based on
+      variouse factors like correlation, cosine distance, etc.
+    </p>
+
+    <h3>Pearson correlation distance</h3>
+    <p>
+      Correlation is a technique for investigating the linear relationship
+      between two continuous variables based on the Pearson correlation
+      coefficient.
+    </p>
+    <p>
+      The Pearson’s correlation ranges from -1 to +1. A value of 1 implies
+      perfect positive relationship. A value of -1 implies perfect negative
+      relationship. A value of 0 implies no linear relationship.
+    </p>
+    <a href="./Similarity-and-Distance-algorithms/Pearsons-Correlation_p.png">
+      <img
+        src="./Similarity-and-Distance-algorithms/Pearsons-Correlation_p.png"
+        width="250"
+      />
+    </a>
+
+    <p>Formula:</p>
+    <a href="./Similarity-and-Distance-algorithms/Pearsons-Correlation.png">
+      <img
+        src="./Similarity-and-Distance-algorithms/Pearsons-Correlation.png"
+      />
+    </a>
+
+    <p>Python Script:</p>
+    <textarea class="ta2">
+    from scipy import stats
+    A = [1, 2, 3, 4, 5]
+    B = [0, 1, 4, 10, 15]
+    pearson_correlation, _ = stats.pearsonr(A, B)
+    print("Pearson's correlation is {:.4f}".format(pearson_correlation))
+    >>> Pearson's correlation is 0.9690
+    </textarea>
+
+    <h3>Spearman’s correlation distance</h3>
+    <p>
+      Spearman's correlation is the nonparametric version of the Pearson
+      product-moment correlation. It is calculated similarly to Pearson’s
+      correlation but uses ranked data values. It determines the strength and
+      direction of the monotonic relationship.
+    </p>
+    <a href="./Similarity-and-Distance-algorithms/Spearmans-Correlation_p.png">
+      <img
+        src="./Similarity-and-Distance-algorithms/Spearmans-Correlation_p.png"
+        width="250"
+      />
+    </a>
+
+    <p>Formula:</p>
+    <a href="./Similarity-and-Distance-algorithms/Spearman’s Correlation.png">
+      <img
+        src="./Similarity-and-Distance-algorithms/Spearman’s Correlation.png"
+      />
+    </a>
+
+    <p>Python Script:</p>
+    <textarea class="ta2">
+    from scipy import stats
+    A = [1, 2, 3, 4, 5]
+    B = [0, 1, 4, 10, 15]
+    spearman_correlation, _ = stats.spearmanr(A, B)
+    print("Spearmans correlation is {:.4f}".format(spearman_correlation))
+    >>> Spearmans correlation is 1.0000
+    </textarea>
+
+    <h3>Cosine distances</h3>
+    <p>
+      The cosine distances calculates the cosine of the angle between two
+      vectors.
+    </p>
+    <p>
+      Two vectors with the same orientation have a cosine similarity of 1, two
+      vectors oriented at 90° relative to each other have a similarity of 0, and
+      two vectors diametrically opposed have a similarity of -1
+    </p>
+    <a href="./Similarity-and-Distance-algorithms/Cosine_p.png">
+      <img
+        src="./Similarity-and-Distance-algorithms/Cosine_p.png"
+        width="250"
+      />
+    </a>
+
+    <p>Formula:</p>
+    <a href="./Similarity-and-Distance-algorithms/Cosine.svg">
+      <img src="./Similarity-and-Distance-algorithms/Cosine.svg" />
+    </a>
+
+    <p>Python Script:</p>
+    <textarea class="ta2">
+      import scipy.spatial.distance as dist
+      A = [1, 2, 4, 5, 2]
+      B = [1, 3, 5, 6, 2]
+      cosine_distance = dist.cosine(A, B)
+      print("Cosine distance is {:.4f}".format(cosine_distance))
+      >>>Cosine distance is 0.0039
+    </textarea>
+
+    <h3>Jaccard Similarity</h3>
+    <p>
+      Cosine similarity is for comparing two real-valued vectors, but Jaccard
+      similarity is for comparing two binary vectors (sets). Jaccard similarity
+      divides the size of the intersection by the size of the union of the
+      sample sets.
+    </p>
+    <p>
+      It’s a measure of similarity for the two sets of data, with a range from 0
+      to 1. The higher the value, the more similar the two sets.
+    </p>
+    <a href="./Similarity-and-Distance-algorithms/Jaccard-Similarity_p.png">
+      <img
+        src="./Similarity-and-Distance-algorithms/Jaccard-Similarity_p.png"
+        width="250"
+      />
+    </a>
+
+    <p>Formula:</p>
+    <a href="./Similarity-and-Distance-algorithms/Jaccard-Similarity.png">
+      <img src="./Similarity-and-Distance-algorithms/Jaccard-Similarity.png" />
+    </a>
+
+    <p>Python Script:</p>
+    <textarea class="ta2">
+    import scipy.spatial.distance as dist
+    A = [1, 1, 1, 0, 0]
+    B = [1, 1, 0, 1, 0]
+    jaccard_distance = dist.jaccard(A, B)
+    print("Jaccard distance is {:.4f}".format(jaccard_distance))
+    >>> Jaccard distance is 0.5000
+    </textarea>
+
     <hr />
-    <br />
 
     <div id="navh_resources"></div>
     <div style="padding-top: 2em;"></div>
@@ -297,17 +397,7 @@
       >
     </p>
 
-    <p>
-      <a href="#" target="_blank">&#127760; Link</a>
-    </p>
-    <p>
-      <a href="#" target="_blank">&#128229; Download</a>
-    </p>
-    <p>
-      <a href="#" target="_blank">&#128212; Contents</a>
-    </p>
-
-    <div style="padding-top: 10em;"></div>
+    <div style="padding-top: 2em;"></div>
 
     <!-- Ending of Content -->
     <hr />
