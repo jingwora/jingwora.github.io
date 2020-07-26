@@ -109,6 +109,8 @@
     print("Euclidean distance is {:.4f}".format(euclidean_distance))
     >>> Euclidean distance is 5.0000
     </textarea>
+    <br />
+    <br />
 
     <h3>Manhattan Distance</h3>
     <p>
@@ -140,6 +142,8 @@
     print("Manhattan distance is {:.4f}".format(manhattan_distance))
     >>> Manhattan distance is 7.0000
     </textarea>
+    <br />
+    <br />
 
     <h3>Minkowski Distance</h3>
     <p>
@@ -170,6 +174,8 @@
     print("Minkowski distance is {:.4f}".format(minkowskin_distance))
     >>> Minkowski distance is 5.3385
     </textarea>
+    <br />
+    <br />
 
     <h3>Chebyshev Distance</h3>
     <p>
@@ -200,6 +206,8 @@
     print("Chebyshev distance is {:.4f}".format(chebyshev_distance))
     >>> Chebyshev distance is 4.0000
     </textarea>
+    <br />
+    <br />
 
     <h3>Canberra Distance</h3>
     <p>
@@ -227,9 +235,52 @@
     print("Canberra distance is {:.4f}".format(canberra_distance))
     >>> Canberra distance is 1.2667
     </textarea>
-
-    <hr />
     <br />
+    <br />
+
+    <h3>Hamming Distance</h3>
+    <p>
+      Hamming distance is a metric for comparing two binary data strings. With
+      equal length, Hamming distance is the number of bit positions in which the
+      two bits are different.
+    </p>
+    <p>
+      Hamming distance between two strings is calculated from XOR operation, (a⊕
+      b), and then count the total number of 1s in the resultant string.
+    </p>
+    <p>
+      It is used for error detection in network data transmission or to compare
+      lenght of data words in coding.
+    </p>
+
+    <p>Examples:</p>
+    <ul>
+      <li>
+        "ka<span style="color: blue;">rol</span>in" and "ka<span
+          style="color: blue;"
+          >thr</span
+        >in" is 3.
+      </li>
+      <li>
+        111<span style="color: blue;">00</span>0 and 111<span
+          style="color: blue;"
+          >11</span
+        >0 is 2.
+      </li>
+    </ul>
+
+    <p>Python Script:</p>
+    <textarea class="ta2">
+    import scipy.spatial.distance as dist
+    A = [(110, 100)]
+    B = [(110, 110)]
+    hamming_distance = dist.hamming(A, B)
+    print("Hamming distance is {:.4f}".format(hamming_distance))
+    >>> Hamming distance is 0.5000
+    </textarea>
+    <br />
+    <br />
+    <hr />
 
     <!-- Similarity-based distances -->
 
@@ -281,6 +332,8 @@
     print("Pearson's correlation is {:.4f}".format(pearson_correlation))
     >>> Pearson's correlation is 0.9690
     </textarea>
+    <br />
+    <br />
 
     <h3>Spearman’s correlation distance</h3>
     <p>
@@ -321,6 +374,8 @@
     print("Pearson's correlation is {:.4f}".format(pearson_correlation))
     >>> Spearmans correlation is 0.8743
     </textarea>
+    <br />
+    <br />
 
     <h3>Kendall’s Tau correlation distance</h3>
     <p>
@@ -355,6 +410,8 @@
     print("Kendall tau correlation is {:.4f}".format(kendall_correlation))
     >>> Kendall tau correlation is 0.8000
     </textarea>
+    <br />
+    <br />
 
     <h3>Cosine distances</h3>
     <p>
@@ -387,6 +444,8 @@
       print("Cosine distance is {:.4f}".format(cosine_distance))
       >>>Cosine distance is 0.0039
     </textarea>
+    <br />
+    <br />
 
     <h3>Jaccard Similarity</h3>
     <p>
@@ -420,6 +479,8 @@
     print("Jaccard distance is {:.4f}".format(jaccard_distance))
     >>> Jaccard distance is 0.5000
     </textarea>
+    <br />
+    <br />
 
     <hr />
 
