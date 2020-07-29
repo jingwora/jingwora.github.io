@@ -195,7 +195,7 @@
       and error to discover the actions that yield the greatest rewards. AlphaGo
       is a famous example of RL.
     </p>
-    <hr />
+
     <br />
 
     <h3>Machine learning vs Traditional programming</h3>
@@ -219,36 +219,12 @@
     <hr />
     <br />
 
-    <h2>Colab: Notebook</h2>
-    <p>
-      <a
-        href="./TensorFlow Developer Certificate/nb/l02c01_celsius_to_fahrenheit_wrap_up.html"
-        target="_blank"
-        >&#128212; Notebook: Celsius_to_fahrenheit_with_FC</a
-      >
-    </p>
-    <a href="./TensorFlow Developer Certificate/img/celsius_to_fahrenheit.png">
-      <img
-        src="./TensorFlow Developer Certificate/img/celsius_to_fahrenheit.png"
-        width="300"
-      />
-    </a>
+    <!-- Build and train neural network models using TensorFlow 2.x -->
 
-    <p>
-      <a
-        href="./TensorFlow Developer Certificate/nb/l03c01_classifying_images_of_clothing_warp_up.html"
-        target="_blank"
-        >&#128212; Notebook: fashion_MNIST_with_FC</a
-      >
-    </p>
-    <a href="./TensorFlow Developer Certificate/img/fashion_MNIST.png">
-      <img
-        src="./TensorFlow Developer Certificate/img/fashion_MNIST.png"
-        width="500"
-      />
-    </a>
-
-    <br />
+    <div id="navh02"></div>
+    <div style="padding-top: 2em;"></div>
+    <h1>Build and train neural network models using TensorFlow 2.x</h1>
+    <p><a href="#TOP">[TOP]</a></p>
 
     <h3>The Training Process</h3>
     <p>
@@ -314,7 +290,6 @@
       this example we used the Adam optimizer.
     </p>
 
-    <hr />
     <br />
 
     <h3>Key Machine Learning Terminology</h3>
@@ -355,7 +330,6 @@
       (y').
     </p>
 
-    <hr />
     <br />
 
     <h3>Key Neural Network Terminology</h3>
@@ -413,8 +387,47 @@
       <b>Softmax</b> - A function that provides probabilities for each possible
       output class.
     </p>
+
+    <br />
+
+    <h2>Colab: Notebook</h2>
+    <p>
+      <a
+        href="./TensorFlow Developer Certificate/nb/l02c01_celsius_to_fahrenheit_wrap_up.html"
+        target="_blank"
+        >&#128212; Notebook: Celsius_to_fahrenheit_with_FC</a
+      >
+    </p>
+    <a href="./TensorFlow Developer Certificate/img/celsius_to_fahrenheit.png">
+      <img
+        src="./TensorFlow Developer Certificate/img/celsius_to_fahrenheit.png"
+        width="300"
+      />
+    </a>
+
+    <p>
+      <a
+        href="./TensorFlow Developer Certificate/nb/l03c01_classifying_images_of_clothing_warp_up.html"
+        target="_blank"
+        >&#128212; Notebook: fashion_MNIST_with_FC</a
+      >
+    </p>
+    <a href="./TensorFlow Developer Certificate/img/fashion_MNIST.png">
+      <img
+        src="./TensorFlow Developer Certificate/img/fashion_MNIST.png"
+        width="500"
+      />
+    </a>
+
     <hr />
     <br />
+
+    <!-- Image classification -->
+
+    <div id="navh03"></div>
+    <div style="padding-top: 2em;"></div>
+    <h1>Image classification</h1>
+    <p><a href="#TOP">[TOP]</a></p>
 
     <h2>Convolutional neural network</h2>
     <p>
@@ -481,18 +494,6 @@
       images, i.e. by selecting the max value in each window.
     </p>
 
-    <hr />
-    <br />
-
-    <hr />
-
-    <br />
-
-    <h3>Images of Difference size</h3>
-
-    <h3>Color Images</h3>
-
-    <hr />
     <br />
 
     <h2>Overfitting</h2>
@@ -524,6 +525,7 @@
       <b>Dropout</b> - Removing a random selection of a fixed number of neurons
       in a neural network during training.
     </p>
+    <br />
 
     <h2>Colab: Notebook CNN</h2>
     <p>
@@ -562,7 +564,36 @@
     <br />
 
     <h2>Transfer Learning</h2>
-    <p></p>
+
+    <p>
+      <b>Transfer Learning</b> - A technique that reuses a model that was
+      created by machine learning experts and that has already been trained on a
+      large dataset. When performing transfer learning we must always change the
+      last layer of the pre-trained model so that it has the same number of
+      classes that we have in the dataset we are working with.
+    </p>
+
+    <a href="./TensorFlow Developer Certificate/img/transfer-learning.png">
+      <img
+        src="./TensorFlow Developer Certificate/img/transfer-learning.png"
+        width="500"
+      />
+    </a>
+
+    <p>
+      <b>Freezing Parameters</b> - Setting the variables of a pre-trained model
+      to non-trainable. By freezing the parameters, we will ensure that only the
+      variables of the last classification layer get trained, while the
+      variables from the other layers of the pre-trained model are kept the
+      same.
+    </p>
+    <p>
+      <b>MobileNet</b> - A state-of-the-art convolutional neural network
+      developed by Google that uses a very efficient neural network architecture
+      that minimizes the amount of memory and computational resources needed,
+      while maintaining a high level of accuracy. MobileNet is ideal for mobile
+      devices that have limited memory and computational resources.
+    </p>
 
     <h2>Colab: Notebook Transfer Learning</h2>
 
@@ -581,6 +612,18 @@
         >&#128212; Notebook: Flower and Transfer Learning</a
       >
     </p>
+
+    <hr />
+    <br />
+
+    <h2>Saving and Loading Models</h2>
+
+    <a href="./TensorFlow Developer Certificate/img/saving-loading-models.png">
+      <img
+        src="./TensorFlow Developer Certificate/img/saving-loading-models.png"
+        width="600"
+      />
+    </a>
 
     <hr />
     <br />
@@ -629,30 +672,6 @@
 
     <h3>Model Evaluation: Classification</h3>
 
-    <hr />
-
-    <!-- Build and train neural network models using TensorFlow 2.x -->
-
-    <div id="navh02"></div>
-    <div style="padding-top: 2em;"></div>
-    <h2>Build and train neural network models using TensorFlow 2.x</h2>
-    <p><a href="#TOP">[TOP]</a></p>
-
-    <p>
-      xxx
-    </p>
-    <hr />
-
-    <!-- Image classification -->
-
-    <div id="navh03"></div>
-    <div style="padding-top: 2em;"></div>
-    <h2>Image classification</h2>
-    <p><a href="#TOP">[TOP]</a></p>
-
-    <p>
-      xxx
-    </p>
     <hr />
 
     <!-- Natural language processing (NLP) -->
