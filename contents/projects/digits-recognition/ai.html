@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="AI Digits Recognition" />
+    <meta name="keywards" content="AI Digits Recognition" />
+    <meta name="author" content="Kritdikoon Woraitthinan" />
+    <title>AI Digits Recognition</title>
+    <link rel="stylesheet" href="/contents_resources/styles/mainStyles.css" />
+    <link rel="icon" type="image/png" href="/images/J_favicon/favicon.ico" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-HDYFX99SK4"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-HDYFX99SK4");
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+  </head>
+  <body>
+    <!-- NAVNIGATION BAR -->
+    <p style="padding: 20px;"></p>
+
+    <div class="navbar">
+      <a class="main" href="https://jingwora.github.io">
+        <img src="/images/J_favicon/favicon.ico" width="15" />
+      </a>
+      <a href="https://jingwora.github.io/contents.html">◀ CONTENTS</a>
+    </div>
+
+    <!-- CONTENT -->
+
+    <h3>Hand Written Digit Recognition</h3>
+
+    <div class="flex-two">
+      <div id="canvas_box_wrapper" class="canvas-box-wrapper">
+        <div id="canvas_box" class="canvas-box"></div>
+        <div class="col-12">
+          <button id="clear-button" class="btn btn-dark">Clear</button>
+          <button id="predict-button" class="btn btn-dark">
+            Predict
+          </button>
+        </div>
+      </div>
+      <br />
+      <div class="col-6">
+        <div style="width: 200px;">
+          <canvas id="chart_box" width="20" height="20"></canvas>
+        </div>
+        <div class="prediction-text"></div>
+      </div>
+    </div>
+
+    <script src="js/digit-recognition.js"></script>
+  </body>
+
+  <div style="padding-top: 10em;"></div>
+
+  <!-- Ending of Content -->
+  <hr />
+  <footer>
+    &copy; Jingwora All rights reserved.
+  </footer>
+</html>
