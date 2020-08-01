@@ -266,8 +266,8 @@ function loadChart(label, data, modelSelected) {
       labels: label,
       datasets: [
         {
-          label: modelSelected + " prediction",
-          backgroundColor: "#f50057",
+          label: " prediction",
+          backgroundColor: "navy",
           borderColor: "rgb(255, 99, 132)",
           data: data,
         },
@@ -275,7 +275,11 @@ function loadChart(label, data, modelSelected) {
     },
 
     // Configuration options go here
-    options: {},
+    options: {
+      legend: {
+        display: false,
+      },
+    },
   });
 }
 
