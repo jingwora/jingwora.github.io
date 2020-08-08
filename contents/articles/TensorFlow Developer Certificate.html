@@ -818,6 +818,29 @@
       src="./TensorFlow Developer Certificate/img/sentiment-example.png"
       width="500"
     />
+    <br />
+
+    <h3>Contents:</h3>
+    <p>
+      <b>Tokenization</b><br />
+
+      - Tokenizing input text<br />
+      - Creating and padding sequences<br />
+      - Incorporating out of vocabulary words<br />
+      - Generalizing tokenization and sequence methods to real world datasets<br />
+      - From there, you moved onto Embeddings, where you:
+    </p>
+    <p>
+      <b>Embeddings</b><br />
+      - developed a basic sentiment analysis model<br />
+      - visualized the embeddings vector<br />
+      - tweaked hyperparameters of the model to improve it<br />
+      - and diagnosed potential issues with using pre-trained subword tokenizers
+      when the network doesn’t have sequence context
+    </p>
+
+    <br />
+    <hr />
 
     <h2>Text Preprocessing</h2>
 
@@ -998,6 +1021,7 @@
       <code>tf.keras.losses.BinaryCrossentropy </code>
       <code>(from_logits=True)</code>
     </p>
+    <br />
 
     <h3>Visualizing Embeddings</h3>
     <p>
@@ -1022,6 +1046,7 @@
         >&#127760; Tensorflow Projector</a
       >
     </p>
+    <br />
 
     <h3>Colab: Notebook</h3>
 
@@ -1035,6 +1060,76 @@
 
     <hr />
     <br />
+
+    <h3>Tweaking the Model</h3>
+
+    <p>
+      There are a number of ways in which you might improve the sentiment
+      analysis model we’ve built already:
+    </p>
+
+    <p>
+      Data and preprocessing-based approaches<br />
+      - More data<br />
+      - Adjusting vocabulary size (make sure to consider the overall size of the
+      corpus!)<br />
+      - Adjusting sequence length (more or less padding or truncation)<br />
+      - Whether to pad or truncate pre or post (usually less of an effect than
+      the others)
+    </p>
+
+    <p>
+      Model-based approaches<br />
+      - Adjust the number of embedding dimensions<br />
+      - Changing use of Flatten vs. GlobalAveragePooling1D<br />
+      - Considering other layers like Dropout<br />
+      - Adjusting the number of nodes in intermediate fully-connected layers<br />
+      These are just some of the potential things you might tweak to better
+      predict sentiment from text.
+    </p>
+
+    <hr />
+    <br />
+    <h2>Subword</h2>
+    <p>
+      Subwords are another approach, where individual words are broken up into
+      the more commonly appearing pieces of themselves. This helps avoid marking
+      very rare words as OOV when you use only the most common words in a
+      corpus.
+    </p>
+
+    <img
+      src="./TensorFlow Developer Certificate/img/subwords.png"
+      width="300"
+    />
+
+    <p>
+      recurrent neural networks will help understanding the full context of the
+      sequence of words in an input.
+    </p>
+
+    <h3>Subword Datasets</h3>
+    <p>
+      There are a number of already created subwords datasets available online.
+      If you check out the IMDB dataset on TFDS, for instance, by scrolling down
+      you can see datasets with both 8,000 subwords as well as 32,000 subwords
+      in a corpus (along with regular full-word datasets).
+    </p>
+
+    <p>
+      TensorFlow’s SubwordTextEncoder and its build_from_corpus function is used
+      to create subwords from the reviews dataset we used previously.
+    </p>
+
+    <h3>Colab: Notebook</h3>
+
+    <p>
+      <a
+        href="./TensorFlow Developer Certificate/nb/l09c06_nlp_subwords.html"
+        target="_blank"
+        >&#128212; Notebook: NLP Subword</a
+      >
+    </p>
 
     <h3>Datasets</h3>
 
@@ -1059,29 +1154,18 @@
     <hr />
     <br />
 
-    <table class="t1">
-      <tr>
-        <th>xxxx</th>
-        <th>xxxx</th>
-      </tr>
-      <tr>
-        <td>xxxx</td>
-        <td>xxxx</td>
-      </tr>
-    </table>
-    <br />
+    <h2>Recurrent Neural Networks (RNNs)</h2>
+    <p>
+      Recurrent Neural Networks (RNNs) still take in some input x and output
+      some y, but they also feed some of the output of the network back into
+      itself. This may be done over and over, so that with text input, the
+      network has some memory of words that came much earlier in a sequence.
+    </p>
 
-    <ul>
-      <li>
-        <b>xxx</b>
-        xxx
-      </li>
-      <li>
-        <b>xxx</b>
-        xxx
-      </li>
-    </ul>
-    <br />
+    <img
+      src="./TensorFlow Developer Certificate/img/rnn-basics.png"
+      width="300"
+    />
 
     <div id="navh_resources"></div>
     <div style="padding-top: 2em;"></div>
