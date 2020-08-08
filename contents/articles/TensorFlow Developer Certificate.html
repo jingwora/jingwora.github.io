@@ -61,8 +61,8 @@
       >
     </p>
     <p><a href="#navh03">Image classification▸</a></p>
-    <p><a href="#navh04">Natural language processing (NLP)▸</a></p>
-    <p><a href="#navh05">Time series, sequences and predictions▸</a></p>
+    <p><a href="#navh04">Time series, sequences and predictions▸</a></p>
+    <p><a href="#navh05">Natural language processing (NLP)▸</a></p>
     <p><a href="#navh_resources">Resources▸</a></p>
     <hr />
 
@@ -724,29 +724,339 @@
 
     <hr />
 
-    <!-- Natural language processing (NLP) -->
+    <!-- Time series, sequences and predictions -->
 
     <div id="navh04"></div>
     <div style="padding-top: 2em;"></div>
-    <h2>Natural language processing (NLP)</h2>
+    <h1>Time series, sequences and predictions</h1>
     <p><a href="#TOP">[TOP]</a></p>
 
+    <h2>Colab: Notebook SavedModel</h2>
+
     <p>
-      xxx
+      <a
+        href="./TensorFlow Developer Certificate/nb/l08c01_time_series_patterns.html"
+        target="_blank"
+        >&#128212; Notebook: Time series patterns</a
+      >
     </p>
+
+    <p>
+      <a
+        href="./TensorFlow Developer Certificate/nb/l08c03_forecasting.html"
+        target="_blank"
+        >&#128212; Notebook: Forecasting</a
+      >
+    </p>
+
+    <p>
+      <a
+        href="./TensorFlow Developer Certificate/nb/l08c05_forecasting_with_machine_learning.html"
+        target="_blank"
+        >&#128212; Notebook: Forecasing with Machine Learning</a
+      >
+    </p>
+
+    <p>
+      <a
+        href="./TensorFlow Developer Certificate/nb/l08c06_forecasting_with_rnn.html"
+        target="_blank"
+        >&#128212; Notebook: Forecasting with RNN</a
+      >
+    </p>
+
+    <p>
+      <a
+        href="./TensorFlow Developer Certificate/nb/l08c07_forecasting_with_stateful_rnn.html"
+        target="_blank"
+        >&#128212; Notebook: Forecasting wiht Stateful RNN</a
+      >
+    </p>
+
+    <p>
+      <a
+        href="./TensorFlow Developer Certificate/nb/l08c08_forecasting_with_lstm.html"
+        target="_blank"
+        >&#128212; Notebook: Forecasting wiht LSTM</a
+      >
+    </p>
+
+    <p>
+      <a
+        href="./TensorFlow Developer Certificate/nb/l08c09_forecasting_with_cnn.html"
+        target="_blank"
+        >&#128212; Notebook: Forecasting wiht CNN</a
+      >
+    </p>
+
+    <br />
     <hr />
 
-    <!-- Time series, sequences and predictions -->
+    <!-- Natural language processing (NLP) -->
 
     <div id="navh05"></div>
     <div style="padding-top: 2em;"></div>
-    <h2>Time series, sequences and predictions</h2>
+    <h1>Natural language processing (NLP)</h1>
     <p><a href="#TOP">[TOP]</a></p>
 
     <p>
-      xxx
+      Natural Language Processing, or NLP for short, focuses on analyzing text
+      and speech data. This can range from simple recognition (what words are in
+      the given text/speech), to sentiment analysis (was a review positive or
+      negative), and all the way to areas like text generation (creating novel
+      song lyrics from scratch).
     </p>
+
+    <p>
+      NLP got its start mostly on machine translation, where users often had to
+      create strict, manual rules to go from one language to another. It has
+      since morphed to be more machine learning-based, reliant on much larger
+      datasets than the early methods were.
+    </p>
+
+    <img
+      src="./TensorFlow Developer Certificate/img/sentiment-example.png"
+      width="500"
+    />
+
+    <h2>Text Preprocessing</h2>
+
+    <h3>Tokenizing Text</h3>
+
+    <p>
+      Neural networks utilize numbers as their inputs, so we need to convert our
+      input text into numbers. Tokenization is the process of assigning numbers
+      to our inputs, but there is more than one way to do this - should each
+      letter have its own numerical token, each word, phrase, etc.
+    </p>
+
+    <p>
+      Tokenizing based on letters with our current neural networks doesn’t
+      always work so well - anagrams, for instance, may be made up of the same
+      letters but have vastly different meanings. So, in our case, we’ll start
+      by tokenizing each individual word.
+    </p>
+
+    <p>
+      <b>Tokenizer</b>
+      <br />
+      With TensorFlow, this is done easily through use of a Tokenizer, found
+      within tf.keras.preprocessing.text. If you wanted only the first 10 most
+      common words, you could initialize it like so:
+      <br />
+      <code>tokenizer = Tokenizer(num_words=10)</code>
+    </p>
+
+    <p>
+      <b>Fit on Texts </b>
+      <br />
+      Then, to fit the tokenizer to your inputs (in the below case a list of
+      strings called sentences), you use .fit_on_texts():
+      <br />
+      <code>tokenizer.fit_on_texts(sentences) </code>
+    </p>
+
+    <p>
+      <b>Text to Sequences </b>
+      <br />
+      From there, you can use the tokenizer to convert sentences into tokenized
+      sequences:
+      <br />
+      <code>tokenizer.texts_to_sequences(sentences) </code>
+    </p>
+
+    <p>
+      <b>Out of Vocabulary Words (OOV) </b>
+      <br />
+      However, new sentences may have new words that the tokenizer was not fit
+      on. By default, the tokenizer will just ignore these words and not include
+      them in the tokenized sequences. However, you can also add an “out of
+      vocabulary”, or OOV, token to represent these words. This has to be
+      specified when originally creating the Tokenizer object.
+      <br />
+      <code>tokenizer = Tokenizer(num_words=20, oov_token=’OOV’) </code>
+    </p>
+
+    <p>
+      <b>Viewing the Word Index </b>
+      <br />
+      Lastly, if you want to see how the tokenizer has mapped numbers to words,
+      use the tokenizer.word_index property to see this mapping.
+      <br />
+      <code>tokenizer = Tokenizer(num_words=20, oov_token=’OOV’) </code>
+    </p>
+
+    <h3>Colab: Notebook</h3>
+
+    <p>
+      <a
+        href="./TensorFlow Developer Certificate/nb/l09c01_nlp_turn_words_into_tokens.html"
+        target="_blank"
+        >&#128212; Notebook: NLP Turn words into Tokens</a
+      >
+    </p>
+
+    <h3>padding and truncating</h3>
+
+    <p>
+      Even after converting sentences to numerical values, there’s still an
+      issue of providing equal length inputs to our neural networks - not every
+      sentence will be the same length! There’s two main ways you can process
+      the input sentences to achieve this - padding the shorter sentences with
+      zeroes, and truncating some of the longer sequences to be shorter. In
+      fact, you’ll likely use some combination of these.
+    </p>
+
     <hr />
+    <br />
+
+    <p>
+      <b>pad_sequences </b>
+      <br />
+      With TensorFlow, the pad_sequences function from
+      tf.keras.preprocessing.sequence can be used for both of these tasks. Given
+      a list of sequences, you can specify a maxlen (where any sequences longer
+      than that will be cut shorter), as well as whether to pad and truncate
+      from either the beginning or ending, depending on pre or post settings for
+      the padding and truncating arguments. By default, padding and truncation
+      will happen from the beginning of the sequence, so set these to post if
+      you want it to occur at the end of the sequence. If you wanted to pad and
+      truncate from the beginning, you could use the following:
+      <br />
+      <code>padded = pad_sequences(sequences, maxlen=10) </code>
+    </p>
+
+    <h3>Colab: Notebook</h3>
+
+    <p>
+      <a
+        href="./TensorFlow Developer Certificate/nb/l09c02_nlp_padding.html"
+        target="_blank"
+        >&#128212; Notebook: NLP Padding</a
+      >
+    </p>
+
+    <p>
+      <a
+        href="./TensorFlow Developer Certificate/nb/l09c03_nlp_prepare_larger_text_corpus.html"
+        target="_blank"
+        >&#128212; Notebook: NLP prepare larger text corpus</a
+      >
+    </p>
+
+    <hr />
+    <br />
+
+    <h3>Word Embeddings</h3>
+
+    <p>
+      Embeddings are clusters of vectors in multi-dimensional space, where each
+      vector represents a given word in those dimensions. While it’s difficult
+      for us humans to think in many dimensions, luckily the TensorFlow
+      Projector makes it fairly easy for us to view these clusters in a 3D
+      projection (later Colabs will generate the necessary files for use with
+      the projection tool). This can be very useful for sentiment analysis
+      models, where you’d expect to see clusters around either more positive or
+      more negative sentiment associated with each word.
+    </p>
+    <img
+      src="./TensorFlow Developer Certificate/img/sphereized-viz.png"
+      width="500"
+    />
+
+    <p>
+      To create our embeddings, we’ll first use an embeddings layer, called
+      tf.keras.layers.Embedding. This takes three arguments: the size of the
+      tokenized vocabulary, the number of embedding dimensions to use, as well
+      as the input length (from when you standardized sequence length with
+      padding and truncation).
+    </p>
+    <p>
+      The output of this layer needs to be reshaped to work with any
+      fully-connected layers. You can do this with a pure Flatten layer, or use
+      GlobalAveragePooling1D for a little additional computation that sometimes
+      creates better results. In our case, we’re only looking at positive vs.
+      negative sentiment, so only a single output node is needed (0 for
+      negative, 1 for positive). You’ll be able to use a binary cross entropy
+      loss function since the result is only binary classification.
+    </p>
+    <br />
+
+    <b>A Note on Embedding Networks </b>
+    <p>
+      They suggest that the final network does not use a sigmoid activation
+      layer when working with embeddings, especially when using just the two
+      classes like we are for sentiment analysis:
+      <br />
+      <code>tf.keras.layers.Dense(1) </code>
+    </p>
+    <p>
+      <br />
+      Additionally, they suggest instead of using the string
+      ”binary_crossentropy” as the loss function, you use
+      <br />
+      <code>tf.keras.losses.BinaryCrossentropy(from_logits=True) </code>
+    </p>
+
+    <h3>Visualizing Embeddings</h3>
+    <p>
+      We’ve given you the code to create the files for input into the projector.
+      This will download two files: 1) the vectors, and 2) the metadata. The
+      projector will already come with a pre-loaded visualization, so you’ll
+      need to use the “Load” button on the left and upload each of the two
+      files.
+    </p>
+    <p>
+      In some cases, there may be a small difference in the number of tensors
+      present in the vector file and the metadata file (usually with a message
+      appearing after uploading the metadata); if this appears, wait for a few
+      seconds for the error message to disappear, and then click outside the
+      window. Typically, the visualization will still load just fine. Make sure
+      to click the checkbox for “Sphereize data”, which will better show whether
+      there is separation between positive and negative sentiment (or not).
+    </p>
+
+    <p>
+      <a href="http://projector.tensorflow.org/" target="_blank"
+        >&#127760; Tensorflow Projector</a
+      >
+    </p>
+
+    <h3>Colab: Notebook</h3>
+
+    <p>
+      <a
+        href="./TensorFlow Developer Certificate/nb/l09c04_nlp_embeddings_and_sentiment.html"
+        target="_blank"
+        >&#128212; Notebook: NLP embedding</a
+      >
+    </p>
+
+    <hr />
+    <br />
+
+    <h3>Datasets</h3>
+
+    <p>
+      <a href="https://github.com/niderhoff/nlp-datasets" target="_blank"
+        >&#127760; A popular Github repo for NLP datasets
+      </a>
+    </p>
+
+    <p>
+      <a href="https://www.kaggle.com/datasets" target="_blank"
+        >&#127760; Kaggle datasets
+      </a>
+    </p>
+
+    <p>
+      <a href="https://datasetsearch.research.google.com/" target="_blank"
+        >&#127760; Google's public dataset search
+      </a>
+    </p>
+
+    <hr />
+    <br />
 
     <table class="t1">
       <tr>
