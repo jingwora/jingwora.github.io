@@ -43,9 +43,6 @@
       WRAP-UP: <br />
       Python Environment
     </h1>
-    <p>
-      xxx
-    </p>
 
     <!-- Table of Contents -->
 
@@ -55,27 +52,119 @@
     <p><a href="#navh03">conda env</a></p>
     <hr />
 
-    <!-- xxxx -->
+    <p>
+      In many cases, different applicaations require different version of python
+      and package version. The solution for this problem is to create a virtual
+      environment, a self-contained directory tree that contains a Python
+      installation for a particular version of Python, plus a number of
+      additional packages.
+    </p>
+
+    <!-- venv -->
 
     <div id="navh01"></div>
     <div style="padding-top: 2em;"></div>
     <h2>venv</h2>
     <p><a href="#TOP">[TOP]</a></p>
 
-    <p>venv is a built-in module in python3.3 or higher.</p>
+    <p>venv is a lightweight built-in module in python3.3 or higher.</p>
     <p>Pros: Build-in module no need package installation.</p>
-    <p>Cons: Cannot create environment in different python version.</p>
-
-    <h3>Commonly used commands:</h3>
+    <p>
+      Cons: Cannot create environment in different python version.<br />
+      Need to activate from the path location.
+    </p>
 
     <p>
       <code>python -m venv &lt;env_name&gt;</code><br />
-      ・To create new virtual environment.
+      ・To create new virtual environment in current path.
     </p>
 
     <p>
       <code>&lt;env_name&gt;\Scripts\activate.bat</code><br />
-      ・To Active virtual environment.
+      ・To activate virtual environment.
+    </p>
+
+    <p>
+      <code>deactivate</code><br />
+      ・Deactivate environment (remove directory).
+    </p>
+
+    <p>
+      <code>rmdir &lt;env_name&gt; /s</code><br />
+      ・Delete Environment.
+    </p>
+
+    <hr />
+    <br />
+
+    <!-- conda -->
+
+    <div id="navh03"></div>
+    <div style="padding-top: 2em;"></div>
+    <h2>cond env</h2>
+    <p><a href="#TOP">[TOP]</a></p>
+
+    <p>
+      With conda, user can create, export, list, remove, and update environments
+      that have different versions of Python and/or packages installed in them.
+    </p>
+    <p>
+      Pros: can control both python version and package version. <br />
+      can create environment yml file.
+    </p>
+    <p>Cons: require to install anaconda.</p>
+
+    <p>
+      <code>conda create -n &lt;env_name&gt;</code><br />
+      ・To create new virtual environment.
+    </p>
+
+    <p>
+      <code>conda create -n &lt;env_name&gt; python=3.6</code><br />
+      ・To create new virtual environment with specific python version.
+    </p>
+
+    <p>
+      <code>conda create -n &lt;env_name&gt; python=3.6 numpy==1.17.4</code
+      ><br />
+      ・To create new virtual environment with specific python version and
+      package.
+    </p>
+
+    <p>
+      <code>conda env list</code><br />
+      <code>conda info --envs</code><br />
+      ・To list all environments.
+    </p>
+
+    <p>
+      <code>conda activate &lt;env_name&gt;</code><br />
+      ・To activate virtual environment.
+    </p>
+
+    <p>
+      <code>conda deactivate</code><br />
+      ・Deactivate environment (remove directory).
+    </p>
+
+    <p>
+      <code>conda remove -n &lt;env_name&gt; --all</code><br />
+      ・Delete Environment.
+    </p>
+
+    <p>
+      <code>conda env export &gt; environment.yml</code><br />
+      ・Exporting the environment.yml file.
+    </p>
+
+    <p>
+      <code>conda env create -f environment.yml</code><br />
+      ・Create environment with yml file.
+    </p>
+
+    <p>
+      <code>conda -h</code><br />
+      ・Conda help
     </p>
 
     <hr />
@@ -135,6 +224,11 @@
       </tr>
 
       <tr>
+        <td>pip install -r requirements.txt <br /></td>
+        <td>To install from requirements.txt.</td>
+      </tr>
+
+      <tr>
         <td>
           python --version<br />
           python -V
@@ -143,18 +237,15 @@
       </tr>
 
       <tr>
-        <td>xxx</td>
-        <td>xxxx</td>
+        <td>python</td>
+        <td>Open python</td>
       </tr>
 
       <tr>
-        <td>xxx</td>
-        <td>xxxx</td>
+        <td>exist()</td>
+        <td>Exist python</td>
       </tr>
     </table>
-    <br />
-
-    <hr />
 
     <div style="padding-top: 10em;"></div>
 
