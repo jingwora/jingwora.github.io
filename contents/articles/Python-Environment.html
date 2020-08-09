@@ -48,7 +48,7 @@
 
     <h2>TOC</h2>
     <p><a href="#navh01">venv</a></p>
-    <p><a href="#navh02">virtualenv</a></p>
+    <p><a href="#navh02">pipenv</a></p>
     <p><a href="#navh03">conda env</a></p>
     <hr />
 
@@ -68,10 +68,14 @@
     <p><a href="#TOP">[TOP]</a></p>
 
     <p>venv is a lightweight built-in module in python3.3 or higher.</p>
-    <p>Pros: Build-in module no need package installation.</p>
     <p>
-      Cons: Cannot create environment in different python version.<br />
-      Need to activate from the path location.
+      <b>Pros:</b> <br />
+      ・Build-in module no need package installation.
+    </p>
+    <p>
+      <b> Cons:</b> <br />
+      ・Cannot create environment in different python version.<br />
+      ・Need to activate from the path location.
     </p>
 
     <p>
@@ -97,11 +101,114 @@
     <hr />
     <br />
 
+    <!-- pipenv -->
+
+    <div id="navh02"></div>
+    <div style="padding-top: 2em;"></div>
+    <h2>pipenv</h2>
+    <p><a href="#TOP">[TOP]</a></p>
+
+    <p>
+      Pipenv is quite a new tool to help manage environment and packages similar
+      to npm, yarn, etc. User no longer need to use pip and virtualenv
+      separately.
+    </p>
+    <p>
+      Managing a requirements.txt file can be problematic, so Pipenv uses
+      Pipfile and Pipfile.lock to separate abstract dependency declarations from
+      the last tested combination.
+    </p>
+    <p>
+      Hashes are used everywhere, always. Security. Automatically expose
+      security vulnerabilities.
+    </p>
+    <p>
+      <b>Pros:</b> <br />
+      ・Combination of pip and virtualenv.<br />
+      ・No need to mannually create virtual environment.<br />
+      ・Security check
+    </p>
+
+    <p>
+      <b>Cons:</b> <br />
+      ・Need to install package.
+    </p>
+
+    <p>
+      <code>pip install pipenv</code><br />
+      ・To install pipenv.
+    </p>
+
+    <p>
+      <code>pipenv install &lt;package&gt;</code><br />
+      <code>pipenv install requests</code><br />
+      ・To install package via pipenv.
+    </p>
+
+    <p>
+      <code>pipenv install -r ./requirements.txt</code><br />
+      ・To install package via pipenv from requirements.txt.
+    </p>
+
+    <p>
+      <code>pipenv install pytest --dev</code><br />
+      ・To pytest only for dev environment.
+    </p>
+
+    <p>
+      <code>pipenv uninstall &lt;package&gt;</code><br />
+      <code>pipenv uninstall request</code><br />
+      ・To uninstall package from pipenv.
+    </p>
+
+    <p>
+      <code>pipenv shell</code><br />
+      ・To activate pipenv environment.
+    </p>
+
+    <p>
+      <code>exit</code><br />
+      ・To deactivate pipenv environment.
+    </p>
+
+    <p>
+      <code>pipenv run python</code><br />
+      ・To run python in pipenv environment.
+    </p>
+
+    <p>
+      <code>pipenv run python script.py</code><br />
+      ・To run python script in pipenv environment.
+    </p>
+
+    <p>
+      <code>pipenv lock -r > requirements.txt</code><br />
+      ・To create lock for requirements.txt.
+    </p>
+
+    <p>
+      <code>pipenv --python 3.6</code><br />
+      ・To change python version in pipenv.
+    </p>
+
+    <p>
+      <code>pipenv --rm</code><br />
+      ・To remove pipenv environment. (Pipfile is not deleted)
+    </p>
+
+    <p>
+      <code>pipenv install</code><br />
+      ・To create pipenv from Pipfile.
+    </p>
+
+    <hr />
+    <br />
+
     <!-- conda -->
 
     <div id="navh03"></div>
     <div style="padding-top: 2em;"></div>
-    <h2>cond env</h2>
+    <h2>conda env</h2>
     <p><a href="#TOP">[TOP]</a></p>
 
     <p>
@@ -109,10 +216,14 @@
       that have different versions of Python and/or packages installed in them.
     </p>
     <p>
-      Pros: can control both python version and package version. <br />
-      can create environment yml file.
+      <b>Pros:</b> <br />
+      ・User can control both python version and package version. <br />
+      ・User can create environment yml file.
     </p>
-    <p>Cons: require to install anaconda.</p>
+    <p>
+      <b>Cons: </b><br />
+      ・It requires to install anaconda.
+    </p>
 
     <p>
       <code>conda create -n &lt;env_name&gt;</code><br />
@@ -242,8 +353,8 @@
       </tr>
 
       <tr>
-        <td>exist()</td>
-        <td>Exist python</td>
+        <td>exit()</td>
+        <td>Exit python</td>
       </tr>
     </table>
 
