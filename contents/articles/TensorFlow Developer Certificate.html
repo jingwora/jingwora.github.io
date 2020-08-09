@@ -63,6 +63,7 @@
     <p><a href="#navh03">Image classification▸</a></p>
     <p><a href="#navh04">Time series, sequences and predictions▸</a></p>
     <p><a href="#navh05">Natural language processing (NLP)▸</a></p>
+    <p><a href="#navh06">Tensorflow Lite▸</a></p>
     <p><a href="#navh_resources">Resources▸</a></p>
     <hr />
 
@@ -824,19 +825,34 @@
     <p>
       <b>Tokenization</b><br />
 
-      - Tokenizing input text<br />
-      - Creating and padding sequences<br />
-      - Incorporating out of vocabulary words<br />
-      - Generalizing tokenization and sequence methods to real world datasets<br />
-      - From there, you moved onto Embeddings, where you:
+      - Tokenizing<br />
+      - Padding sequences<br />
+      - OOV (Out of vocabulary words)<br />
+      - Use real datasets<br />
     </p>
+
     <p>
       <b>Embeddings</b><br />
-      - developed a basic sentiment analysis model<br />
-      - visualized the embeddings vector<br />
-      - tweaked hyperparameters of the model to improve it<br />
-      - and diagnosed potential issues with using pre-trained subword tokenizers
-      when the network doesn’t have sequence context
+      - Transform into Enbeddings<br />
+      - Develop a Sentiment Model<br />
+      - Visualize Embedding Space<br />
+      - Tweak Hyperparameters<br />
+      - Diagnose Sequence Issues
+    </p>
+
+    <p>
+      <b>RNN</b><br />
+      - Sequence Context<br />
+      - RNN Architecture<br />
+      - Usage of LSTMs<br />
+      - LSTM vs Convolution vs GRU<br />
+    </p>
+
+    <p>
+      <b>Text Generation</b><br />
+      - Text Generation Basics<br />
+      - LSTMs for Text Generation<br />
+      - Optimizing Text Generation
     </p>
 
     <br />
@@ -1166,6 +1182,288 @@
       src="./TensorFlow Developer Certificate/img/rnn-basics.png"
       width="300"
     />
+
+    <p>
+      Simple RNNs are not always enough when working with text data. Longer
+      sequences, such as a paragraph, often are difficult to handle, as the
+      simple RNN structure loses information about previous inputs fairly
+      quickly.
+    </p>
+
+    <h2>LTSTMs (Long Short-Term Memory models)</h2>
+    <p>
+      Long Short-Term Memory models, or LSTMs, help resolve this by keeping a
+      “cell state” across time. These include a “forget gate”, where the cell
+      can choose whether to keep or forget certain words to carry forward in the
+      sequence. Another interesting aspect of LSTMs is that they can be
+      bidirectional, meaning that information can be passed both forward (later
+      in the text sequence) and backward (earlier in the text sequence).
+    </p>
+
+    <img
+      src="./TensorFlow Developer Certificate/img/lstm_forget.png"
+      width="500"
+    />
+
+    <h3>LSTMs in Code</h3>
+    <p>
+      The code for an LSTM layer itself is just the LSTM layer from
+      tf.keras.layers, with the number of LSTM cells to use. However, this is
+      typically wrapped within a Bidirectional layer to make use of passing
+      information both forward and backward in the network, as we noted on the
+      previous page.
+    </p>
+
+    <code>tf.keras.layers.Bidirectional </code>
+    <code>(tf.keras.layers.LSTM(64))</code>
+
+    <p>
+      One thing to note when using a Bidirectional layer is when you look at the
+      model summary, if you put in 64 LSTM nodes, you will actually see a layer
+      shape with 128 nodes (64x2).
+    </p>
+
+    <p>
+      <b>No Need to Flatten </b><br />
+      Unlike our more vanilla neural networks in the last lesson, you no longer
+      need to use Flatten or GlobalAveragePooling1D after the LSTM layer - the
+      LSTM can take the output of an Embedding layer and directly hook up to a
+      fully-connected Dense layer with its own output.
+    </p>
+
+    <p>
+      <b>Doubling Up </b><br />
+      You can also feed an LSTM layer into another LSTM layer. To do so, on top
+      of just stacking them in order when you create the model, you also need to
+      set return_sequences to True for the earlier LSTM layer - otherwise, as
+      noted above, the output will be ready for fully-connected layers and not
+      be in the sequence format the LSTM layer expects.
+    </p>
+
+    <textarea class="ta2">
+    # Two bidirectional LSTM layers with 64 nodes each
+    tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(64),
+    return_sequences=True)
+    tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(64))
+    </textarea>
+
+    <h3>Colab: Notebook</h3>
+
+    <p>
+      <a
+        href="./TensorFlow Developer Certificate/nb/l10c01_nlp_lstms_with_reviews_subwords_dataset.html"
+        target="_blank"
+        >&#128212; Notebook: NLP with Subword</a
+      >
+    </p>
+
+    <hr />
+    <br />
+
+    <h2>LSTMs vs. Convolutions vs. GRUs</h2>
+
+    <p>
+      <b>Convolutional Layers for Text </b><br />
+      Just like you did with images, you can also use convolutional layers on
+      text, where the convolution occurs across a sequence of words instead of
+      across an image. To use a convolutional layer on text inputs, you can
+      place a Conv1D layer directly after the Embedding layer:
+      <code>tf.keras.layers.Conv1D </code><br />
+      <code>(128, 5, activation=’relu’)</code>
+    </p>
+
+    <p>
+      Note that you will need to use Flatten or GlobalAveragePooling1D on the
+      output of this layer to connect to any fully-connected layers from there.
+    </p>
+
+    <p>
+      <b>GRUs(Gated Recurrent Units) </b><br />
+      Gated Recurrent Units, or GRUs, have “update” and “reset” gates. These
+      gates decide what to keep and what to throw away. They do not have a “cell
+      state” like LSTMs do. The code for these is very similar to an LSTM, where
+      the GRU layer is wrapped in a Bidirectional layer.
+      <code>tf.keras.layers.Bidirectional </code><br />
+      <code>(tf.keras.layers.GRU(32))</code>
+    </p>
+
+    <p>
+      An important item to note here is these performance differences (with
+      perhaps the exception of training duration) will vary depending on the
+      dataset and other changes to the model - you shouldn’t always assume one
+      type of model will work better than another.
+    </p>
+
+    <h3>In short</h3>
+
+    <p>
+      <b>CNN</b><br />
+      Utilizes “filters” that can slide over multiple words at a time and
+      extract features from those sequences of words. Can be used for purposes
+      other than a recurrent neural network.
+    </p>
+
+    <p>
+      <b>GRU</b><br />
+      Utilizes “update” and “reset” gates, where the “update” gate determines
+      updates to the existing stored knowledge, and the reset gate determines
+      how much to forget in the existing stored knowledge.
+    </p>
+
+    <p>
+      <b>LSTM </b><br />
+      Utilizes “forget” and “learn” gates that feed to “remember” and “use”
+      gates, where remembering is for further storage for the next input, and
+      using is for generating the current output.
+    </p>
+
+    <h3>Colab: Notebook</h3>
+
+    <p>
+      <a
+        href="./TensorFlow Developer Certificate/nb/l10c02_nlp_multiple_models_for_predicting_sentiment.html"
+        target="_blank"
+        >&#128212; Notebook: NLP with multiple models comparison</a
+      >
+    </p>
+
+    <h3>Document</h3>
+    <p>
+      <a
+        href="https://www.tensorflow.org/api_docs/python/tf/keras/layers/GRU"
+        target="_blank"
+        >&#127760; Documentation for GRU layers in TensorFlow
+      </a>
+    </p>
+    <p>
+      <a
+        href="https://www.tensorflow.org/api_docs/python/tf/keras/layers/LSTM"
+        target="_blank"
+        >&#127760; Documentation for LSTM layers in TensorFlow
+      </a>
+    </p>
+    <p>
+      <a
+        href="https://www.tensorflow.org/api_docs/python/tf/keras/layers/Conv1D"
+        target="_blank"
+        >&#127760; Documentation for 1D Convolutional layers in TensorFlow
+      </a>
+    </p>
+
+    <hr />
+    <br />
+
+    <h2>Text Generation</h2>
+
+    <p>
+      Text generation can be done through simply predicting the next most likely
+      word, given an input sequence. This can be done over and over by feeding
+      the original input sequence, plus the newly predicted end word, as the
+      next input sequence to the model. As such, the full output generated from
+      a very short original input can effectively go on however long you want it
+      to be.
+    </p>
+
+    <p>
+      The only real change to the network here is the output layer will now be
+      equivalent to a node per each possible new word to generate - so, if you
+      have 1,000 possible words in your corpus, you’d have an output array of
+      length 1,000. You’ll also need to change the loss function from binary
+      cross-entropy to categorical cross entropy - before, we had only a 0 or 1
+      as output, now there are potentially thousands of output “classes” (each
+      possible word).
+    </p>
+
+    <img
+      src="./TensorFlow Developer Certificate/img/text-prediction-example.png"
+      width="400"
+    />
+
+    <p>
+      There are hardly any differences in the model itself, other than changing
+      the number of nodes in the output layer and changing the loss function.
+      The more obvious changes come in working with the input and output data.
+      The input data takes chunks of sequences and just splits off the final
+      word as its label. So, if we had the sentence “I went to the beach with my
+      dog”, and we had a max input length of five words, we’d get:
+    </p>
+    <p>
+      Input: I went to the beach <br />
+      Label: with
+    </p>
+    <p>
+      Now, that’s not the only sequence that will come from the sentence! We
+      would also get:
+    </p>
+    <p>
+      Input: went to the beach with
+      <br />
+      Label: my
+    </p>
+    <p>And</p>
+    <p>
+      Input: to the beach with my
+      <br />
+      Label: dog
+    </p>
+
+    <p>
+      That’s how the N-Grams used in the pre-processing work - a single input
+      sequence might actually become a series of sequences and labels. With the
+      output of the network, I’ll let you mostly investigate that code in the
+      Colab on the next page, but the important thing there is that you can keep
+      looping and creating more text by just appending the next word onto the
+      previous input sequence.
+    </p>
+
+    <h3>Colab: Notebook</h3>
+
+    <p>
+      <a
+        href="./TensorFlow Developer Certificate/nb/l10c03_nlp_constructing_text_generation_model.html"
+        target="_blank"
+        >&#128212; Notebook: NLP CNN song generation</a
+      >
+    </p>
+    <br />
+
+    <h2>Optimizing the Text Generation Model</h2>
+
+    <p>
+      There are a number of ways you might improve your text generation
+      models:<br />
+
+      Using more data?<br />
+      You’ll need to consider memory and output size constraints<br />
+      - Also consider using only top-k most common words<br />
+      - Know your data - songs have many more words than a Tweet<br />
+      Keep tuning your model<br />
+      - Add/subtract from layer sizes or embedding dimensions<br />
+      Use np.random.choice with the probabilities for more variance in predicted
+      outputs
+    </p>
+
+    <h3>Colab: Notebook</h3>
+
+    <p>
+      <a
+        href="./TensorFlow Developer Certificate/nb/l10c04_nlp_optimizing_the_text_generation_model.html"
+        target="_blank"
+        >&#128212; Notebook: NLP optimizing song generation</a
+      >
+    </p>
+    <br />
+
+    <hr />
+    <br />
+
+    <div id="navh06"></div>
+    <div style="padding-top: 2em;"></div>
+    <h2>Tensorflow Lite</h2>
+    <p><a href="#TOP">[TOP]</a></p>
+
+    <hr />
+    <br />
 
     <div id="navh_resources"></div>
     <div style="padding-top: 2em;"></div>
