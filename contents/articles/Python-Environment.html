@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Wrap-up xxxx" />
-    <meta name="keywards" content="xxxx" />
+    <meta name="description" content="Wrap-up Python Environment" />
+    <meta name="keywards" content="Python Environment" />
     <meta name="author" content="Kritdikoon Woraitthinan" />
-    <title>WRAP-UP: xxxx</title>
+    <title>WRAP-UP: Python Environment</title>
     <link rel="stylesheet" href="/contents_resources/styles/mainStyles.css" />
     <link rel="icon" type="image/png" href="/images/J_favicon/favicon.ico" />
 
@@ -40,12 +40,8 @@
     <!-- CONTENT -->
 
     <h1>
-      <img
-        src="./TensorFlow Developer Certificate/tensorflow_logo.svg"
-        width="200"
-      />
-      xxxx <br />
-      xxxx
+      WRAP-UP: <br />
+      Python Environment
     </h1>
     <p>
       xxx
@@ -54,95 +50,122 @@
     <!-- Table of Contents -->
 
     <h2>TOC</h2>
-    <p><a href="#navh01">Content1▸</a></p>
-    <p><a href="#navh02">Content2▸</a></p>
-    <p><a href="#navh03">Content3▸</a></p>
-    <p><a href="#navh04">Content4▸</a></p>
-    <p><a href="#navh_resources">Resources▸</a></p>
+    <p><a href="#navh01">venv</a></p>
+    <p><a href="#navh02">virtualenv</a></p>
+    <p><a href="#navh03">conda env</a></p>
     <hr />
 
     <!-- xxxx -->
 
     <div id="navh01"></div>
     <div style="padding-top: 2em;"></div>
-    <h2>xxx</h2>
+    <h2>venv</h2>
     <p><a href="#TOP">[TOP]</a></p>
 
-    <p>
-      xxx
-    </p>
-    <hr />
+    <p>venv is a built-in module in python3.3 or higher.</p>
+    <p>Pros: Build-in module no need package installation.</p>
+    <p>Cons: Cannot create environment in different python version.</p>
 
-    <!-- xxxx -->
-
-    <div id="navh02"></div>
-    <div style="padding-top: 2em;"></div>
-    <h2>xxx</h2>
-    <p><a href="#TOP">[TOP]</a></p>
+    <h3>Commonly used commands:</h3>
 
     <p>
-      xxx
+      <code>python -m venv &lt;env_name&gt;</code><br />
+      ・To create new virtual environment.
     </p>
-    <hr />
-
-    <!-- xxxx -->
-
-    <div id="navh03"></div>
-    <div style="padding-top: 2em;"></div>
-    <h2>xxx</h2>
-    <p><a href="#TOP">[TOP]</a></p>
 
     <p>
-      xxx
+      <code>&lt;env_name&gt;\Scripts\activate.bat</code><br />
+      ・To Active virtual environment.
     </p>
+
     <hr />
+    <br />
+
+    <h2>Appendix</h2>
+
+    <h3>Commonly used commands:</h3>
 
     <table class="t1">
       <tr>
-        <th>xxxx</th>
-        <th>xxxx</th>
+        <th>Code</th>
+        <th>Explaination</th>
+        <th>Example</th>
       </tr>
+
       <tr>
+        <td>cls</td>
+        <td>Clear screen</td>
+        <td>cls</td>
+      </tr>
+
+      <tr>
+        <td>pip list</td>
+        <td>To show all current packages including pip and setuptools.</td>
+        <td>pip list</td>
+      </tr>
+
+      <tr>
+        <td>pip freeze</td>
+        <td>To show all current packages in requirements format.</td>
+        <td>pip freeze</td>
+      </tr>
+
+      <tr>
+        <td>pip freeze > requirements.txt</td>
+        <td>To create requirements file.</td>
+        <td>pip freeze > requirements.txt</td>
+      </tr>
+
+      <tr>
+        <td>where python</td>
+        <td>To get path of current python command.</td>
+        <td>where python</td>
+      </tr>
+
+      <tr>
+        <td>pip install &lt;package name&gt;</td>
+        <td>To install package in lastest version.</td>
+        <td>pip install nampy</td>
+      </tr>
+
+      <tr>
+        <td>pip install &lt;package name&gt;==&lt;version&gt;</td>
+        <td>To install python package with specific version.</td>
+        <td>pip install numpy==1.17.4</td>
+      </tr>
+
+      <tr>
+        <td>
+          python --version<br />
+          python -V
+        </td>
+        <td>To check python version.</td>
+        <td>
+          python --version<br />
+          python -V
+        </td>
+      </tr>
+
+      <tr>
+        <td>xxx</td>
+        <td>xxxx</td>
+        <td>xxxx</td>
+      </tr>
+
+      <tr>
+        <td>xxx</td>
         <td>xxxx</td>
         <td>xxxx</td>
       </tr>
     </table>
     <br />
 
-    <ul>
-      <li>
-        <b>xxx</b>
-        xxx
-      </li>
-      <li>
-        <b>xxx</b>
-        xxx
-      </li>
-    </ul>
-    <br />
-
-    <textarea class="ta1">
-      test
-    </textarea>
-
-    <a href="xxx">
-      <img src="xxx" width="400px" />
-    </a>
-
-    <div id="navh_resources"></div>
-    <div style="padding-top: 2em;"></div>
-    <h2>Resources</h2>
-    <p><a href="#TOP">[TOP]</a></p>
-
     <p>
-      <a href="#" target="_blank">&#127760; Link</a>
+      <code>pip install &lt;package name&gt;</code><br />
+      ・To Active virtual environment. pip install six==1.8.0
     </p>
-    <p>
-      <a href="#" target="_blank">&#128229; Download</a>
-    </p>
-    <p>
-      <a href="#" target="_blank">&#128212; Contents</a>
-    </p>
+
+    <hr />
 
     <div style="padding-top: 10em;"></div>
 
