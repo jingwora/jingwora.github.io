@@ -385,25 +385,62 @@
 
     <h3>Python Snippet</h3>
 
-    <p>
-      To python version:<br />
-      <code
-        >import sys<br />
-        print(sys.version)
-        <br />
-      </code>
-      3.7.7 (default, May 6 2020, 11:45:54) [MSC v.1916 64 bit (AMD64)]
-    </p>
-    <br />
+    <table class="t1">
+      <tr>
+        <td>
+          <p>
+            Get <b>python version</b>:<br />
+            <code
+              >import sys<br />
+              print(sys.version)
+              <br />
+            </code>
+            3.7.7 (default, May 6 2020, 11:45:54) [MSC v.1916 64 bit (AMD64)]
+          </p>
+        </td>
+      </tr>
 
-    <p>
-      To check package version:<br />
-      <code
-        >import tensorflow as tf<br />
-        print(tf.__version__)<br />
-      </code>
-      2.3.0
-    </p>
+      <tr>
+        <td>
+          <p>
+            Get <b>package version</b>:<br />
+            <code
+              >import tensorflow as tf<br />
+              print(tf.__version__)<br />
+            </code>
+            2.3.0
+          </p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p>
+            Get <b>current working directory</b>:<br />
+            <code
+              >import os<br />
+              print(os.getcwd())<br />
+            </code>
+            C:\Users\jingw\PycharmProjects\pj01
+          </p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p>
+            To <b>add working directory</b> relative to the current running
+            script:<br />
+            <code
+              >import os, sys<br />
+              sys.path.append(os.getcwd())<br />
+            </code>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <hr />
+    <br />
 
     <div style="padding-top: 10em;"></div>
 
