@@ -732,6 +732,176 @@
     <h1>Time series, sequences and predictions</h1>
     <p><a href="#TOP">[TOP]</a></p>
 
+    <p>
+      Time series is ordered sequence of value spread over time.
+      Time series data is available in various place like stock price, 
+      weather forecast, demand trend, audio, GPS location log, brain wave etc.
+    </p>
+    <p>
+      <b>Univariate time series</b> is time series data with single value at each time-step.
+      <br>
+      <b>Multivariate time series</b> is time series with multiple value at each time-step.
+    </p>
+
+    <p>
+      <b>Forecasting</b> – process of predicting the future based on past and
+       present data. Use cases: Demand forecast, Weather forecast, …
+       <br>
+      <b>Anomaly Detection</b> – process of identifying unusual data points in dataset. 
+       Use cases: Spam detection, fraud detection, …
+
+    </p>
+    <hr>
+
+    <h3>Time series patterns</h3>
+    <p>
+      <b>Trend</b> - A trend exists when there is a long-term increase or decrease in the data.
+      <br>
+      <b>Seasonality</b> - A seasonal pattern occurs when a time series is affected by seasonal factors such as the day of week.
+      <br>
+      <b>Cyclic</b> - A cycle occurs when the data exhibit rises and falls that are not of a fixed frequency.
+      <br>
+      <b>Noise</b> - Noise simply refers to random fluctuations of data.
+
+    </p>
+    <hr><br>
+
+
+
+    <h2>Forecasting Approaches</h2>
+    <h3>Naïve Forecasting</h3>
+    <p>
+      Last period's actuals are used as this period's forecast. 
+      It is used as a based model for comparison.
+    </p>
+
+    <h3>Moving Average Forecasting</h3>
+    <p>
+      Average value of moving window data used to smooth data.
+      <br>
+      Differencing – calculate different of each data point to 
+      previous period for example -1 year to eliminate trend and seasonality. 
+      (series(t) – series(t-365)
+    </p>
+
+    <h3>Linear Regression Forecasting</h3>
+    <p>
+      Linear relationship model with 1 dense layer.
+    </p>
+
+    <h3>RNN (Recurrent Neural Network)</h3>
+    <p>
+      RNN is a neural network which contains recurrent layers, that can sequentially 
+      process a sequence of inputs. RNN contain memory cell which is used repeatedly 
+      to compute the outputs. RNN expects 3D inputs: batch size, number of time-steps 
+      and series dimension.
+      <br><br>
+      <img
+      src="./TensorFlow Developer Certificate/img/forecasting_RNN.png"
+      width="500"
+      />
+
+      <br>
+      RNN > RNN > Dense
+      <br>
+      Sequent to Vector RNNs
+      <br>
+      Sequent to Sequent RNNs
+      <br>
+      <b>Stateless RNNs</b> – NN resets state to zero at each iteration. Stateless 
+      RNNs is simple to use but it cannot learn patterns longer than the length of the window.
+      <br><br>
+      <img
+      src="./TensorFlow Developer Certificate/img/forecasting_stateless_RNN.png"
+      width="500"
+      />
+      <br>
+      <b>Stateful RNNs</b> – NN which state is preserved for next training batch and 
+      reset state to zero at the end of each epoch. It can learn from previous 
+      state yet, it required more data preparation and take more time. 
+      (used less compared to Stateless RNNs)
+      <br><br>
+      <img
+      src="./TensorFlow Developer Certificate/img/forecasting_stateful_RNN.png"
+      width="500"
+      />
+    </p>
+
+    <h3>LSTM (long short-term memory)</h3>
+    <p>
+      LSTM has short term and long time memory cell. LTSM call can detect 
+      patterns of over 100 time steps.
+    </p>
+    <img
+    src="./TensorFlow Developer Certificate/img/forecasting_LSTM.png"
+    width="500"
+    />
+
+    <h3>CNN (Convolutional Neural Network)</h3>
+    <p>
+      it is preferable to stack multiple convolutional layers with small kernel 
+      which increase performance and accuracy. Hyperparameter: Padding, Stride, 
+      No. of filter, Kernels
+    </p>
+
+    <img
+    src="./TensorFlow Developer Certificate/img/forecasting_1D_CNN.png"
+    width="500"
+    />
+
+    <h3>WaveNet</h3>
+    <p>
+      WaveNet is CNN model that has receptive field at different dilation rate 
+      to learn different time frame.
+    </p>
+    <img
+    src="./TensorFlow Developer Certificate/img/forecasting_WaveNet.png"
+    width="500"
+    />
+    <hr>
+    <br>
+
+    <h3>Forecasting performance evaluation</h3>
+    <p>
+      We use train and validation data to evaluate model and use full data including 
+      test period for production deployment. 
+      <br>
+      <b>Fix partitioning</b> - Split data into - Train, Validation, Test period
+      <br>
+      <b>Roll-forward partitioning</b> – Create series window of Train and Validation. 
+      It required much more training time but it more mimic production condition.
+    </p>
+
+    <h3>Evaluation Metrics</h3>
+    <table class="t1">
+      <tr>
+        <th>Metrics</th>
+        <th>Explaination</th>
+      </tr>
+      <tr>
+        <td>errors</td>
+        <td>forecast – actual</td>
+      </tr>
+      <tr>
+        <td>mse <br> (mean square error)</td>
+        <td>np.square(errors).mean()</td>
+      </tr>
+      <tr>
+        <td>rmse <br> (root mean square error) </td>
+        <td>pow(mse, 2)</td>
+      </tr>
+      <tr>
+        <td>mae <br> (mean absolute error) </td>
+        <td>np.abs(errors).mean()</td>
+      </tr>
+      <tr>
+        <td>mape  <br> (mean absolute percentage error) </td>
+        <td>np.abs(errors/x_valid).mean()</td>
+      </tr>
+    </table>
+    <br />
+
+  
     <h2>Colab: Notebook SavedModel</h2>
 
     <p>
