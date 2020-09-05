@@ -28,7 +28,7 @@
 
   <body>
     <!-- NAVNIGATION BAR -->
-    <p style="padding: 20px;"></p>
+    <p style="padding: 20px"></p>
 
     <div class="navbar">
       <a class="main" href="https://jingwora.github.io">
@@ -63,7 +63,7 @@
     <!-- venv -->
 
     <div id="navh01"></div>
-    <div style="padding-top: 2em;"></div>
+    <div style="padding-top: 2em"></div>
     <h2>venv</h2>
     <p><a href="#TOP">[TOP]</a></p>
 
@@ -104,7 +104,7 @@
     <!-- pipenv -->
 
     <div id="navh02"></div>
-    <div style="padding-top: 2em;"></div>
+    <div style="padding-top: 2em"></div>
     <h2>pipenv</h2>
     <p><a href="#TOP">[TOP]</a></p>
 
@@ -228,7 +228,7 @@
     <!-- conda -->
 
     <div id="navh03"></div>
-    <div style="padding-top: 2em;"></div>
+    <div style="padding-top: 2em"></div>
     <h2>conda env</h2>
     <p><a href="#TOP">[TOP]</a></p>
 
@@ -389,7 +389,7 @@
       <tr>
         <td>
           <p>
-            Get <b>python version</b>:<br />
+            Print <b>python version</b>:<br />
             <code
               >import sys<br />
               print(sys.version)
@@ -403,7 +403,7 @@
       <tr>
         <td>
           <p>
-            Get <b>package version</b>:<br />
+            Print <b>package version</b>:<br />
             <code
               >import tensorflow as tf<br />
               print(tf.__version__)<br />
@@ -416,7 +416,7 @@
       <tr>
         <td>
           <p>
-            Get <b>current working directory</b>:<br />
+            Print <b>current working directory</b>:<br />
             <code
               >import os<br />
               print(os.getcwd())<br />
@@ -438,17 +438,28 @@
           </p>
         </td>
       </tr>
+
+      <tr>
+        <td>
+          <p>
+            Print <b>Execution time</b><br />
+            <code
+              >from datetime import datetime<br />
+              start_time = datetime.now()<br />
+              print('Execution time:' + str(datetime.now() - start_time))<br />
+            </code>
+          </p>
+        </td>
+      </tr>
     </table>
     <hr />
     <br />
 
-    <div style="padding-top: 10em;"></div>
+    <div style="padding-top: 10em"></div>
 
     <!-- Ending of Content -->
     <hr />
-    <footer>
-      &copy; Jingwora All rights reserved.
-    </footer>
+    <footer>&copy; Jingwora All rights reserved.</footer>
 
     <!-- Script -->
   </body>
