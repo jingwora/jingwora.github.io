@@ -392,10 +392,11 @@
             Print <b>python version</b>:<br />
             <code
               >import sys<br />
-              print(sys.version)
+              print('Python environment : ' + str(sys.version))
               <br />
             </code>
-            3.7.7 (default, May 6 2020, 11:45:54) [MSC v.1916 64 bit (AMD64)]
+            Python environment : 3.7.7 (default, May 6 2020, 11:45:54) [MSC
+            v.1916 64 bit (AMD64)]
           </p>
         </td>
       </tr>
@@ -406,9 +407,9 @@
             Print <b>package version</b>:<br />
             <code
               >import tensorflow as tf<br />
-              print(tf.__version__)<br />
+              print('Tensorflow version : ' + str(tf.__version__))<br />
             </code>
-            2.3.0
+            Tensorflow version : 2.3.0
           </p>
         </td>
       </tr>
@@ -419,9 +420,9 @@
             Print <b>current working directory</b>:<br />
             <code
               >import os<br />
-              print(os.getcwd())<br />
+              print('Working Directory : ' + str(os.getcwd()))<br />
             </code>
-            C:\Users\jingw\PycharmProjects\pj01
+            Working Directory : C:\Users\jingw\PycharmProjects\tfexam-t1
           </p>
         </td>
       </tr>
@@ -448,6 +449,7 @@
               start_time = datetime.now()<br />
               print('Execution time:' + str(datetime.now() - start_time))<br />
             </code>
+            Execution time:0:00:00
           </p>
         </td>
       </tr>
