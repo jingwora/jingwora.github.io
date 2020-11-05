@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>Python_Logging_Best_Practices</title>
+<title>MSSQLServer_pyodbc</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13031,45 +13031,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-<style type="text/css">
-    
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-
-    </style>
 
 
 <style type="text/css">
@@ -13130,370 +13091,83 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Python-Default-Logging-Module">Python Default Logging Module<a class="anchor-link" href="#Python-Default-Logging-Module">&#182;</a></h1>
+<h1 id="pyodbc">pyodbc<a class="anchor-link" href="#pyodbc">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In Python project, good logs is very essentail not only for debugging but also to provide insight to avoid issue and improve performance. In this articles, I will discuss the best practises for logging with Python and provide some code sample in 3 logging methods.</p>
+<p>Sample code of pyodbc to connect with Microsoft SQL Server Database.</p>
+<p>SQL Server Management:</p>
+<p><a href="https://docs.microsoft.com/en-us/sql/sql-server/?view=sql-server-ver15">https://docs.microsoft.com/en-us/sql/sql-server/?view=sql-server-ver15</a></p>
+<p>SQL</p>
+<p><a href="https://www.sqlservertutorial.net/">https://www.sqlservertutorial.net/</a></p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Good-practices">Good practices<a class="anchor-link" href="#Good-practices">&#182;</a></h4><ul>
-<li>Use the Python Standard Logging Module</li>
-<li>Always keep date in your log file name</li>
-<li>Always add some name to your log file name. </li>
-<li>Always log time and date for every log event.</li>
-<li>Always store your date as YYYYMMDD. Everywhere. In filename, inside of logfile. It greatly helps with sorting. Some separators are allowed (eg. 2009-11-29).</li>
-<li>In general avoid storing logs in database. In is another point of failure in your logging schema.</li>
-<li>If you have multiple environment or system always log environment or system id.</li>
-</ul>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># conda env py36db</span>
+</pre></div>
 
+    </div>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Create-log">Create log<a class="anchor-link" href="#Create-log">&#182;</a></h3><h4 id="Logging-Levels">Logging Levels<a class="anchor-link" href="#Logging-Levels">&#182;</a></h4><p>The log level corresponds to the “importance” a log is given: an “error” log should be more urgent then than the “warn” log, whereas a “debug” log should be useful only when debugging the application.</p>
-<p>There are six log levels in Python; each level is associated with an integer that indicates the log severity:</p>
-<ul>
-<li>NOTSET=0</li>
-<li>DEBUG=10 : for debugging purposes in development</li>
-<li>INFO=20 :  for something interesting—but expected—happens</li>
-<li>WARN=30 : for something unexpected or unusual happens</li>
-<li>ERROR=40 : for things that go wrong but are usually recoverable</li>
-<li>CRITICAL=50 : for a serious scenario</li>
-</ul>
 
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
-
-<span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;debug message.&#39;</span><span class="p">)</span>
-<span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;informational message.&#39;</span><span class="p">)</span>
-<span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;message for debugging purposes.&#39;</span><span class="p">)</span>
-<span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;warning!&#39;</span><span class="p">)</span>
-<span class="n">logging</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s1">&#39;critial!&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># !pip install pyodbc</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>WARNING:root:warning!
-CRITICAL:root:critial!
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The main components of the logging module are loggers, handlers, and formatters.</p>
-<ul>
-<li>Handlers is the component that effectively writes/displays a log: Display it in the console (via StreamHandler), in a file (via FileHandler), or even by sending you an email via SMTPHandler, etc.</li>
-<li>Loggers are the objects you call when you want to record a message in your application code. </li>
-<li>Formatters are responsible for formatting the layout of log messages.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Configuring-Logging">Configuring Logging<a class="anchor-link" href="#Configuring-Logging">&#182;</a></h2><p>Programmers can configure logging in three ways:</p>
-<ol>
-<li><p>Creating loggers, handlers, and formatters explicitly using Python code that calls the configuration methods listed above.</p>
-</li>
-<li><p>Creating a logging config file and reading it using the fileConfig() function.</p>
-</li>
-<li><p>Creating a dictionary of configuration information and passing it to the dictConfig() function.</p>
-</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="1.-Creating-loggers,-handlers,-and-formatters">1. Creating loggers, handlers, and formatters<a class="anchor-link" href="#1.-Creating-loggers,-handlers,-and-formatters">&#182;</a></h2>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">logging</span>
-<span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span>
-
-<span class="k">def</span> <span class="nf">create_logging</span><span class="p">():</span>
-  <span class="sd">&quot;&quot;&quot; Create logging &quot;&quot;&quot;</span>
-  <span class="n">logs_folder</span> <span class="o">=</span> <span class="s1">&#39;logs/&#39;</span>
-  <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">logs_folder</span><span class="p">):</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">logs_folder</span><span class="p">)</span>
-
-  <span class="n">log_dir</span> <span class="o">=</span> <span class="n">logs_folder</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;logfile_ws02_%Y%m</span><span class="si">%d</span><span class="s1">.log&#39;</span><span class="p">))</span>
-  <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">log_dir</span><span class="p">,</span>
-                  <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span>
-                  <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> | </span><span class="si">%(name)s</span><span class="s1"> | </span><span class="si">%(levelname)s</span><span class="s1"> | </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">)</span>
-  <span class="n">console</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">()</span>
-  <span class="n">console</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
-  <span class="n">formatter</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> | </span><span class="si">%(name)s</span><span class="s1"> | </span><span class="si">%(levelname)s</span><span class="s1"> | </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">)</span>
-  <span class="n">console</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
-  <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">console</span><span class="p">)</span>
-  <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Started&#39;</span><span class="p">)</span>
-  <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Log file : &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">log_dir</span><span class="p">))</span>
-
-<span class="n">create_logging</span><span class="p">()</span>
-<span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;debug message.&#39;</span><span class="p">)</span>
-<span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;informational message.&#39;</span><span class="p">)</span>
-<span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;message for debugging purposes.&#39;</span><span class="p">)</span>
-<span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;warning!&#39;</span><span class="p">)</span>
-<span class="n">logging</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s1">&#39;critial!&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pyodbc</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>WARNING:root:warning!
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>2020-09-18 04:08:34,780 | root | INFO | Started</p>
-<p>2020-09-18 04:08:34,781 | root | INFO | Log file : logs/logfile_ws02_20200918.log</p>
-<p>2020-09-18 04:08:34,784 | root | INFO | informational message.</p>
-<p>2020-09-18 04:08:34,787 | root | WARNING | warning!</p>
-<p>2020-09-18 04:08:34,789 | root | CRITICAL | critial!</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="2.-Creating-a-logging-config-file">2. Creating a logging config file<a class="anchor-link" href="#2.-Creating-a-logging-config-file">&#182;</a></h2><p>Creating a logging config file and reading it using the fileConfig() function.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="logging.conf">logging.conf<a class="anchor-link" href="#logging.conf">&#182;</a></h4>
-<pre><code>[loggers]
-keys=root
-
-[handlers]
-keys=fileHandler, consoleHandler
-
-[formatters]
-keys=logFormatter, consoleFormatter
-
-[logger_root]
-handlers=fileHandler, consoleHandler
-level=NOTSET
-
-[handler_consoleHandler]
-class=StreamHandler
-level=INFO
-formatter=consoleFormatter
-args=(sys.stdout,)
-
-[handler_fileHandler]
-class=FileHandler
-level=DEBUG
-formatter=logFormatter
-args=(__import__("datetime").datetime.now().strftime('logs/logfile_%%Y%%m%%d.log'), 'a')
-
-[formatter_logFormatter]
-format=%(asctime)s | %(name)s | %(levelname)-8s | %(lineno)04d | %(message)s
-
-[formatter_consoleFormatter]
-format=%(asctime)s | %(levelname)-8s | %(message)s</code></pre>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
-<span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span>
-<span class="kn">import</span> <span class="nn">logging.config</span>
-
-
-<span class="n">logging</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">fileConfig</span><span class="p">(</span><span class="s1">&#39;logging.conf&#39;</span><span class="p">)</span>
-
-<span class="c1"># create logger</span>
-<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;log-test&#39;</span><span class="p">)</span>
-
-<span class="c1"># &#39;application&#39; code</span>
-<span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;debug message&#39;</span><span class="p">)</span>
-<span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;info message&#39;</span><span class="p">)</span>
-<span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;warn message&#39;</span><span class="p">)</span>
-<span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;error message&#39;</span><span class="p">)</span>
-<span class="n">logger</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s1">&#39;critical message&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># help(pyodbc)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2020-08-29 15:49:46,602 | INFO     | info message
-2020-08-29 15:49:46,603 | WARNING  | warn message
-2020-08-29 15:49:46,604 | ERROR    | error message
-2020-08-29 15:49:46,605 | CRITICAL | critical message
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>logfile_20200829.log</p>
-<p>2020-08-29 22:52:13,443 | log-test | DEBUG    | 0013 | debug message</p>
-<p>2020-08-29 22:52:13,443 | log-test | INFO     | 0014 | info message</p>
-<p>2020-08-29 22:52:13,443 | log-test | WARNING  | 0015 | warn message</p>
-<p>2020-08-29 22:52:13,443 | log-test | ERROR    | 0016 | error message</p>
-<p>2020-08-29 22:52:13,443 | log-test | CRITICAL | 0017 | critical message</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="3.-Creating-a-dictionary-of-configuration-information">3. Creating a dictionary of configuration information<a class="anchor-link" href="#3.-Creating-a-dictionary-of-configuration-information">&#182;</a></h2>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
-<span class="kn">import</span> <span class="nn">logging.config</span>
-<span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span>
-
-<span class="n">LOGGING_CONFIG</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="s1">&#39;loggers&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s1">&#39;&#39;</span><span class="p">:</span> <span class="p">{</span>  <span class="c1"># root logger</span>
-            <span class="s1">&#39;level&#39;</span><span class="p">:</span> <span class="s1">&#39;NOTSET&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;handlers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;fileHandler&#39;</span><span class="p">,</span> <span class="s1">&#39;consoleHandler&#39;</span><span class="p">],</span>
-        <span class="p">},</span>
-        <span class="s1">&#39;handler_fileHandler&#39;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s1">&#39;level&#39;</span><span class="p">:</span> <span class="s1">&#39;WARNING&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;propagate&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
-            <span class="s1">&#39;handlers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;fileHandler&#39;</span><span class="p">,</span> <span class="s1">&#39;consoleHandler&#39;</span> <span class="p">],</span>
-        <span class="p">},</span>
-    <span class="p">},</span>
-    <span class="s1">&#39;handlers&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s1">&#39;consoleHandler&#39;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s1">&#39;level&#39;</span><span class="p">:</span> <span class="s1">&#39;INFO&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;formatter&#39;</span><span class="p">:</span> <span class="s1">&#39;formatter_consoleFormatter&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;class&#39;</span><span class="p">:</span> <span class="s1">&#39;logging.StreamHandler&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;stream&#39;</span><span class="p">:</span> <span class="s1">&#39;ext://sys.stdout&#39;</span><span class="p">,</span>
-        <span class="p">},</span>
-        <span class="s1">&#39;fileHandler&#39;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s1">&#39;level&#39;</span><span class="p">:</span> <span class="s1">&#39;NOTSET&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;formatter&#39;</span><span class="p">:</span> <span class="s1">&#39;formatter_logFormatter&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;class&#39;</span><span class="p">:</span> <span class="s1">&#39;logging.FileHandler&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;logs/logfile_%Y%m</span><span class="si">%d</span><span class="s1">.log&#39;</span><span class="p">),</span>
-            <span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;a&#39;</span>
-        <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="s1">&#39;formatters&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s1">&#39;formatter_logFormatter&#39;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> | </span><span class="si">%(name)s</span><span class="s1"> | </span><span class="si">%(levelname)-8s</span><span class="s1"> | </span><span class="si">%(lineno)04d</span><span class="s1"> | </span><span class="si">%(message)s</span><span class="s1">&#39;</span>
-        <span class="p">},</span>
-        <span class="s1">&#39;formatter_consoleFormatter&#39;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> | </span><span class="si">%(levelname)-8s</span><span class="s1"> | </span><span class="si">%(message)s</span><span class="s1">&#39;</span>
-        <span class="p">},</span>
-    <span class="p">},</span>
-
-<span class="p">}</span>
-
-<span class="c1"># Run once at startup:</span>
-<span class="n">logging</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">dictConfig</span><span class="p">(</span><span class="n">LOGGING_CONFIG</span><span class="p">)</span>
-
-<span class="c1"># Include in each module:</span>
-<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;test-log&#39;</span><span class="p">)</span>
-
-<span class="c1"># &#39;application&#39; code</span>
-<span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;debug message&#39;</span><span class="p">)</span>
-<span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;info message&#39;</span><span class="p">)</span>
-<span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;warn message&#39;</span><span class="p">)</span>
-<span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;error message&#39;</span><span class="p">)</span>
-<span class="n">logger</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s1">&#39;critical message&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#  Check drivers</span>
+<span class="k">for</span> <span class="n">driver</span> <span class="ow">in</span> <span class="n">pyodbc</span><span class="o">.</span><span class="n">drivers</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">driver</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13510,14 +13184,1536 @@ format=%(asctime)s | %(levelname)-8s | %(message)s</code></pre>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>2020-08-29 15:49:46,638 | INFO     | info message
-2020-08-29 15:49:46,639 | WARNING  | warn message
-2020-08-29 15:49:46,641 | ERROR    | error message
-2020-08-29 15:49:46,642 | CRITICAL | critical message
+<pre>SQL Server
+SQL Server Native Client 11.0
+ODBC Driver 17 for SQL Server
+SQL Server Native Client RDA 11.0
+ODBC Driver 13 for SQL Server
+PostgreSQL ANSI(x64)
+PostgreSQL Unicode(x64)
+Amazon Redshift (x64)
 </pre>
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Connect-to-DB">Connect to DB<a class="anchor-link" href="#Connect-to-DB">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#  SQL Server Authentication</span>
+
+<span class="n">server</span> <span class="o">=</span> <span class="s1">&#39;DESKTOP-1GHH8VU\JSQL&#39;</span> 
+<span class="n">database</span> <span class="o">=</span> <span class="s1">&#39;testdb&#39;</span> 
+<span class="n">username</span> <span class="o">=</span> <span class="s1">&#39;sa&#39;</span> 
+<span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;mssqlP@ssw0rd&#39;</span> 
+<span class="n">cnxn</span> <span class="o">=</span> <span class="n">pyodbc</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;DRIVER={ODBC Driver 17 for SQL Server};&#39;</span>
+                      <span class="s1">&#39;SERVER=&#39;</span><span class="o">+</span><span class="n">server</span><span class="o">+</span><span class="s1">&#39;;&#39;</span>
+                      <span class="s1">&#39;DATABASE=&#39;</span><span class="o">+</span><span class="n">database</span><span class="o">+</span><span class="s1">&#39;;&#39;</span>
+                      <span class="s1">&#39;UID=&#39;</span><span class="o">+</span><span class="n">username</span><span class="o">+</span><span class="s1">&#39;;PWD=&#39;</span><span class="o">+</span> <span class="n">password</span><span class="p">)</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">cnxn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#  Window Authentication</span>
+
+<span class="n">server</span> <span class="o">=</span> <span class="s1">&#39;DESKTOP-1GHH8VU\JSQL&#39;</span> 
+<span class="n">database</span> <span class="o">=</span> <span class="s1">&#39;testdb&#39;</span>
+<span class="n">cnxn</span> <span class="o">=</span> <span class="n">pyodbc</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;Driver={SQL Server};&#39;</span>
+                      <span class="s1">&#39;SERVER=&#39;</span><span class="o">+</span><span class="n">server</span><span class="o">+</span><span class="s1">&#39;;&#39;</span>
+                      <span class="s1">&#39;DATABASE=&#39;</span><span class="o">+</span><span class="n">database</span><span class="o">+</span><span class="s1">&#39;;&#39;</span>
+                      <span class="s1">&#39;Trusted_Connection=yes;&#39;</span><span class="p">)</span>
+
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">cnxn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Check-version">Check version<a class="anchor-link" href="#Check-version">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT @@version;&quot;</span><span class="p">)</span> 
+<span class="n">row</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span> 
+<span class="k">while</span> <span class="n">row</span><span class="p">:</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">row</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Microsoft SQL Server 2017 (RTM) - 14.0.1000.169 (X64) 
+	Aug 22 2017 17:04:49 
+	Copyright (C) 2017 Microsoft Corporation
+	Developer Edition (64-bit) on Windows 10 Home 10.0 &lt;X64&gt; (Build 18362: )
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Show-Database">Show Database<a class="anchor-link" href="#Show-Database">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># SQL: &#39;EXEC sp_databases&#39;</span>
+
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">cnxn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT name from sys.databases&quot;</span><span class="p">)</span>
+<span class="n">rows</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+    <span class="n">sql</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;select type_desc, physical_name from </span><span class="si">%s</span><span class="s2">.sys.database_files&quot;</span> <span class="o">%</span> <span class="n">row</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">)</span>
+    <span class="n">l1rows</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Database: &quot;</span> <span class="o">+</span> <span class="n">row</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">l1row</span> <span class="ow">in</span> <span class="n">l1rows</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">l1row</span><span class="o">.</span><span class="n">type_desc</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">l1row</span><span class="o">.</span><span class="n">physical_name</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Database: master
+ROWS C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER2\MSSQL\DATA\master.mdf
+LOG C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER2\MSSQL\DATA\mastlog.ldf
+Database: tempdb
+ROWS C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER2\MSSQL\DATA\tempdb.mdf
+LOG C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER2\MSSQL\DATA\templog.ldf
+ROWS C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER2\MSSQL\DATA\tempdb_mssql_2.ndf
+ROWS C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER2\MSSQL\DATA\tempdb_mssql_3.ndf
+ROWS C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER2\MSSQL\DATA\tempdb_mssql_4.ndf
+ROWS C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER2\MSSQL\DATA\tempdb_mssql_5.ndf
+ROWS C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER2\MSSQL\DATA\tempdb_mssql_6.ndf
+ROWS C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER2\MSSQL\DATA\tempdb_mssql_7.ndf
+ROWS C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER2\MSSQL\DATA\tempdb_mssql_8.ndf
+Database: model
+ROWS C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER2\MSSQL\DATA\model.mdf
+LOG C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER2\MSSQL\DATA\modellog.ldf
+Database: msdb
+ROWS C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER2\MSSQL\DATA\MSDBData.mdf
+LOG C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER2\MSSQL\DATA\MSDBLog.ldf
+Database: testdb
+ROWS C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER2\MSSQL\DATA\testdb.mdf
+LOG C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER2\MSSQL\DATA\testdb_log.ldf
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Create-Table">Create Table<a class="anchor-link" href="#Create-Table">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+
+<span class="s1">               IF NOT EXISTS (SELECT * FROM sysobjects WHERE name=&#39;customer&#39; and xtype=&#39;U&#39;)</span>
+<span class="s1">               CREATE TABLE customer</span>
+<span class="s1">               (</span>
+<span class="s1">               Name nvarchar(50),</span>
+<span class="s1">               Age int,</span>
+<span class="s1">               City nvarchar(50),</span>
+<span class="s1">               Date date</span>
+<span class="s1">               )</span>
+
+<span class="s1">               &#39;&#39;&#39;</span><span class="p">)</span>
+
+<span class="n">cnxn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Drop-Table">Drop Table<a class="anchor-link" href="#Drop-Table">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># cursor.execute(&quot;DROP TABLE customer&quot;)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Show-all-tables">Show all tables<a class="anchor-link" href="#Show-all-tables">&#182;</a></h3><p>columns:</p>
+<ol>
+<li>table_cat: The catalog name.</li>
+<li>table_schem: The schema name.</li>
+<li>table_name: The table name.</li>
+<li>table_type</li>
+</ol>
+<p>Schema name</p>
+<ul>
+<li>dbo</li>
+<li>sys</li>
+<li>INFORMATION_SCHEMA</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># cursor = cnxn.cursor()                                                                                                                                  </span>
+<span class="c1"># for row in cursor.tables():</span>
+<span class="c1">#     print(row)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">table_info</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">tables</span><span class="p">()</span>
+<span class="n">table_info</span> <span class="o">=</span> <span class="n">table_info</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">table_info</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;table_info&#39;</span><span class="p">])</span>
+
+<span class="c1"># Split column</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;table_info&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># All column</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span><span class="p">[</span><span class="s1">&#39;table_cat&#39;</span><span class="p">,</span><span class="s1">&#39;table_schem&#39;</span><span class="p">,</span><span class="s1">&#39;table_name&#39;</span><span class="p">,</span><span class="s1">&#39;table_type&#39;</span><span class="p">,</span><span class="s1">&#39;memo&#39;</span><span class="p">]</span>
+
+<span class="c1">#  Replace symbol</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;\(&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;\)&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1">#  Filter only dbo</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;table_schem&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;dbo&#39;</span><span class="p">,</span> <span class="n">na</span><span class="o">=</span><span class="kc">False</span><span class="p">)]</span>
+
+<span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[12]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>table_cat</th>
+      <th>table_schem</th>
+      <th>table_name</th>
+      <th>table_type</th>
+      <th>memo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>testdb</td>
+      <td>dbo</td>
+      <td>customer</td>
+      <td>TABLE</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Show-table-meta-data">Show table meta data<a class="anchor-link" href="#Show-table-meta-data">&#182;</a></h3><p>Columns:</p>
+<ol>
+<li>table_cat</li>
+<li>table_schem</li>
+<li>table_name</li>
+<li>column_name</li>
+<li>data_type</li>
+<li>type_name</li>
+<li>column_size</li>
+<li>buffer_length</li>
+<li>decimal_digits</li>
+<li>num_prec_radix</li>
+<li>nullable</li>
+<li>remarks</li>
+<li>column_def</li>
+<li>sql_data_type</li>
+<li>sql_datetime_sub</li>
+<li>char_octet_length</li>
+<li>ordinal_position</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">meta</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">columns</span><span class="p">(</span><span class="n">table</span><span class="o">=</span><span class="s1">&#39;customer&#39;</span><span class="p">)</span>                                                                                                              
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">meta</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(&#39;testdb&#39;, &#39;dbo&#39;, &#39;customer&#39;, &#39;Name&#39;, -9, &#39;nvarchar&#39;, 50, 100, None, None, 1, None, None, -9, None, 100, 1, &#39;YES&#39;, 39)
+(&#39;testdb&#39;, &#39;dbo&#39;, &#39;customer&#39;, &#39;Age&#39;, 4, &#39;int&#39;, 10, 4, 0, 10, 1, None, None, 4, None, None, 2, &#39;YES&#39;, 38)
+(&#39;testdb&#39;, &#39;dbo&#39;, &#39;customer&#39;, &#39;City&#39;, -9, &#39;nvarchar&#39;, 50, 100, None, None, 1, None, None, -9, None, 100, 3, &#39;YES&#39;, 39)
+(&#39;testdb&#39;, &#39;dbo&#39;, &#39;customer&#39;, &#39;Date&#39;, -9, &#39;date&#39;, 10, 20, None, None, 1, None, None, -9, None, None, 4, &#39;YES&#39;, 0)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">meta</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">columns</span><span class="p">(</span><span class="n">table</span><span class="o">=</span><span class="s1">&#39;customer&#39;</span><span class="p">)</span>                                                                                                              
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">meta</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">column_name</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">type_name</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Name nvarchar
+Age int
+City nvarchar
+Date date
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Insert-Records">Insert Records<a class="anchor-link" href="#Insert-Records">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+
+<span class="s1">                INSERT INTO testdb.dbo.customer (Name, Age, City, Date)</span>
+<span class="s1">                VALUES</span>
+<span class="s1">                (&#39;Sakura&#39;,20,&#39;Tokyo&#39;, &#39;2020-01-01&#39;),</span>
+<span class="s1">                (&#39;Neo&#39;,30,&#39;London&#39;, &#39;2020-04-15&#39;),</span>
+<span class="s1">                (&#39;Patrick&#39;,40,&#39;&#39;, &#39;2019-10-21&#39;)  </span>
+
+<span class="s1">                &#39;&#39;&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span><span class="p">,</span> <span class="s1">&#39;records inserted&#39;</span><span class="p">)</span>
+
+<span class="n">cnxn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3 records inserted
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO customer (Name, Age, City, Date) values (?, ?, ?, ?)&quot;</span><span class="p">,</span>
+               <span class="s1">&#39;Tom&#39;</span><span class="p">,</span> <span class="s1">&#39;50&#39;</span><span class="p">,</span><span class="s1">&#39;California&#39;</span><span class="p">,</span> <span class="s1">&#39;2020-02-03&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span><span class="p">,</span> <span class="s1">&#39;records inserted&#39;</span><span class="p">)</span>
+
+<span class="n">cnxn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 records inserted
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Update-Records">Update Records<a class="anchor-link" href="#Update-Records">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">                UPDATE TestDB.dbo.customer</span>
+<span class="s1">                SET Age = 50, City = &#39;Bangkok&#39;</span>
+<span class="s1">                WHERE Name = &#39;Patrick&#39;</span>
+<span class="s1">                &#39;&#39;&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span><span class="p">,</span> <span class="s1">&#39;records updated&#39;</span><span class="p">)</span>
+
+<span class="n">cnxn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>16 records updated
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Delete--Records">Delete  Records<a class="anchor-link" href="#Delete--Records">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">                DELETE FROM TestDB.dbo.customer</span>
+<span class="s1">                WHERE Name = &#39;Tom&#39;</span>
+<span class="s1">                &#39;&#39;&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span><span class="p">,</span> <span class="s1">&#39;records deleted&#39;</span><span class="p">)</span>
+
+<span class="n">cnxn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 records deleted
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Query-Data">Query Data<a class="anchor-link" href="#Query-Data">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#  SELECT ALL</span>
+
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM customer&quot;</span><span class="p">)</span>
+<span class="n">rows</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#  WHERE text</span>
+
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM customer WHERE Name=&#39;Patrick&#39;&quot;</span><span class="p">)</span>
+<span class="n">rows</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#  WHERE int</span>
+
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM customer WHERE Age &gt; 30&quot;</span><span class="p">)</span>
+<span class="n">rows</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, &#39;2019-10-21&#39;)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#  WHERE date</span>
+
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM customer WHERE Date &gt; &#39;2019-12-31&#39;&quot;</span><span class="p">)</span>
+<span class="n">rows</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, &#39;2020-01-01&#39;)
+(&#39;Neo&#39;, 30, &#39;London&#39;, &#39;2020-04-15&#39;)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Create-dataframe">Create dataframe<a class="anchor-link" href="#Create-dataframe">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM testdb.dbo.customer&quot;</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">cnxn</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[23]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>City</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Sakura</td>
+      <td>20</td>
+      <td>Tokyo</td>
+      <td>2020-01-01</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Neo</td>
+      <td>30</td>
+      <td>London</td>
+      <td>2020-04-15</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Patrick</td>
+      <td>50</td>
+      <td>Bangkok</td>
+      <td>2019-10-21</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Sakura</td>
+      <td>20</td>
+      <td>Tokyo</td>
+      <td>2020-01-01</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Sakura</td>
+      <td>20</td>
+      <td>Tokyo</td>
+      <td>2020-01-01</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Neo</td>
+      <td>30</td>
+      <td>London</td>
+      <td>2020-04-15</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Patrick</td>
+      <td>50</td>
+      <td>Bangkok</td>
+      <td>2019-10-21</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Neo</td>
+      <td>30</td>
+      <td>London</td>
+      <td>2020-04-15</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Patrick</td>
+      <td>50</td>
+      <td>Bangkok</td>
+      <td>2019-10-21</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Sakura</td>
+      <td>20</td>
+      <td>Tokyo</td>
+      <td>2020-01-01</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Neo</td>
+      <td>30</td>
+      <td>London</td>
+      <td>2020-04-15</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Patrick</td>
+      <td>50</td>
+      <td>Bangkok</td>
+      <td>2019-10-21</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Sakura</td>
+      <td>20</td>
+      <td>Tokyo</td>
+      <td>2020-01-01</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Sakura</td>
+      <td>20</td>
+      <td>Tokyo</td>
+      <td>2020-01-01</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Neo</td>
+      <td>30</td>
+      <td>London</td>
+      <td>2020-04-15</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Patrick</td>
+      <td>50</td>
+      <td>Bangkok</td>
+      <td>2019-10-21</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Neo</td>
+      <td>30</td>
+      <td>London</td>
+      <td>2020-04-15</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Patrick</td>
+      <td>50</td>
+      <td>Bangkok</td>
+      <td>2019-10-21</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Sakura</td>
+      <td>20</td>
+      <td>Tokyo</td>
+      <td>2020-01-01</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Neo</td>
+      <td>30</td>
+      <td>London</td>
+      <td>2020-04-15</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Patrick</td>
+      <td>50</td>
+      <td>Bangkok</td>
+      <td>2019-10-21</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Sakura</td>
+      <td>20</td>
+      <td>Tokyo</td>
+      <td>2020-01-01</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Sakura</td>
+      <td>20</td>
+      <td>Tokyo</td>
+      <td>2020-01-01</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Neo</td>
+      <td>30</td>
+      <td>London</td>
+      <td>2020-04-15</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>Patrick</td>
+      <td>50</td>
+      <td>Bangkok</td>
+      <td>2019-10-21</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>Neo</td>
+      <td>30</td>
+      <td>London</td>
+      <td>2020-04-15</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>Patrick</td>
+      <td>50</td>
+      <td>Bangkok</td>
+      <td>2019-10-21</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>Sakura</td>
+      <td>20</td>
+      <td>Tokyo</td>
+      <td>2020-01-01</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>Neo</td>
+      <td>30</td>
+      <td>London</td>
+      <td>2020-04-15</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>Patrick</td>
+      <td>50</td>
+      <td>Bangkok</td>
+      <td>2019-10-21</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>Sakura</td>
+      <td>20</td>
+      <td>Tokyo</td>
+      <td>2020-01-01</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>Sakura</td>
+      <td>20</td>
+      <td>Tokyo</td>
+      <td>2020-01-01</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>Neo</td>
+      <td>30</td>
+      <td>London</td>
+      <td>2020-04-15</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>Patrick</td>
+      <td>50</td>
+      <td>Bangkok</td>
+      <td>2019-10-21</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>Neo</td>
+      <td>30</td>
+      <td>London</td>
+      <td>2020-04-15</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>Patrick</td>
+      <td>50</td>
+      <td>Bangkok</td>
+      <td>2019-10-21</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>Sakura</td>
+      <td>20</td>
+      <td>Tokyo</td>
+      <td>2020-01-01</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>Neo</td>
+      <td>30</td>
+      <td>London</td>
+      <td>2020-04-15</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>Patrick</td>
+      <td>50</td>
+      <td>Bangkok</td>
+      <td>2019-10-21</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>Sakura</td>
+      <td>20</td>
+      <td>Tokyo</td>
+      <td>2020-01-01</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>Sakura</td>
+      <td>20</td>
+      <td>Tokyo</td>
+      <td>2020-01-01</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>Neo</td>
+      <td>30</td>
+      <td>London</td>
+      <td>2020-04-15</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>Patrick</td>
+      <td>50</td>
+      <td>Bangkok</td>
+      <td>2019-10-21</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>Neo</td>
+      <td>30</td>
+      <td>London</td>
+      <td>2020-04-15</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Patrick</td>
+      <td>50</td>
+      <td>Bangkok</td>
+      <td>2019-10-21</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>Sakura</td>
+      <td>20</td>
+      <td>Tokyo</td>
+      <td>2020-01-01</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>Neo</td>
+      <td>30</td>
+      <td>London</td>
+      <td>2020-04-15</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Patrick</td>
+      <td>50</td>
+      <td>Bangkok</td>
+      <td>2019-10-21</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Insert-dataframe-to-SQL-Server">Insert dataframe to SQL Server<a class="anchor-link" href="#Insert-dataframe-to-SQL-Server">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Insert Dataframe into SQL Server:</span>
+
+<span class="n">totalrow</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO dbo.customer (Name,Age,City,Date) values(?,?,?,?)&quot;</span><span class="p">,</span> 
+                   <span class="n">row</span><span class="o">.</span><span class="n">Name</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">Age</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">City</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">Date</span><span class="p">)</span>
+    <span class="n">totalrow</span> <span class="o">+=</span><span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">totalrow</span><span class="p">,</span> <span class="s1">&#39;records inserted&#39;</span><span class="p">)</span>
+
+<span class="n">cnxn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>48 records inserted
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Functions">Functions<a class="anchor-link" href="#Functions">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pyodbc</span>
+
+
+<span class="k">def</span> <span class="nf">dblogin</span><span class="p">():</span>
+    <span class="n">server</span> <span class="o">=</span> <span class="s1">&#39;DESKTOP-1GHH8VU\JSQL&#39;</span> 
+    <span class="n">database</span> <span class="o">=</span> <span class="s1">&#39;testdb&#39;</span> 
+    <span class="n">username</span> <span class="o">=</span> <span class="s1">&#39;sa&#39;</span> 
+    <span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;mssqlP@ssw0rd&#39;</span> 
+
+    <span class="n">cnxn</span> <span class="o">=</span> <span class="n">pyodbc</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;DRIVER={ODBC Driver 17 for SQL Server};&#39;</span>
+                      <span class="s1">&#39;SERVER=&#39;</span><span class="o">+</span><span class="n">server</span><span class="o">+</span><span class="s1">&#39;;&#39;</span>
+                      <span class="s1">&#39;DATABASE=&#39;</span><span class="o">+</span><span class="n">database</span><span class="o">+</span><span class="s1">&#39;;&#39;</span>
+                      <span class="s1">&#39;UID=&#39;</span><span class="o">+</span><span class="n">username</span><span class="o">+</span><span class="s1">&#39;;PWD=&#39;</span><span class="o">+</span> <span class="n">password</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">cnxn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">select_execute</span><span class="p">(</span><span class="n">con</span><span class="p">,</span> <span class="n">slq</span><span class="p">):</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">slq</span><span class="p">)</span>
+        <span class="n">rows</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">rows</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">dblogin</span><span class="p">()</span>
+    <span class="n">sql</span> <span class="o">=</span>  <span class="s1">&#39;&#39;&#39;SELECT *</span>
+<span class="s1">                FROM customer&#39;&#39;&#39;</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="n">select_execute</span><span class="p">(</span><span class="n">cursor</span><span class="p">,</span> <span class="n">sql</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+(&#39;Sakura&#39;, 20, &#39;Tokyo&#39;, datetime.date(2020, 1, 1))
+(&#39;Neo&#39;, 30, &#39;London&#39;, datetime.date(2020, 4, 15))
+(&#39;Patrick&#39;, 50, &#39;Bangkok&#39;, datetime.date(2019, 10, 21))
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Close-connection-and-remove-the-cursor">Close connection and remove the cursor<a class="anchor-link" href="#Close-connection-and-remove-the-cursor">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">cnxn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
