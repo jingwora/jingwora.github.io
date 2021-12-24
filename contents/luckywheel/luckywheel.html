@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Lucky Wheel Spinner for Workout</title>
+  <link rel="stylesheet" href="./luckywheel.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="page">
+  <header class="header">
+    <div class="game-title">
+      <div class="game-title__wrapper">
+        <!-- <h3 class="game-title__text">The bare minimum workout</h3> -->
+      </div>
+    </div>
+    <button class="info__open-btn">
+      <!-- <div class="info__open-btn__container"> -->
+        <!-- <h4 class="info__title">What's this</h4> -->
+        <!-- <svg viewBox="0 0 24 24" fill="none" class="info__icon" width="24" height="24" focusable="false" aria-hidden="true"><path d="M18.5 11H10.7435L14.0445 7.51599L12.9555 6.48399L7.96699 11.75L12.9555 17.016L14.0445 15.984L10.7435 12.5H18.5V11Z" fill="currentColor"></path><path d="M6.5 4.5H5V19H6.5V4.5Z" fill="currentColor"></path></svg> -->
+      <!-- </div> -->
+    </button>
+    <nav class="menu">
+      <button class="menu__collapse-btn IconButton">
+        <span class="IconButton-content"><svg viewBox="0 0 24 24" fill="none" class="dig-UIIcon dig-UIIcon--standard" width="24" height="24" focusable="false" aria-label="Collapse sidebar"><path d="M17.5 6.5L6.5 17.5M17.5 17.5L6.5 6.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></path></svg></span>
+      </button>
+      <div class="menu__wrapper">
+        <section class="menu__section">
+          <h2 class="menu__section__heading">What is this?</h2>
+          <p class="menu__section__text">A fun, goofy game to help you get started working out or spice up your workout routine.</p>
+          <h2 class="menu__section__heading">How does it work?</h2>
+          <p class="menu__section__text">Click the red button to spin the wheel. Whatever exercise you get, click the <em>Start timer </em>button to run the 45-second timer. When the time is up, click the <em>Spin again </em>to get back to the spin wheel. Do as many times as you like. This means if you get burpee seven times in a row, do it anyway.</p>
+          <h2 class="menu__section__heading">Why did you make it?</h2>
+          <p class="menu__section__text">Getting started is always the hardest part of cultivating a new habit. We could all use a little help with gamification.</p>
+          <h2 class="menu__section__heading">What is it not?</h2>
+          <p class="menu__section__text">This is not about getting a six-pack abs in six weeks. Sometimes, however, doing something is still better than nothing at all. Enjoy</p>
+        </section>
+      </div>
+    </nav>
+  </header>
+<main class="main">
+  <div class="game">
+    <div class="flip-card">
+    <div class="interactive-area flip-card__inner">
+  <div id="wheel" class="wheel-area flip-card__front">
+      <div id="spin" class="spin-area">
+         <div class="slice__container" data-order="1">
+      <div class="text"><span>1</span>
+       </div>
+    </div>
+        <div class="slice__container" data-order="2">
+      <div class="text"><span>2</span>
+       </div>
+    </div>
+        <div class="slice__container" data-order="3">
+      <div class="text"><span>3</span>
+       </div>
+    </div>
+      <div class="slice__container" data-order="4">
+      <div class="text"><span>4</span>
+       </div>
+    </div>
+      <div class="slice__container" data-order="5">
+      <div class="text"><span>5</span>
+       </div>
+    </div>
+      <div class="slice__container" data-order="6">
+      <div class="text"><span>6</span>
+       </div>
+    </div>
+      <div class="slice__container" data-order="7">
+      <div class="text"><span>7</span>
+       </div>
+    </div>
+      <div class="slice__container" data-order="8">
+      <div class="text"><span>8</span>
+       </div>
+    </div>
+    <div class="slice__container" data-order="9">
+      <div class="text"><span>9</span>
+       </div>
+    </div>
+    <div class="slice__container" data-order="10">
+      <div class="text"><span>10</span>
+       </div>
+    </div>
+    <div class="slice__container" data-order="11">
+      <div class="text"><span>11</span>
+       </div>
+    </div>
+    <div class="slice__container" data-order="12">
+      <div class="text"><span>12</span>
+       </div>
+    </div>
+      </div>
+    <div class="shadow"></div>
+    <div class="highlight"></div>
+    <div id="btn--wheel" class="wheel__btn">
+    </div>
+    <div id="speech-bubble" class="box tooltip">
+      <div class="tooltip__heading">
+        <button class="close-button IconButton">
+        <span class="IconButton-content"><svg viewBox="0 0 24 24" fill="none" class="dig-UIIcon dig-UIIcon--standard" width="24" height="24" focusable="false" aria-label="Collapse sidebar"><path d="M17.5 6.5L6.5 17.5M17.5 17.5L6.5 6.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></path></svg></span>
+      </button>
+      </div>
+      <span>Click Here</span>
+      
+    </div>
+    <div class="wheel__indicator"></div>
+  </div>
+      <div class="flip-card__back">
+        <div class="timer">
+  <div class="pie spinner"></div>
+  <div class="pie filler"></div>
+  <div class="mask"></div>
+</div>
+      </div>
+    </div>
+    </div>
+    <div class="guidance hidden">
+      <h2 class="slice-name"></h2>
+      <button class="button btn__start"></button>
+</div>
+  </div>
+<!--   <div class="instruction">
+    <div class="cta">
+    <h3>Can't decide? Spin that wheel</h3>
+    </div>
+  </div> -->
+</main>   
+  </div>
+<!-- partial -->
+  <script  src="./luckywheel.js"></script>
+
+</body>
+</html>
