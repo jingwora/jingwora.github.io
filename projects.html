@@ -63,15 +63,14 @@
           ><img src="/images/J_favicon/favicon.ico" width="20em"
         /></a>
         &emsp; PROJECTS
-         <!-- <div style="text-align:right">JP EN TH</div> -->
-        <button onclick="document.location = 'blog.html'"
-        style="width:40px; padding-left:0px; padding-right:0px;">EN</button>
 
-        <button onclick="document.location = 'blog.html'"
-        style="width:40px; padding-left:0px; padding-right:0px;">JP</button>
+        <button onclick="changeLanguage('en')"
+        style="width:40px; padding-left:0px; padding-right:0px;">
+        EN</button>
 
-        <button onclick="document.location = 'blog.html'"
-        style="width:40px; padding-left:0px; padding-right:0px;">TH</button>
+        <button onclick="changeLanguage('ja')"
+        style="width:40px; padding-left:0px; padding-right:0px;">
+        JP</button>
 
       </h1>
       <nav>
@@ -269,17 +268,26 @@
             </div>
             <br />
 
-            <!-- Demand pattern analysis -->
+            <!-- 09 Demand pattern analysis -->
 
             <div class="card">
               <h2>Demand Pattern Analysis</h2>
               <p>
-                <b>Solution:</b> To identify different pattern of demand trend.
-                <br />
-                <b>Use case:</b> Operation report for kpi analysis
-                 of large electric appliance manufacturer.
-              </p>
-              <a
+                <b>Solution:</b>
+                <p id="c09_1">
+                  Understand seasonal pattern to optimize production and sales plan.
+                </p>
+                <p id="c09_2">
+                  Provide recommended product to optimize profit based on buying behavior and characteristic. 
+                </p>
+                <p id="c09_3">
+                  Understand customer need and find out new opportunity.
+                </p> 
+                <p id="c09_4">
+                  Client: Electronic Machine Maker
+                </p> 
+               
+                <a
                 href="/contents_resources/images/demand_pattern_analysis.png"
                 target="_blank"
               >
@@ -290,7 +298,7 @@
             </div>
             <br />
 
-            <!-- Sentiment analysis -->
+            <!-- 10 Sentiment analysis -->
 
             <div class="card">
               <h2>Sentiment Analysis across customer journey</h2>
@@ -312,7 +320,7 @@
             <br />
 
 
-            <!-- Supply Chain Management -->
+            <!-- 11 Supply Chain Management -->
 
             <div class="card">
               <h2>Supply chain management</h2>
@@ -334,7 +342,7 @@
             </div>
             <br />
 
-            <!-- Customer Transaction Analysis -->
+            <!-- 12 Customer Transaction Analysis -->
 
             <div class="card">
               <h2>Customer Transaction Analysis</h2>
@@ -356,7 +364,7 @@
             </div>
             <br />
 
-            <!-- Operation Line Report -->
+            <!-- 13 Operation Line Report -->
 
             <div class="card">
               <h2>Operation Line Report</h2>
@@ -379,7 +387,7 @@
 
             <br />
 
-            <!-- Financial Analysis Report -->
+            <!-- 14 Financial Analysis Report -->
 
             <div class="card">
               <h2>Financial Analysis Report</h2>
@@ -403,7 +411,7 @@
             </div>
             <br />
 
-            <!-- Material Management Report -->
+            <!-- 15 Material Management Report -->
 
             <div class="card">
               <h2>Material Management Report</h2>
@@ -426,16 +434,24 @@
             </div>
             <br />
 
-            <!-- School Management Report -->
+            <!-- 16 University Management Report -->
 
             <div class="card">
               <h2>University Management Analytics</h2>
-              <p>
-                <b>Solution:</b> Tracking key KPIs of students and teachers from various sources.
-                Apply machine learning to reveal hiden insights 
-                <br />
-                <b>Use case:</b> Management team of Leading Public University Group
+              <b>Solution:</b>
+              <p id="c16_1">
+                Improve and speed up PDCA cycle by preparing faculty and student evaluation system.
               </p>
+              <p id="c16_2">
+                Understand student performance, characteristics and needs to provide best learning support.
+              </p>
+              <p id="c16_3">
+                Provide most suitable curriculum that meets changing job market.
+              </p> 
+              <p id="c16_4">
+                Client: Leading University in Japan
+              </p> 
+
               <a
                 href="/contents_resources/images/BI_school_management.png"
                 target="_blank"
@@ -449,7 +465,7 @@
 
             <!-- App Analytics Report -->
 
-            <div class="card">
+            <!-- <div class="card">
               <h2>University Management Analytics</h2>
               <p>
                 <b>Solution:</b> Tracking key KPIs of students and teachers from various sources.
@@ -466,7 +482,7 @@
                   width="270"
               /></a>
             </div>
-            <br />
+            <br /> -->
 
             <div class="card">
               <h2>Power BI: Visualiation Library</h2>
@@ -558,5 +574,63 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      // Create a function to change
+      // the hash value of the page
+      function changeLanguage(lang) {
+        location.hash = lang;
+        location.reload();
+      }
+    
+      // Define the language reload anchors
+      var en09_1 = "Understand seasonal pattern to optimize production and sales plan.";
+      var en09_2 = "Provide recommended product to optimize profit based on buying behavior and characteristic. "; 
+      var en09_3 = "Understand customer need and find out new opportunity.";
+      var en09_4 = "Client: Electronic Machine Maker";
+     
+      var ja09_1 = "季節のパターンの理解に基づいて製造、販売の計画を最適化する";
+      var ja09_2 = "購買履歴、顧客属性に合わせて商品推奨で顧客育成、利益効率を高める";
+      var ja09_3 = "消費者のニーズに合わせて新製品の機会と需要の発見";
+      var ja09_4 = "お客様情報：電子機械メーカー";
+
+      var en16_1 = "Improve and speed up PDCA cycle by preparing faculty and student evaluation system.";
+      var en16_2 = "Understand student performance, characteristics and needs to provide best learning support."; 
+      var en16_3 = "Provide most suitable curriculum that meets changing job market.";
+      var en16_4 = "Client: Leading University in Japan";
+     
+      var ja16_1 = "学生・教員評価のシステム化に基づいて 、PDCA改善のサイクルがスムーズに移行し、早める";
+      var ja16_2 = "人人の学生の成績、個性、 特色に応じて指導・学習支援の最適化";
+      var ja16_3 = "採用ニーズの変化に合わせてカリキュラムを提供する学習支援する";
+      var ja16_4 = "お客様情報：日本の一流大学";
+    
+      // Check if a hash value exists in the URL
+      if (window.location.hash) {
+    
+        // Set the content of the webpage 
+        // depending on the hash value
+        if (window.location.hash == "#en") {
+          c09_1.textContent = en09_1;
+          c09_2.textContent = en09_2;
+          c09_3.textContent = en09_3;
+          c09_4.textContent = en09_4;
+
+          c16_1.textContent = en16_1;
+          c16_2.textContent = en16_2;
+          c16_3.textContent = en16_3;
+          c16_4.textContent = en16_4;
+        }
+        else if (window.location.hash == "#ja") {
+          c09_1.textContent = ja09_1;
+          c09_2.textContent = ja09_2;
+          c09_3.textContent = ja09_3; 
+          c09_4.textContent = ja09_4; 
+
+          c16_1.textContent = ja16_1;
+          c16_2.textContent = ja16_2;
+          c16_3.textContent = ja16_3;        
+          c16_4.textContent = ja16_4;        
+        }
+      }
+    </script>
   </body>
 </html>
