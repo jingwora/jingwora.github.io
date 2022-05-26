@@ -109,7 +109,7 @@
             <hr />
             <h1>AI Solutions</h1>
 
-            <!-- Tableau: Natural Language Processing(NLP) -->
+            <!-- 01 Tableau: Natural Language Processing(NLP) -->
             <div class="card">
               <h2>Tableau: Natural Language Processing(NLP)</h2>
               <p>
@@ -127,7 +127,7 @@
             </div>
             <br /><br />
 
-            <!-- PaaS : AI Development Cloud Architecture  -->
+            <!-- 02 PaaS : AI Development Cloud Architecture  -->
             <div class="card">
               <h2>PaaS : AI Development Cloud Architecture</h2>
               <p>
@@ -145,7 +145,7 @@
 
             <br /><br />
 
-            <!-- IaaS : AI Development Cloud Architecture  -->
+            <!-- 03 IaaS : AI Development Cloud Architecture  -->
             <div class="card">
               <h2>IaaS : AI Development Cloud Architecture</h2>
               <p>
@@ -163,7 +163,7 @@
 
             <br /><br />
 
-            <!-- Kubernetes Deployment : AI Development Cloud Architecture  -->
+            <!-- 04 Kubernetes Deployment : AI Development Cloud Architecture  -->
             <div class="card">
               <h2>Kubernetes Deployment : AI Development Cloud Architecture</h2>
               <p>
@@ -181,7 +181,7 @@
 
             <br /><br />
 
-            <!-- AI at the edge -->
+            <!-- 05 AI at the edge -->
 
             <div class="card">
               <h2>AI at the edge</h2>
@@ -202,7 +202,7 @@
             </div>
             <br /><br />
 
-            <!-- Face Recognition -->
+            <!-- 06 Face Recognition -->
 
             <div class="card">
               <h2>AI: Face Recognition</h2>
@@ -222,7 +222,7 @@
             </div>
             <br /><br />
 
-            <!-- IoT Object Detection -->
+            <!-- 07 IoT Object Detection -->
 
             <div class="card">
               <h2>IoT: Object Detection</h2>
@@ -246,17 +246,25 @@
             <hr />
             <h2>BI Solutions</h2>
 
-            <!-- Inventory Management -->
+            <!-- 08 Inventory Management -->
 
             <div class="card">
               <h2>Inventory Management</h2>
-              <p>
-                <b>Solution:</b> To identify opportunity loss and get optimize
-                inventory via optimizer and fine-tune with expert.
-                <br />
-                <b>Use case:</b> Operation report for Business process
-                improvement department of large electric appliance manufacturer.
+
+              <b>Solution:</b>
+              <p id="c08_1">
+                Develop sales predictive model and inventory optimization model.
               </p>
+              <p id="c08_2">
+                Decrease operating cost by optimize process flow. 
+              </p>
+              <p id="c08_3">
+                Identify the right product mix that optimize sales and profit.
+              </p> 
+              <p id="c08_4">
+                Client: Electronic Machine Maker
+              </p> 
+
               <a
                 href="/contents_resources/images/BI_inventory_management1.png"
                 target="_blank"
@@ -272,7 +280,7 @@
 
             <div class="card">
               <h2>Demand Pattern Analysis</h2>
-              <p>
+
                 <b>Solution:</b>
                 <p id="c09_1">
                   Understand seasonal pattern to optimize production and sales plan.
@@ -583,6 +591,16 @@
       }
     
       // Define the language reload anchors
+      var en08_1 = "Develop sales predictive model and inventory optimization model.";
+      var en08_2 = "Decrease operating cost by optimize process flow. "; 
+      var en08_3 = "Identify the right product mix that optimize sales and profit.";
+      var en08_4 = "Client: Electronic Machine Maker";
+     
+      var ja08_1 = "売り上げ予測により製造・在庫の最適化";
+      var ja08_2 = "業務フローの最適化によるコストの削減";
+      var ja08_3 = "商品の組み合わせ変更による売り上げと利益の最大化";
+      var ja08_4 = "お客様情報：電子機械メーカー";
+
       var en09_1 = "Understand seasonal pattern to optimize production and sales plan.";
       var en09_2 = "Provide recommended product to optimize profit based on buying behavior and characteristic. "; 
       var en09_3 = "Understand customer need and find out new opportunity.";
@@ -609,6 +627,11 @@
         // Set the content of the webpage 
         // depending on the hash value
         if (window.location.hash == "#en") {
+          c08_1.textContent = en08_1;
+          c08_2.textContent = en08_2;
+          c08_3.textContent = en08_3;
+          c08_4.textContent = en08_4;
+
           c09_1.textContent = en09_1;
           c09_2.textContent = en09_2;
           c09_3.textContent = en09_3;
@@ -620,6 +643,11 @@
           c16_4.textContent = en16_4;
         }
         else if (window.location.hash == "#ja") {
+          c08_1.textContent = ja08_1;
+          c08_2.textContent = ja08_2;
+          c08_3.textContent = ja08_3; 
+          c08_4.textContent = ja08_4; 
+          
           c09_1.textContent = ja09_1;
           c09_2.textContent = ja09_2;
           c09_3.textContent = ja09_3; 
