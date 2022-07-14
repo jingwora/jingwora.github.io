@@ -1,0 +1,293 @@
+/* Body Style */
+body {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  margin-left: 40px;
+  margin-right: 40px;
+  line-height: 1.7em;
+}
+b {
+  color: Navy;
+}
+
+/* Class tab Style */
+
+.tab {
+  margin-left: 40px;
+}
+.tab2 {
+  margin-left: 80px;
+}
+
+/* Style the navbar */
+.navbar {
+  background-color: #00415a;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s;
+  margin-left: -40px;
+}
+
+.clr {
+  clear: both;
+}
+
+.navbar .main {
+  background-color: #00415a;
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+.navbar a {
+  float: left;
+  color: #009bd6;
+  display: block;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+.dropdown {
+  float: left;
+  color: #009bd6;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #009bd6;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+.navbar a:hover {
+  background-color: #009bd6;
+  color: #00415a;
+}
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Code Style
+code {
+  background-color: aqua;
+} */
+
+/* Horizontal rule Style */
+hr {
+  border: 1px solid #00719c;
+}
+
+hr.dash {
+  border: 1px dashed #009bd6;
+}
+
+/* Headline Style */
+h1 {
+  color: #00415a;
+}
+h2 {
+  color: #00719c;
+}
+h3,
+h4,
+h5,
+h6 {
+  color: #009bd6;
+}
+
+/* Text Area Style */
+textarea {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(250, 250, 250);
+  border: 1px solid #009bd6;
+  line-height: 1.5;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px #999;
+  resize: none;
+  overflow: Auto;
+}
+
+textarea.ta1 {
+  height: 80px;
+}
+
+textarea.ta2 {
+  height: 140px;
+}
+
+textarea.ta3 {
+  height: 200px;
+}
+
+textarea.ta4 {
+  height: 300px;
+}
+
+/* Table Style */
+table.t1 {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table.t1 td,
+table.t1 th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table.t1 tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table.t1 tr:hover {
+  background-color: #ddd;
+}
+
+table.t1 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #00719c;
+  color: white;
+}
+
+/* Link Style */
+a:link {
+  color: #009bd6;
+  text-decoration: none;
+}
+a:hover {
+  color: #009bd6;
+  text-decoration: none;
+  background: #00415a;
+}
+a:visited {
+  color: #009bd6;
+  text-decoration: none;
+}
+a:active {
+  color: #009bd6;
+  text-decoration: none;
+}
+
+/* Style Button */
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  background-color: #00719c;
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #009bd6;
+}
+
+/* Calculator */
+.calculator {
+  background-color: skyblue;
+  width: 260px;
+}
+.calculator-screen {
+  width: 250px;
+  height: 30px;
+}
+.number,
+.operator,
+.all-clear,
+.decimal {
+  width: 60px;
+  height: 40px;
+}
+.operator {
+  background-color: #00415a;
+}
+.all-clear {
+  background-color: slateblue;
+}
+
+/* block */
+.top-block {
+  background-color: navy;
+  color: white;
+}
+
+.content-block {
+  float: left;
+  width: 70%;
+  box-sizing: border-box;
+}
+
+.sidenav {
+  float: right;
+  width: 30%;
+  height: 585px;
+  box-sizing: border-box;
+  background-color: skyblue;
+}
+
+strong {
+  font-weight: bold;
+  color: #00415a;
+}
+
+/* Image */
+img {
+  max-width: 100%;
+}
+
+/* Video */
+video {
+  max-width: 100%;
+}
+
+/* Footer */
+
+footer {
+  padding: 0.5em 1em 5em 1em;
+  display: block;
+  width: 100%;
+  color: gray;
+  font-size: 90%;
+}
