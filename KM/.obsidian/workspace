@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Knowledge Management.md",
+            "file": "README.md.md",
             "mode": "preview",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Knowledge Management.md",
+                "file": "README.md.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Knowledge Management.md",
+                "file": "README.md.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Knowledge Management.md"
+                "file": "README.md.md"
               }
             }
           }
@@ -127,10 +127,10 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "6a42e527edd1537a",
+  "active": "596ae0575060fadd",
   "lastOpenFiles": [
     "Bioinformatics/Notes/What is Bioinformatics.md",
-    "Knowledge Management.md",
+    "README.md.md",
     "Utility/Useful Links.md",
     "Bioinformatics/Notes/Bioinformatics Tutorials.md",
     "attachments/20220818080615.png.md",
