@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "README.md",
-            "mode": "preview",
+            "mode": "source",
             "source": false
           }
         }
@@ -127,7 +127,7 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "596ae0575060fadd",
+  "active": "6a42e527edd1537a",
   "lastOpenFiles": [
     "Bioinformatics/Notes/What is Bioinformatics.md",
     "README.md",
