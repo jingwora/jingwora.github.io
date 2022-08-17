@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Bioinformatics/Bioinformatics.md",
+            "file": "Bioinformatics/Notes/Bioinformatics.md",
             "mode": "preview",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Bioinformatics/Bioinformatics.md",
+                "file": "Bioinformatics/Notes/Bioinformatics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Bioinformatics/Bioinformatics.md",
+                "file": "Bioinformatics/Notes/Bioinformatics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Bioinformatics/Bioinformatics.md"
+                "file": "Bioinformatics/Notes/Bioinformatics.md"
               }
             }
           }
@@ -129,6 +129,6 @@
   },
   "active": "596ae0575060fadd",
   "lastOpenFiles": [
-    "Bioinformatics/Bioinformatics.md"
+    "Bioinformatics/Notes/Bioinformatics.md"
   ]
 }
