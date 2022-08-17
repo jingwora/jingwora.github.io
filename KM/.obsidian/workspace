@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "184e0a6af209b33e",
+        "id": "6a42e527edd1537a",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
             "file": "Bioinformatics/Notes/Bioinformatics.md",
-            "mode": "preview",
+            "mode": "source",
             "source": false
           }
         }
@@ -127,9 +127,13 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "184e0a6af209b33e",
+  "active": "6a42e527edd1537a",
   "lastOpenFiles": [
-    "BI/Untitled.md",
-    "Bioinformatics/Notes/Bioinformatics.md"
+    "attachments/20220818080615.png.md",
+    "Bioinformatics/Notes/Bioinformatics.md",
+    "KM/Bioinformatics/Notes/attachments/Pasted 2.md",
+    "KM/Bioinformatics/Notes/attachments/Pasted 1.md",
+    "KM/Bioinformatics/Notes/attachments/Pasted.md",
+    "BI/Untitled.md"
   ]
 }
