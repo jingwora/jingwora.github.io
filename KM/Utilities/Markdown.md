@@ -106,15 +106,15 @@ Output:
 #### External links
 Code:
 ````
-http://obsidian.md 
+https://en.wikipedia.org/wiki/Main_Page
 
-automatic! [Obsidian](../README.md)
+[wikipedia](https://en.wikipedia.org/wiki/Main_Page)
 ````
 Output:
 
-http://obsidian.md 
+https://en.wikipedia.org/wiki/Main_Page
 
- automatic! [Obsidian](../README.md)
+[wikipedia](https://en.wikipedia.org/wiki/Main_Page)
 
 #### Obsidian URI links
 Code:
@@ -241,19 +241,19 @@ Left justified | Right justified
 contnet1 `:` | content 2
 
 
-#### Tables with link
+#### Tables with link & image
 Code:
 ```
-First Header | Second Header 
------------- | ------------
-[[Format your notes\|Formatting]] | [[Keyboard shortcuts\|hotkeys]]
+Internal Link | External Link  | Image
+------------ | ------------ | ------------
+[Link to note](../README.md) | [wikipedia](https://en.wikipedia.org/wiki/Main_Page) | ![Engelbart](https://history-computer.com/ModernComputer/Basis/images/Engelbart.jpg)]
 ```
 
 Output:
 
-First Header | Second Header 
+Internal Link | External Link 
 ------------ | ------------
-[[Format your notes\|Formatting]] | [[Keyboard shortcuts\|hotkeys]]
+[Link to note](../README.md) | ![Engelbart](https://history-computer.com/ModernComputer/Basis/images/Engelbart.jpg)]
 
 
 
