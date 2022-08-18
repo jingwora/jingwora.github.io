@@ -124,7 +124,30 @@ Output:
 
 [Link with space](../Utilities/Useful%20Links.md)
 
+---
 
+### Blockquotes
+
+Code:
+```md
+> Human beings face ever more complex and urgent problems, and their effectiveness in dealing with these problems is a matter that is critical to the stability and continued progress of society. \- Doug Engelbart, 1961
+````
+
+Output:
+
+> Human beings face ever more complex and urgent problems, and their effectiveness in dealing with these problems is a matter that is critical to the stability and continued progress of society. \- Doug Engelbart, 1961
+
+
+### Inline code
+
+Code:
+```md
+Text inside `backticks` on a line will be formatted like code.
+````
+
+Output:
+
+Text inside `backticks` on a line will be formatted like code.
 
 
 
