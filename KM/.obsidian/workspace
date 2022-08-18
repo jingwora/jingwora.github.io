@@ -9,7 +9,19 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "README.md",
+            "file": "Bioinformatics/Books/Introduction to Bioinformatics Algorithms.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "fdf4e14522dd6075",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Utilities/Useful Links.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Bioinformatics/Books/Introduction to Bioinformatics Algorithms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Bioinformatics/Books/Introduction to Bioinformatics Algorithms.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Bioinformatics/Books/Introduction to Bioinformatics Algorithms.md"
               }
             }
           }
@@ -130,15 +142,15 @@
   },
   "active": "4e5259acf9baf0d2",
   "lastOpenFiles": [
-    "Utilities/ToDO List.md",
     "README.md",
+    "Bioinformatics/Books/Introduction to Bioinformatics Algorithms.md",
+    "Books/Introduction to Bioinformatics Algorithms.md",
+    "Utilities/ToDO List.md",
     "Utilities/Useful Links.md",
     "Utilities/MathJax-LaTeX.md",
     "Utilities/Markdown.md",
-    "Bioinformatics/Books/Introduction to Bioinformatics Algorithms.md",
     "Biology.md",
     "Bioinformatics/Notes/Ref Bioinformatics Books.md",
-    "Bioinformatics/Notes/01 What is Bioinformatics.md",
-    "Bioinformatics/Notes/Ref Bioinformatics Tutorials.md"
+    "Bioinformatics/Notes/01 What is Bioinformatics.md"
   ]
 }
