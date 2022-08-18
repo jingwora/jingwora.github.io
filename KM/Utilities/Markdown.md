@@ -1,5 +1,7 @@
 # Markdown
 
+Obsidian markdown format list.
+It is slightly difference from Github markdown style.
 
 ### Headers
 
@@ -150,6 +152,51 @@ Output:
 Text inside `backticks` on a line will be formatted like code.
 
 
+---
+
+### Code blocks
+
+Code:
+````
+```js
+function fancyAlert(arg) {
+  if(arg) {
+    $.facebox({div:'#foo'})
+  }
+}
+```
+````
+
+Output:
+
+```js
+function fancyAlert(arg) {
+  if(arg) {
+    $.facebox({div:'#foo'})
+  }
+}
+```
+
+---
+### Task list
+Code:
+```
+- [x] #tags, [links](), **formatting** supported 
+- [x] list syntax required (any unordered or ordered list supported) 
+- [x] this is a complete item 
+- [?] this is also a complete item (works with every character) 
+- [ ] this is an incomplete item 
+- [ ] tasks can be clicked in Preview to be checked off
+```
+
+Output:
+
+- [x] #tags, [links](), **formatting** supported 
+- [x] list syntax required (any unordered or ordered list supported) 
+- [x] this is a complete item 
+- [?] this is also a complete item (works with every character) 
+- [ ] this is an incomplete item 
+- [ ] tasks can be clicked in Preview to be checked off
 
 
 ---
