@@ -4,18 +4,19 @@
 [Jobling, Mark](https://www.kinokuniya.co.jp/disp/CSfDispListPage_001.jsp?qsd=true&ptk=10&author=Jobling+Mark)/[Hollox, Edward](https://www.kinokuniya.co.jp/disp/CSfDispListPage_001.jsp?qsd=true&ptk=10&author=Hollox+Edward)/[Kivisild, Toomas](https://www.kinokuniya.co.jp/disp/CSfDispListPage_001.jsp?qsd=true&ptk=10&author=Kivisild+Toomas)/[Tyler-Smith, Chris](https://www.kinokuniya.co.jp/disp/CSfDispListPage_001.jsp?qsd=true&ptk=10&author=Tyler-Smith+Chris)
 Human Evolutionary Genetics is a groundbreaking text which for the first time brings together molecular genetics and genomics to the study of the origins and movements of human populations. Starting with an overview of molecular genomics for the non-specialist.
 
-![image|300](../attachments/20220818161351.png | width=100)
+![image|300](../attachments/20220818161351.png = 100x)
 
 
 ### Genomes 4
  [T. A. Brown](https://www.amazon.co.jp/s/ref=dp_byline_sr_ebooks_1?ie=UTF8&field-author=T.+A.+Brown&text=T.+A.+Brown&sort=relevancerank&search-alias=digital-text)
 Genomes 4 has been completely revised and updated. It is a thoroughly modern textbook about genomes and how they are investigated. As with Genomes 3, techniques come first, then genome anatomies, followed by genome function, and finally genome evolution.
 
-![image|300](../attachments/20220818162024.png | width=100)
+![image|300](../attachments/20220818162024.png = 100x)
 
 
 ### Introduction to Bioinformatics Algorithms
 [Neil J. Jones](https://www.amazon.co.jp/s/ref=dp_byline_sr_book_1?ie=UTF8&field-author=Neil+J.+Jones&text=Neil+J.+Jones&sort=relevancerank&search-alias=books-us) , [Pavel A. Pevzner](https://www.amazon.co.jp/Pavel-A-Pevzner/e/B004NCRQ7G/ref=dp_byline_cont_book_2) 
+[[Introduction to Bioinformatics Algorithms]]
 This _introductory_ text offers a clear exposition of the _algorithmic_ principles driving advances in _bioinformatics_.
 
 ![image|300](../attachments/20220818162400.png)
