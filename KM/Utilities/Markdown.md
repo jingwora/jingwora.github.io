@@ -382,7 +382,6 @@ A --> B
 
 class A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z internal-link;
 ```
-
 ````
 
 Output:
@@ -397,29 +396,75 @@ A --> B
 
 class A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z internal-link;
 ```
+Code:
+
+````
+```mermaid
+graph TD
+
+    A[Christmas] -->|Get money| B(Go shopping)
+
+    B --> C{Let me think}
+
+    C -->|One| D[Laptop]
+
+    C -->|Two| E[iPhone]
+
+    C -->|Three| F[fa:fa-car Car]
+```
+````
+
+Output:
+
+```mermaid
+graph TD
+
+    A[Christmas] -->|Get money| B(Go shopping)
+
+    B --> C{Let me think}
+
+    C -->|One| D[Laptop]
+
+    C -->|Two| E[iPhone]
+
+    C -->|Three| F[fa:fa-car Car]
+```
+
+
 
 ---
-### Math LaTex
+### Math LaTex - MathJax
 
 Code:
 ```md
-\begin
-{equation*} 1 + 2 = 3 
+$$ 
+\begin{equation*} 
+1 + 2 = 3 
 \end{equation*}
+$$
 ````
 Output:
 $$ 
-\begin
-{equation*} 1 + 2 = 3 
-\end{equation*}$$
+\begin{equation*} 
+1 + 2 = 3 
+\end{equation*}
+$$
 
 Code:
 ```md
-$$\begin{vmatrix}a & b\\ 
+$$
+\begin{vmatrix}
+a & b\\ 
 c & d 
-\end{vmatrix}=ad-bc$$
+\end{vmatrix}
+=ad-bc
+$$
 ````
 Output:
-$$\begin{vmatrix}a & b\\ 
+$$
+\begin{vmatrix}
+a & b\\ 
 c & d 
-\end{vmatrix}=ad-bc$$
+\end{vmatrix}
+=ad-bc
+$$
