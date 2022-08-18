@@ -114,11 +114,11 @@ Output:
 #### Escaping
 Code:
 ```md
-[Link with space](../Useful%20Links)
+[Link with space](../Utilities/Useful%20Links.md)
 ````
 Output:
 
-[Link with space](../Useful%20Links)
+[Link with space](../Utilities/Useful%20Links.md)
 
 
 
