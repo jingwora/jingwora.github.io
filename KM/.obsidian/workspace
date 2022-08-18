@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Utility/Markdown.md",
+            "file": "Utilities/Markdown.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Utility/Markdown.md",
+                "file": "Utilities/Markdown.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Utility/Markdown.md",
+                "file": "Utilities/Markdown.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Utility/Markdown.md"
+                "file": "Utilities/Markdown.md"
               }
             }
           }
@@ -131,8 +131,8 @@
   "active": "3505a5549469e1ac",
   "lastOpenFiles": [
     "README.md",
-    "Utility/Markdown.md",
-    "Utility/Useful Links.md",
+    "Utilities/Markdown.md",
+    "Utilities/Useful Links.md",
     "Bioinformatics/Books/Introduction to Bioinformatics Algorithms.md",
     "Bioinformatics/Notes/Ref Bioinformatics Books.md",
     "Bioinformatics/Notes/01 What is Bioinformatics.md",
