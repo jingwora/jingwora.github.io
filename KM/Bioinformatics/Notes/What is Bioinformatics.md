@@ -4,11 +4,14 @@ _Bioinformatics_ is the application of computer technology to the understanding
 ![image](./attachments/20220818080615.png)
 
 
-===== 
-Status:
-#
+---
+
+[TOP](/README.md)
+
+Status: #Draft
+
 Tags:
-[[What is Bioinformatics]]
+[[Bioinformatics]]
 
 Links:
 
