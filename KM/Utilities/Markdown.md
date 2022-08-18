@@ -96,11 +96,15 @@ Output:
 #### External links
 Code:
 ````
-http://obsidian.md - automatic! [Obsidian](http://obsidian.md)
+http://obsidian.md 
+
+automatic! [Obsidian](../README.md)
 ````
 Output:
 
-http://obsidian.md - automatic! [Obsidian](http://obsidian.md)
+http://obsidian.md 
+
+ automatic! [Obsidian](../README.md)
 
 #### Obsidian URI links
 Code:
