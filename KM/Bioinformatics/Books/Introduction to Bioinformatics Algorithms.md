@@ -48,6 +48,9 @@ A **variable**, written as x or total, contains some numerical value and can be 
 
 An **array** of n elements is an ordered collection of n variables a1, a2, . . . , an. We usually denote arrays by boldface letters like **a** = (a1, a2, . . . , an) and write the individual elements as ai where i is between 1 and n.
 
+Assignment Format: 
+a ← b Effect: 
+Sets the variable a to the value b.
 
 
 
