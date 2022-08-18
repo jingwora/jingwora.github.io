@@ -1,10 +1,9 @@
 # Markdown
 
----
 
 ### Headers
 
-Code
+Code:
 ````
 # This is a heading 1 
 ## This is a heading 2 
@@ -13,7 +12,7 @@ Code
 ##### This is a heading 5 
 ###### This is a heading 6
 ````
-Output
+Output:
 # This is a heading 1 
 ## This is a heading 2 
 ### This is a heading 3 
@@ -24,7 +23,7 @@ Output
 ---
 
 ### Emphasis
-Code
+Code:
 ````
 *This text will be italic* 
 _This will also be italic_
@@ -32,7 +31,8 @@ _This will also be italic_
 __This will also be bold__
 
 ````
-Output
+Output:
+
 *This text will be italic* 
 _This will also be italic_
 **This text will be bold** 
@@ -41,8 +41,20 @@ __This will also be bold__
 ---
 
 ### Lists
-Code
+Code:
 ````
+- Item 1 
+- Item 2 
+ - Item 2a 
+ - Item 2b 
+
+1. Item 1 
+1. Item 2 
+1. Item 3 
+　1. Item 3a 
+　1. Item 3b
+````
+Output:
 - Item 1 
 - Item 2 
   - Item 2a 
@@ -51,39 +63,29 @@ Code
 1. Item 1 
 1. Item 2 
 1. Item 3 
-　　1. Item 3a 
-　　1. Item 3b
-````
-Output
-- Item 1 
-- Item 2 
-  - Item 2a 
-  - Item 2b 
-
-1. Item 1 
-1. Item 2 
-1. Item 3 
-　　1. Item 3a 
-　　1. Item 3b
+　1. Item 3a 
+　1. Item 3b
 
 ---
 
 ### Images
 
-Code
+Code:
 ````
 ![Engelbart](https://history-computer.com/ModernComputer/Basis/images/Engelbart.jpg)
 ````
-Output
+Output:
+
 ![Engelbart](https://history-computer.com/ModernComputer/Basis/images/Engelbart.jpg)
 
 
 #### Resizing images
-Code
+Code:
 ````
 ![Engelbart|100](https://history-computer.com/ModernComputer/Basis/images/Engelbart.jpg)
 ````
-Output
+Output:
+
 ![Engelbart|100](https://history-computer.com/ModernComputer/Basis/images/Engelbart.jpg)
 
 
@@ -92,22 +94,30 @@ Output
 ### Links 
 
 #### External links
-Code
+Code:
 ````
 http://obsidian.md - automatic! [Obsidian](http://obsidian.md)
 ````
-Output
+Output:
+
 http://obsidian.md - automatic! [Obsidian](http://obsidian.md)
 
 #### Obsidian URI links
-Code
+Code:
 ````
 [Link to note](../README.md)
 ````
-Output
+Output:
 
 [Link to note](../README.md)
 
+#### Escaping
+Code:
+```md
+[Link with space](Useful%20Links)
+````
+Output:
+[Link with space](Useful%20Links)
 
 
 ---
