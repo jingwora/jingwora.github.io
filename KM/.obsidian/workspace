@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "README.md",
+            "file": "Bioinformatics/Notes/01 What is Bioinformatics.md.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Bioinformatics/Notes/01 What is Bioinformatics.md.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Bioinformatics/Notes/01 What is Bioinformatics.md.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Bioinformatics/Notes/01 What is Bioinformatics.md.md"
               }
             }
           }
@@ -129,5 +129,13 @@
     "collapsed": true
   },
   "active": "d6a544aabdde8600",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "Bioinformatics/Notes/Ref Bioinformatics Books.md",
+    "Bioinformatics/Notes/Ref Bioinformatics Tutorials.md",
+    "Bioinformatics/Notes/01 What is Bioinformatics.md.md",
+    "README.md",
+    "Bioinformatics/Notes/What is Bioinformatics.md",
+    "Utility/Useful Links.md",
+    "Utility/ToDO List.md"
+  ]
 }
