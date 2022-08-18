@@ -250,11 +250,9 @@ Internal Link | External Link  | Image
 ```
 
 Output:
-
-Internal Link | External Link 
------------- | ------------
-[Link to note](../README.md) | ![Engelbart](https://history-computer.com/ModernComputer/Basis/images/Engelbart.jpg)]
-
+Internal Link | External Link  | Image
+------------ | ------------ | ------------
+[Link to note](../README.md) | [wikipedia](https://en.wikipedia.org/wiki/Main_Page) | ![Engelbart](https://history-computer.com/ModernComputer/Basis/images/Engelbart.jpg)]
 
 
 
