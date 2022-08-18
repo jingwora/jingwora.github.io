@@ -24,14 +24,15 @@ Output:
 
 ---
 
-### Emphasis
+### Text format
 Code:
 ````
 *This text will be italic* 
 _This will also be italic_
 **This text will be bold** 
 __This will also be bold__
-
+~~Strikethrough~~
+==highlight text==
 ````
 Output:
 
@@ -39,6 +40,8 @@ Output:
 _This will also be italic_
 **This text will be bold** 
 __This will also be bold__
+~~Strikethrough~~
+==highlight text==
 
 ---
 
@@ -217,8 +220,57 @@ First Header | Second Header
 Content from cell 1 | Content from cell 2 
 Content in the first column | Content in the second column
 
----
 
+#### Tables with justification
+Code:
+```
+Left justified | Right justified 
+:----------------|-------------:
+contnet1 `:` | content 2
+```
+
+Output:
+
+Left justified | Right justified 
+:----------------|-------------:
+contnet1 `:` | content 2
+
+
+#### Tables with link
+Code:
+```
+First Header | Second Header 
+------------ | ------------
+[[Format your notes\|Formatting]] | [[Keyboard shortcuts\|hotkeys]]
+```
+
+Output:
+
+First Header | Second Header 
+------------ | ------------
+[[Format your notes\|Formatting]] | [[Keyboard shortcuts\|hotkeys]]
+
+
+
+
+---
+### Horizontal Bar
+Code:
+```
+*** (stars)
+--- (minuses)
+___ (underscores)
+```
+
+Output:
+
+***
+---
+___
+
+
+
+---
 ### LaTex
 
 Code:
