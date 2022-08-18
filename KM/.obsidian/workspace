@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Utilities/MathJax-LaTeX.md",
+            "file": "README.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Utilities/MathJax-LaTeX.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Utilities/MathJax-LaTeX.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Utilities/MathJax-LaTeX.md"
+                "file": "README.md"
               }
             }
           }
@@ -130,13 +130,13 @@
   },
   "active": "4e5259acf9baf0d2",
   "lastOpenFiles": [
-    "Utilities/Markdown.md",
-    "Utilities/MathJax-LaTeX.md",
     "Utilities/Useful Links.md",
+    "README.md",
+    "Utilities/MathJax-LaTeX.md",
+    "Utilities/Markdown.md",
+    "Utilities/ToDO List.md",
     "Bioinformatics/Books/Introduction to Bioinformatics Algorithms.md",
     "Biology.md",
-    "Utilities/ToDO List.md",
-    "README.md",
     "Bioinformatics/Notes/Ref Bioinformatics Books.md",
     "Bioinformatics/Notes/01 What is Bioinformatics.md",
     "Bioinformatics/Notes/Ref Bioinformatics Tutorials.md"
