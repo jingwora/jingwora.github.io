@@ -48,9 +48,66 @@ A **variable**, written as x or total, contains some numerical value and can be 
 
 An **array** of n elements is an ordered collection of n variables a1, a2, . . . , an. We usually denote arrays by boldface letters like **a** = (a1, a2, . . . , an) and write the individual elements as ai where i is between 1 and n.
 
-Assignment Format: 
+##### Assignment Format
 a ← b Effect: 
 Sets the variable a to the value b.
+
+##### Arithmetic 
+Format: a + b, a − b, a · b, a/b, a^b 
+Effect:  Addition, subtraction, multiplication, division, and exponentiation of numbers. 
+Example: DIST(x1, y1, x2, y2) 
+1 dx ← (x2 − x1)2 
+2 dy ← (y2 − y1)2 
+3 return √ (dx + dy)
+
+Result: DIST(x1, y1,x2, y2) computes the Euclidean distance between points with coordinates (x1, y1) and (x2, y2). DISTANCE(0, 0, 3, 4)returns 5
+
+##### Conditional 
+Format: if A is true 
+					B 
+			 else 
+					 C
+Effect: If statement A is true, executes instructions B, otherwise executes instructions C. Sometimes we will omit “else C,” in which case this will either execute B or not, depending on whether A is true.
+Example: MAX(a, b) 
+if a < b 
+	return b
+else 
+	return a
+	
+Result: MAX(a, b) computes the maximum of the numbers a and b. For example, MAX(1, 99) returns 99.
+
+#### for loops
+Format: for i ← a to b 
+				**B**
+
+Effect: Sets i to a and executes instructions B. Sets i to a + 1 and executes instructions B again. Repeats for i = a + 2, a + 3, . . . , b − 1, b^3
+
+Example: SUMINTEGERS(n) 
+		sum ← 0 
+		for i ← 1 to n 
+				sum ← sum + i
+		return sum
+Result: SUMINTEGERS(n) computes the sum of integers from 1 to n. SUMINTEGERS(10) returns 1 + 2 + · · · + 10 = 55.
+
+#### while loops
+Format: while A is true
+				B 
+Effect: Checks the condition A. If it is true, then executes instructions B. Checks A again; if it’s true, it executes B again. Repeats until A is not true. 
+
+Example: ADDUNTIL(b) 
+		i ← 1 
+		total ← i 
+		while total ≤ b
+				 i ← i + 1
+				 total ← total + i
+		return i
+
+Result: ADDUNTIL(b) computes the smallest integer i such that 1 + 2 + · · ·+i is larger than b. For example, ADDUNTIL(25)returns 7, since 1+ 2+· · ·+ 7 = 28, which is larger than 25, but 1+ 2+· · ·+ 6 = 21, which is smaller than 25.
+
+#### Array access
+Format: a　i
+
+
 
 
 
