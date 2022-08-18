@@ -341,7 +341,9 @@ Output:
 
 ---
 ### Diagram 
-[Mermaid](https://mermaid-js.github.io/) [a helpful live editor](https://mermaid-js.github.io/mermaid-live-editor).
+[Mermaid](https://mermaid-js.github.io/) 
+
+[a helpful live editor](https://mermaid-js.github.io/mermaid-live-editor).
 
 Code:
 ````
