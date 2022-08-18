@@ -274,11 +274,11 @@ ___
 ### Footnotes
 Code:
 ```
-Here's a simple footnote,[1] and here's a longer one.[bignote]
+Here's a simple footnote,[^1] and here's a longer one.[^bignote]
 
-[1]: meaningful! 
+[^1]: meaningful! 
 
-[bignote]: Here's one with multiple paragraphs and code. 
+[^bignote]: Here's one with multiple paragraphs and code. 
 
 	Indent paragraphs to include them in the footnote. 
 	
@@ -289,11 +289,11 @@ Here's a simple footnote,[1] and here's a longer one.[bignote]
 
 Output:
 
-Here's a simple footnote,[1] and here's a longer one.[bignote]
+Here's a simple footnote,[^1] and here's a longer one.[^bignote]
 
-[1]: meaningful! 
+[^1]: meaningful! 
 
-[bignote]: Here's one with multiple paragraphs and code. 
+[^bignote]: Here's one with multiple paragraphs and code. 
 
 	Indent paragraphs to include them in the footnote. 
 	
@@ -303,7 +303,101 @@ Here's a simple footnote,[1] and here's a longer one.[bignote]
 
 
 ---
-### LaTex
+### Comments
+Code:
+```
+Here is some inline comments: %%You can't see this text%% (Can't see it) 
+
+Here is a block comment: 
+%% 
+It can span 
+multiple lines 
+%%
+```
+
+Output:
+
+Here is some inline comments: %%You can't see this text%% (Can't see it) 
+
+Here is a block comment: 
+%% 
+It can span 
+multiple lines 
+%%
+
+---
+### Callouts
+Code:
+```
+> [!INFO] 
+> Here's a callout block. 
+> It supports **markdown** and [Link to note](../README.md).
+```
+
+Output:
+> [!INFO] 
+> Here's a callout block. 
+> It supports **markdown** and [Link to note](../README.md).
+
+---
+### Diagram 
+[Mermaid](https://mermaid-js.github.io/) [a helpful live editor](https://mermaid-js.github.io/mermaid-live-editor).
+
+Code:
+````
+```mermaid
+graph TD
+
+Biology --> Chemistry
+
+class Biology,Chemistry internal-link;
+```
+````
+
+Output:
+
+```mermaid
+graph TD
+
+Biology --> Chemistry
+
+class Biology,Chemistry internal-link;
+```
+
+
+#### Diagram 2
+
+Code:
+
+````
+```mermaid
+graph TD
+
+A[Biology]
+B[Chemistry]
+
+A --> B
+
+class A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z internal-link;
+```
+
+````
+
+Output:
+
+```mermaid
+graph TD
+
+A[Biology]
+B[Chemistry]
+
+A --> B
+
+class A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z internal-link;
+```
+
+---
+### Math LaTex
 
 Code:
 ```md
@@ -312,8 +406,18 @@ Code:
 \end{equation*}
 ````
 Output:
-
 $$ 
 \begin
 {equation*} 1 + 2 = 3 
-\end{equation*}
+\end{equation*}$$
+
+Code:
+```md
+$$\begin{vmatrix}a & b\\ 
+c & d 
+\end{vmatrix}=ad-bc$$
+````
+Output:
+$$\begin{vmatrix}a & b\\ 
+c & d 
+\end{vmatrix}=ad-bc$$
