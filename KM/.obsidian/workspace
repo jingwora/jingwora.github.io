@@ -130,13 +130,15 @@
   },
   "active": "54c62e436033f6d1",
   "lastOpenFiles": [
-    "Bioinformatics/Notes/01 What is Bioinformatics.md",
-    "README.md",
-    "Bioinformatics.md",
-    "Bioinformatics/Notes/Ref Bioinformatics Books.md",
     "Bioinformatics/Notes/Ref Bioinformatics Tutorials.md",
-    "Bioinformatics/Notes/What is Bioinformatics.md",
+    "README.md",
+    "Bioinformatics/Notes/Ref Bioinformatics Books.md",
+    "Bioinformatics/Notes/04 Analysis Tools.md",
+    "Bioinformatics/Notes/03 Data.md",
+    "Bioinformatics/Notes/02 Environment.md",
+    "Bioinformatics/Notes/01 What is Bioinformatics.md",
     "Utility/Useful Links.md",
-    "Utility/ToDO List.md"
+    "Bioinformatics.md",
+    "Bioinformatics/Notes/What is Bioinformatics.md"
   ]
 }
