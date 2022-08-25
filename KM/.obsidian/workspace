@@ -14,18 +14,6 @@
             "source": false
           }
         }
-      },
-      {
-        "id": "fdf4e14522dd6075",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Utilities/Useful Links.md",
-            "mode": "source",
-            "source": false
-          }
-        }
       }
     ],
     "direction": "vertical"
@@ -142,15 +130,15 @@
   },
   "active": "4e5259acf9baf0d2",
   "lastOpenFiles": [
+    "Bioinformatics/Notes/02 Environment.md",
     "README.md",
+    "Bioinformatics/Notes/01 What is Bioinformatics.md",
+    "Utilities/Useful Links.md",
     "Bioinformatics/Books/Introduction to Bioinformatics Algorithms.md",
     "Books/Introduction to Bioinformatics Algorithms.md",
     "Utilities/ToDO List.md",
-    "Utilities/Useful Links.md",
     "Utilities/MathJax-LaTeX.md",
     "Utilities/Markdown.md",
-    "Biology.md",
-    "Bioinformatics/Notes/Ref Bioinformatics Books.md",
-    "Bioinformatics/Notes/01 What is Bioinformatics.md"
+    "Biology.md"
   ]
 }
