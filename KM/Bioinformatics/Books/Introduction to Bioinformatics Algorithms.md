@@ -49,18 +49,23 @@ A **variable**, written as x or total, contains some numerical value and can be 
 An **array** of n elements is an ordered collection of n variables a1, a2, . . . , an. We usually denote arrays by boldface letters like **a** = (a1, a2, . . . , an) and write the individual elements as ai where i is between 1 and n.
 
 ##### Assignment Format
-a ← b Effect: 
-Sets the variable a to the value b.
+a ← b 
+Effect: Sets the variable a to the value b.
 
 ##### Arithmetic 
-Format: a + b, a − b, a · b, a/b, a^b 
+Format: $\displaystyle a + b, a - b, · b, a/b, a^b$
 Effect:  Addition, subtraction, multiplication, division, and exponentiation of numbers. 
-Example: DIST(x1, y1, x2, y2) 
-1 dx ← (x2 − x1)2 
-2 dy ← (y2 − y1)2 
-3 return √ (dx + dy)
-
-Result: DIST(x1, y1,x2, y2) computes the Euclidean distance between points with coordinates (x1, y1) and (x2, y2). DISTANCE(0, 0, 3, 4)returns 5
+Example: 
+$$
+\begin{align*} 
+&DIST(x1, y1, x2,y2)\\
+&1. dx ← (x2 − x1)2 \\
+&2. dy ← (y2 − y1)2 \\
+&3. return \sqrt {(dx + dy)} \\
+\end{align*}
+$$
+Result: DIST(x1, y1,x2, y2) computes the Euclidean distance between points with coordinates (x1, y1) and (x2, y2). 
+DISTANCE(0, 0, 3, 4)returns 5
 
 ##### Conditional 
 Format: if A is true 
@@ -80,7 +85,7 @@ Result: MAX(a, b) computes the maximum of the numbers a and b. For example, MAX(
 Format: for i ← a to b 
 				**B**
 
-Effect: Sets i to a and executes instructions B. Sets i to a + 1 and executes instructions B again. Repeats for i = a + 2, a + 3, . . . , b − 1, b^3
+Effect: Sets i to a and executes instructions B. Sets i to a + 1 and executes instructions B again. Repeats for i = a + 2, a + 3, . . . , b − 1, b³　
 
 Example: SUMINTEGERS(n) 
 		sum ← 0 
@@ -91,7 +96,7 @@ Result: SUMINTEGERS(n) computes the sum of integers from 1 to n. SUMINTEGERS(10)
 
 #### while loops
 Format: while A is true
-				B 
+				**B** 
 Effect: Checks the condition A. If it is true, then executes instructions B. Checks A again; if it’s true, it executes B again. Repeats until A is not true. 
 
 Example: ADDUNTIL(b) 
@@ -105,10 +110,31 @@ Example: ADDUNTIL(b)
 Result: ADDUNTIL(b) computes the smallest integer i such that 1 + 2 + · · ·+i is larger than b. For example, ADDUNTIL(25)returns 7, since 1+ 2+· · ·+ 7 = 28, which is larger than 25, but 1+ 2+· · ·+ 6 = 21, which is smaller than 25.
 
 #### Array access
-Format: a　i
+Format: aᵢ
+
+Effect: The ith number of array a = (a₁, . . . aᵢ , . . . aₙ). For example, if F = (1, 1, 2, 3, 5, 8, 13), then F₃ = 2, and F₄ = 3.
+
+Example: FIBONACCI(n) 
+F₁ ← 1 
+F₂ ← 1 
+for i ← 3 to n 
+    Fᵢ ← Fᵢ₋₁ + Fᵢ₋₂ 
+return Fₙ 
+
+Result: FIBONACCI(n) computes the nth Fibonacci number. FIBONACCI(8) returns 21.
+
+We reiterate that the function of pseudocode in this book is only to communicate the idea behind an algorithm, and that to actually use an algorithm in this book you would need to turn the pseudocode into computer code.
+
+### Biological Algorithms versus Computer Algorithms
+
+DNA replication:
+
+1. A molecular machine (in other words, a protein complex) called a DNA helicase, binds to the DNA at certain positions called replication origins
+
+2. Helicase wrenches apart the two strands of DNA, creating a so-called replication fork. The two strands are complementary and run in opposite directions. Two other molecular machines, topoisomerase and single-strand binding protein bind to the single strands to help relieve the instability of single-stranded DNA.
 
 
-
+<iframe src="https://www.youtube.com/embed/TNKWgcFPHqw"></iframe>
 
 
 ---

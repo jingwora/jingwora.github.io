@@ -5,6 +5,33 @@ MathJax is an open-source JavaScript display engine for LaTeX, MathML, and Ascii
 [Website](https://www.mathjax.org/)  [Docs](http://docs.mathjax.org/en/latest/)
 
 --- 
+**Formula**
+Code:
+````
+Example: $\displaystyle DIST(x1, y1, x2,y2)$
+````
+Output:
+Example: $\displaystyle DIST(x1, y1, x2,y2)$
+
+
+
+
+```
+$$
+\begin{align}
+x & = 1+1 \hspace{100cm} \\
+& = 2
+\end{align}
+$$
+```
+$$
+\begin{align}
+x & = 1+1 \hspace{15cm} \\
+  & = 2
+\end{align}
+$$
+
+
 **Operation**
 `align` is for multiline operation
 Code:
@@ -102,6 +129,8 @@ $$
 \begin{align*} 
 \text{Equation} \\
 a b, a \; b, a \quad b, a \qquad b \\
+\hspace{100cm}\\
+
 \end{align*}
 $$
 ````

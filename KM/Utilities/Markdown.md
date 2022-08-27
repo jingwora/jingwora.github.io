@@ -78,6 +78,22 @@ Output:
 
 ---
 
+#### Special Characters
+superscript ⁰ ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹  xª xº xⁱ xʰ xʲ xⱽ xⁿ x⁺ x⁻ x⁼ x⁽ x⁾  ˢᵘᵖᵉʳˢᶜʳᶦᵖᵗ
+
+subscript ₀ ₁ ₂ ₃ ₄ ₅ ₆ ₇ ₈ ₉ ₙ ᵢ	x₊	x₋	x₌	x₍	x₎	xₐ	xᵢ xₑ	xₒ	xₓ	xₔ	xₕ	xₖ	xₗ	xₘ	xₙ	xₚ	xₛ	xₜ
+
+1ˢᵗ, 2ⁿᵈ, 3ʳᵈ, 4ᵗʰ
+½ ¼ ¾
+% $ € 
+
+Symbol
++<= ≠ ≃ > ≤ ≥ ±× * ⋅  ÷ ⁄ ⅀ ← → √ ∛ ∜ e π ∞ ∩ ∪ ⊂ ⊃ ⊄ ⊅ σ ∫  ⋮  ⋯ χ 
+α β γ δ ε ζ η θ ι κ λ μ ν ξ ο ω
+H₂O    E = mc²
+
+---
+
 ### Images
 
 Code:
@@ -97,6 +113,20 @@ Code:
 Output:
 
 ![Engelbart|100](https://history-computer.com/ModernComputer/Basis/images/Engelbart.jpg)
+
+
+
+---
+
+
+#### Embeded Video
+Code:
+````
+<iframe src="https://www.youtube.com/embed/mI0Fo9kaWqo"></iframe>
+````
+Output:
+
+<iframe src="https://www.youtube.com/embed/mI0Fo9kaWqo"></iframe>
 
 
 ---

@@ -128,17 +128,73 @@
     "width": 300,
     "collapsed": true
   },
+  "floating": {
+    "id": "21ce43ffbfad4393",
+    "type": "floating",
+    "children": [
+      {
+        "id": "a0fe278653adb7e2",
+        "type": "window",
+        "children": [
+          {
+            "id": "c0eab640ddad8b56",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Utilities/MathJax-LaTeX.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "direction": "vertical",
+        "x": 231,
+        "y": 98,
+        "width": 1000,
+        "height": 565,
+        "maximize": false,
+        "zoom": 0
+      },
+      {
+        "id": "bd38897913d876fa",
+        "type": "window",
+        "children": [
+          {
+            "id": "9759e054e865d1fa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Utilities/Markdown.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "direction": "vertical",
+        "x": 331,
+        "y": 101,
+        "width": 1023,
+        "height": 560,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
   "active": "4e5259acf9baf0d2",
   "lastOpenFiles": [
-    "Bioinformatics/Notes/02 Environment.md",
-    "README.md",
-    "Bioinformatics/Notes/01 What is Bioinformatics.md",
-    "Utilities/Useful Links.md",
-    "Bioinformatics/Books/Introduction to Bioinformatics Algorithms.md",
-    "Books/Introduction to Bioinformatics Algorithms.md",
     "Utilities/ToDO List.md",
-    "Utilities/MathJax-LaTeX.md",
+    "Bioinformatics/Notes/Ref Bioinformatics Tutorials.md",
     "Utilities/Markdown.md",
-    "Biology.md"
+    "README.md",
+    "Bioinformatics/Notes/Ref Bioinformatics Books.md",
+    "Bioinformatics/Notes/04 Analysis Tools.md",
+    "Bioinformatics/Books/Introduction to Bioinformatics Algorithms.md",
+    "Utilities/MathJax-LaTeX.md",
+    "Utilities/Useful Links.md",
+    "Bioinformatics/Notes/01 What is Bioinformatics.md"
   ]
 }
