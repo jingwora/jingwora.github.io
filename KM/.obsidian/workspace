@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Bioinformatics/Books/Introduction to Bioinformatics Algorithms.md",
+            "file": "README.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Bioinformatics/Books/Introduction to Bioinformatics Algorithms.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Bioinformatics/Books/Introduction to Bioinformatics Algorithms.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Bioinformatics/Books/Introduction to Bioinformatics Algorithms.md"
+                "file": "README.md"
               }
             }
           }
@@ -186,14 +186,14 @@
   },
   "active": "4e5259acf9baf0d2",
   "lastOpenFiles": [
-    "Utilities/ToDO List.md",
-    "Bioinformatics/Notes/Ref Bioinformatics Tutorials.md",
     "Utilities/Markdown.md",
     "README.md",
+    "Utilities/MathJax-LaTeX.md",
+    "Bioinformatics/Books/Introduction to Bioinformatics Algorithms.md",
+    "Utilities/ToDO List.md",
+    "Bioinformatics/Notes/Ref Bioinformatics Tutorials.md",
     "Bioinformatics/Notes/Ref Bioinformatics Books.md",
     "Bioinformatics/Notes/04 Analysis Tools.md",
-    "Bioinformatics/Books/Introduction to Bioinformatics Algorithms.md",
-    "Utilities/MathJax-LaTeX.md",
     "Utilities/Useful Links.md",
     "Bioinformatics/Notes/01 What is Bioinformatics.md"
   ]

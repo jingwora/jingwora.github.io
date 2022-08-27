@@ -18,7 +18,7 @@
 
 ---
 #### Utilities
-- ToDo List[🔗](/Utilities/ToDo%20List.md)
-- Markdown[🔗](/Utilities/Markdown.md)
-- MathJax-LaTeX[🔗](/Utilities/MathJax-LaTeX.md)
-- Useful Links[🔗](/Utilities/Useful%20Links.md)
+- ToDo List[🔗](Utilities/ToDo%20List.md)
+- Markdown[🔗](Utilities/Markdown.md)
+- MathJax-LaTeX[🔗](Utilities/MathJax-LaTeX.md)
+- Useful Links[🔗](Utilities/Useful%20Links.md)
