@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Bioinformatics/Notes/Ref Bioinformatics Books.md",
+            "file": "Bioinformatics/Notes/01 Bioinformatics.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Bioinformatics/Notes/Ref Bioinformatics Books.md",
+                "file": "Bioinformatics/Notes/01 Bioinformatics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Bioinformatics/Notes/Ref Bioinformatics Books.md",
+                "file": "Bioinformatics/Notes/01 Bioinformatics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Bioinformatics/Notes/Ref Bioinformatics Books.md"
+                "file": "Bioinformatics/Notes/01 Bioinformatics.md"
               }
             }
           }
@@ -130,13 +130,13 @@
   },
   "active": "4e5259acf9baf0d2",
   "lastOpenFiles": [
-    "Bioinformatics/attachments/Books/_cover/Human Evolutionary Genetics.png",
     "Bioinformatics/Notes/Ref Bioinformatics Books.md",
+    "Bioinformatics/attachments/Books/_cover/Human Evolutionary Genetics.png",
     "Bioinformatics/Books/An Introduction to Bioinformatics Algorithms (EN).md",
     "Bioinformatics/Books/Human Evolutionary Genetics (EN).md",
     "Bioinformatics/attachments/20220818162904.png",
     "Bioinformatics/Books/An Introduction to Bioinformatics Algorithms (JA).md",
-    "Bioinformatics/Notes/01 What is Bioinformatics.md",
+    "Bioinformatics/Notes/01 Bioinformatics.md",
     "2022-09-18.md",
     "Utilities/MathJax-LaTeX.md",
     "Utilities/Markdown.md"
