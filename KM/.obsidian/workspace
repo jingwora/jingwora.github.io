@@ -61,7 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 269.5
+    "width": 314.5
   },
   "right": {
     "id": "728dc3a96036bcb7",
@@ -131,10 +131,10 @@
   "active": "4e5259acf9baf0d2",
   "lastOpenFiles": [
     "Bioinformatics/Books/An Introduction to Bioinformatics Algorithms (EN).md",
+    "README.md",
     "Bioinformatics/Books/Human Evolutionary Genetics (EN).md",
     "Bioinformatics/Books/An Introduction to Bioinformatics Algorithms (JA).md",
     "2022-09-18.md",
-    "README.md",
     "Bioinformatics/Notes/01 Bioinformatics.md",
     "Bioinformatics/Notes/Ref Bioinformatics Books.md",
     "Bioinformatics/attachments/Books/_cover/Human Evolutionary Genetics.png",

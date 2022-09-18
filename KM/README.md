@@ -1,7 +1,7 @@
 # My KM
 obsidian://open?vault=KM&file=Bioinformatics%2FNotes%2F01%20Bioinformatics
 obsidian://open?vault=KM&file=Bioinformatics%2FNotes%2F02%20Environment
-
+obsidian://open?vault=KM&file=Bioinformatics%2FBooks%2FAn%20Introduction%20to%20Bioinformatics%20Algorithms%20(EN)
 
 ### Bioinformatics
 1. What is Bioinformatics? [🔗](Bioinformatics/Notes/01%20Bioinformatics.md)
@@ -19,7 +19,7 @@ obsidian://open?vault=KM&file=Bioinformatics%2FNotes%2F02%20Environment
 
 ---
 #### Book Summary
-- Introduction to Bioinformatics Algorithms[🔗](An%20Introduction%20to%20Bioinformatics%20Algorithms%20(EN).md)
+- Introduction to Bioinformatics Algorithms[🔗](Bioinformatics/Books/An%20Introduction%20to%20Bioinformatics%20Algorithms%20(EN).md)
 
 ---
 #### Utilities
