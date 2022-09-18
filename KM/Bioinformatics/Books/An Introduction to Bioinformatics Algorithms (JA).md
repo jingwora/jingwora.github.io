@@ -1,46 +1,55 @@
-# Introduction to Bioinformatics Algorithms
+# バイオインフォマティクスのためのアルゴリズム入門
+### An Introduction to Bioinformatics Algorithms (JA)
+### 
+
+NEIL C. JONES AND PAVEL A. PEVZNER
+
+ニールCジョーンズ  とパベルAペヴズナー
+
+計算分子生物学（Computational molecular biology）は、計算、統計、実験、および技術的手法を組み合わせた新しい分野である。新しい技術とツールのより、分子生物学の発見を加速させています。
+
+## 目次
+
+1 はじめに
+2 アルゴリズムと複雑さ
+3 分子生物学入門
+4 しらみつぶし探索（exhaustive search）
+5 グリーディ法（greedy algorithm）
+6 動的計画法（Dynamic Programming Algorithms）
+7 分割統治（Divide-and-Conquer Algorithms）
+8 グラフアルゴリズム（Graph Algorithms）
+9 組み合わせパターンマッチング（Combinatorial Pattern Matching）
+10 クラスタリングとツリー（Clustering and Trees）
+11 隠れマルコフモデル（Hidden Markov Models）
+12 乱択アルゴリズム（Randomized Algorithms）
 
 
+## 序文
+長い間、コンピュータ サイエンスと生物学は別々に教えられてきました。1990 年代初頭には、一部の生物学の学生はアルゴリズム 101 を受講し、一部のコンピューター サイエンスの学生は遺伝学 101 とバイオインフォマティクス 101 を受講しました。
 
-## Contents
+バイオインフォマティクスのアルゴリズムと、過去 20 年間にそれらを推進してきた計算のアイデアに関する入門書です。
 
-1 Introduction
-2 Algorithms and Complexity
-3 Molecular Biology Primer
-4 Exhaustive Search
-5 Greedy Algorithms
-6 Dynamic Programming Algorithms
-7 Divide-and-Conquer Algorithms
-8 Graph Algorithms
-9 Combinatorial Pattern Matching
-10 Clustering and Trees
-11 Hidden Markov Models
-12 Randomized Algorithms
+### 1. はじめに
+この本では、いくつかのアルゴリズムのアイデアを使用して、多数のバイオインフォマティクスの問題を解決できることに述べています。より知的価値があり、より良い長期投資を表すロジックに焦点を当てています。プロトコルはすぐに変更されますが、計算ロジックはそうではないようです。
 
+目標は、アルゴリズムの基礎とバイオインフォマティクスの重要な結果の両方をカバーすることです。
 
-## Preface
-In the early 1990s, biology students take some sort of Algorithms 101 and computer science students take Genetics 101 and Bioinformatics 101. This is an introductory textbook on bioinformatics algorithms and the computational ideas that have driven them through the last twenty years.
-The very first bioinformatics textbooks were Waterman, 1995 (108), which contains excellent coverage of DNA statistics and Gusfield, 1997 (44) which includes an encyclopedia of string algorithms.
+計算生物学の新しい分野と古い分野の両方をカバーしています
 
-### 1. Introduction
-In this book we attempt to show that a handful of algorithmic ideas can be used to solve a large number of bioinformatics problems. We feel that focusing on ideas has more intellectual value and represents a better long-term investment: protocols change quickly, but the computational ideas don’t seem to.
+ロックパズルゲームの必勝法サンプルを説明しました。結論はアルゴリズムを使用して問題を解決する方法を学習できます。
 
-We pursued a goal of presenting both the foundations of algorithms and the important results in bioinformatics under the same cover.
+アルゴリズムを使用して、多くの生物学の問題を解決できます。
 
-This book covers both new and old areas in computational biology
-
-To hold a student’s interest, it is necessary to introduce biology and algorithms simultaneously.
-
-This book is what we, as computer scientists, believe that a modern biologist ought to know about computer science if he or she would be a successful researcher.
+アルゴリズムのパラメータ調整より、アルゴリズムのロジックを理解るすことが必要です。
 
 
-## 2. Algorithms and Complexity
+## 2. アルゴリズムと複雑さ
 
-An [[algorithm]] is a sequence of instructions that one must perform in order to solve a well-formulated problem.
+アルゴリズム（algorithm） とは 、適切に定式化された問題を解決するための計算手順や処理手順のこと。入力と出力の問題を特定し、アルゴリズムは入力を出力に変換する方法になります。
 
-We will specify problems in terms of their inputs and their outputs, and the algorithm will be the method of translating the inputs into the outputs.
+擬似コード（pseudocode）とは 、特定のプログラミング言語の知識を持たない人でもアルゴリズムが理解できるように自然言語に近い形で記述するコードです。
 
-[[Pseudocode]] is a language computer scientists often use to describe algorithms
+課題形式
 
 A **variable**, written as x or total, contains some numerical value and can be assigned a new numerical value at different points throughout the course of an algorithm.
 
@@ -132,7 +141,6 @@ DNA replication:
 2. Helicase wrenches apart the two strands of DNA, creating a so-called replication fork. The two strands are complementary and run in opposite directions. Two other molecular machines, topoisomerase and single-strand binding protein bind to the single strands to help relieve the instability of single-stranded DNA.
 
 
-<iframe src="https://www.youtube.com/embed/TNKWgcFPHqw"></iframe>
 
 
 ---
@@ -140,7 +148,7 @@ DNA replication:
 Status: #Draft
 
 Tags:
-[[Introduction to Bioinformatics Algorithms]] | [[Algorithms]] | [[Pseudocode]]
+[[Bioinformatics]] | [[Algorithms]] | [[Pseudocode]]
 
 Links:
 

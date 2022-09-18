@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Bioinformatics/Books/Introduction to Bioinformatics Algorithms.md",
+            "file": "Bioinformatics/Notes/Ref Bioinformatics Books.md",
             "mode": "source",
             "source": false
           }
@@ -61,7 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 269.5
   },
   "right": {
     "id": "728dc3a96036bcb7",
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Bioinformatics/Books/Introduction to Bioinformatics Algorithms.md",
+                "file": "Bioinformatics/Notes/Ref Bioinformatics Books.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Bioinformatics/Books/Introduction to Bioinformatics Algorithms.md",
+                "file": "Bioinformatics/Notes/Ref Bioinformatics Books.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Bioinformatics/Books/Introduction to Bioinformatics Algorithms.md"
+                "file": "Bioinformatics/Notes/Ref Bioinformatics Books.md"
               }
             }
           }
@@ -130,15 +130,15 @@
   },
   "active": "4e5259acf9baf0d2",
   "lastOpenFiles": [
-    "Bioinformatics/Notes/01 What is Bioinformatics.md",
-    "Utilities/MathJax-LaTeX.md",
-    "Utilities/Markdown.md",
-    "README.md",
-    "Utilities/ToDO List.md",
-    "Bioinformatics/Books/Introduction to Bioinformatics Algorithms.md",
-    "Bioinformatics/Notes/Ref Bioinformatics Tutorials.md",
+    "Bioinformatics/attachments/Books/_cover/Human Evolutionary Genetics.png",
     "Bioinformatics/Notes/Ref Bioinformatics Books.md",
-    "Bioinformatics/Notes/04 Analysis Tools.md",
-    "Utilities/Useful Links.md"
+    "Bioinformatics/Books/An Introduction to Bioinformatics Algorithms (EN).md",
+    "Bioinformatics/Books/Human Evolutionary Genetics (EN).md",
+    "Bioinformatics/attachments/20220818162904.png",
+    "Bioinformatics/Books/An Introduction to Bioinformatics Algorithms (JA).md",
+    "Bioinformatics/Notes/01 What is Bioinformatics.md",
+    "2022-09-18.md",
+    "Utilities/MathJax-LaTeX.md",
+    "Utilities/Markdown.md"
   ]
 }

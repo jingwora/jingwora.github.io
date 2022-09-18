@@ -14,7 +14,7 @@
 
 ---
 #### Book Summary
-- Introduction to Bioinformatics Algorithms[🔗](Bioinformatics/Books/Introduction%20to%20Bioinformatics%20Algorithms.md)
+- Introduction to Bioinformatics Algorithms[🔗](An%20Introduction%20to%20Bioinformatics%20Algorithms%20(EN).md)
 
 ---
 #### Utilities
