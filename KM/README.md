@@ -1,4 +1,7 @@
 # My KM
+obsidian://open?vault=KM&file=Bioinformatics%2FNotes%2F01%20Bioinformatics
+obsidian://open?vault=KM&file=Bioinformatics%2FNotes%2F02%20Environment
+
 
 ### Bioinformatics
 1. What is Bioinformatics? [🔗](Bioinformatics/Notes/01%20Bioinformatics.md)
