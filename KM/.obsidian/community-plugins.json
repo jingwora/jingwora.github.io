@@ -1,3 +1,9 @@
 [
-  "obsidian-pandoc"
+  "obsidian-pandoc",
+  "table-editor-obsidian",
+  "calendar",
+  "sliding-panes-obsidian",
+  "obsidian-kanban",
+  "obsidian-emoji-toolbar",
+  "dataview"
 ]

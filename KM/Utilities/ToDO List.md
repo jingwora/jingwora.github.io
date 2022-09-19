@@ -1,6 +1,6 @@
 # ToDo List
 
-- [ ] TOEIC
+- [x] TOEIC
 
 - [x] Next Generation Sequencing
 - [ ] Computational Genomics: Applied Comparative 

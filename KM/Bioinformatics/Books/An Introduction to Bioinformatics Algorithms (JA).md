@@ -1,6 +1,6 @@
 # バイオインフォマティクスのためのアルゴリズム入門
 ### An Introduction to Bioinformatics Algorithms (JA)
-### 
+
 
 NEIL C. JONES AND PAVEL A. PEVZNER
 
@@ -29,7 +29,7 @@ NEIL C. JONES AND PAVEL A. PEVZNER
 
 バイオインフォマティクスのアルゴリズムと、過去 20 年間にそれらを推進してきた計算のアイデアに関する入門書です。
 
-### 1. はじめに
+## 1. はじめに
 この本では、いくつかのアルゴリズムのアイデアを使用して、多数のバイオインフォマティクスの問題を解決できることに述べています。より知的価値があり、より良い長期投資を表すロジックに焦点を当てています。プロトコルはすぐに変更されますが、計算ロジックはそうではないようです。
 
 目標は、アルゴリズムの基礎とバイオインフォマティクスの重要な結果の両方をカバーすることです。
@@ -55,11 +55,11 @@ A **variable**, written as x or total, contains some numerical value and can be 
 
 An **array** of n elements is an ordered collection of n variables a1, a2, . . . , an. We usually denote arrays by boldface letters like **a** = (a1, a2, . . . , an) and write the individual elements as ai where i is between 1 and n.
 
-##### Assignment Format
+#### Assignment Format
 a ← b 
 Effect: Sets the variable a to the value b.
 
-##### Arithmetic 
+#### Arithmetic 
 Format: $\displaystyle a + b, a - b, · b, a/b, a^b$
 Effect:  Addition, subtraction, multiplication, division, and exponentiation of numbers. 
 Example: 
@@ -74,7 +74,7 @@ $$
 Result: DIST(x1, y1,x2, y2) computes the Euclidean distance between points with coordinates (x1, y1) and (x2, y2). 
 DISTANCE(0, 0, 3, 4)returns 5
 
-##### Conditional 
+#### Conditional 
 Format: if A is true 
 					B 
 			 else 

@@ -22,7 +22,7 @@
 In the early 1990s, biology students take some sort of Algorithms 101 and computer science students take Genetics 101 and Bioinformatics 101. This is an introductory textbook on bioinformatics algorithms and the computational ideas that have driven them through the last twenty years.
 The very first bioinformatics textbooks were Waterman, 1995 (108), which contains excellent coverage of DNA statistics and Gusfield, 1997 (44) which includes an encyclopedia of string algorithms.
 
-### 1. Introduction
+## 1. Introduction
 In this book we attempt to show that a handful of algorithmic ideas can be used to solve a large number of bioinformatics problems. We feel that focusing on ideas has more intellectual value and represents a better long-term investment: protocols change quickly, but the computational ideas don’t seem to.
 
 We pursued a goal of presenting both the foundations of algorithms and the important results in bioinformatics under the same cover.

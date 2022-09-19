@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "4e5259acf9baf0d2",
+        "id": "c1bb6f6a8725bf3b",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "README.md",
+            "file": "Dictionary Med terms/Med roots/-a.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Draft",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Dictionary Med terms/Med roots/-a.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Dictionary Med terms/Med roots/-a.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,28 +117,36 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Dictionary Med terms/Med roots/-a.md"
               }
             }
+          },
+          {
+            "id": "6eb33bcefbbb0acc",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
-  "active": "4e5259acf9baf0d2",
+  "active": "c1bb6f6a8725bf3b",
   "lastOpenFiles": [
-    "Utilities/Markdown.md",
-    "Utilities/Useful Links.md",
-    "README.md",
-    "Bioinformatics/Books/Human Evolutionary Genetics (EN).md",
-    "Bioinformatics/Books/An Introduction to Bioinformatics Algorithms (JA).md",
-    "Bioinformatics/Books/An Introduction to Bioinformatics Algorithms (EN).md",
-    "2022-09-18.md",
-    "Bioinformatics/Notes/01 Bioinformatics.md",
-    "Bioinformatics/Notes/Ref Bioinformatics Books.md",
-    "Bioinformatics/attachments/Books/_cover/Human Evolutionary Genetics.png"
+    "Dictionary Med terms/Med roots tables/Med roots dictionary.md",
+    "Dictionary Med terms/Med roots/zym-.md",
+    "Dictionary Med terms/Med roots/Zo-.md",
+    "Dictionary Med terms/Med roots/tax-.md",
+    "Dictionary Med terms/Med roots/per-.md",
+    "Dictionary Med terms/Med roots/ped-.md",
+    "Dictionary Med terms/Med roots/meat-.md",
+    "Dictionary Med terms/Med roots/anthrac-.md",
+    "Dictionary Med terms/Med roots/-ad.md",
+    "Dictionary Med terms/Med roots/-ac.md"
   ]
 }
