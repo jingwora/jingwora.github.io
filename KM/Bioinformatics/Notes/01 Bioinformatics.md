@@ -28,7 +28,7 @@ Precision medicine looks at the genetics, environment, and lifestyle of a person
 Status: #Draft
 
 Tags:
-[[Bioinformatics]] | [[Big data]] | [[Precision medicine]]
+[[Dictionary/Bioinfo dictionary/Med roots/bioinformatic]] | [[Big data]] | [[Precision medicine]]
 
 Links:
 

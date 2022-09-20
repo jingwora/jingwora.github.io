@@ -139,7 +139,7 @@ DNA replication:
 Status: #Draft
 
 Tags:
-[[Bioinformatics]] | [[Algorithms]] | [[Pseudocode]]
+[[Dictionary/Bioinfo dictionary/Med roots/bioinformatic]] | [[Algorithms]] | [[Pseudocode]]
 
 Links:
 

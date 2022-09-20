@@ -54,21 +54,16 @@ Index
 ## AN INTRODUCTION TO HUMAN EVOLUTIONARY GENETICS
 
 #### 1.1 WHAT IS HUMAN EVOLUTIONARY GENETICS?
-- Evolutionary genetics is founded on the principle that the genetic record of life is contained in the genomes of living species and it reveals evolutionary processes and relationships all the way back to the last universal common ancestor of all species.
+- Evolutionary genetics is founded on the principle that the genetic record of life is contained in the [[genome]]s of living species and it reveals evolutionary processes and relationships all the way back to the last universal common ancestor of all species.
 - 
 
-| col1 | col2 | col3 |
-| ---- | ---- | ---- |
-| val1 | val2 | val3     |
-
-[[achlorhydria]]
 
 ---
 
 Status: #Draft
 
 Tags:
-[[Bioinformatics]] |
+[[Dictionary/Bioinfo dictionary/Med roots/bioinformatic]] |
 
 Links:
 

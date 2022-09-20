@@ -53,7 +53,7 @@ _Campbell BIOLOGY_ is the unsurpassed leader in introductory biology.
 Status: #Draft
 
 Tags:
-[[Bioinformatics]] | [[Book]] 
+[[Dictionary/Bioinfo dictionary/Med roots/bioinformatic]] | [[Book]] 
 
 Links:
 
