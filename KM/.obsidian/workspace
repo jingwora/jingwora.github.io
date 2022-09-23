@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Dictionary/Bioinfo dictionary en/Bioinfo terms/1000 Genomes Project.md",
+            "file": "Notes/Bioinformatics/Ref Bioinformatics Books.md",
             "mode": "source",
             "source": false
           }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Dictionary/Bioinfo dictionary en/Bioinfo terms/1000 Genomes Project.md",
+                "file": "Notes/Bioinformatics/Ref Bioinformatics Books.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Dictionary/Bioinfo dictionary en/Bioinfo terms/1000 Genomes Project.md",
+                "file": "Notes/Bioinformatics/Ref Bioinformatics Books.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Dictionary/Bioinfo dictionary en/Bioinfo terms/1000 Genomes Project.md"
+                "file": "Notes/Bioinformatics/Ref Bioinformatics Books.md"
               }
             }
           },
@@ -159,6 +159,8 @@
   },
   "active": "12dd4d442a57052b",
   "lastOpenFiles": [
+    "Notes/Bioinformatics/Ref Bioinformatics Tutorials.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/1000 Genomes Project.md",
     "Dictionary/Bioinfo dictionary en/Bioinfo terms/bioinformatics.md",
     "Dictionary/Bioinfo dictionary en/Bioinfo terms/biology.md",
     "Dictionary/Bioinfo dictionary en/Bioinfo terms/cell.md",
@@ -166,8 +168,6 @@
     "Dictionary/Bioinfo dictionary en/Bioinfo terms/genome.md",
     "Dictionary/Bioinfo dictionary ja/Bioinfo terms/ゲノム.md",
     "Dictionary/Bioinfo dictionary ja/Bioinfo terms/バイオインフォマティクス.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/生物学.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝子.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/細胞.md"
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/生物学.md"
   ]
 }
