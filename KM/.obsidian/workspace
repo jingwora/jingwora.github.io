@@ -4,11 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "d29147205c4f07f4",
+        "id": "bdb35e4967c16ad3",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Notes/Books/Human Evolutionary Genetics (EN).md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -73,6 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Notes/Books/Human Evolutionary Genetics (EN).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Notes/Books/Human Evolutionary Genetics (EN).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -110,7 +116,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Notes/Books/Human Evolutionary Genetics (EN).md"
+              }
             }
           },
           {
@@ -130,24 +138,24 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
   },
-  "active": "d29147205c4f07f4",
+  "active": "bdb35e4967c16ad3",
   "lastOpenFiles": [
-    "Utilities/Untitled.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/対立遺伝子.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/allele.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/メンデルの法則.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/mendelian laws.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo tables/Bioinfo list en jp.md",
     "Dictionary/Bioinfo dictionary ja/Bioinfo terms/細胞.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝子.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/gene.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/cell.md",
-    "Notes/Bioinformatics/01 Bioinformatics.md",
-    "Notes/Bioinformatics/Ref Bioinformatics Books.md",
-    "README.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/バイオインフォマティクス.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/ゲノム.md",
     "Notes/Books/Human Evolutionary Genetics (EN).md",
-    "Notes/Books/An Introduction to Bioinformatics Algorithms (EN).md"
+    "README.md"
   ]
 }
