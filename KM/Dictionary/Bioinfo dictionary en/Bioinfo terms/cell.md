@@ -18,6 +18,6 @@ definition:: The basic structural and functional unit of life forms.
 > [[cell]] → [[nucleus]] → [[chromosome]] → [[DNA]] → [[gene]]
 
 >[!faq]+ IMAGE
-> ![image](/Attachments/Dictionary/Bioinfo-dictionary/cell-to-gene.jpg)
+> ![image](../Attachments/cell-to-gene.jpg)
 
 _____

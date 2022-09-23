@@ -4,15 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "2936ea1464c0f84f",
+        "id": "d29147205c4f07f4",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "README.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -77,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +89,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -116,9 +110,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "README.md"
-              }
+              "state": {}
             }
           },
           {
@@ -145,17 +137,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "2936ea1464c0f84f",
+  "active": "d29147205c4f07f4",
   "lastOpenFiles": [
-    "Notes/Books/An Introduction to Bioinformatics Algorithms (EN).md",
-    "README.md",
-    "KM/Notes/Bioinformatics/01 Bioinformatics.md",
+    "Utilities/Untitled.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/細胞.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝子.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/gene.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/cell.md",
     "Notes/Bioinformatics/01 Bioinformatics.md",
     "Notes/Bioinformatics/Ref Bioinformatics Books.md",
-    "Notes/Bioinformatics/Ref Bioinformatics Tutorials.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/1000 Genomes Project.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/bioinformatics.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/biology.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/cell.md"
+    "README.md",
+    "Notes/Books/Human Evolutionary Genetics (EN).md",
+    "Notes/Books/An Introduction to Bioinformatics Algorithms (EN).md"
   ]
 }

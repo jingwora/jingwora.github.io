@@ -19,6 +19,6 @@ definition:: Sections of DNA that code individual proteins.
 > [[cell]] → [[nucleus]] → [[chromosome]] → [[DNA]] → [[gene]]
 
 >[!faq]+ IMAGE
-> ![image](/Attachments/Dictionary/Bioinfo-dictionary/cell-to-gene.jpg)
+> ![image](../Attachments/cell-to-gene.jpg)
 
 _____

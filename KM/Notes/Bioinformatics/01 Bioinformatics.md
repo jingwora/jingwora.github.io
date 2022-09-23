@@ -6,7 +6,7 @@ Biology is the study of life and living organisms.
 ### Bioinformatics Components
 
 
-![image](/Attachments/Notes/Bioinformatics/Bioinformatics-Components.png)
+![image](../Attachments/Bioinformatics/Bioinformatics-Components.png)
 
 
 ### Big Data
