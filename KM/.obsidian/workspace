@@ -4,24 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "12dd4d442a57052b",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Notes/Bioinformatics/Ref Bioinformatics Books.md",
-            "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
         "id": "2936ea1464c0f84f",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Utilities/Markdown.md",
+            "file": "README.md",
             "mode": "source",
             "source": false
           }
@@ -89,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Bioinformatics/Ref Bioinformatics Books.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Bioinformatics/Ref Bioinformatics Books.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -129,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Bioinformatics/Ref Bioinformatics Books.md"
+                "file": "README.md"
               }
             }
           },
@@ -157,17 +145,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "12dd4d442a57052b",
+  "active": "2936ea1464c0f84f",
   "lastOpenFiles": [
+    "KM/Notes/Bioinformatics/01 Bioinformatics.md",
+    "Notes/Bioinformatics/01 Bioinformatics.md",
+    "README.md",
+    "Notes/Bioinformatics/Ref Bioinformatics Books.md",
     "Notes/Bioinformatics/Ref Bioinformatics Tutorials.md",
     "Dictionary/Bioinfo dictionary en/Bioinfo terms/1000 Genomes Project.md",
     "Dictionary/Bioinfo dictionary en/Bioinfo terms/bioinformatics.md",
     "Dictionary/Bioinfo dictionary en/Bioinfo terms/biology.md",
     "Dictionary/Bioinfo dictionary en/Bioinfo terms/cell.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/gene.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/genome.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/ゲノム.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/バイオインフォマティクス.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/生物学.md"
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/gene.md"
   ]
 }

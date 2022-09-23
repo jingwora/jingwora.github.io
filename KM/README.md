@@ -1,12 +1,11 @@
 # My KM
 
 ### Bioinformatics
-1. What is Bioinformatics? [📄](01%20Bioinformatics.md)
+
+1. What is Bioinformatics? [📄](./Notes/Bioinformatics/01%20Bioinformatics.md)
 2. Environment [📄](02%20Environment.md)
 3. Data [📄](03%20Data.md)
 4. Analysis Tools [📄](04%20Analysis%20Tools.md)
-
-
 
 ---
 #### Learning materials
