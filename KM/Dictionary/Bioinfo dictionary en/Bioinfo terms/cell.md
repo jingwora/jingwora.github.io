@@ -2,20 +2,19 @@
 tags: [" #bioinfo-dict-en "]
 aliases: []
 roots: []
-alphabet:: G
+alphabet:: C
 language:: en
-japanese:: [[遺伝子]] （いでんし）
+japanese:: [[細胞]] （さいぼう）
 source:: -
-definition:: Sections of DNA that code individual proteins.
+definition:: The basic structural and functional unit of life forms.
 ---
 >[!note] Definition
->Sections of DNA that code individual proteins.>
+>The basic structural and functional unit of life forms.
 
 >[!example]+ 日本語
-> [[遺伝子]] （いでんし）
+> [[細胞]] （さいぼう）
 
 >[!info]+ RELATED TERMS
-> [[genome]]
 > [[cell]] → [[nucleus]] → [[chromosome]] → [[DNA]] → [[gene]]
 
 >[!faq]+ IMAGE

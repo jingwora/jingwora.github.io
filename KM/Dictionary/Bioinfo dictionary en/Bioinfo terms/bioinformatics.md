@@ -4,6 +4,7 @@ aliases: []
 roots: []
 alphabet:: B
 language:: en
+japanese:: [[バイオインフォマティクス]]
 source:: -
 definition:: The application of computer technology and biology to the understanding and effective use of biological and biomedical data.
 ---
@@ -17,7 +18,5 @@ definition:: The application of computer technology and biology to the understan
 
 >[!info]+ RELATED TERMS
 > ⁻
-
-
 
 _____

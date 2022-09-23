@@ -4,6 +4,7 @@ aliases: []
 roots: []
 alphabet:: "0"
 language:: en
+japanese:: -
 source:: Book: Human Evolutionary Genetics
 definition:: An international collaborative project launched in 2008 that pioneered the application of next-generation sequencing to sequence the entire genomes and exomes of 2500 diverse human individuals.
 ---
@@ -17,7 +18,5 @@ definition:: An international collaborative project launched in 2008 that pionee
 
 >[!info]+ RELATED TERMS
 > ⁻
-
-
 
 _____

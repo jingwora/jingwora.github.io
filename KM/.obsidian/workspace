@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝子.md",
+            "file": "Dictionary/Bioinfo dictionary en/Bioinfo terms/1000 Genomes Project.md",
             "mode": "source",
             "source": false
           }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝子.md",
+                "file": "Dictionary/Bioinfo dictionary en/Bioinfo terms/1000 Genomes Project.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝子.md",
+                "file": "Dictionary/Bioinfo dictionary en/Bioinfo terms/1000 Genomes Project.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝子.md"
+                "file": "Dictionary/Bioinfo dictionary en/Bioinfo terms/1000 Genomes Project.md"
               }
             }
           },
@@ -159,15 +159,15 @@
   },
   "active": "12dd4d442a57052b",
   "lastOpenFiles": [
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/bioinformatics.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/biology.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/cell.md",
     "Dictionary/Bioinfo dictionary en/Bioinfo terms/gene.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/genome.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/ゲノム.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/バイオインフォマティクス.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/生物学.md",
     "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝子.md",
-    "Notes/Bioinformatics/Ref Bioinformatics Books.md",
-    "Notes/Bioinformatics/04 Analysis Tools.md",
-    "Notes/Bioinformatics/03 Data.md",
-    "Notes/Bioinformatics/02 Environment.md",
-    "Notes/Bioinformatics/01 Bioinformatics.md",
-    "Notes/Bioinformatics/Ref Bioinformatics Tutorials.md",
-    "Utilities/Markdown.md",
-    "Utilities/ToDO List.md"
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/細胞.md"
   ]
 }

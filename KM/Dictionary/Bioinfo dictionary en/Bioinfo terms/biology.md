@@ -4,6 +4,7 @@ aliases: []
 roots: []
 alphabet:: B
 language:: en
+japanese:: [[生物学]] （せいぶつがく）
 source:: -
 definition:: The study of living organisms, divided into many specialized fields that cover their morphology, physiology, anatomy, behaviour, origin, and distribution.
 
@@ -18,7 +19,5 @@ definition:: The study of living organisms, divided into many specialized fields
 
 >[!info]+ RELATED TERMS
 > ⁻
-
-
 
 _____
