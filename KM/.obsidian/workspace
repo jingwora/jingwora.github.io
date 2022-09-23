@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Bioinformatics/Ref Bioinformatics Books.md",
+            "file": "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝子.md",
             "mode": "source",
             "source": false
           }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Bioinformatics/Ref Bioinformatics Books.md",
+                "file": "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝子.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Bioinformatics/Ref Bioinformatics Books.md",
+                "file": "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝子.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Bioinformatics/Ref Bioinformatics Books.md"
+                "file": "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝子.md"
               }
             }
           },
@@ -159,15 +159,15 @@
   },
   "active": "12dd4d442a57052b",
   "lastOpenFiles": [
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/gene.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝子.md",
+    "Notes/Bioinformatics/Ref Bioinformatics Books.md",
     "Notes/Bioinformatics/04 Analysis Tools.md",
     "Notes/Bioinformatics/03 Data.md",
     "Notes/Bioinformatics/02 Environment.md",
     "Notes/Bioinformatics/01 Bioinformatics.md",
     "Notes/Bioinformatics/Ref Bioinformatics Tutorials.md",
-    "Notes/Bioinformatics/Ref Bioinformatics Books.md",
     "Utilities/Markdown.md",
-    "Utilities/ToDO List.md",
-    "Utilities/Useful Links.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/gene.md"
+    "Utilities/ToDO List.md"
   ]
 }

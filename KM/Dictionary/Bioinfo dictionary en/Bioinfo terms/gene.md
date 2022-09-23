@@ -17,7 +17,7 @@ definition:: Sections of _DNA_ that code individual proteins.
 > [[genome]]
 
 >[!faq]+ IMAGE
-> [[genome]]
+> ![image](/Attachments/Dictionary/Bioinfo-dictionary/cell-to-gene.jpg)
 
 
 
