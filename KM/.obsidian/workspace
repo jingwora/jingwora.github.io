@@ -7,12 +7,8 @@
         "id": "eeafd7ecdf8198d0",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Dictionary/Bioinfo dictionary en/Bioinfo terms/1000 Genomes Project.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -77,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Dictionary/Bioinfo dictionary en/Bioinfo terms/1000 Genomes Project.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,9 +89,8 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Dictionary/Bioinfo dictionary en/Bioinfo terms/1000 Genomes Project.md",
                 "linksCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -116,9 +110,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Dictionary/Bioinfo dictionary en/Bioinfo terms/1000 Genomes Project.md"
-              }
+              "state": {}
             }
           },
           {
@@ -128,25 +120,34 @@
               "type": "calendar",
               "state": {}
             }
+          },
+          {
+            "id": "7de33cd3b6998b03",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "active": "eeafd7ecdf8198d0",
   "lastOpenFiles": [
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/bioinformatics.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/1000 Genomes Project.md",
     "Dictionary/Bioinfo dictionary ja/Bioinfo terms/ゲノム.md",
     "Dictionary/Bioinfo dictionary ja/Bioinfo terms/バイオインフォマティクス.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo tables/Bioinfo list ja.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo tables/Bioinfo dictionary ja.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/genome.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo tables/Bioinfo list en.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo tables/Bioinfo dictionary en.md",
-    "Bioinformatics/Books/Human Evolutionary Genetics (EN).md"
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/生物学.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝子.md",
+    "Bioinformatics/Books/An Introduction to Bioinformatics Algorithms (EN).md",
+    "Bioinformatics/Books/An Introduction to Bioinformatics Algorithms (JA).md",
+    "Bioinformatics/Books/Human Evolutionary Genetics (EN).md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/1000 Genomes Project.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/bioinformatics.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/biology.md"
   ]
 }

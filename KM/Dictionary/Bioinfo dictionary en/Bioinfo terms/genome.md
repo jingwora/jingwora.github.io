@@ -15,6 +15,8 @@ definition:: The complete set of genes or genetic material present in a cell or 
 > 
 [[ゲノム]] 
 
+>[!info]+ RELATED TERMS
+> [[gene]]
 
 
 

@@ -27,27 +27,27 @@ Chris Tyler-Smith
 
 ## CONTENTS
 
-Chapter1:   An Introduction to Human Evolutionary Genetics
-Chapter2:   Organization and Inheriatance of the Human Genome
-Chapter3:   Human Genome Variation
-Chapter4:   Finding and Assaying Genome Diversity
-Chapter5:   Processes Shaping Diversity
-Chapter6:   Making Inferences from Diversity
-Chapter7:   Humans as Apes
-Chapter8:   What Genetic Changes Have Made Us Human?
-Chapter9:   Origins of Modern Humans
-Chapter10: The Distribution of Diversity
-Chapter11: The Colonization of the Old World and Australia
-Chapter12: Agricultural Expansions
-Chapter13: Into New-Found Lands
-Chapter14: What Happens When Populations Meet
-Chapter15: Understanding the Past, Present, and Future of Phenotypic Variation
-Chapter16: Evolutionary Insights into Simple Genetic Diseases
-Chapter17: Evolution and Complex Disease
-Chapter18: Identity and Identification
-Appendix
-Glossary
-Index
+- Chapter1:   An Introduction to Human Evolutionary Genetics
+- Chapter2:   Organization and Inheriatance of the Human Genome
+- Chapter3:   Human Genome Variation
+- Chapter4:   Finding and Assaying Genome Diversity
+- Chapter5:   Processes Shaping Diversity
+- Chapter6:   Making Inferences from Diversity
+- Chapter7:   Humans as Apes
+- Chapter8:   What Genetic Changes Have Made Us Human?
+- Chapter9:   Origins of Modern Humans
+- Chapter10: The Distribution of Diversity
+- Chapter11: The Colonization of the Old World and Australia
+- Chapter12: Agricultural Expansions
+- Chapter13: Into New-Found Lands
+- Chapter14: What Happens When Populations Meet
+- Chapter15: Understanding the Past, Present, and Future of Phenotypic Variation
+- Chapter16: Evolutionary Insights into Simple Genetic Diseases
+- Chapter17: Evolution and Complex Disease
+- Chapter18: Identity and Identification
+- Appendix
+- Glossary
+- Index
 
 ---
 
@@ -55,7 +55,9 @@ Index
 
 #### 1.1 WHAT IS HUMAN EVOLUTIONARY GENETICS?
 - Evolutionary genetics is founded on the principle that the genetic record of life is contained in the [[genome]]s of living species and it reveals evolutionary processes and relationships all the way back to the last universal common ancestor of all species.
-- 
+- Two developments
+  - The public availability of human and nonhuman genome sequences
+  - Technology as the tools to analyze huge datasets
 
 
 ---

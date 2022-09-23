@@ -15,6 +15,8 @@ definition:: An international collaborative project launched in 2008 that pionee
 > 
 [[バイオインフォマティクス]] 
 
+>[!info]+ RELATED TERMS
+> ⁻
 
 
 
