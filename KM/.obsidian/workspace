@@ -4,11 +4,27 @@
     "type": "split",
     "children": [
       {
-        "id": "eeafd7ecdf8198d0",
+        "id": "12dd4d442a57052b",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Notes/Bioinformatics/Ref Bioinformatics Books.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "2936ea1464c0f84f",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Utilities/Markdown.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -73,6 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Notes/Bioinformatics/Ref Bioinformatics Books.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Notes/Bioinformatics/Ref Bioinformatics Books.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -110,7 +128,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Notes/Bioinformatics/Ref Bioinformatics Books.md"
+              }
             }
           },
           {
@@ -137,17 +157,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "eeafd7ecdf8198d0",
+  "active": "12dd4d442a57052b",
   "lastOpenFiles": [
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/ゲノム.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/バイオインフォマティクス.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/生物学.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝子.md",
-    "Bioinformatics/Books/An Introduction to Bioinformatics Algorithms (EN).md",
-    "Bioinformatics/Books/An Introduction to Bioinformatics Algorithms (JA).md",
-    "Bioinformatics/Books/Human Evolutionary Genetics (EN).md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/1000 Genomes Project.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/bioinformatics.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/biology.md"
+    "Notes/Bioinformatics/04 Analysis Tools.md",
+    "Notes/Bioinformatics/03 Data.md",
+    "Notes/Bioinformatics/02 Environment.md",
+    "Notes/Bioinformatics/01 Bioinformatics.md",
+    "Notes/Bioinformatics/Ref Bioinformatics Tutorials.md",
+    "Notes/Bioinformatics/Ref Bioinformatics Books.md",
+    "Utilities/Markdown.md",
+    "Utilities/ToDO List.md",
+    "Utilities/Useful Links.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/gene.md"
   ]
 }
