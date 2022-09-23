@@ -1,6 +1,8 @@
-# HUMAN EVOLUTIONARY GENETICS
-second edition
+# HUMAN EVOLUTIONARY GENETICS 
+# 2nd  edition
+# SUMMARY
 
+![image](../Attachments/Books/Cover/Human_Evolutionary_Genetics.png)
 
 Mark Jobling 
 Edward Hollox 
@@ -51,7 +53,8 @@ Chris Tyler-Smith
 
 ---
 
-## AN INTRODUCTION TO HUMAN EVOLUTIONARY GENETICS
+### AN INTRODUCTION TO HUMAN EVOLUTIONARY GENETICS
+---
 
 #### 1.1 WHAT IS HUMAN EVOLUTIONARY GENETICS?
 - Evolutionary genetics is founded on the principle that the genetic record of life is contained in the [[genome]]s of living species and it reveals evolutionary processes and relationships all the way back to the last universal common ancestor of all species.
@@ -60,6 +63,11 @@ Chris Tyler-Smith
   - Technology as the tools to analyze huge datasets
 - Different layers of the past are accessible through the analysis of genetic diversity.
 - The past is the source of the present
+
+
+#### 1.2 INSIGHTS INTO PHENOTYPES AND DISEASES
+
+###### A shared evolutionary history underpins our understanding of biology
 
 - Time line of important developments in the field of human evolutionary genetics.
 |Year|Developments|
@@ -125,12 +133,14 @@ A phylogenetic tree relates different branches of modern species, showing that t
 
 - By identifying segments of DNA that are more similar between the two species than could be expected by chance, we can identify regions whose evolution has been constrained by the need to perform a specific function. Some of these regions are genes.
 
-- Understanding evolutionary history is essential to understanding human biology today. Why is the present like it is?
+###### Understanding evolutionary history is essential to understanding human biology today. 
+- The interaction of humans and their surroundings comes to the fore, as does an understanding of human adaptability in the face of huge variability in inhabited environments.
 
-- Understanding evolutionary history shapes our expectations about the future. An evolutionary perspective on human genetic variation also allows us to make predictions, both about biological research, and about the future of our species.
+###### Understanding evolutionary history shapes our expectations about the future. 
+- An evolutionary perspective on human genetic variation also allows us to make predictions, both about biological research, and about the future of our species.
 - Phenotypic traits of humans are controlled by a combination of inherited and environmental factors, and stochastic developmental and molecular processes.
 
-COMPLEMENTARY RECORDS OF THE HUMAN PAST
+#### 1.3 COMPLEMENTARY RECORDS OF THE HUMAN PAST
 - Different types of evidence available
 - The **historical** record comprises written texts: 4,000 years ago
 
@@ -146,8 +156,50 @@ COMPLEMENTARY RECORDS OF THE HUMAN PAST
 - The **paleontological** record comprises the fossilized remains of living organisms or their traces, such as preserved footprints. The earliest microfossils are suggested to date from 3500 MYA.
 
 
-- Understanding chronology allows comparison of evidence from different scientific approaches
+###### Understanding chronology allows comparison of evidence from different scientific approaches.
+- To cross-referencing between multiple records is to relate them all chronologically, by dating events and processes visible in the different records. 
 
+###### It is important to synthesize different records of the past. 
+- To paint a fuller picture of the past we often seek to combine information from multiple records into a single synthesis. 
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/history-synthesis.png)
+
+
+###### None of the different records represents an unbiased picture of the past
+- We do not have a time machine, and therefore must rely upon evidence that has survived to the present. This survival is selective
+
+#### 1.4 WHAT CAN WE KNOW ABOUT THE PAST?
+- We can ask how genetically diverse humans are?
+- What proportion of genes?
+- How genetically similar two humans are?
+- Which genetic changes make us human?
+- The processes of recombination and independent chromosomal assortment divide the genome into segments that have independent genealogical histories
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/population-growth.png)
+
+- The curves representing potential ancestors of a single individual and world population size intersect within the past 900 years. 
+- Before this time, everyone in the world was potentially an ancestor of every living person. 
+
+#### 1.5 THE ETHICS OF STUDYING HUMAN POPULATIONS
+
+- Researchers take responsibility for the accurate popularization and public dissemination of this research, including active opposition to misinterpretation
+- Irrespective of the source of funding, public concerns about the implications of our work must be addressed. 
+- Recent public anxiety has been focused on issues of ownership, commercialization, and privacy. 
+- Steps must be actively taken to ensure both that such misuse does not occur
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/time-line-human-evolution.png)
+
+
+---
+## SECTION 1
+---
+
+### CHAPTER 2
+### ORGANIZATION AND INHERITANCE OF THE HUMAN GENOME
+---
+
+###### 2.1 THE BIG PICTURE: AN OVERVIEW OF THE HUMAN GENOME
+- In February 2001, a milestone was reached in the attempt to sequence the entire human genome. 
 
 
 
@@ -157,7 +209,6 @@ COMPLEMENTARY RECORDS OF THE HUMAN PAST
 Status: #Draft
 
 Tags:
-[[Dictionary/Bioinfo dictionary/Med roots/bioinformatic]] |
 
 Links:
 

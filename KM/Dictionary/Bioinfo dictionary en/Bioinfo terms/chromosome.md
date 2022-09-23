@@ -2,20 +2,19 @@
 tags: [" #bioinfo-dict-en "]
 aliases: []
 roots: []
-alphabet:: G
+alphabet:: C
 language:: en
-japanese:: [[遺伝子]] （いでんし）
+japanese:: [[染色体]] （せんしょくたい）
 source:: -
-definition:: Sections of DNA that code individual proteins.
+definition:: A long DNA molecule with part or all of the genetic material of an organism.
 ---
 >[!note] Definition
->Sections of DNA that code individual proteins.
+>A long DNA molecule with part or all of the genetic material of an organism.
 
 >[!example]+ 日本語
-> [[遺伝子]] （いでんし）
+> [[染色体]] （せんしょくたい）
 
 >[!info]+ RELATED TERMS
-> [[genome]], [[genetics]]
 > [[cell]] → [[nucleus]] → [[chromosome]] → [[DNA]] → [[gene]]
 
 >[!faq]+ IMAGE

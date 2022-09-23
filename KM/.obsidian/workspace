@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "bdb35e4967c16ad3",
+        "id": "1863dc7e57aaf303",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -145,17 +145,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "bdb35e4967c16ad3",
+  "active": "1863dc7e57aaf303",
   "lastOpenFiles": [
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/対立遺伝子.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/allele.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/メンデルの法則.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/mendelian laws.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/genomics.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/ゲノミクス.md",
     "Dictionary/Bioinfo dictionary en/Bioinfo tables/Bioinfo list en jp.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/細胞.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/バイオインフォマティクス.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/ゲノム.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/genetics.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/genome.md",
     "Notes/Books/Human Evolutionary Genetics (EN).md",
-    "README.md"
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/gene.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/mendelian laws.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝子.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝学.md"
   ]
 }

@@ -220,10 +220,3 @@ WHERE contains(alphabet, "Z")
 SORT file.name ASC
 >```
 _____
-
-#### Extra resources
-- [[Appendix A Prefixes]]
-- [[Appendix B Combining Forms]]
-- [[Appendix C Suffixes]]
-- [[Appendix D Suffix forms]]
-- [[exampleroottemplate]]
