@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "1863dc7e57aaf303",
+        "id": "13f9bfe743f549bb",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -61,7 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 314.5
+    "width": 244
   },
   "right": {
     "id": "728dc3a96036bcb7",
@@ -145,17 +145,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "1863dc7e57aaf303",
+  "active": "13f9bfe743f549bb",
   "lastOpenFiles": [
+    "Notes/Books/An Introduction to Bioinformatics Algorithms (JA).md",
+    "Notes/Attachments/Books/Human-Evolutionary-Genetics/protein-coding-gene.png",
+    "Notes/Books/Human Evolutionary Genetics (EN).md",
+    "Notes/Attachments/Books/Human-Evolutionary-Genetics/protein-coding-gene 1.png",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/central dogma.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/chromosome.md",
     "Dictionary/Bioinfo dictionary ja/Bioinfo terms/セントラルドグマ.md",
     "Dictionary/Bioinfo dictionary ja/Bioinfo terms/細胞.md",
     "Dictionary/Bioinfo dictionary ja/Bioinfo terms/メンデルの法則.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/バイオインフォマティクス.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/central dogma.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/gene.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝学.md",
-    "Notes/Books/Human Evolutionary Genetics (EN).md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/genomics.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/ゲノミクス.md"
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/バイオインフォマティクス.md"
   ]
 }

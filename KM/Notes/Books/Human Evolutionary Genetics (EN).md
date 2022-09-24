@@ -198,13 +198,81 @@ A phylogenetic tree relates different branches of modern species, showing that t
 ### ORGANIZATION AND INHERITANCE OF THE HUMAN GENOME
 ---
 
-###### 2.1 THE BIG PICTURE: AN OVERVIEW OF THE HUMAN GENOME
+#### 2.1 THE BIG PICTURE: AN OVERVIEW OF THE HUMAN GENOME
 - In February 2001, a milestone was reached in the attempt to sequence the entire human genome. 
   - discovering sequence variation that can be analyzed in evolutionary and disease studies.
   - comparative analysis of other animal genomes
   - understanding of the structure and function of chromosomes
   
 - Humans, like almost all animals, are diploid—that is, we have two copies of the genome in each of our somatic cells, the cells that make up our tissues. The human haploid genome (that is, a single copy) is composed of about 3.2 billion nucleotides (nt), the fundamental building blocks of DNA within which information is encoded.
+
+- Protein-coding genes comprise a mere 2% of the genome; some of the remaining 98% is essential for producing RNA molecules that are never used as intermediates in protein production, but for gene regulation and for the function of chromosomes; but much of it may have no specific function.
+- ENCODE (the ENCyclopedia Of DNA Elements; genome.ucsc.edu/ENCODE/) set out to find all the functional elements in the human genome.
+- Gene predictions are currently at 23,532, only some 3000 greater than the nematode worm.
+
+###### the human genome sequence
+- The reference sequence is not derived from the DNA of one individual, but many. This means that it is an artificial composite, and does not reflect the true sequence of any real genome.
+- The result is not perfect:
+  - The reference sequence contains sequencing errors, though remarkably rarely—about 1 per 100,000 bases.
+  - It contains gaps, though only ~250. Some of these will be closed by teams of people known as finishers.
+- The reference sequence is continually being improved. Genomic coordinates generally differ between versions.
+- https://www.ncbi.nlm.nih.gov/guide/all/
+
+###### chromosomes
+- The diploid nuclear genome is divided into 46 chromosomes, made up of 23 pairs
+- Females carrying two X chromosomes, and males one X and one Y chromosome.
+- Male-specificity of the Y means that it is passed down only from father to son.
+
+#### 2.2 STRUCTURE OF DNA
+- All organisms, with the exception of a few kinds of viruses, use deoxyribonucleic acid (DNA) as their genetic material.
+- Two central biological roles:
+  1. The instructions for making the components of a cell
+  2. Set of instructions to be passed to the daughter cells when a cell divides
+
+- DNA is a polymer, and its monomeric subunits are called nucleotides. 
+- There are four varieties of nucleotide, which differ in portions known as bases. 
+- The bases are adenine, guanine, cytosine, and thymine, abbreviated as A, G, C, and T, and it is the order or sequence of these parts of each nucleotide that carries the genetic information.
+
+Chemical structures of the nucleotide components of DNA
+![image](../Attachments/Books/Human-Evolutionary-Genetics/DNA-components.png)
+
+Double-stranded helical structure of DNA
+![image](../Attachments/Books/Human-Evolutionary-Genetics/DNA-structure.png)
+
+#### 2.3 GENES, TRANSCRIPTION, AND TRANSLATION
+- Transcription - RNA polymerase makes an intermediate RNA molecule, known as messenger RNA (mRNA) from the DNA template.
+- Translation - mRNA is then used as a template to convert the code of nucleotides into the code of amino acids, to produce a protein.
+
+- Genes are made up of introns and exons, and include elements to initiate and regulate transcription. 
+- Transcription produces a pre-mRNA that contains both the exons and the introns. A complex process known as splicing then removes the introns, before mature mRNA can be translated into protein. 
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/protein-coding-gene.png)
+
+- Genes vary greatly in size and complexity
+- Human mRNAs are eventually degraded with a median half-life of ~10 hours.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/human-gene-property.png)
+
+- The genetic code allows nucleotide sequences to be translated into amino acid sequences
+
+- Codon is a set of three adjacent nucleotides specifies one of the amino acids, or alternatively represents an instruction to halt translation (stop codon)
+
+- Since there are 64 possible triplet codons, there is more than enough capacity in the genetic code to specify the 20 amino acids and a stop signal. The code is therefore redundant.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/genetic-code.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
