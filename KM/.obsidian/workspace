@@ -147,15 +147,15 @@
   },
   "active": "1863dc7e57aaf303",
   "lastOpenFiles": [
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/genomics.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/ゲノミクス.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo tables/Bioinfo list en jp.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/genetics.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/genome.md",
-    "Notes/Books/Human Evolutionary Genetics (EN).md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/セントラルドグマ.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/細胞.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/メンデルの法則.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/バイオインフォマティクス.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/central dogma.md",
     "Dictionary/Bioinfo dictionary en/Bioinfo terms/gene.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/mendelian laws.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝子.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝学.md"
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝学.md",
+    "Notes/Books/Human Evolutionary Genetics (EN).md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/genomics.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/ゲノミクス.md"
   ]
 }

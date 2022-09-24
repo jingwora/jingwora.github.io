@@ -200,7 +200,11 @@ A phylogenetic tree relates different branches of modern species, showing that t
 
 ###### 2.1 THE BIG PICTURE: AN OVERVIEW OF THE HUMAN GENOME
 - In February 2001, a milestone was reached in the attempt to sequence the entire human genome. 
-
+  - discovering sequence variation that can be analyzed in evolutionary and disease studies.
+  - comparative analysis of other animal genomes
+  - understanding of the structure and function of chromosomes
+  
+- Humans, like almost all animals, are diploid—that is, we have two copies of the genome in each of our somatic cells, the cells that make up our tissues. The human haploid genome (that is, a single copy) is composed of about 3.2 billion nucleotides (nt), the fundamental building blocks of DNA within which information is encoded.
 
 
 
