@@ -253,7 +253,7 @@ Double-stranded helical structure of DNA
 
 ![image](../Attachments/Books/Human-Evolutionary-Genetics/human-gene-property.png)
 
-- The genetic code allows nucleotide sequences to be translated into amino acid sequences
+###### The genetic code allows nucleotide sequences to be translated into amino acid sequences
 
 - Codon is a set of three adjacent nucleotides specifies one of the amino acids, or alternatively represents an instruction to halt translation (stop codon)
 
@@ -261,14 +261,44 @@ Double-stranded helical structure of DNA
 
 ![image](../Attachments/Books/Human-Evolutionary-Genetics/genetic-code.png)
 
+###### Gene expression is highly regulated in time and space
+
+Proteome: a subset of these genes is expressed in any one cell type at any one time.
+
+Gene ontology  is a catalog of each gene product’s cellular component of expression, molecular function, and the biological process in which it is involved.
+
+#### 2.4 NONCODING DNA
+- noncoding RNAs (ncRNAs) which function in their own right, including molecules with key functions in translation
+- The functions of the great majority of these ncRNAs are unknown, and a proportion may represent transcriptional noise. However, evidence is accumulating that many ncRNAs play important roles in the control of chromosome dynamics, splicing, translational inhibition, and mRNA destruction, and our protein-centric view of gene expression and regulation is undergoing a change.
+
+- DNA sequences change through time by mutation, but functionally important sequences change more slowly because changes are more likely to have deleterious effects.
+
+###### Some DNA sequences in the genome are repeated in multiple copies
+- Copy-number variation exists, so that some genes are single-copy in some genomes, but multi-copy in others.
+- At the deepest level, some human genes show sequence similarities to others that reflect ancient duplications of an entire ancestral genome that occurred early in the evolution of the vertebrate lineage, several hundred million years ago.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/genome-repeat.png)
+
+#### 2.5 HUMAN CHROMOSOMES AND THE HUMAN KARYOTYPE
+- The linear nature of DNA means that large genomes correspond to extremely long molecules.
+- If it were a single DNA duplex and stretched out, it would be about 1 m long.
+- The DNA molecule is first coiled round nucleosomes.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/chromosome-DNA.png)
+
+###### The human genome is divided into 46 chromosomes
+
+- The nuclear genetic material of the somatic cells of normal human individuals is divided into 46 separate molecules—the chromosomes. (23 pairs)
+- 
 
 
+![image](../Attachments/Books/Human-Evolutionary-Genetics/chromosome-DNA-2.png)
 
+- The last two chromosomes are known as the sex chromosomes, because they differ between the sexes. 
+- Females have two copies of the X chromosome, which, at ~155 Mb, is about the same size as chromosome 7. 
+- Males have one X chromosome, but in addition they have one Y chromosome which is one of the smallest (~60 Mb) of all chromosomes.
 
-
-
-
-
+![image](../Attachments/Books/Human-Evolutionary-Genetics/chromosome-DNA-3.png)
 
 
 
