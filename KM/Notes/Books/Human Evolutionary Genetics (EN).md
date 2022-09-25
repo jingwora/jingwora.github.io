@@ -300,11 +300,40 @@ Gene ontology  is a catalog of each gene product’s cellular component of expre
 
 ![image](../Attachments/Books/Human-Evolutionary-Genetics/chromosome-DNA-3.png)
 
+G-banded chromosome
+- The numbers of the dark and light bands are given to the left. 
+- The telomeres are given the suffix “ter” (for “terminus”), and the centromere “cen“.
+- Arrows to the right indicate the conventional armspecific directions of proximal (toward the centromere) and distal (toward the telomere).
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/chromosome-features.png)
+
+###### Size, centromere position, and staining methods allow chromosomes to be distinguished
+- Without the use of staining methods, differences between chromosomes that are visible through a microscope are their lengths, and the position of the centromere (seen as a constriction in most cases), which allow them to be divided into groups.
+- 850 or more G-bands to be identified in a human karyogram
 
 
+#### 2.6 MITOSIS, MEIOSIS, AND THE INHERITANCE OF THE GENOME
+- There are two kinds of cell division:
+ - Mitosis, the process seen in somatic tissues, each daughter cell contains the same genetic material as the parental cell.
+ - Meiosis, however, is needed to produce a gamete (egg or sperm), which contains only half the diploid complement of genetic material (that is, is haploid).
+- Mitosis has great importance in disease, since errors in mitotic divisions can contribute to cancer development.
 
+- A gamete (egg or sperm; also known as a germ cell) is haploid; it contains only one copy of the genome, as opposed to the usual two copies in our somatic, diploid cells.
+- Following this, however, the cells enter meiosis, a cell division process. 
 
+![image](../Attachments/Books/Human-Evolutionary-Genetics/cell-division-process.png)
 
+#### 2.7 RECOMBINATION—THE GREAT RESHUFFLER
+- A key tool in human genetics is the pedigree: a collection of related individuals which allows us to observe how segments of DNA are inherited by children from their parents. 
+- Sequence variants (sometimes called markers) that lie on different chromosomes are independently inherited, and are said to be unlinked. However, two variants on the same chromosome, particularly ones that lie close together, may often be co-inherited within pedigrees; they are said to be linked.
+
+- The frequency of recombination events varies between the sexes, because the production of eggs involves more recombination events than the production of sperm. Males have roughly 50 recombination events per meiosis, whereas females experience about 80, so the genetic map of females is expanded on average about 1.65-fold with respect to that of males.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/genetic-physical-compared.png)
+
+#### 2.8 NONRECOMBINING SEGMENTS OF THE GENOME
+- The great majority of the human genome is inherited from both parents, and undergoes reshuffling each generation through recombination. However, there are two segments of our DNA that are atypical, being inherited from one parent only, and escaping recombination.
+- The male-specific Y chromosome escapes crossing over for most of its length
 
 ---
 
