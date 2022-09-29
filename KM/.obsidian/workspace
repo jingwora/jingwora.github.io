@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "13f9bfe743f549bb",
+        "id": "6ddde1c4ebc59af6",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -138,24 +138,24 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
   },
-  "active": "13f9bfe743f549bb",
+  "active": "6ddde1c4ebc59af6",
   "lastOpenFiles": [
-    "Notes/Attachments/Books/Human-Evolutionary-Genetics/chromosome-DNA.png",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/ミトコンドリア.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/mitochondria.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/ゲノム.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/ゲノミクス.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/1000 Genomes Project.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/genomics.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/mendelian laws.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/genome.md",
     "Notes/Books/Human Evolutionary Genetics (EN).md",
-    "Notes/Attachments/Books/Human-Evolutionary-Genetics/genome-repeat.png",
-    "Notes/Books/An Introduction to Bioinformatics Algorithms (JA).md",
-    "Notes/Attachments/Books/Human-Evolutionary-Genetics/protein-coding-gene.png",
-    "Notes/Attachments/Books/Human-Evolutionary-Genetics/protein-coding-gene 1.png",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/central dogma.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/chromosome.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/セントラルドグマ.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/細胞.md"
+    "Notes/Books/An Introduction to Bioinformatics Algorithms (JA).md"
   ]
 }

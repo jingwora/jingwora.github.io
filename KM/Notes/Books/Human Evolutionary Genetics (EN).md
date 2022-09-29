@@ -324,16 +324,60 @@ G-banded chromosome
 ![image](../Attachments/Books/Human-Evolutionary-Genetics/cell-division-process.png)
 
 #### 2.7 RECOMBINATION—THE GREAT RESHUFFLER
-- A key tool in human genetics is the pedigree: a collection of related individuals which allows us to observe how segments of DNA are inherited by children from their parents. 
-- Sequence variants (sometimes called markers) that lie on different chromosomes are independently inherited, and are said to be unlinked. However, two variants on the same chromosome, particularly ones that lie close together, may often be co-inherited within pedigrees; they are said to be linked.
+- A key tool in human genetics is the **pedigree**: a collection of related individuals which allows us to observe how segments of DNA are inherited by children from their parents. 
+- Sequence variants (sometimes called **markers**) that lie on different chromosomes are independently inherited, and are said to be unlinked. However, two variants on the same chromosome, particularly ones that lie close together, may often be co-inherited within pedigrees; they are said to be linked.
+
+- Two variants on the same chromosome, particularly ones that lie close together, may often be co-inherited within pedigrees; they are said to be **linked**.
+- The recognition of such recombination events allows us to determine the order of genetic variants along a DNA molecule, and the counting of recombination events allows us to estimate the **genetic distance** between variants; this is **genetic mapping**.
 
 - The frequency of recombination events varies between the sexes, because the production of eggs involves more recombination events than the production of sperm. Males have roughly 50 recombination events per meiosis, whereas females experience about 80, so the genetic map of females is expanded on average about 1.65-fold with respect to that of males.
+
+- Some regions of the genome at least, events are concentrated in small (1–2-kb) segments of DNA known as **recombination hotspots**.
 
 ![image](../Attachments/Books/Human-Evolutionary-Genetics/genetic-physical-compared.png)
 
 #### 2.8 NONRECOMBINING SEGMENTS OF THE GENOME
+
 - The great majority of the human genome is inherited from both parents, and undergoes reshuffling each generation through recombination. However, there are two segments of our DNA that are atypical, being inherited from one parent only, and escaping recombination.
-- The male-specific Y chromosome escapes crossing over for most of its length
+
+- Inheritance of recombining and nonrecombining segments of the genome.
+![image](../Attachments/Books/Human-Evolutionary-Genetics/inheritance-of-recombining.png)
+
+###### The male-specific Y chromosome escapes crossing over for most of its length
+- More than 90% of its length—a region known as the **nonrecombining portion** of the Y (sometimes NRPY, or NRY), and sometimes the male-specific region of the Y (MSY).  Since it has no homolog with which to recombine, we expect the Y chromosome to avoid recombination.
+
+###### Maternally inherited mtDNA escapes from recombination
+- The other constitutively nonrecombining region of our genetic material is mitochondrial DNA (mtDNA), a circular double-stranded DNA molecule about 16.5  kb in size. 
+
+###### The unusual features of the X chromosome
+- It is inherited twice as frequently from females as from males
+- To balance the doses of X-chromosomal genes, one of the two X chromosomes in the somatic tissues of a female is largely transcriptionally silenced by **X-inactivation**.
+- The haploid nature of the X chromosome in males exposes them to increased risk of **X-linked** diseases, because in females the second copy can mask the effect of mutation.
+
+- [[Mitochondria]] originated as endosymbiotic bacteria, taken up into proto-eukaryotic cells about 1.5 billion years ago, and providing energy generation in return for a safe environment.
+- This **prokaryotic** past has left its traces in the many remarkable features of mtDNA that resemble those of modern bacterial genomes.
+- The number of mitochondria in a cell varies with cell type: those requiring a lot of energy, such as nerve and muscle cells, contain thousands of mitochondria.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/NUCLEAR-mtDNA-GENOMES.png)
+
+---
+
+### CHAPTER 3
+### HUMAN GENOME VARIATION
+---
+
+#### 3.1 GENETIC VARIATION AND THE PHENOTYPE
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
