@@ -289,7 +289,6 @@ Gene ontology  is a catalog of each gene product’s cellular component of expre
 ###### The human genome is divided into 46 chromosomes
 
 - The nuclear genetic material of the somatic cells of normal human individuals is divided into 46 separate molecules—the chromosomes. (23 pairs)
-- 
 
 
 ![image](../Attachments/Books/Human-Evolutionary-Genetics/chromosome-DNA-2.png)
@@ -324,11 +323,11 @@ G-banded chromosome
 ![image](../Attachments/Books/Human-Evolutionary-Genetics/cell-division-process.png)
 
 #### 2.7 RECOMBINATION—THE GREAT RESHUFFLER
-- A key tool in human genetics is the **pedigree**: a collection of related individuals which allows us to observe how segments of DNA are inherited by children from their parents. 
-- Sequence variants (sometimes called **markers**) that lie on different chromosomes are independently inherited, and are said to be unlinked. However, two variants on the same chromosome, particularly ones that lie close together, may often be co-inherited within pedigrees; they are said to be linked.
+- A key tool in human genetics is the ==pedigree==: a collection of related individuals which allows us to observe how segments of DNA are inherited by children from their parents. 
+- Sequence variants (sometimes called ==markers==) that lie on different chromosomes are independently inherited, and are said to be unlinked. However, two variants on the same chromosome, particularly ones that lie close together, may often be co-inherited within pedigrees; they are said to be linked.
 
 - Two variants on the same chromosome, particularly ones that lie close together, may often be co-inherited within pedigrees; they are said to be **linked**.
-- The recognition of such recombination events allows us to determine the order of genetic variants along a DNA molecule, and the counting of recombination events allows us to estimate the **genetic distance** between variants; this is **genetic mapping**.
+- The recognition of such recombination events allows us to determine the order of genetic variants along a DNA molecule, and the counting of recombination events allows us to estimate the ==genetic distance== between variants; this is ==genetic mapping==.
 
 - The frequency of recombination events varies between the sexes, because the production of eggs involves more recombination events than the production of sperm. Males have roughly 50 recombination events per meiosis, whereas females experience about 80, so the genetic map of females is expanded on average about 1.65-fold with respect to that of males.
 
@@ -344,18 +343,18 @@ G-banded chromosome
 ![image](../Attachments/Books/Human-Evolutionary-Genetics/inheritance-of-recombining.png)
 
 ###### The male-specific Y chromosome escapes crossing over for most of its length
-- More than 90% of its length—a region known as the **nonrecombining portion** of the Y (sometimes NRPY, or NRY), and sometimes the male-specific region of the Y (MSY).  Since it has no homolog with which to recombine, we expect the Y chromosome to avoid recombination.
+- More than 90% of its length—a region known as the ==nonrecombining portion== of the Y (sometimes NRPY, or NRY), and sometimes the male-specific region of the Y (MSY).  Since it has no homolog with which to recombine, we expect the Y chromosome to avoid recombination.
 
 ###### Maternally inherited mtDNA escapes from recombination
 - The other constitutively nonrecombining region of our genetic material is mitochondrial DNA (mtDNA), a circular double-stranded DNA molecule about 16.5  kb in size. 
 
 ###### The unusual features of the X chromosome
 - It is inherited twice as frequently from females as from males
-- To balance the doses of X-chromosomal genes, one of the two X chromosomes in the somatic tissues of a female is largely transcriptionally silenced by **X-inactivation**.
+- To balance the doses of X-chromosomal genes, one of the two X chromosomes in the somatic tissues of a female is largely transcriptionally silenced by ==X-inactivation==.
 - The haploid nature of the X chromosome in males exposes them to increased risk of **X-linked** diseases, because in females the second copy can mask the effect of mutation.
 
 - [[Mitochondria]] originated as endosymbiotic bacteria, taken up into proto-eukaryotic cells about 1.5 billion years ago, and providing energy generation in return for a safe environment.
-- This **prokaryotic** past has left its traces in the many remarkable features of mtDNA that resemble those of modern bacterial genomes.
+- This ==prokaryotic== past has left its traces in the many remarkable features of mtDNA that resemble those of modern bacterial genomes.
 - The number of mitochondria in a cell varies with cell type: those requiring a lot of energy, such as nerve and muscle cells, contain thousands of mitochondria.
 
 ![image](../Attachments/Books/Human-Evolutionary-Genetics/NUCLEAR-mtDNA-GENOMES.png)
@@ -367,6 +366,90 @@ G-banded chromosome
 ---
 
 #### 3.1 GENETIC VARIATION AND THE PHENOTYPE
+
+- All humans are different from each other, and much of this difference has a genetic basis: differences in ==phenotype== caused by differences in ==genotype==. (with the rare exceptions carried by identical twins).
+- The vast majority of the many differences between human genome copies have little or no phenotypic effect.
+- ==Neutral alleles== are thought not to affect the evolutionary fitness of someone who carries them, and hence their frequency is not directly affected by natural selection. 
+- OMIM (An Online Catalog of Human Genes and Genetic Disorders)
+- https://www.omim.org/
+
+###### Some DNA sequence variation causes Mendelian genetic disease
+- Alleles that have a phenotypic consequence when only one copy is mutant can be recognized by the inheritance of a disorder from affected parent to affected child and are referred to as ==dominant==. 
+
+- Many disease alleles, including those associated with CF, must be present in both copies of the gene for the disease to be expressed, and these are referred to as ==recessive==—mutation in one copy can be masked by the presence of a normal, wild-type allele on the other homologous chromosome.
+- The mutant alleles of a patient manifesting a recessive disorder need not be identical at the DNA sequence level, but need only have similar effects on the function of the gene. When the two alleles are identical, the patient is ==homozygous==; when they are different, the patient is ==heterozygous==.
+- Most mutant alleles in recessive disorders result in either severe reduction or absence of gene product from that allele, or production of an abnormal, nonfunctional product.
+
+- The parents of a CF patient are phenotypically normal heterozygous ==carriers==, who each carry one mutant and one normal allele.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/dominant-recessive-x-linked.png)
+
+- ==Haplosufficiency== —  Fore carriers, half as much gene product as normal is being produced, but this is sufficient for normal or near-normal function.
+- ==Haploinsufficiency== — Fore carriers, half as much product as normal is produced, but this half-dosage is not enough to ensure normal function.
+
+- ==gain-of-function== — Dominance can also result from overproduction of protein from a mutant allele, or expression in an inappropriate place or time.
+
+- Disease-causing alleles on the X chromosome can behave differently in males and females, because males have only one X, while females have two.
+- An ==X-linked== recessive mutant allele will manifest in males (who are hemizygous), but not in females, who are heterozygous carriers. 
+- Autosomal dominant and X-linked disorders are over-represented in disease databases, because they are easier to ascertain than autosomal recessive disorders.
+
+
+###### The relationship between genotype and phenotype is usually complex
+
+- That the path from genotype to phenotype is rarely simple.
+- The roles of genetic and nongenetic factors in generating the phenotype
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/gene-phenotype.png)
+
+- ==Monogenic== (also known as simple, or Mendelian) disorders show relatively simple patterns of inheritance in familie.
+- ==Modifier genes== can influence phenotype.
+
+###### Mutations are diverse and have different rates and mechanisms
+- Our practice is to use ==polymorphism== (including SNP) to indicate ≥1% allele frequency, “variant” for any less frequent difference between genome copies, and ==mutation== to refer to a ==de novo== change.
+
+#### 3.2 SINGLE NUCLEOTIDE POLYMORPHISMS (SNPS) IN THE NUCLEAR GENOME
+
+- A mutation is any change (==insertion==, ==deletion==, ==duplication==, and ==inversion==) in DNA sequence, and covers a very broad spectrum of events with different rates and different molecular mechanisms.
+
+- Scale of mutation
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/scale-of-mutation.png)
+
+###### Base substitutions can occur through base misincorporation during DNA replication
+- Through, DNA replication machinery has a double-checking function, occasional incorporation of the incorrect base does occur.
+- Replication errors occur with a frequency of only about 10⁹–10¹¹ per nucleotide per replication event.
+
+###### Base substitutions can be caused by chemical and physical mutagens
+- DNA damage can be caused by chemical mutagens.
+- Physical agents can also damage DNA. Ultraviolet (UV) radiation is a low-energy form of electromagnetic radiation that can induce chemical linking between adjacent thymidine nucleotides.
+- Chemical and physical mutagens are important contributors to many cancers, but their effects on germ-line mutation can be very different from their somatic effects.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/physical-chemical-mutagen.png)
+
+###### Sophisticated DNA repair processes can fix much genome damage
+
+- Elaborate mechanisms have evolved to detect and repair DNA damage. 
+- The mutations that pass to the next generation are therefore the outcome of two processes—primary damage and failures of secondary repair. 
+- In homologous recombination (HR), the undamaged sister chromatid acts as template. This ensures accurate repair, but because it relies on the presence of the sister chromatid, is dependent on the stage of the cell cycle at which damage occurs. 
+- Cell-cycle progression is tightly coordinated with DNA repair and cell survival or death through a network of genome surveillance pathways.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/DNA-repair.png)
+
+###### The rate of base substitution can be estimated indirectly or directly
+
+- For neutral mutations, the rate of mutation is expected to be equal to the evolutionary rate of change.
+- Transitions are almost three times more frequent than transversions, despite the fact that for a given base there are two possible transversions to only one transition.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/mutation-rate.png)
+
+###### Because of their low mutation rate, SNPs usually show identity by descent
+
+
+
+
+
+
+
 
 
 
