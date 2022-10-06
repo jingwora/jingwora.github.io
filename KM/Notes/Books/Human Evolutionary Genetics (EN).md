@@ -443,11 +443,13 @@ G-banded chromosome
 ![image](../Attachments/Books/Human-Evolutionary-Genetics/mutation-rate.png)
 
 ###### Because of their low mutation rate, SNPs usually show identity by descent
+- Even though the base-substitutional mutation rate is low the current population size  is so large that the recurrence or reversion of any SNP in some individual(s) is expected to occur each generation. 
 
+- The low mutation rate means that this class of mutation generally shows ==identity by descent==, rather than ==identity by state==.
 
+- The allele resembling the great ape allele is known as the ==ancestral state== of the SNP (coded as 0), and the allele that differs is the ==derived state== (coded as 1).
 
-
-
+![image](../Attachments/Books/Human-Evolutionary-Genetics/SNP-determination.png)
 
 
 
