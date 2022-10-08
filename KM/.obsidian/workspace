@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Utilities/Markdown.md",
+            "file": "Notes/Books/An Introduction to Bioinformatics Algorithms (EN).md",
             "mode": "source",
             "source": false
           }
@@ -159,15 +159,15 @@
   },
   "active": "6ddde1c4ebc59af6",
   "lastOpenFiles": [
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/SNP.md",
+    "Notes/Books/An Introduction to Bioinformatics Algorithms (EN).md",
     "Notes/Books/Human Evolutionary Genetics (EN).md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/central dogma.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/ゲノム.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/ゲノミクス.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/一塩基多型.md",
-    "Utilities/Markdown.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/CF.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/cell.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/生物学.md"
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/SNP.md",
+    "Notes/Books/An Introduction to Bioinformatics Algorithms (JA).md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo tables/Bioinfo list en jp.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo tables/Bioinfo list en.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/嚢胞性線維症.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/生物学.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝子.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝学.md"
   ]
 }

@@ -451,6 +451,9 @@ G-banded chromosome
 
 ![image](../Attachments/Books/Human-Evolutionary-Genetics/SNP-determination.png)
 
+###### The CpG dinucleotide is a hotspot for mutation
+
+- The rate of base substitutions is not uniform throughout the genome. In particular, where a C nucleotide is followed by a G (denoted a CpG dinucleotide), mutation rate is elevated by more than tenfold. This is because of a chemical modification that occurs at most CpGs.
 
 
 
