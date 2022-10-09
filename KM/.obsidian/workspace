@@ -14,18 +14,6 @@
             "source": false
           }
         }
-      },
-      {
-        "id": "d06df36d3b6d95b0",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Notes/Books/An Introduction to Bioinformatics Algorithms (EN).md",
-            "mode": "source",
-            "source": false
-          }
-        }
       }
     ],
     "direction": "vertical"
