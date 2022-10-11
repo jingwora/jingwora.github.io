@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "6ddde1c4ebc59af6",
+        "id": "c75353b7cfa8b339",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Books/Human Evolutionary Genetics (EN).md",
+            "file": "Notes/Bioinformatics/03 Data.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Draft",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Books/Human Evolutionary Genetics (EN).md",
+                "file": "Notes/Bioinformatics/03 Data.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Books/Human Evolutionary Genetics (EN).md",
+                "file": "Notes/Bioinformatics/03 Data.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Books/Human Evolutionary Genetics (EN).md"
+                "file": "Notes/Bioinformatics/03 Data.md"
               }
             }
           },
@@ -137,25 +137,23 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
-  "active": "6ddde1c4ebc59af6",
+  "active": "c75353b7cfa8b339",
   "lastOpenFiles": [
-    "Notes/Books/An Introduction to Bioinformatics Algorithms (EN).md",
-    "Notes/Books/Human Evolutionary Genetics (EN).md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/SNP.md",
-    "Notes/Books/An Introduction to Bioinformatics Algorithms (JA).md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo tables/Bioinfo list en jp.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo tables/Bioinfo list en.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/嚢胞性線維症.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/生物学.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝子.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/遺伝学.md"
+    "Notes/Attachments/Draw/DNA-data-pipeline.md",
+    "Notes/Attachments/Bioinformatics/DNA-Pipeline-v2.jpg",
+    "Notes/Bioinformatics/03 Data.md",
+    "Notes/Attachments/Bioinformatics/DNA-data-pipeline.png",
+    "Notes/Bioinformatics/Ref Bioinformatics Tutorials.md",
+    "Notes/Attachments/Icons/Pasted Image 20221011062536_159.png",
+    "Notes/Attachments/Icons/DNA.png",
+    "Notes/Attachments/Icons/DNA-sample.png",
+    "Notes/Attachments/Icons/DNA-report.png",
+    "Notes/Attachments/Icons/DNA-db.png"
   ]
 }
