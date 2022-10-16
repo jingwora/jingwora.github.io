@@ -48,9 +48,8 @@ Alignment
 | 10  | SEQ   | String | segment SEQuence                      |
 | 11  | QUAL  | String | ASCII of Phred-scaled base QUALity+33 |
 
-- VCF / BCF sample
+- SAM sample data
 ![image](../Attachments/Bioinformatics/SAM_format.png)
-
 
 Ref: https://samtools.github.io/hts-specs/SAMv1.pdf
 
@@ -60,7 +59,7 @@ Ref: https://samtools.github.io/hts-specs/SAMv1.pdf
 - Header
 - Columns
 - VCF extesions: vcf  (.gz, .bgz, .bz2, .xz)
-- VCF / BCF sample
+- VCF / BCF sample data
 ![image](../Attachments/Bioinformatics/BCF_VCF_format.png)
 
 
