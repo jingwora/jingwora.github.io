@@ -16,7 +16,7 @@
 - FASTQ file extensions: fastq, fq (.gz, .bgz, .bz2, .xz)
 
 #### SAM file
-- SAM stands for Sequence Alignment/Map format. 
+- SAM stands for Sequence Alignment Map format. 
 - It is a TAB-delimited text format consisting of a header section, which is optional, and an alignment section.
 - Each header line begins with the character ‘@’.
 - Each alignment line has 11 mandatory fields.
@@ -47,6 +47,11 @@ Alignment
 | 9   | TLEN  | Int    | observed Template LENgth              |
 | 10  | SEQ   | String | segment SEQuence                      |
 | 11  | QUAL  | String | ASCII of Phred-scaled base QUALity+33 |
+
+- VCF / BCF sample
+![image](../Attachments/Bioinformatics/SAM_format.png)
+
+
 Ref: https://samtools.github.io/hts-specs/SAMv1.pdf
 
 #### VCF file
@@ -54,11 +59,11 @@ Ref: https://samtools.github.io/hts-specs/SAMv1.pdf
 - a text file used in bioinformatics for storing gene sequence variations. 
 - Header
 - Columns
-
+- VCF extesions: vcf  (.gz, .bgz, .bz2, .xz)
 - VCF / BCF sample
-![image](Notes/Attachments/Bioinformatics/BCF_VCF_format.png)
+![image](../Attachments/Bioinformatics/BCF_VCF_format.png)
 
-VCF extesions: vcf  (.gz, .bgz, .bz2, .xz)
+
 
 #### BCF file
 BCF extesions: bcf  (.gz, .bgz)
@@ -67,6 +72,6 @@ BCF extesions: bcf  (.gz, .bgz)
 GVF extesions: gvf  (.gz, .bgz, .bz2, .xz)
 
 ## Sequencing Bioinformatics Pipeline
-![image](Notes/Attachments/Bioinformatics/DNA-data-pipeline.png)
+![image](../Attachments/Bioinformatics/DNA-data-pipeline.png)
 [[DNA-data-pipeline]]
 

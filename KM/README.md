@@ -4,7 +4,7 @@
 
 1. What is Bioinformatics? [📄](./Notes/Bioinformatics/01%20Bioinformatics.md)
 2. Environment [📄](./Notes/Bioinformatics/02%20Environment.md)
-3. Data [📄](./Notes/Bioinformatics/03%20Data.md)
+3. Genetic Sequence Data [📄](./Notes/Bioinformatics/Genetic%20Sequence%20Data.md)
 4. Analysis Tools [📄](./Notes/Bioinformatics/04%20Analysis%20Tools.md)
 
 ---
