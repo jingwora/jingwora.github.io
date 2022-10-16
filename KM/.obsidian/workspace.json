@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Bioinformatics/Genetic Sequence Data.md",
+                "file": "Notes/Bioinformatics/Bioinformatic Tools.md",
                 "mode": "source",
                 "source": false
               }
@@ -53,8 +53,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -120,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Bioinformatics/Genetic Sequence Data.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +136,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Bioinformatics/Genetic Sequence Data.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -160,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Bioinformatics/Genetic Sequence Data.md"
+                "file": "README.md"
               }
             }
           },
@@ -190,17 +189,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "d8e25220b17650c1",
+  "active": "c75353b7cfa8b339",
   "lastOpenFiles": [
-    "Notes/Attachments/Draw/DNA-data-pipeline.md",
-    "Notes/Bioinformatics/Genetic Sequence Data.md",
-    "Notes/Books/Human Evolutionary Genetics (EN).md",
+    "Notes/Bioinformatics/Bioinformatics Environment.md",
+    "Notes/Bioinformatics/Bioinformatics Overview.md",
     "README.md",
-    "Notes/Attachments/Bioinformatics/DNA-Pipeline-v2.jpg",
-    "Notes/Attachments/Bioinformatics/DNA-data-pipeline.png",
-    "Notes/Bioinformatics/Ref Bioinformatics Tutorials.md",
-    "Notes/Attachments/Icons/Pasted Image 20221011062536_159.png",
-    "Notes/Attachments/Icons/DNA.png",
-    "Notes/Attachments/Icons/DNA-sample.png"
+    "Notes/Bioinformatics/Bioinformatic Tools.md",
+    "Notes/Bioinformatics/Bioinformatics Books.md",
+    "Notes/Bioinformatics/Bioinformatics Tutorials.md",
+    "Utilities/ToDO List.md",
+    "Utilities/Useful Links.md",
+    "Utilities/MathJax-LaTeX.md",
+    "Utilities/Markdown.md"
   ]
 }

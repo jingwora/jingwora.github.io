@@ -1,4 +1,4 @@
-# Analysis Tools
+# Bioinformatic Tools
 
 ### Genome Analysis Toolkit (GATK)
 The _Genome Analysis Toolkit_ (_GATK_) is a set of bioinformatic tools for analyzing high-throughput sequencing (HTS) and variant call format (VCF) data.
