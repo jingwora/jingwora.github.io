@@ -15,6 +15,12 @@
 - FASTA file extensions: fasta, fa, faa, ffn, fnn, fna (.gz, .bgz, .bze, .xz)
 - FASTQ file extensions: fastq, fq (.gz, .bgz, .bz2, .xz)
 
+- FASTA sample data
+![image](../Attachments/Bioinformatics/FASTA_format.png)
+
+- FASTQ sample data
+![image](../Attachments/Bioinformatics/FASTQ_format.png)
+
 #### SAM file
 - SAM stands for Sequence Alignment Map format. 
 - It is a TAB-delimited text format consisting of a header section, which is optional, and an alignment section.
