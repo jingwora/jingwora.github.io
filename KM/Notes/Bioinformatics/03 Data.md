@@ -1,11 +1,11 @@
 ## Squence Data
 - 3 major types of data
 1. Sequence data - FASTA, FASTQ
-2. Alignment data - SAM, BAM
+2. Alignment data - SAM, BAM, CRAM
 3. Genome feature data - BED, Wiggle, GTF, GFF
 
-#### FASTQ file
-- A FASTQ file is a text file that contains the sequence data from the clusters that pass filter on a flow cell.
+#### FASTA file
+- A FASTA file  is a text-based format for representing either nucleotide sequences or amino acid (protein) sequences.
 - FASTQ – FASTA with quality
 - Each entry in a FASTQ files consists of 4 lines:
   1. A sequence identifier with information about the sequencing run and the cluster. The exact contents of this line vary by based on the BCL to FASTQ conversion software used.
@@ -15,7 +15,7 @@
 - FASTA file extensions: fasta, fa, faa, ffn, fnn, fna (.gz, .bgz, .bze, .xz)
 - FASTQ file extensions: fastq, fq (.gz, .bgz, .bz2, .xz)
 
-#### BAM file
+#### SAM file
 - SAM stands for Sequence Alignment/Map format. 
 - It is a TAB-delimited text format consisting of a header section, which is optional, and an alignment section.
 - Each header line begins with the character ‘@’.
@@ -50,6 +50,14 @@ Alignment
 Ref: https://samtools.github.io/hts-specs/SAMv1.pdf
 
 #### VCF file
+- VCF stands for Variant Call Format. 
+- a text file used in bioinformatics for storing gene sequence variations. 
+- Header
+- Columns
+
+- VCF / BCF sample
+![image](Notes/Attachments/Bioinformatics/BCF_VCF_format.png)
+
 VCF extesions: vcf  (.gz, .bgz, .bz2, .xz)
 
 #### BCF file

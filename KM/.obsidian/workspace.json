@@ -30,6 +30,16 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "7cbc32539625846a",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Notes/Attachments/Draw/DNA-data-pipeline.md"
+              }
+            }
           }
         ],
         "currentTab": 1
@@ -170,9 +180,9 @@
   },
   "active": "6b03b9655a048fa2",
   "lastOpenFiles": [
-    "Notes/Books/Human Evolutionary Genetics (EN).md",
-    "Notes/Bioinformatics/03 Data.md",
     "Notes/Attachments/Draw/DNA-data-pipeline.md",
+    "Notes/Bioinformatics/03 Data.md",
+    "Notes/Books/Human Evolutionary Genetics (EN).md",
     "Notes/Attachments/Bioinformatics/DNA-Pipeline-v2.jpg",
     "Notes/Attachments/Bioinformatics/DNA-data-pipeline.png",
     "Notes/Bioinformatics/Ref Bioinformatics Tutorials.md",
