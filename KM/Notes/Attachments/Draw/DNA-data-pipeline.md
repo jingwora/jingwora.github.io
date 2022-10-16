@@ -19,7 +19,7 @@ Mapper
 FASTQ
 FASTA ^R9PXGAkq
 
-Variant Analysis
+Variant Detection
 異変検出 ^94hzL3WS
 
 DNA 
@@ -39,17 +39,16 @@ Genome
 Reference
 Model ^H7ekeWYw
 
-BAM
-SAM CRAM ^o2P7xnI1
+VCF ^o2P7xnI1
 
-RNA-seq
+DE Analysis
 発現量定量 ^C9hJmj04
 
 GTF ^cTbvnPmr
 
 BED ^vV1Qty5I
 
-ChIP-seq
+Peak Calling
 ピーク検出 ^RwJsKTs0
 
 Human
@@ -173,8 +172,8 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 		},
 		{
 			"type": "text",
-			"version": 241,
-			"versionNonce": 493351621,
+			"version": 243,
+			"versionNonce": 1543516133,
 			"isDeleted": false,
 			"id": "WWoiU17O",
 			"fillStyle": "hachure",
@@ -193,7 +192,7 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 			"groupIds": [],
 			"strokeSharpness": "sharp",
 			"boundElements": [],
-			"updated": 1665446821975,
+			"updated": 1665507946662,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -249,8 +248,8 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 		},
 		{
 			"type": "arrow",
-			"version": 328,
-			"versionNonce": 199765413,
+			"version": 336,
+			"versionNonce": 1830089605,
 			"isDeleted": false,
 			"id": "rqxIG6dNtVI0Midto8VOk",
 			"fillStyle": "hachure",
@@ -260,16 +259,16 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 			"opacity": 100,
 			"angle": 0,
 			"x": -100.65083433014252,
-			"y": -34.05424032726452,
+			"y": -34.05424032726429,
 			"strokeColor": "#000000",
 			"backgroundColor": "transparent",
 			"width": 46.816608353269615,
-			"height": 0.5614927388938469,
+			"height": 0.561492738893925,
 			"seed": 1363393925,
 			"groupIds": [],
 			"strokeSharpness": "round",
 			"boundElements": [],
-			"updated": 1665446824853,
+			"updated": 1665507946676,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -292,7 +291,7 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 				],
 				[
 					46.816608353269615,
-					-0.5614927388938469
+					-0.561492738893925
 				]
 			]
 		},
@@ -337,8 +336,8 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 		},
 		{
 			"type": "text",
-			"version": 328,
-			"versionNonce": 292094283,
+			"version": 330,
+			"versionNonce": 1780149803,
 			"isDeleted": false,
 			"id": "QyaEUrAz",
 			"fillStyle": "hachure",
@@ -357,7 +356,7 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 			"groupIds": [],
 			"strokeSharpness": "sharp",
 			"boundElements": [],
-			"updated": 1665446821980,
+			"updated": 1665507946666,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -481,8 +480,8 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 		},
 		{
 			"type": "text",
-			"version": 1066,
-			"versionNonce": 592861957,
+			"version": 1079,
+			"versionNonce": 1495679013,
 			"isDeleted": false,
 			"id": "94hzL3WS",
 			"fillStyle": "hachure",
@@ -491,28 +490,28 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": 246.75517937955533,
+			"x": 242.25517937955533,
 			"y": -49.99740829346101,
 			"strokeColor": "#000000",
 			"backgroundColor": "transparent",
-			"width": 114,
+			"width": 123,
 			"height": 36,
 			"seed": 683868389,
 			"groupIds": [],
 			"strokeSharpness": "sharp",
 			"boundElements": [],
-			"updated": 1665446821988,
+			"updated": 1665507946673,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
 			"fontFamily": 2,
-			"text": "Variant Analysis\n異変検出",
-			"rawText": "Variant Analysis\n異変検出",
+			"text": "Variant Detection\n異変検出",
+			"rawText": "Variant Detection\n異変検出",
 			"baseline": 32,
 			"textAlign": "center",
 			"verticalAlign": "middle",
 			"containerId": "v854PUgpf_tz7--w6W9Vt",
-			"originalText": "Variant Analysis\n異変検出"
+			"originalText": "Variant Detection\n異変検出"
 		},
 		{
 			"type": "ellipse",
@@ -944,8 +943,8 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 		},
 		{
 			"type": "text",
-			"version": 1264,
-			"versionNonce": 1695013573,
+			"version": 1269,
+			"versionNonce": 129071819,
 			"isDeleted": false,
 			"id": "o2P7xnI1",
 			"fillStyle": "hachure",
@@ -954,28 +953,28 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": 500.6933023863844,
-			"y": -50.53907496012778,
+			"x": 527.6933023863844,
+			"y": -41.53907496012778,
 			"strokeColor": "#000000",
 			"backgroundColor": "transparent",
-			"width": 88,
-			"height": 36,
+			"width": 34,
+			"height": 18,
 			"seed": 411786027,
 			"groupIds": [],
 			"strokeSharpness": "sharp",
 			"boundElements": [],
-			"updated": 1665445179332,
+			"updated": 1665508047117,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
 			"fontFamily": 2,
-			"text": "BAM\nSAM CRAM",
-			"rawText": "BAM\nSAM CRAM",
-			"baseline": 32,
+			"text": "VCF",
+			"rawText": "VCF",
+			"baseline": 14,
 			"textAlign": "center",
 			"verticalAlign": "middle",
 			"containerId": "e_70HxcDczCCJodo2uq1e",
-			"originalText": "BAM\nSAM CRAM"
+			"originalText": "VCF"
 		},
 		{
 			"type": "arrow",
@@ -1028,8 +1027,8 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 		},
 		{
 			"type": "arrow",
-			"version": 402,
-			"versionNonce": 759536517,
+			"version": 410,
+			"versionNonce": 1485959371,
 			"isDeleted": false,
 			"id": "hlvDybp64MXJKMGwEcm94",
 			"fillStyle": "hachure",
@@ -1039,16 +1038,16 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 			"opacity": 100,
 			"angle": 0,
 			"x": -101.26308375697559,
-			"y": -162.6592083148386,
+			"y": -162.65920831483896,
 			"strokeColor": "#000000",
 			"backgroundColor": "transparent",
 			"width": 47.057162704345075,
-			"height": 0.70422934620521,
+			"height": 0.7042293462050679,
 			"seed": 359641195,
 			"groupIds": [],
 			"strokeSharpness": "round",
 			"boundElements": [],
-			"updated": 1665446824846,
+			"updated": 1665507946669,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1071,7 +1070,7 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 				],
 				[
 					47.057162704345075,
-					-0.70422934620521
+					-0.7042293462050679
 				]
 			]
 		},
@@ -1118,8 +1117,8 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 		},
 		{
 			"type": "arrow",
-			"version": 398,
-			"versionNonce": 1616911467,
+			"version": 416,
+			"versionNonce": 1414526661,
 			"isDeleted": false,
 			"id": "fbSJP63AKERlCfmdFva_H",
 			"fillStyle": "hachure",
@@ -1129,16 +1128,16 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 			"opacity": 100,
 			"angle": 0,
 			"x": 394.35484071328807,
-			"y": -30.47314749685056,
+			"y": -30.473147496850487,
 			"strokeColor": "#000000",
 			"backgroundColor": "transparent",
 			"width": 50.15605637006553,
-			"height": 0.34733141231011544,
+			"height": 0.3473314123101403,
 			"seed": 251206565,
 			"groupIds": [],
 			"strokeSharpness": "round",
 			"boundElements": [],
-			"updated": 1665446824859,
+			"updated": 1665508048216,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1161,14 +1160,14 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 				],
 				[
 					50.15605637006553,
-					-0.34733141231011544
+					-0.3473314123101403
 				]
 			]
 		},
 		{
 			"type": "arrow",
-			"version": 564,
-			"versionNonce": 908987851,
+			"version": 576,
+			"versionNonce": 741020139,
 			"isDeleted": false,
 			"id": "2_jcp1Kzj1rtqRp8tcQnC",
 			"fillStyle": "hachure",
@@ -1187,7 +1186,7 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 			"groupIds": [],
 			"strokeSharpness": "round",
 			"boundElements": [],
-			"updated": 1665446824856,
+			"updated": 1665507946679,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1259,8 +1258,8 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 		},
 		{
 			"type": "text",
-			"version": 1215,
-			"versionNonce": 2108343883,
+			"version": 1230,
+			"versionNonce": 637129515,
 			"isDeleted": false,
 			"id": "C9hJmj04",
 			"fillStyle": "hachure",
@@ -1269,28 +1268,28 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": 262.75517937955533,
+			"x": 260.75517937955533,
 			"y": 67.37001594896321,
 			"strokeColor": "#000000",
 			"backgroundColor": "transparent",
-			"width": 82,
+			"width": 86,
 			"height": 36,
 			"seed": 845020619,
 			"groupIds": [],
 			"strokeSharpness": "sharp",
 			"boundElements": [],
-			"updated": 1665446822002,
+			"updated": 1665507946686,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
 			"fontFamily": 2,
-			"text": "RNA-seq\n発現量定量",
-			"rawText": "RNA-seq\n発現量定量",
+			"text": "DE Analysis\n発現量定量",
+			"rawText": "DE Analysis\n発現量定量",
 			"baseline": 32,
 			"textAlign": "center",
 			"verticalAlign": "middle",
 			"containerId": "wX-4MeAZuufC1wf-JRRGo",
-			"originalText": "RNA-seq\n発現量定量"
+			"originalText": "DE Analysis\n発現量定量"
 		},
 		{
 			"type": "rectangle",
@@ -1481,8 +1480,8 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 		},
 		{
 			"type": "text",
-			"version": 1282,
-			"versionNonce": 2011796293,
+			"version": 1298,
+			"versionNonce": 1360207973,
 			"isDeleted": false,
 			"id": "RwJsKTs0",
 			"fillStyle": "hachure",
@@ -1491,33 +1490,33 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": 262.75517937955533,
+			"x": 258.25517937955533,
 			"y": 193.9700640014371,
 			"strokeColor": "#000000",
 			"backgroundColor": "transparent",
-			"width": 82,
+			"width": 91,
 			"height": 36,
 			"seed": 169308069,
 			"groupIds": [],
 			"strokeSharpness": "sharp",
 			"boundElements": [],
-			"updated": 1665446822011,
+			"updated": 1665507946695,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
 			"fontFamily": 2,
-			"text": "ChIP-seq\nピーク検出",
-			"rawText": "ChIP-seq\nピーク検出",
+			"text": "Peak Calling\nピーク検出",
+			"rawText": "Peak Calling\nピーク検出",
 			"baseline": 32,
 			"textAlign": "center",
 			"verticalAlign": "middle",
 			"containerId": "yLltI-_vCGWbzdxi8RdyB",
-			"originalText": "ChIP-seq\nピーク検出"
+			"originalText": "Peak Calling\nピーク検出"
 		},
 		{
 			"type": "arrow",
-			"version": 391,
-			"versionNonce": 1787720645,
+			"version": 395,
+			"versionNonce": 483820965,
 			"isDeleted": false,
 			"id": "rQl_qmqOdVEaEXkdEde3X",
 			"fillStyle": "hachure",
@@ -1536,7 +1535,7 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 			"groupIds": [],
 			"strokeSharpness": "round",
 			"boundElements": [],
-			"updated": 1665446824862,
+			"updated": 1665507946686,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1561,8 +1560,8 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 		},
 		{
 			"type": "arrow",
-			"version": 433,
-			"versionNonce": 580343563,
+			"version": 437,
+			"versionNonce": 765495557,
 			"isDeleted": false,
 			"id": "RVvOI4L-LkR0VP6nY1FOJ",
 			"fillStyle": "hachure",
@@ -1581,7 +1580,7 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 			"groupIds": [],
 			"strokeSharpness": "round",
 			"boundElements": [],
-			"updated": 1665446824870,
+			"updated": 1665507946694,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1606,8 +1605,8 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 		},
 		{
 			"type": "arrow",
-			"version": 601,
-			"versionNonce": 1987425061,
+			"version": 605,
+			"versionNonce": 1632384459,
 			"isDeleted": false,
 			"id": "baoudRMRecxNyzJoyoCYB",
 			"fillStyle": "hachure",
@@ -1626,7 +1625,7 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 			"groupIds": [],
 			"strokeSharpness": "round",
 			"boundElements": [],
-			"updated": 1665446824870,
+			"updated": 1665507946695,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -1655,8 +1654,8 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 		},
 		{
 			"type": "arrow",
-			"version": 450,
-			"versionNonce": 674671403,
+			"version": 452,
+			"versionNonce": 1367978827,
 			"isDeleted": false,
 			"id": "tZApJ-gGaHmkGwknP2NXL",
 			"fillStyle": "hachure",
@@ -1675,7 +1674,7 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 			"groupIds": [],
 			"strokeSharpness": "round",
 			"boundElements": [],
-			"updated": 1665446824853,
+			"updated": 1665507946676,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1778,8 +1777,8 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 		},
 		{
 			"type": "arrow",
-			"version": 288,
-			"versionNonce": 905840261,
+			"version": 296,
+			"versionNonce": 1291570117,
 			"isDeleted": false,
 			"id": "7HsUnMhd41maEIRvWm9_0",
 			"fillStyle": "hachure",
@@ -1798,7 +1797,7 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 			"groupIds": [],
 			"strokeSharpness": "round",
 			"boundElements": [],
-			"updated": 1665446824873,
+			"updated": 1665507946698,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1823,38 +1822,6 @@ cd536b39157ab47f2e18018fe7fd7d812723882a: [[DNA.png]]
 					48.62006198082355,
 					-0.12408289049546184
 				]
-			]
-		},
-		{
-			"type": "image",
-			"version": 30,
-			"versionNonce": 129451525,
-			"isDeleted": true,
-			"id": "Py6j9b7z79WOfD7tULjLP",
-			"fillStyle": "hachure",
-			"strokeWidth": 0.5,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -375.85876565972694,
-			"y": -130.85027910685812,
-			"strokeColor": "transparent",
-			"backgroundColor": "#fd7e14",
-			"width": 745.4539858417974,
-			"height": 458.9473684210526,
-			"seed": 495125253,
-			"groupIds": [],
-			"strokeSharpness": "round",
-			"boundElements": [],
-			"updated": 1665446823711,
-			"link": null,
-			"locked": false,
-			"status": "pending",
-			"fileId": "6df9f5d0f1ccbc30e8141541621c49464d3d4b89",
-			"scale": [
-				1,
-				1
 			]
 		}
 	],
