@@ -41,6 +41,10 @@ Status: 30%
 
 <iframe src="https://www.youtube.com/embed/plVLRashaA8"></iframe>
 
+---
+
+### Computational Genomics with R
+[Website](https://compgenomr.github.io/book/)
 
 
 ---
