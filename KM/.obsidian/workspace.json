@@ -47,8 +47,12 @@
             "id": "7cbc32539625846a",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Books/Human Evolutionary Genetics (EN).md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ],
@@ -118,6 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Notes/Books/Human Evolutionary Genetics (EN).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,6 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Notes/Books/Human Evolutionary Genetics (EN).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -155,7 +161,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Notes/Books/Human Evolutionary Genetics (EN).md"
+              }
             }
           },
           {

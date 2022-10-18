@@ -359,6 +359,7 @@ G-banded chromosome
 
 ![image](../Attachments/Books/Human-Evolutionary-Genetics/NUCLEAR-mtDNA-GENOMES.png)
 
+
 ---
 
 ### CHAPTER 3
