@@ -456,7 +456,30 @@ G-banded chromosome
 
 - The rate of base substitutions is not uniform throughout the genome. In particular, where a C nucleotide is followed by a G (denoted a CpG dinucleotide), mutation rate is elevated by more than tenfold. This is because of a chemical modification that occurs at most CpGs.
 
+- Base substitutions and indels can affect the functions of genes
+- In the open reading frame (ORF) itself, base substitutions can  have a wide range of possible outcomes, from no effect to a total abolition of  protein production. 
 
+- Substitutions that do not alter an amino acid are known as silent-site, or synonymous substitutions, and are often assumed to be selectively neutral.
+- Base substitutions which lead to a change of amino acid are termed nonsynonymous, or missense mutations.
+- Change one amino acid for another that has different chemical properties;  such nonconservative substitutions are more likely to be deleterious than  are conservative changes. 
+
+- A mutation changing  an amino acid codon into a termination codon is termed a nonsense or stop mutation, and is likely to be deleterious unless very close to the natural termination codon. Analysis of the 1000 Genomes Project data reveals  ~10,000 nonsynonymous and ~30 nonsense SNPs per genome.
+
+- Multinucleotide polymorphisms (MNPs), where two or more adjacent base  pairs are altered compared with the reference sequence.
+
+- A small indel within an ORF is more likely to be deleterious than a base substitution. Because the genetic code is based on triplets, any indel of a multiple of  three base pairs will lead to an insertion or deletion of amino acid(s).
+
+- Whole-genome resequencing provides an unbiased picture of SNP diversity.
+
+- SNPs discovered through many different methods are described by numbers  prefixed with the letters rs, for RefSNP, and are deposited in the database  dbSNP (www.ncbi.nlm.nih.gov/projects/SNP/). 
+
+- Minor allele frequency (MAF), the frequency  at which the less common allele is found within a given population.
+
+- We  expect to find one SNP about every 1250 bp. 
+
+###### 3.3 SEQUENCE VARIATION IN MITOCHONDRIAL DNA
+
+- Early comparisons of human and other primate DNAs indicated that the base-substitutional mutation rate in mtDNA is about 10 times higher than the average  rate in nuclear DNA.
 
 
 
