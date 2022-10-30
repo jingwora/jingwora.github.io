@@ -56,7 +56,8 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 3,
+        "stacked": true
       }
     ],
     "direction": "vertical"
@@ -189,9 +190,6 @@
     "direction": "horizontal",
     "width": 200,
     "collapsed": true
-  },
-  "ribbon": {
-    "mostRecentAction": ""
   },
   "active": "7cbc32539625846a",
   "lastOpenFiles": [
