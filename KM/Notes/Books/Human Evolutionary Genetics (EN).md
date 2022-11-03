@@ -477,15 +477,52 @@ G-banded chromosome
 
 - We  expect to find one SNP about every 1250 bp. 
 
-###### 3.3 SEQUENCE VARIATION IN MITOCHONDRIAL DNA
+#### 3.3 SEQUENCE VARIATION IN MITOCHONDRIAL DNA
+
+###### mtDNA has a high mutation rate
 
 - Early comparisons of human and other primate DNAs indicated that the base-substitutional mutation rate in mtDNA is about 10 times higher than the average  rate in nuclear DNA.
 
+- SNP density shows a peak (red color) around the HLA locus on Chr 6, indicated by the circle. Gray indicates regions where base calling is too unreliable to estimate SNP density. 
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/Genomewide-SNP-density.png)
+
+- Systems for the repair of mtDNA are active within the mitochondrion, but several factors may account for its higher rate of mutation compared with nuclear DNA.
 
 
+###### The transmission of mtDNA mutations between generations is complex
 
+- Mutations in mtDNA are different, each cell contains many mitochondria, each of which contains several mtDNA molecules; thus there is a large population of mtDNAs in any cell.
 
+- A female developing from a fertilized oocyte that is 50% heteroplasmic for a mutant mtDNA type produces primordial germ cells ==oogonia== which show similar levels of heteroplasmy (low variance).
 
+![image](../Attachments/Books/Human-Evolutionary-Genetics/Intracellular-population-genetics.png)
+
+- The term ==heteroplasmy== is used to refer to a situation where more than one mtDNA type occurs in a cell, and homoplasmy when all mtDNAs are identical.
+
+#### 3.4 VARIATION IN TANDEMLY REPEATED DNA SEQUENCES
+
+- Another class of genetic variation, on a generally larger scale and often mutating much more rapidly than that described in the previous sections, is common in ==eukaryotic genomes==. 
+
+- This variation involves changes in the numbers of repeated DNA sequences arranged adjacently in tandem arrays, and the highly heterogeneous classes of loci undergoing these changes are collectively known as ==variable number of tandem repeats loci==, or ==VNTRs==.
+
+- Alleles with the same size and sequence may not reflect identity by descent, but identity by state (coincidental resemblance, sometimes called ==convergent evolution==).
+
+- Approximate repeat unit length and repeat copy number are shown on non-uniform scales for microsatellites, minisatellites, satellites, and telomere repeat arrays, which contain about 1500–2500 copies of a hexanucleotide repeat.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/VNTR.png)
+
+###### Microsatellites have short repeat units and repeat arrays, and mutate through replication slippage
+
+- ==Microsatellites==, also widely known as short tandem repeats (STRs), and sometimes as simple sequence repeats (SSRs), are tandem arrays of repeat units 1–7 bp in length, and those that have a useful degree of polymorphism have a typical copy number of 10–30.
+
+- Lists some general properties of microsatellites by repeat unit size:
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/Properties-of-microsatellites.png)
+
+- Examples of microsatellite structure
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/microsatellite-structures.png)
 
 
 

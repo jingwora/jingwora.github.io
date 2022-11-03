@@ -56,8 +56,7 @@
             }
           }
         ],
-        "currentTab": 3,
-        "stacked": true
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -107,7 +106,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 244
+    "width": 318.5
   },
   "right": {
     "id": "728dc3a96036bcb7",
@@ -188,10 +187,9 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
-  "active": "7cbc32539625846a",
+  "active": "05d8abcaa75e75e3",
   "lastOpenFiles": [
     "Notes/Attachments/Draw/DNA-data-pipeline.md",
     "Notes/Bioinformatics/Bioinformatic Tools.md",
