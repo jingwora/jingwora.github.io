@@ -520,9 +520,83 @@ G-banded chromosome
 
 ![image](../Attachments/Books/Human-Evolutionary-Genetics/Properties-of-microsatellites.png)
 
-- Examples of microsatellite structure
+-  Some compound microsatellite loci contain repeat units of more than one length, such as adjacent di- and tetranucleotide arrays. Microsatellites composed of some specific repeat units show clustering, but most are distributed throughout the genome. 
 
+- Examples of microsatellite structure
 ![image](../Attachments/Books/Human-Evolutionary-Genetics/microsatellite-structures.png)
+
+###### Microsatellite mutation rates and processes
+
+- The mutation rates of microsatellites have been estimated by direct pedigree analysis and general characteristics of mutability have also been studied by large-scale comparisons of human and chimpanzee microsatellites.
+
+- Application of such rates to the dating of past events such as migrations and population expansions is somewhat controversial, since when populations with well-documented short-term histories are examined the ==effective mutation rate== that explains the accumulated diversity seems to be considerably lower.
+
+- A number of properties of the microsatellite mutation process emerge from direct mutation studies9, 57 and from research which models mutation to explain diversity data: 
+   - Most mutations (68% for dinucleotides, and >95% for tetranucleotides) involve an increase or decrease of a single repeat unit.
+  - Homogeneous (pure) repeat arrays mutate faster than equivalent-sized interrupted arrays containing variant repeats. 
+  - Overall mutation rate increases as array length increases.
+  - Shorter alleles tend to increase in size, while longer alleles tend to decrease, leading to an equilibrium distribution of allele lengths.
+
+- Properties of microsatellite mutation processes:
+- (a) Mutation events involve predominantly (dinucleotides) and near-exclusively (tetranucleotides) single-step changes. (b) Mutation rates increase with repeat array length. (c) Shorter alleles are biased toward repeat gains in mutation, while longer alleles are biased toward repeat losses.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/microsatellite-mutation-processes.png)
+
+###### Minisatellites have longer repeat units and arrays, and mutate through recombination mechanisms
+
+- Minisatellites consist of repeat units from about 8 to 100  bp in length, with copy numbers from as low as 5 to over 1000.
+
+- Mutation at microsatellites:
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/Mutation-microsatellites.png)
+
+
+- The minisatellite encodes the DNA-binding motif of the protein, a zinc finger array that recognizes a short sequence motif associated with hotspots, and variation in copy number and sequence of the 84-bp (28-amino-acid) minisatellite repeat has a profound effect on recombination activity.
+
+###### Minisatellite diversity and mutation
+
+- The minisatellites that have been well studied are a small and biased subset with particularly high diversity. When allele length variation is considered, these loci show typical ==heterozygosity values==.
+
+- Hypervariability of minisatellite alleles:
+- A selection of alleles (each line representing a different allele) for (a) the autosomal minisatellite B6.7. Each different colored circle represents a sequence variant on a 34-bp repeat unit; (b) the Y-chromosomal minisatellite MSY1. Each different colored circle represents a sequence variant on a 25-bp repeat unit.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/Hypervariability-of-minisatellite-alleles.png)
+
+- A method known as minisatellite variant repeat PCR (==MVR-PCR==) allows these variant repeats to be mapped within arrays conveniently, and allows access to the details of the mutation process in sperm DNA.
+
+- Germ-line mutation events at minisatellites can be highly complex, involving interactions between alleles in which one allele acquires blocks of repeat units from the other in a nonreciprocal ==gene conversion== process.
+
+###### Telomeres contain specialized and functionally important repeat arrays
+
+- They are sometimes included in the class of microsatellites, or even minisatellites, but their high repeat number, absence of ==distal== flanking single-copy DNA, and specialized functional role put them in a class of their own.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/Microsatellites-Minisatellites-compared.png)
+
+###### Satellites are large, sometimes functionally important, repeat arrays
+
+- ==Satellites==, sometimes called macrosatellites, are large tandem arrays spanning hundreds of kilobases to megabases, and composed of repeat units of a wide range of sizes that can display a higher-order structure.
+
+- Alpha satellite, or alphoid DNA, which forms an important component of centromeres. The alphoid repeat monomer is ~170 bp in length, but in many chromosomes it is arranged in higher-order repeat units of a few kilobases.
+
+#### 3.5 TRANSPOSABLE ELEMENT INSERTIONS
+
+- Forty-five percent of the human genome is composed of dispersed repeat elements with copy numbers ranging from a few hundred to several hundred thousand, including >850,000 LINEs (long interspersed nuclear elements) and >1,500,000 SINEs (short interspersed nuclear elements).
+
+- The ==reverse transcriptase== enzyme encoded in full-length L1 elements is related to that used by retroviruses (for example, HIV) to integrate a DNA copy of their RNA genome into the host genome.
+
+- Only 0.5% of Alu element differences between humans, chimpanzees, and macaques could be explained by precise excisions in one lineage, rather than by new insertions.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/L1-Alu-elements.png)
+
+- The abundance and simplicity of typing of SNPs nevertheless makes them by far the most widely exploited class of binary polymorphism.
+
+#### 3.6 STRUCTURAL VARIATION IN THE GENOME
+
+- ==Structural variation== is a broad term covering changes in chromosome structure. Some of these changes are ==balanced==, involving no alteration of sequence copy number—examples are the inversion of a chromosomal segment or a reciprocal ==translocation== between a pair of chromosomes. Others involve differences in the numbers of particular sequences between alleles—==copy-number variation==.
+
+###### Some genomic disorders arise from recombination between segmental duplications
+
+
 
 
 

@@ -187,13 +187,14 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
-  "active": "05d8abcaa75e75e3",
+  "active": "6b03b9655a048fa2",
   "lastOpenFiles": [
-    "Notes/Attachments/Draw/DNA-data-pipeline.md",
     "Notes/Bioinformatics/Bioinformatic Tools.md",
     "Notes/Books/Human Evolutionary Genetics (EN).md",
+    "Notes/Attachments/Draw/DNA-data-pipeline.md",
     "Notes/Bioinformatics/Bioinformatics Tutorials.md",
     "README.md",
     "Notes/Bioinformatics/Bioinformatics Environment.md",
