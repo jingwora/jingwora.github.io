@@ -596,6 +596,72 @@ G-banded chromosome
 
 ###### Some genomic disorders arise from recombination between segmental duplications
 
+- Analysis of the human reference sequence revealed the remarkable fact that ~5% of the genome exists as long, duplicated sequences (paralogs) that have arisen within the last 40 million years.
+
+- These segmental duplications (also known as low-copy repeats, or LCRs) have been defined operationally as being between one and hundreds of kilobases in size and >90% similar in sequence. 
+
+- Their existence has profound implications for the evolution of our genome and for disease because such paralogous repeats have the potential to promote ==non-allelic homologous recombination (NAHR)==.
+
+###### Copy-number variation is widespread in the human genome
+
+- The term ==copy-number variant (CNV)== traditionally refers to a DNA segment at least 1 kb in size, for which differences in copy number have been observed when comparing two or more genomes. 
+
+- Distribution of CNVs in the human genome. Circular map showing the genomic distribution of different classes of CNVs. Chromosomes are color-coded in the outer circle. 
+- (a) Curved lines connect the origins and new locations of 58 putative interchromosomal duplications, colored according to chromosome of origin. 
+- (b) Stacked histogram representing the number of deletions (red), duplications (green), and multiallelic (blue) loci in 5-Mb bins.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/distribution-of-CNVs.png)
+
+###### Cytogenetic examination of chromosomes can reveal large-scale structural variants
+
+- Cytogenetic examination of chromosomes in individuals with genetic disorders has been a useful way to pinpoint disease genes.
+
+#### 3.7 THE EFFECTS OF AGE AND SEX ON MUTATION RATE
+
+- Mutations at many of the classes of loci described above show increasing rates with parental age.
+
+- Sex and age effects on mutation for base substitutions and microsatellite
+- (a) Parental age- and sex-effects on numbers of de novo base substitutions in whole-genome sequencing data from five Icelandic trios in which parent-of-origin could be determined. 
+
+- (b) Number of de novo base substitutions in 78 sequenced Icelandic trios as a function of paternal age. Here, the parent-of-origin is undetermined. The black line is the linear fit, while the dashed blue line represents a model where maternal mutations are assumed to occur at a constant rate of 14.2 per generation (see panel a) and paternal mutations increase exponentially with father’s age. 
+
+- (c) Mutation rates for dinucleotide and tetranucleotide microsatellites as a function of parental age at childbirth, measured in 24,832 Icelandic trios for 2477 microsatellites. T
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/mutation-sex-age.png)
+
+- The number of cell divisions in oogenesis is 23, while the number in spermatogenesis at puberty is 36, increasing by 23 per annum thereafter.
+
+- The difference in base-substitutional mutation rate between males and females is approximated by a figure known as the ==alpha factor==. Sex differences in mutation rates are not confined to base substitutions.
+
+#### 3.8 THE EFFECTS OF RECOMBINATION ON GENOME VARIATION
+
+- A ==haplotype== refers to the combination of allelic states of polymorphisms along the same DNA molecule, in other words on the same chromosome or on mtDNA.
+
+- Genotypes and haplotypes
+- Hypothetical haplotypes involving three SNPs and a microsatellite linked on the X chromosome in females and a male. Direct analysis of these polymorphisms in females will yield genotypes, from which the haplotypes cannot be directly inferred except in the case of a homozygote. 
+
+- Note that the top two females have identical genotypes, but different underlying haplotypes. Males are hemizygous for the X chromosome, and therefore yield haplotypes directly; autosomal loci will yield genotypes in both sexes.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/genotypes-haplotypes.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
