@@ -644,9 +644,52 @@ G-banded chromosome
 
 ![image](../Attachments/Books/Human-Evolutionary-Genetics/genotypes-haplotypes.png)
 
+- ==Linkage disequilibrium (LD)== is said to occur when two alleles are found together on the same chromosome more often than expected if the alleles were segregating at random.
+
+###### Genomewide haplotype structure reveals past recombination behavior
+
+- The aim of the International HapMap Project (HapMap for short) was to characterize patterns of genetic variation and LD in a sample of 269 individuals from four geographically defined populations with ancestry in Africa, Europe, and Asia, thus facilitating the design of efficient genomewide association studies for common disease.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/HAPMAP-samples.png)
+
+- Haplotype blocks can contain many SNPs that are highly correlated with one another and display the limited haplotype diversity that is expected from relatively few historical recombination events.
+
+###### Recombination behavior can be revealed by direct studies in pedigrees and sperm DNA
+
+- The HapMap project gave information about recombination behavior by assessing the long-term cumulative effect of large numbers of recombination events upon haplotypes in populations.
+
+- Many different approaches are showing that recombination behavior, despite its fundamental importance to chromosomal segregation and haplotype diversity, is highly evolutionarily labile.
+
+###### The process of gene conversion results in nonreciprocal exchange between DNA sequences
+
+- Mutation and recombination are not the only processes affecting haplotype diversity. Information transfer can also occur between haplotypes through a process called gene conversion.
+
+- Unlike classical crossing over, this is a nonreciprocal transfer of genetic information between homologous sequences, in which one sequence remains unchanged, but the other is converted to the sequence state of the first.
+
+- Second, gene conversion acts not only between allelic sequences (homologs), but also between paralogs—highly similar sequences that are non-allelic.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/allelic-non-allelic-gene-conversion.png)
+
+- Gene conversion has been best studied in yeast, and is relatively poorly characterized in humans, where it cannot be formally distinguished from a double crossover. Conversion tract lengths are typically in the range of 10–1000 bp. Rather than being regarded as a specialized process, gene conversion should be seen as one of the consequences of homologous recombination via the four-stranded intermediate, the ==Holliday junction==.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/Holliday-junction.png)
 
 
+---
 
+### CHAPTER 4 
+### FINDING AND ASSAYING GENOME DIVERSITY
+---
+
+#### 2.1 THE BIG PICTURE: AN OVERVIEW OF THE HUMAN GENOME
+
+- Early methods for studying genetic differences were indirect, based on immunological reactions , and later, on electrophoretic analysis of gene products. Methods evolved toward the direct detection of DNA variation in the 1970s and 1980s, including laborious Southern blotting analysis, but it was with the invention of the truly revolutionary technique, the polymerase chain reaction (PCR) that the analysis of human genetic diversity took its first great leap forward.
+
+- Five subsequent technological advances have further increased the scope and pace of diversity studies: 
+ - The development of capillary DNA sequencing using fluorescent dyes. 
+ - The subsequent determination of the human genome reference sequence, and the associated development of computational tools to display and share information about the genome sequence and its variation. 
+ - Cheap and accurate methods for high-throughput genomewide SNP typing. • Reliable methods for the measurement of structural and copy-number variation. 
+ - The development of so-called next-generation and third-generation sequencing methods, which have massively reduced the cost of sequencing large genomes but introduced their own complications.
 
 
 
