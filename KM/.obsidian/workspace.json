@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c75353b7cfa8b339",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Bioinformatics/Bioinformatics Tutorials.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "6b03b9655a048fa2",
             "type": "leaf",
             "state": {
@@ -30,33 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "d8e25220b17650c1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Bioinformatics/Bioinformatic Tools.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7cbc32539625846a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Books/Human Evolutionary Genetics (EN).md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -192,10 +155,10 @@
   },
   "active": "6b03b9655a048fa2",
   "lastOpenFiles": [
-    "Notes/Bioinformatics/Bioinformatic Tools.md",
-    "Notes/Books/Human Evolutionary Genetics (EN).md",
-    "Notes/Attachments/Draw/DNA-data-pipeline.md",
     "Notes/Bioinformatics/Bioinformatics Tutorials.md",
+    "Notes/Books/Human Evolutionary Genetics (EN).md",
+    "Notes/Bioinformatics/Bioinformatic Tools.md",
+    "Notes/Attachments/Draw/DNA-data-pipeline.md",
     "README.md",
     "Notes/Bioinformatics/Bioinformatics Environment.md",
     "Notes/Bioinformatics/Bioinformatics Overview.md",

@@ -681,8 +681,6 @@ G-banded chromosome
 ### FINDING AND ASSAYING GENOME DIVERSITY
 ---
 
-#### 2.1 THE BIG PICTURE: AN OVERVIEW OF THE HUMAN GENOME
-
 - Early methods for studying genetic differences were indirect, based on immunological reactions , and later, on electrophoretic analysis of gene products. Methods evolved toward the direct detection of DNA variation in the 1970s and 1980s, including laborious Southern blotting analysis, but it was with the invention of the truly revolutionary technique, the polymerase chain reaction (PCR) that the analysis of human genetic diversity took its first great leap forward.
 
 - Five subsequent technological advances have further increased the scope and pace of diversity studies: 
@@ -691,9 +689,11 @@ G-banded chromosome
  - Cheap and accurate methods for high-throughput genomewide SNP typing. • Reliable methods for the measurement of structural and copy-number variation. 
  - The development of so-called next-generation and third-generation sequencing methods, which have massively reduced the cost of sequencing large genomes but introduced their own complications.
 
+#### 4.1 FIRST, FIND YOUR DNA
 
+- We set aside the ethical considerations that affect sampling in particular populations and address only the practical questions regarding sources of human DNA.
 
-
+- There are several possible tissue sources differing in the amount of DNA that they yield, and in other important aspects. Since the advent of PCR the amount of DNA needed for many analyses has dropped dramatically: previously, a genotyping experiment used 5–10  μg of each DNA sample to test a single polymorphism, while a typical PCR makes do with 1000-fold less.
 
 
 
