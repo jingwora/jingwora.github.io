@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Books/Human Evolutionary Genetics (EN).md",
+                "file": "Dictionary/Bioinfo dictionary en/Bioinfo terms/central dogma.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Books/Human Evolutionary Genetics (EN).md",
+                "file": "Dictionary/Bioinfo dictionary en/Bioinfo terms/central dogma.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Books/Human Evolutionary Genetics (EN).md",
+                "file": "Dictionary/Bioinfo dictionary en/Bioinfo terms/central dogma.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Books/Human Evolutionary Genetics (EN).md"
+                "file": "Dictionary/Bioinfo dictionary en/Bioinfo terms/central dogma.md"
               }
             }
           },
@@ -155,15 +155,15 @@
   },
   "active": "6b03b9655a048fa2",
   "lastOpenFiles": [
-    "Notes/Bioinformatics/Bioinformatics Tutorials.md",
-    "Notes/Books/Human Evolutionary Genetics (EN).md",
-    "Notes/Bioinformatics/Bioinformatic Tools.md",
-    "Notes/Attachments/Draw/DNA-data-pipeline.md",
-    "README.md",
-    "Notes/Bioinformatics/Bioinformatics Environment.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/genome.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/mitochondria.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/mendelian laws.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/genomics.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo terms/gene.md",
     "Notes/Bioinformatics/Bioinformatics Overview.md",
-    "Notes/Bioinformatics/Bioinformatics Books.md",
-    "Utilities/ToDO List.md",
-    "Utilities/Useful Links.md"
+    "Notes/Books/An Introduction to Bioinformatics Algorithms (EN).md",
+    "Notes/Books/Human Evolutionary Genetics (EN).md",
+    "Notes/Bioinformatics/Bioinformatics Tutorials.md",
+    "Notes/Bioinformatics/Bioinformatic Tools.md"
   ]
 }
