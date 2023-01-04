@@ -4,6 +4,15 @@
 2. Alignment data - SAM, BAM, CRAM
 3. Genome feature data - BED, Wiggle, GTF, GFF
 
+#### Process
+Genome Alignment
+Using human reference genome to align position
+FASTG -> BAM
+
+Variance detection
+- Around 4-5 million differences to reference genome
+BAM -> VCF 
+
 #### FASTA file
 - A FASTA file  is a text-based format for representing either nucleotide sequences or amino acid (protein) sequences.
 - FASTQ – FASTA with quality
@@ -19,6 +28,8 @@
 ![image](../Attachments/Bioinformatics/FASTA_format.png)
 
 - FASTQ sample data
+- Reads 150 pairs
+- Genome coverage at 30X yields 99.9% accuracy
 ![image](../Attachments/Bioinformatics/FASTQ_format.png)
 
 #### SAM file
@@ -59,6 +70,14 @@ Alignment
 
 Ref: https://samtools.github.io/hts-specs/SAMv1.pdf
 
+Human base pairs is 3.2 billion with 20,000 human genes
+Human has 50 trillion cells
+All of the cells in your body started from a single cell and contain  same DNA.
+_Some exceptions are:_
+ - 1) Mature red blood cells which contain no DNA
+ - 2) The sperm and the egg that have half the amount of DNA
+ - 3) B cells in which some of the DNA has been rearranged to make antibodies.
+
 #### VCF file
 - VCF stands for Variant Call Format. 
 - a text file used in bioinformatics for storing gene sequence variations. 
@@ -67,7 +86,6 @@ Ref: https://samtools.github.io/hts-specs/SAMv1.pdf
 - VCF extesions: vcf  (.gz, .bgz, .bz2, .xz)
 - VCF / BCF sample data
 ![image](../Attachments/Bioinformatics/BCF_VCF_format.png)
-
 
 
 #### BCF file
@@ -80,3 +98,17 @@ GVF extesions: gvf  (.gz, .bgz, .bz2, .xz)
 ![image](../Attachments/Bioinformatics/DNA-data-pipeline.png)
 [[DNA-data-pipeline]]
 
+---
+## Tools
+
+-   [SAMtools](http://samtools.sourceforge.net/) (and associated [publication](http://bioinformatics.oxfordjournals.org/content/25/16/2078.full))
+-   [pysam](http://code.google.com/p/pysam/) (Python library)
+-   [Picard](http://picard.sourceforge.net/) (Java library)
+-   [Bamtools](http://sourceforge.net/projects/bamtools/) (C++ library)
+-   [Rsamtools](http://www.bioconductor.org/packages/2.14/bioc/html/Rsamtools.html) (R library)
+
+### pysam
+- Pysam is a wrapper of the [htslib](http://www.htslib.org/) C-API and provides facilities to read and write SAM/BAM/VCF/BCF/BED/GFF/GTF/FASTA/FASTQ files as well as access to the command line functionality of the [samtools](http://samtools.sourceforge.net/) and [bcftools](https://samtools.github.io/bcftools/bcftools.html) packages.
+
+- Github: https://github.com/pysam-developers/pysam
+- Docs: https://pysam.readthedocs.io/en/latest/

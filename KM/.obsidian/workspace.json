@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "1e2a566600304727",
+        "id": "a1c3d1bd800aa9f7",
         "type": "tabs",
         "children": [
           {
-            "id": "6b03b9655a048fa2",
+            "id": "0dc30f7ce6b1d136",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dictionary/Bioinfo dictionary en/Bioinfo terms/central dogma.md",
+                "file": "Notes/Bioinformatics/Genetic Sequence Data.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "mendelian laws",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Dictionary/Bioinfo dictionary en/Bioinfo terms/central dogma.md",
+                "file": "Notes/Bioinformatics/Genetic Sequence Data.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Dictionary/Bioinfo dictionary en/Bioinfo terms/central dogma.md",
+                "file": "Notes/Bioinformatics/Genetic Sequence Data.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Dictionary/Bioinfo dictionary en/Bioinfo terms/central dogma.md"
+                "file": "Notes/Bioinformatics/Genetic Sequence Data.md"
               }
             }
           },
@@ -153,17 +153,29 @@
     "width": 200,
     "collapsed": true
   },
-  "active": "6b03b9655a048fa2",
+  "left-ribbon": {
+    "hiddenItems": {
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:New Excalidraw drawing": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "0dc30f7ce6b1d136",
   "lastOpenFiles": [
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/genome.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/mitochondria.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo terms/メンデルの法則.md",
     "Dictionary/Bioinfo dictionary en/Bioinfo terms/mendelian laws.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/genomics.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo terms/gene.md",
-    "Notes/Bioinformatics/Bioinformatics Overview.md",
-    "Notes/Books/An Introduction to Bioinformatics Algorithms (EN).md",
-    "Notes/Books/Human Evolutionary Genetics (EN).md",
-    "Notes/Bioinformatics/Bioinformatics Tutorials.md",
-    "Notes/Bioinformatics/Bioinformatic Tools.md"
+    "Untitled.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo tables/Bioinfo list ja.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo tables/Bioinfo list en jp.md",
+    "Dictionary/Bioinfo dictionary en/Bioinfo tables/Bioinfo list en.md",
+    "Dictionary/Bioinfo dictionary ja/Bioinfo tables/Bioinfo dictionary ja.md",
+    "Notes/Bioinformatics/Genetic Sequence Data.md",
+    "Notes/Bioinformatics/Bioinformatic Tools.md",
+    "Dictionary/Med terms dictionary/exampleroottemplate.md"
   ]
 }
