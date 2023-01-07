@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Bioinformatics/Genetic Sequence Data.md",
+                "file": "Notes/Books/Human Evolutionary Genetics (EN).md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Bioinformatics/Genetic Sequence Data.md",
+                "file": "Notes/Books/Human Evolutionary Genetics (EN).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Bioinformatics/Genetic Sequence Data.md",
+                "file": "Notes/Books/Human Evolutionary Genetics (EN).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Bioinformatics/Genetic Sequence Data.md"
+                "file": "Notes/Books/Human Evolutionary Genetics (EN).md"
               }
             }
           },
@@ -167,15 +167,15 @@
   },
   "active": "0dc30f7ce6b1d136",
   "lastOpenFiles": [
+    "Notes/Attachments/Books/Human-Evolutionary-Genetics/variant-detection-methods.png",
+    "Notes/Books/Human Evolutionary Genetics (EN).md",
+    "Notes/Bioinformatics/Bioinformatics Books.md",
+    "Notes/Bioinformatics/Genetic Sequence Data.md",
     "Dictionary/Bioinfo dictionary ja/Bioinfo terms/メンデルの法則.md",
     "Dictionary/Bioinfo dictionary en/Bioinfo terms/mendelian laws.md",
     "Untitled.md",
     "Dictionary/Bioinfo dictionary ja/Bioinfo tables/Bioinfo list ja.md",
     "Dictionary/Bioinfo dictionary en/Bioinfo tables/Bioinfo list en jp.md",
-    "Dictionary/Bioinfo dictionary en/Bioinfo tables/Bioinfo list en.md",
-    "Dictionary/Bioinfo dictionary ja/Bioinfo tables/Bioinfo dictionary ja.md",
-    "Notes/Bioinformatics/Genetic Sequence Data.md",
-    "Notes/Bioinformatics/Bioinformatic Tools.md",
-    "Dictionary/Med terms dictionary/exampleroottemplate.md"
+    "Dictionary/Bioinfo dictionary en/Bioinfo tables/Bioinfo list en.md"
   ]
 }

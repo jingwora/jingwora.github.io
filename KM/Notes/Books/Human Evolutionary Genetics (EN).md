@@ -166,7 +166,7 @@ A phylogenetic tree relates different branches of modern species, showing that t
 
 
 ###### None of the different records represents an unbiased picture of the past
-- We do not have a time machine, and therefore must rely upon evidence that has survived to the present. This survival is selective
+- We do not have a time machine, and therefore must rely upon evidence that has survived to the present. This survival is selective.
 
 #### 1.4 WHAT CAN WE KNOW ABOUT THE PAST?
 - We can ask how genetically diverse humans are?
@@ -387,7 +387,6 @@ G-banded chromosome
 
 - ==Haplosufficiency== —  Fore carriers, half as much gene product as normal is being produced, but this is sufficient for normal or near-normal function.
 - ==Haploinsufficiency== — Fore carriers, half as much product as normal is produced, but this half-dosage is not enough to ensure normal function.
-
 - ==gain-of-function== — Dominance can also result from overproduction of protein from a mutant allele, or expression in an inappropriate place or time.
 
 - Disease-causing alleles on the X chromosome can behave differently in males and females, because males have only one X, while females have two.
@@ -691,16 +690,114 @@ G-banded chromosome
 
 #### 4.1 FIRST, FIND YOUR DNA
 
-- We set aside the ethical considerations that affect sampling in particular populations and address only the practical questions regarding sources of human DNA.
+- Blood is a widely used source for human DNA, and the preferred source for next-generation sequencing. It can be taken easily from a vein in the arm, and 5 ml yields 50–200 μg of DNA. 
+- Disadvantages of blood are that taking it requires appropriately qualified personnel and involves some risk of blood-borne diseases
 
-- There are several possible tissue sources differing in the amount of DNA that they yield, and in other important aspects. Since the advent of PCR the amount of DNA needed for many analyses has dropped dramatically: previously, a genotyping experiment used 5–10  μg of each DNA sample to test a single polymorphism, while a typical PCR makes do with 1000-fold less.
+- Different scales of human genetic variation, and the methods used for variant detection and typing. CGH, comparative genomic hybridization; FISH, fluorescence in situ hybridization.
 
+![image](../Attachments/Books/Human-Evolutionary-Genetics/variant-detection-methods.png)
 
+- Saliva or buccal (cheek) cells offer a less invasive alternative to blood. Qualified personnel are unnecessary, and self-sampling is possible—this method is favored by police when sampling individuals for genetic profiling, and by personal genomics companies.
 
+- A brush or swab can be simply rubbed in the inside of the cheek. 
+- “spit-kit” can be used in which several milliliters of saliva are mixed with a preservative solution.
 
+- Semen is a good source of DNA (albeit available from only half the population) and is sampled noninvasively by donation. However, recruitment of semen donors can be sensitive, and semen is not widely used as a starting material in genetic diversity studies. In studies of mutation and meiotic recombination, however, semen samples have been of great importance.
 
+- Hair has been used in some studies of human genetic diversity. Traditionally the major issue was whether the hair was cut or plucked, since the root contains much cellular material for DNA extraction.
 
+- Cell lines are established from primary sampled tissues, and offer the advantage that they can be cultured, sometimes indefinitely, yielding unlimited amounts of DNA. (fibroblasts taken from skin biopsies, lymphocytes)
 
+- The principle of multiple displacement amplification is illustrated; random primers are six nucleotides in length, and the reaction proceeds at a temperature of 30°C for 2–3 hours.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/Whole-genome-amplification.png)
+
+#### 4.2 THE POLYMERASE CHAIN REACTION (PCR)
+
+- PCR provides is a way to amplify individual gene copies directly, cheaply, and quickly.
+
+- short (typically 18–24 nucleotides) oligonucleotide primers can be designed which flank the β-globin gene, and synthesized by a commercial supplier.
+- This cycle of denaturation, annealing, and extension is repeated, typically 25–30 times. 
+- Amount of target sequence (the amplicon) that starting with 100 ng (nanograms) of genomic DNA (about 30,000 genome copies), the β-globin gene would be amplified to a copy number of over a billion, with a mass of over 50 μg. 
+![image](../Attachments/Books/Human-Evolutionary-Genetics/PCA-Accumulation.png)
+
+- A programmable heating block called a ==thermal cycler==, the genomic template DNA is denatured by heating, then the reaction is cooled to a specific temperature to allow the primers to anneal to their specific target sequence. The temperature is then raised in the extension phase, and a thermostable DNA polymerase, isolated from a thermophilic (“heat-loving”) bacterium such as Thermus aquaticus (Taq), carries out DNA synthesis from the primers, using the genomic DNA as template.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/PCR-ingredients.png)
+
+- The specificity and sensitivity of PCR, combined with the ingenuity of researchers, has led to a wide range of applications, including:
+- Direct determination of the DNA sequence of PCR products
+- Detection of very rare mutant or recombinant DNA molecules within cell populations 
+- Quantification of template molecules in genomic DNA, allowing measurement of copy number of genomic sequences
+- Detection of specific transcripts in cell extracts, after reverse-transcription of RNA into cDNA (complementary DNA). 
+- Quantification of transcripts and thus monitoring of gene expression 
+- Detection of methylated sites within DNA templates 
+- Introduction of specific mutations into DNA molecules (in vitro mutagenesis) 
+- Amplification of minute amounts of DNA from fossil material
+- Amplification of trace amounts of DNA present in crime-scene samples in forensic analysis 
+
+#### 4.3 SANGER SEQUENCING, THE HUMAN REFERENCE SEQUENCE, AND SNP DISCOVERY
+
+- ==Sanger sequencing== (named after its inventor Frederick Sanger, and often known as ==chain-termination==, dideoxy, or capillary sequencing). The method relies upon the incorporation into the growing daughter strand of labeled dideoxynucleotides, which allow the detection of DNA fragments of different lengths, each one terminated at one of the four bases.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/Sanger-sequencing.png)
+
+- In one day a single capillary sequencer (for example, the ABI3730xl) can process more than 1000 samples, generating ≥850-bp reads for each, with >99% accuracy.
+
+#### 4.4 A QUANTUM LEAP IN VARIATION STUDIES: NEXT-GENERATION SEQUENCING
+
+- Next-generation sequencing (NGS) (second-generation)
+- Two general features of the well-established NGS methods are: 
+- (1) the fragmentation of genomic DNA by, for example, nebulization (use of compressed air to shear DNA into ~200–500-bp fragments).
+- (2) the subsequent immobilization of spatially separated template DNA fragments on a solid surface or support prior to sequencing. These features allow the simultaneous shotgun sequencing of millions or billions of fragments, and hence NGS methods are sometimes referred to as massively parallel.
+
+- The fact that sequencing costs per megabase are declining at an even faster rate.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/DNA-sequencing-cost.png)
+
+- Each NGS platform has its own methods for DNA template preparation, sequencing, and data processing, and the peculiarities of each of these steps leads to characteristic rates and types of errors.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/Sequencing-platforms-comparison.png)
+
+Principle of Illumina™ nextgeneration sequencing:
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/Principle-of-Illumina-sequencing.png)
+
+###### Sequencing can be targeted to regions of specific interest or the exome
+
+- Sequence capture, or target enrichment use oligonucleotide hybridization to capture particular regions from genomic DNA. 
+- Long (50–120 nt) oligonucleotides (sometimes known as probes, or baits) are designed based on the reference genome, and then used in solution to capture complementary single-stranded genomic DNA fragments which can then be used to construct a library for sequencing.
+- The amount of sequence range from a few hundred kilobases up to tens of megabases.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/Sequence-capture.png)
+
+- Whole-genome vs exome sequencing
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/whole-genome-vs-exome-sequencing.png)
+
+###### NGS data have to be processed and interpreted
+
+- The steps needed in an intensive analysis of NGS data for a single genome, which are linked together in a bioinformatic pipeline.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/bioinformatic-analysis-pipeline.png)
+
+- There are a number of sources of error in NGS:
+- (1) Wrongly mapped
+- (2) Error rates associated with individual NGS reads
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/sequence-mapping-error.png)
+
+###### Quality score
+- Q = – 10 log₁₀  P(error)
+- Q scores of 20 correspond to 1% error rates.
+- Q scores of 30 correspond to 0.1% error rates.
+
+- High coverage can increase the degree of confidence about the nature of that base. 
+
+###### Third-generation methods use original, unamplified DNA
+- All widely used NGS methods require a library-preparation step, in which DNA is fragmented, end-repaired, linked to adapters, and amplified. This can introduce biases in the recovery of sequence, and causes particular problems for ancient DNA analysis.
+
+- Third-generation sequencing methods produce sequence data from single, original template DNA molecules, avoiding the need for library preparation and amplification. 
 
 
 
