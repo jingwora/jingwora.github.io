@@ -234,9 +234,11 @@ A phylogenetic tree relates different branches of modern species, showing that t
 - The bases are adenine, guanine, cytosine, and thymine, abbreviated as A, G, C, and T, and it is the order or sequence of these parts of each nucleotide that carries the genetic information.
 
 Chemical structures of the nucleotide components of DNA
+
 ![image](../Attachments/Books/Human-Evolutionary-Genetics/DNA-components.png)
 
 Double-stranded helical structure of DNA
+
 ![image](../Attachments/Books/Human-Evolutionary-Genetics/DNA-structure.png)
 
 #### 2.3 GENES, TRANSCRIPTION, AND TRANSLATION
@@ -799,6 +801,171 @@ Principle of Illumina™ nextgeneration sequencing:
 
 - Third-generation sequencing methods produce sequence data from single, original template DNA molecules, avoiding the need for library preparation and amplification. 
 
+#### 4.5 SNP TYPING: LOW-, MEDIUM-, AND HIGH-THROUGHPUT METHODS FOR ASSAYING VARIATION
+
+###### PCR-RFLP typing is a simple low-throughput method
+
+- If a SNP creates or disrupts a restriction enzyme recognition site, it can be typed by amplifying the flanking DNA by PCR, then digesting the PCR product with the restriction enzyme prior to separation and detection by agarose gel electrophoresis.
+
+- Quite widely used in the analysis of Y-chromosomal and mtDNA polymorphisms.
+
+- Disadvantages: not all SNPs are suitable for PCR-RFLP analysis, because they may not affect a cleavage site for a known or available restriction enzyme.
+
+###### Primer extension and detection by mass spectrometry is a mediumthroughput method
+
+- A simple and robust means to analyze a SNP is by primer extension, where a primer is designed to anneal with its 3ʹ end immediately adjacent to the SNP site, and then extended by one base, complementary to the SNP allele present in the sequence.
+
+###### High throughput SNP chips simultaneously analyze more than 1 million SNPs
+
+- The extreme technical challenge of simultaneously typing a sufficient number of SNPs to carry out genomewide association studies has been met by a number of microarray-based technologies, collectively and colloquially known as SNP chips.
+
+- Current versions of such chips can accomplish the remarkable feat of assaying >1 million SNPs simultaneously in a DNA sample with >99% accuracy and reproducibility, for a few hundred dollars.
+
+#### 4.6 DATABASES OF SEQUENCE VARIATION
+
+- UCSC Genome Browser (https://www.genome.ucsc.edu/)
+- To finding known SNPs within a particular region or gene.
+
+- LFRED ALlele FREquency Database (https://alfred.med.yale.edu/alfred/index.asp)
+- Hand-curated, and more anthropologically based, route to SNPs and their population frequencies is via the database.
+
+- HGVS (www.hgvs.org/dblist/glsdb.html)
+- Many disease-associated SNPs are described in the locus-specific databases that focus on particular genes or diseases.
+
+#### 4.7 DISCOVERING AND ASSAYING VARIATION AT MICROSATELLITES
+
+- Tandem Repeats Finder,6 which moves a sliding window along the sequence to seek candidate matched adjacent repeats of any size in DNA, including repeats containing mismatches and indels. 
+
+- The use of multiple dyes allows the co-amplification of several microsatellites (multiplexing) and their simultaneous separation and detection. 
+
+- Typing microsatellites
+
+- PCR primers labeled with fluorescent dyes allow multiplexing and simultaneous detection of several loci (here, four) on a capillary electrophoresis platform.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/Typing-microsatellites.png)
+
+
+#### 4.8 DISCOVERING AND ASSAYING STRUCTURAL VARIATION ON DIFFERENT SCALES
+
+- As with microsatellites, identification of new minisatellites is today made easy by the use of Tandem Repeats Finder.
+
+- Using allele-specific PCR primers directed at particular repeat unit types, the positions of these variant repeats can be mapped along alleles, in the technique of minisatellite variant repeat-PCR (MVR-PCR).
+
+- One special case in which such analysis has been useful is in the study of variation within telomere repeats at the termini of chromosomes.
+
+###### Discovering and assaying variation at well-defined indels, including Alu/LINE polymorphisms
+
+- Short-read sequences arising from indel regions are difficult to map to the correct location in the genome, a problem that is particularly severe for larger insertions.
+
+- To alleviate this problem, local realignment or de novo assembly can be used, and a Bayesian method.
+
+- The availability of whole-genome sequences now allows their near-comprehensive detection.
+
+###### Discovering and assaying structural polymorphisms and copy-number variants
+
+- Development of array-comparative genomic hybridization (array CGH, or aCGH) was key in the discovery of the extent of copy-number variation (CNV) in the human genome.
+
+- Array-comparative genomic hybridization (aCGH) for the detection of copy-number variation. 
+- (a) Overview of method
+- (b) An example of the result of multiple aCGH experiments on the HapMap Phase I samples for chromosome 5.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/Array-comparative-genomic-hybridization(aCGH).png)
+
+- ==Quantitative PCR (qPCR)==, which monitors the accumulation of a specific PCR product from a candidate CNV region in real time, measured against an independent control sequence that is expected to be invariant in copy number. 
+
+- ==Paralog ratio test (PRT)==, a more reliable method, in which a primer pair is designed to simultaneously amplify both a sequence from a CNV region and a sequence of a slightly different size from a non-CNV region as a control.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/paralog-ratio-test.png)
+
+- The paralog ratio test for the detection of copy-number variation. A single primer pair amplifies both an invariant and a copy-number variable locus, giving PCR products of slightly different sizes.
+
+- Sequence read-depth indicates copy-number variable regions
+- The availability of short shotgun sequence reads from whole-genome NGS experiments has allowed genomewide surveys of CNVs, on the basis of three distinct signatures in such data: unusual read-depth, discrepant separation between read-pairs, and reads that span a breakpoint and thus map to two distinct locations in the reference sequence.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/Sequence-read-depth.png)
+
+- Performance of sequence read-depth in estimating copy number. qPCR-based copy-number genotyping is highly correlated with sequencing-based copy-number estimates (r = 0.95).
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/sequencing-qPCR.png)
+
+- Pulsed-field gel electrophoresis (PFGE), a method for separating large (up to megabase-scale) molecules, and Southern blotting using a specific probe, can indicate both copy number, and the allele combinations that underlie it. 
+
+- Fiber FISH (fluorescence in situ hybridization), in which fluorescently labeled probes are hybridized to stretched chromatin fibers, allowing a resolution of a few kilobases.
+
+- High-resolution fiber FISH validation of copynumber estimates for the gene AMY1. The analyzed individual was estimated by qPCR to have 14 diploid AMY1 gene copies, consistent with fiber FISH results showing one allele with 10 copies and the other with 4 copies.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/Fiber-FISH.png)
+
+#### 4.9 PHASING: FROM GENOTYPES TO HAPLOTYPES
+
+- Gene trees, phylogenies of individual loci, haplotypes are often also the starting point for attempts to locate genes involved in disease, and for understanding the pattern of recombination and LD in the genome.
+
+- Hypothetical haplotypes composed of SNPs, microsatellites, a minisatellite, and an Alu insertion are shown in a male. 
+- (a) Haploid molecules (mtDNA, the Y chromosome, and the X chromosome in a male) yield haplotypes directly. 
+- (b) Autosomal haplotypes can be deduced by specific amplification of each allele (colored arrows indicate allele-specfic primers) followed by typing of polymorphisms.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/deducing-haplotypes-from-genotypes.png)
+
+- how they are associated together on a chromosome—a property sometimes called gametic phase, or simply phase
+
+- Three different approaches to obtain haplotypes from genotype data
+
+- (1) Haplotypes can be determined by physical separation
+- Physical separation of one allele from another allows haplotype determination.
+
+- (2) Haplotypes can be determined by statistical methods
+- Clark’s algorithm12 is a simple and intuitive method that first searches a sample of genotypes for homozygotes and single-site heterozygotes, thus identifying a subset of underlying haplotypes unambiguously.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/Clark’s-algorithm.png)
+
+- (3) Haplotypes can be determined by pedigree analysis
+- While some large pedigrees are assembled for studies of monogenic disease, many studies of complex disorders collect small pedigrees, such as father–mother–child trios. Determination of haplotypes in children (phase) in such cases depends on the informativeness of the parental haplotypes, and can often fail.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/pedigree-analysis.png)
+
+## 4.10 STUDYING GENETIC VARIATION IN ANCIENT SAMPLES
+
+
+- Determination of phylogenetic relationships
+- Analysis of the ancient sequences of candidate genes involved in important human-specific traits
+- Direct understanding of mutational dynamics by sampling loci at different time-points
+- Analysis of the diversities of ancient populations, and the ancestries of individuals 
+- Diagnosis of genetic disorders and measurements of allele frequencies in ancient populations 
+- Determination of past frequencies for alleles involved in adaptive traits such as pigmentation, dietary adaptations linked to agriculture, and responses to particular pathogens
+- Determination of sex of remains, and deduction of kin relationships in group burials
+
+- DNA is degraded after death.
+
+- The relationship between size of surviving DNA fragments and copy number in ancient samples.
+
+![image](../Attachments/Books/Human-Evolutionary-Genetics/DNA-surviving.png)
+
+- Missing bases or base modification cause misincorporation by the polymerase during PCR, while cross-linked sites or oxidized derivatives of cytosine or thymine called hydantoins will block the polymerase and truncate synthesis.
+
+- Contamination is a major problem.
+
+###### Application of next-generation sequencing to aDNA analysis
+
+- This metagenomic nature of the DNA has led to innovations that improve the proportion of recovered hominid DNA, and other techniques have also been developed to improve sequence quality
+
+- Treatment with DNA repair enzymes can also improve sequence reliability from ancient samples.
+
+
+
+
+---
+## SECTION 2
+## How do we in terpret genetic variation?
+
+---
+
+### CHAPTER 5
+### ORGANIZATION AND INHERITANCE OF THE HUMAN GENOME
+---
+
+#### 2.1 THE BIG PICTURE: AN OVERVIEW OF THE HUMAN GENOME
+
+
 
 
 
@@ -816,4 +983,4 @@ Tags:
 
 Links:
 
-References:
+Referenc
