@@ -5,91 +5,108 @@
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
 <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"> </script>
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="AI Odds Prediction demo" />
-    <meta name="keywards" content="AI Odds Prediction demo" />
-    <meta name="author" content="Kritdikoon Woraitthinan" />
-    <title>AI Odds Prediction demo2</title>
-    <link rel="stylesheet" href="/contents_resources/styles/mainStyles.css" />
-    <link rel="icon" type="image/png" href="/images/J_favicon/favicon.ico" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AI Odds Prediction demo" />
+  <meta name="keywards" content="AI Odds Prediction demo" />
+  <meta name="author" content="Kritdikoon Woraitthinan" />
+  <title>AI Odds Prediction demo2</title>
+  <link rel="stylesheet" href="/contents_resources/styles/mainStyles.css" />
+  <link rel="icon" type="image/png" href="/images/J_favicon/favicon.ico" />
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-HDYFX99SK4"
-    ></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HDYFX99SK4"></script>
 
-    <script>
-      async function loadModel() {
-        model = undefined;
-        model = await tf.loadLayersModel("https://raw.githubusercontent.com/jingwora/jingwora.github.io/master/contents/projects/predict-demo/models2/model.json");
-        console.log("model loaded")
-      }
-      loadModel();
-  
-      function make_prediction() {
-        var v01, v02, v03, v04, v05, v06, v07;
-        var output;
+  <script>
+    async function loadModel() {
+      model = undefined;
+      model = await tf.loadLayersModel("https://raw.githubusercontent.com/jingwora/jingwora.github.io/master/contents/projects/predict-demo/models2/model.json");
+      console.log("model loaded")
+    }
+    loadModel();
 
-        v01 = Number(document.getElementById("v01").value);
-        v02 = Number(document.getElementById("v02").value);
-        v03 = Number(document.getElementById("v03").value);
-        v04 = Number(document.getElementById("v04").value);
-        v05 = Number(document.getElementById("v05").value);
-        v06 = Number(document.getElementById("v06").value);
-        v07 = Number(document.getElementById("v07").value);
+    function make_prediction() {
+      var v01, v02, v03, v04, v05, v06, v07;
+      var output;
 
-        input_xs = tf.tensor2d([
-          [v01, v02, v03, v04, v05, v06, v07]
-        ]);
-        output = model.predict(input_xs);
-        const outputData = output.dataSync();
-        document.getElementById("answer").value = outputData;
-      }
-    </script>
-  </head>
+      v01 = Number(document.getElementById("v01").value);
+      v02 = Number(document.getElementById("v02").value);
+      v03 = Number(document.getElementById("v03").value);
+      v04 = Number(document.getElementById("v04").value);
+      v05 = Number(document.getElementById("v05").value);
+      v06 = Number(document.getElementById("v06").value);
+      v07 = Number(document.getElementById("v07").value);
 
-  <body>
-    <!-- NAVNIGATION BAR -->
-    <p style="padding: 20px;"></p>
+      input_xs = tf.tensor2d([
+        [v01, v02, v03, v04, v05, v06, v07]
+      ]);
 
-    <div class="navbar">
-      <a class="main" href="https://jingwora.github.io">
-        <img src="/images/J_favicon/favicon.ico" width="15" />
-      </a>
-      <a href="https://jingwora.github.io/projects.html">◀ PROJECTS</a>
-    </div>
+      output = model.predict(input_xs);
+      const outputData = output.dataSync();
+      document.getElementById("probability").value = outputData;
 
-    <!-- CONTENT -->
+      const maxIndex = outputData.indexOf(Math.max(...outputData));
+      const outputmaxIndex = maxIndex;
+      
+      var resultShow;
+      switch (maxIndex) {
+        case 0:
+          resultShow = "WIN";
+          break;
+        case 1:
+          resultShow = "LOSS";
+          break;
+        case 2:
+          resultShow = "DRAW";
+          break;
+          }
+      document.getElementById("result").value = resultShow;
+    }
+  </script>
+</head>
 
-    <center>
-      <br><br><br>
-      <h1>Odds Prediction</h1><br>
-      <p>Input 7 variables</p><br>
-      <p>Output 3 probabilities (W:L:D)</p><br>
+<body>
+  <!-- NAVNIGATION BAR -->
+  <p style="padding: 20px;"></p>
 
-      <br>
-    </center>
-    <center>lbs1: <input id="v01" value="154.25"></center> <br>
-    <center>lbs2: <input id="v02" value="159.25"></center> <br>
-    <center>win2: <input id="v03" value="6"></center> <br>
-    <center>lose2: <input id="v04" value="3"></center> <br>
-    <center>draw2: <input id="v05" value="1"></center> <br>
-    <center>KOs2: <input id="v06" value="0.2041"></center> <br>
-    <center>age: <input id="v07" value="44.0"></center> <br>
-    <center><button onclick="make_prediction()">predict</button></center>
+  <div class="navbar">
+    <a class="main" href="https://jingwora.github.io">
+      <img src="/images/J_favicon/favicon.ico" width="15" />
+    </a>
+    <a href="https://jingwora.github.io/projects.html">◀ PROJECTS</a>
+  </div>
+
+  <!-- CONTENT -->
+
+  <center>
+    <br><br><br>
+    <h1>Odds Prediction</h1><br>
+    <p>Input 7 variables</p><br>
+    <p>Output 3 probabilities (W:L:D)</p><br>
+
     <br>
-    <center><input id="answer" size="50"></center>
-    <br> <br>
-  </body>
+  </center>
+  <center>lbs1: <input id="v01" value="154.25"></center> <br>
+  <center>lbs2: <input id="v02" value="159.25"></center> <br>
+  <center>win2: <input id="v03" value="6"></center> <br>
+  <center>lose2: <input id="v04" value="3"></center> <br>
+  <center>draw2: <input id="v05" value="1"></center> <br>
+  <center>KOs2: <input id="v06" value="0.2041"></center> <br>
+  <center>age: <input id="v07" value="44.0"></center> <br>
+  <center><button onclick="make_prediction()">predict</button></center>
+  <br>
+  <center>Probability:<input id="probability" size="50"></center> <br>
+  <center>Result:<input id="result" size="25"></center>
+  <br> <br>
+</body>
 
-  <div style="padding-top: 3em;"></div>
+<div style="padding-top: 3em;"></div>
 
-  <!-- Ending of Content -->
-  <hr />
-  <footer>
-    &copy; Jingwora All rights reserved.
-  </footer>
+<!-- Ending of Content -->
+<hr />
+<footer>
+  &copy; Jingwora All rights reserved.
+</footer>
+
 </html>
