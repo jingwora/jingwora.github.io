@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+<script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"> </script>
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="AI Digits Recognition" />
+    <meta name="keywards" content="AI Digits Recognition" />
+    <meta name="author" content="Kritdikoon Woraitthinan" />
+    <title>AI Digits Recognition</title>
+    <link rel="stylesheet" href="/contents_resources/styles/mainStyles.css" />
+    <link rel="icon" type="image/png" href="/images/J_favicon/favicon.ico" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-HDYFX99SK4"
+    ></script>
+
+    <script>
+      async function loadModel() {
+        model = undefined;
+        model = await tf.loadLayersModel("https://raw.githubusercontent.com/bhattbhavesh91/tfjs-model/master/model.json");
+        console.log("model loaded")
+      }
+      loadModel();
+  
+      function make_prediction() {
+        var a, b, output;
+        a = Number(document.getElementById("first").value);
+        b = Number(document.getElementById("second").value);
+        input_xs = tf.tensor2d([
+          [a, b]
+        ]);
+        output = model.predict(input_xs);
+        const outputData = output.dataSync();
+        document.getElementById("answer").value = Number(outputData[0] > 0.5);
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- NAVNIGATION BAR -->
+    <p style="padding: 20px;"></p>
+
+    <div class="navbar">
+      <a class="main" href="https://jingwora.github.io">
+        <img src="/images/J_favicon/favicon.ico" width="15" />
+      </a>
+      <a href="https://jingwora.github.io/projects.html">◀ PROJECTS</a>
+    </div>
+
+    <!-- CONTENT -->
+
+    <h1>
+      <img src="./img/AI1.png" width="80" />
+    </h1>
+
+    <h1>Hand Written Digit Recognition</h1>
+    <p><b>Overview:</b> AI at the Edget to classify digit hangwriting.</p>
+
+    <p>
+      <b>Dataset:</b> MNIST Hangwritten digits (28px x 28px grayscale 65,000
+      images)
+    </p>
+    <a href="./img/mnist.png">
+      <img src="./img/mnist.png" width="400px" />
+    </a>
+
+    <p><b>Model:</b> CNNs</p>
+    <p><b>Labels:</b> 10 classes (the digits 0-9)</p>
+
+    <a href="./img/cnn.png">
+      <img src="./img/cnn.png" width="400px" />
+    </a>
+    <br />
+    <br />
+
+    <p><b>Environment:</b> Git Static site development for AI at the Edge.</p>
+    <a href="./img/AI_digits_recognition_env.png">
+      <img src="./img/AI_digits_recognition_env.png" width="400px" />
+    </a>
+
+    <hr />
+    <br />
+
+    <h2>LIVE DEMO</h2>
+    <p>Draw digit in gray area and click [Predict]</p>
+
+    <div class="flex-two">
+      <div id="canvas_box_wrapper" class="canvas-box-wrapper">
+        <div id="canvas_box" class="canvas-box"></div>
+        <div class="col-12">
+          <button id="clear-button" class="btn btn-dark">Clear</button>
+          <button id="predict-button" class="btn btn-dark">
+            Predict
+          </button>
+        </div>
+      </div>
+      <br />
+      <div class="col-6">
+        <div style="width: 200px;">
+          <canvas id="chart_box" width="20" height="20"></canvas>
+        </div>
+        <div class="prediction-text"></div>
+      </div>
+    </div>
+
+    <h3>References:</h3>
+
+    <p>
+      <a
+        href="https://codelabs.developers.google.com/codelabs/tfjs-training-classfication/index.html#0"
+        target="_blank"
+        >&#127760; Colab: TensorFlow.js
+      </a>
+    </p>
+
+    <script src="js/digit-recognition.js"></script>
+  </body>
+
+  <div style="padding-top: 3em;"></div>
+
+  <!-- Ending of Content -->
+  <hr />
+  <footer>
+    &copy; Jingwora All rights reserved.
+  </footer>
+</html>
