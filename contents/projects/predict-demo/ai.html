@@ -24,21 +24,40 @@
     <script>
       async function loadModel() {
         model = undefined;
-        model = await tf.loadLayersModel("https://raw.githubusercontent.com/bhattbhavesh91/tfjs-model/master/model.json");
+        model = await tf.loadLayersModel("https://raw.githubusercontent.com/jingwora/jingwora.github.io/master/contents/projects/predict-demo/models/model.json");
         console.log("model loaded")
       }
       loadModel();
   
       function make_prediction() {
-        var a, b, output;
-        a = Number(document.getElementById("first").value);
-        b = Number(document.getElementById("second").value);
+        var v01, v02, v03, v04, v05, v06, v07, v08, v09, v10;
+        var v11, v12, v13, v14, v15, v16, v17;
+        var output;
+
+        v01 = Number(document.getElementById("v01").value);
+        v02 = Number(document.getElementById("v02").value);
+        v03 = Number(document.getElementById("v03").value);
+        v04 = Number(document.getElementById("v04").value);
+        v05 = Number(document.getElementById("v05").value);
+        v06 = Number(document.getElementById("v06").value);
+        v07 = Number(document.getElementById("v07").value);
+        v08 = Number(document.getElementById("v08").value);
+        v09 = Number(document.getElementById("v09").value);
+        v10 = Number(document.getElementById("v10").value);
+        v11 = Number(document.getElementById("v11").value);
+        v12 = Number(document.getElementById("v12").value);
+        v13 = Number(document.getElementById("v13").value);
+        v14 = Number(document.getElementById("v14").value);
+        v15 = Number(document.getElementById("v15").value);
+        v16 = Number(document.getElementById("v16").value);
+        v17 = Number(document.getElementById("v17").value);
+
         input_xs = tf.tensor2d([
-          [a, b]
+          [v01, v02, v03, v04, v05, v06, v07, v08 ,v09, v10, v11, v12, v13, v14, v15, v16, v17]
         ]);
         output = model.predict(input_xs);
         const outputData = output.dataSync();
-        document.getElementById("answer").value = Number(outputData[0] > 0.5);
+        document.getElementById("answer").value = outputData;
       }
     </script>
   </head>
@@ -56,71 +75,35 @@
 
     <!-- CONTENT -->
 
-    <h1>
-      <img src="./img/AI1.png" width="80" />
-    </h1>
+    <center>
+      <br><br><br>
+      <p>Odds Prediction</p><br>
+      <p>Input 17 variables</p><br>
+      <p>Output 3 probabilities (W:L:D)</p><br>
 
-    <h1>Hand Written Digit Recognition</h1>
-    <p><b>Overview:</b> AI at the Edget to classify digit hangwriting.</p>
-
-    <p>
-      <b>Dataset:</b> MNIST Hangwritten digits (28px x 28px grayscale 65,000
-      images)
-    </p>
-    <a href="./img/mnist.png">
-      <img src="./img/mnist.png" width="400px" />
-    </a>
-
-    <p><b>Model:</b> CNNs</p>
-    <p><b>Labels:</b> 10 classes (the digits 0-9)</p>
-
-    <a href="./img/cnn.png">
-      <img src="./img/cnn.png" width="400px" />
-    </a>
-    <br />
-    <br />
-
-    <p><b>Environment:</b> Git Static site development for AI at the Edge.</p>
-    <a href="./img/AI_digits_recognition_env.png">
-      <img src="./img/AI_digits_recognition_env.png" width="400px" />
-    </a>
-
-    <hr />
-    <br />
-
-    <h2>LIVE DEMO</h2>
-    <p>Draw digit in gray area and click [Predict]</p>
-
-    <div class="flex-two">
-      <div id="canvas_box_wrapper" class="canvas-box-wrapper">
-        <div id="canvas_box" class="canvas-box"></div>
-        <div class="col-12">
-          <button id="clear-button" class="btn btn-dark">Clear</button>
-          <button id="predict-button" class="btn btn-dark">
-            Predict
-          </button>
-        </div>
-      </div>
-      <br />
-      <div class="col-6">
-        <div style="width: 200px;">
-          <canvas id="chart_box" width="20" height="20"></canvas>
-        </div>
-        <div class="prediction-text"></div>
-      </div>
-    </div>
-
-    <h3>References:</h3>
-
-    <p>
-      <a
-        href="https://codelabs.developers.google.com/codelabs/tfjs-training-classfication/index.html#0"
-        target="_blank"
-        >&#127760; Colab: TensorFlow.js
-      </a>
-    </p>
-
-    <script src="js/digit-recognition.js"></script>
+      <br>
+    </center>
+    <center>v01: <input id="v01" value="0.14957044"></center> <br>
+    <center>v02: <input id="v02" value="0.29269989"></center> <br>
+    <center>v03: <input id="v03" value="-0.17090869"></center> <br>
+    <center>v04: <input id="v04" value="-0.18816525"></center> <br>
+    <center>v05: <input id="v05" value="0.47089992"></center> <br>
+    <center>v06: <input id="v06" value="-2.28291444"></center> <br>
+    <center>v07: <input id="v07" value="-0.69307206"></center> <br>
+    <center>v08: <input id="v08" value="-0.20988928"></center> <br>
+    <center>v09: <input id="v09" value="-0.74164916"></center> <br>
+    <center>v10: <input id="v10" value="-1.24328534"></center> <br>
+    <center>v11: <input id="v11" value="1.80833923"></center> <br>
+    <center>v12: <input id="v12" value="1.80833923"></center> <br>
+    <center>v13: <input id="v13" value="-0.74338293"></center> <br>
+    <center>v14: <input id="v14" value="-2.71032102"></center> <br>
+    <center>v15: <input id="v15" value="0.19990656"></center> <br>
+    <center>v16: <input id="v16" value="2.11844359"></center> <br>
+    <center>v17: <input id="v17" value="0.73623425"></center> <br>
+    <center><button onclick="make_prediction()">predict</button></center>
+    <br>
+    <center><input id="answer"></center>
+    <br> <br>
   </body>
 
   <div style="padding-top: 3em;"></div>
