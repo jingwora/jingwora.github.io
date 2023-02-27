@@ -42,10 +42,22 @@
         [v01, v02, v03, v04, v05, v06, v07]
       ]);
 
+
+      // calculate WLD percentage
+
       output = model.predict(input_xs);
       const outputData = output.dataSync();
-      document.getElementById("probability").value = outputData;
+      var outputDataPercentage = [];
 
+      for (var i = 0; i < outputData.length; i++) {
+        var percentage = Number(outputData[i]).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 1 });;
+        outputDataPercentage.push(percentage);
+      }
+      document.getElementById("probWin").value = outputDataPercentage[0];
+      document.getElementById("probLoss").value = outputDataPercentage[1];
+      document.getElementById("probDraw").value = outputDataPercentage[2];
+
+      // calculate Results
       const maxIndex = outputData.indexOf(Math.max(...outputData));
       const outputmaxIndex = maxIndex;
 
@@ -62,14 +74,26 @@
           break;
       }
       document.getElementById("result").value = resultShow;
+
+      // calculate Odds
+      const vig = 0.15;
+      var outputOdds = [];
+      for (var i = 0; i < outputData.length; i++) {
+        var odds = Number(1 / (outputData[i] + vig)).toFixed(2);
+        outputOdds.push(odds);
+      }
+      document.getElementById("oddsWin").value = outputOdds[0];
+      document.getElementById("oddsLoss").value = outputOdds[1];
+      document.getElementById("oddsDraw").value = outputOdds[2];
+
     }
   </script>
 
-<style>
-  body {
-    background-color: #F9F9F9;
-  }
-</style>
+  <style>
+    body {
+      background-color: #F9F9F9;
+    }
+  </style>
 
 </head>
 
@@ -110,8 +134,35 @@
   <center><img
       src="https://github.com/jingwora/jingwora.github.io/raw/master/contents/projects/predict-demo/img/ai_w_03.gif"
       height="300"></center>
-  <center>Probability:<input id="probability" size="40"></center> <br>
-  <center>Result:<input id="result" size="25"></center>
+
+  <div class="prob-container" style="display:flex; justify-content:center;">
+        <div class="prob-container" style="float:left;">
+              W prob:<input id="probWin" size="5"> &nbsp
+        </div>
+        <div class="prob-container" style="float:left;">
+              L prob:<input id="probLoss" size="5"> &nbsp
+        </div>
+        <div class="prob-container" style="float:left;">
+              D prob:<input id="probDraw" size="5">
+        </div>
+  </div>
+
+  <br>
+  <center>Expected result:<input id="result" size="10"></center>
+  <br>
+
+  <div class="prob-container" style="display:flex; justify-content:center;">
+    <div class="prob-container" style="float:left;">
+          W Odds:<input id="oddsWin" size="5"> &nbsp
+    </div>
+    <div class="prob-container" style="float:left;">
+          L Odds:<input id="oddsLoss" size="5"> &nbsp
+    </div>
+    <div class="prob-container" style="float:left;">
+          D Odds:<input id="oddsDraw" size="5">
+    </div>
+  </div>
+
   <br> <br>
 </body>
 
