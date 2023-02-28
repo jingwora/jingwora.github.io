@@ -79,7 +79,7 @@
       const vig = 0.15;
       var outputOdds = [];
       for (var i = 0; i < outputData.length; i++) {
-        var odds = Number(1 / (outputData[i] + vig)).toFixed(2);
+        var odds = Number((1 - vig) / outputData[i]).toFixed(2);
         outputOdds.push(odds);
       }
       document.getElementById("oddsWin").value = outputOdds[0];
