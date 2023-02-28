@@ -20,8 +20,10 @@
 
   <script>
     async function loadModel() {
-      model = undefined;
-      model = await tf.loadLayersModel("https://raw.githubusercontent.com/jingwora/jingwora.github.io/master/contents/projects/predict-demo/models2/model.json");
+      model1 = undefined;
+      model2 = undefined;
+      model1 = await tf.loadLayersModel("https://raw.githubusercontent.com/jingwora/jingwora.github.io/master/contents/projects/predict-demo/models2/model.json");
+      model2 = await tf.loadLayersModel("https://raw.githubusercontent.com/jingwora/jingwora.github.io/master/contents/projects/predict-demo/ko/model.json");
       console.log("model loaded")
     }
     loadModel();
@@ -36,6 +38,11 @@
       document.getElementById("oddsWin").value = "-";
       document.getElementById("oddsLoss").value = "-";
       document.getElementById("oddsDraw").value = "-";
+
+      document.getElementById("probKO").value = "-";
+      document.getElementById("probNotKO").value = "-";
+      document.getElementById("oddsKO").value = "-";
+      document.getElementById("oddsNotKO").value = "-";
 
       // replace image
       var img = document.getElementById("runImage");
@@ -62,7 +69,7 @@
 
       // calculate WLD percentage
 
-      output = model.predict(input_xs);
+      output = model1.predict(input_xs);
       const outputData = output.dataSync();
       var outputDataPercentage = [];
 
@@ -107,6 +114,25 @@
         }
       }
 
+      // KO Calculation
+
+      output2 = model2.predict(input_xs);
+      const outputData2 = output2.dataSync();
+      var outputDataPercentage2 = [];
+
+      for (var i = 0; i < outputData2.length; i++) {
+        var percentage2 = Number(outputData2[i]).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 });;
+        outputDataPercentage2.push(percentage2);
+      }
+
+      // calculate Odds
+      const vig = 0.15;
+      var outputOdds2 = [];
+      for (var i = 0; i < outputData2.length; i++) {
+        var odds = Number((1 - vig) / outputData2[i]).toFixed(2);
+        outputOdds2.push(odds);
+      }
+
       // start timeout
       setTimeout(function () {
         img.src = "https://github.com/jingwora/jingwora.github.io/raw/master/contents/projects/predict-demo/img/ai_w_03.gif";
@@ -120,6 +146,12 @@
         document.getElementById("oddsWin").value = convertLimit(outputOdds[0]);
         document.getElementById("oddsLoss").value = convertLimit(outputOdds[1]);
         document.getElementById("oddsDraw").value = convertLimit(outputOdds[2]);
+
+        document.getElementById("probKO").value = outputDataPercentage2[0];
+        document.getElementById("probNotKO").value = outputDataPercentage2[1];
+        
+        document.getElementById("oddsKO").value = convertLimit(outputOdds2[0]);
+        document.getElementById("oddsNotKO").value = convertLimit(outputOdds2[1]);
 
         // End timeout
       }, 5000); // 5000 milliseconds = 5 seconds
@@ -279,20 +311,20 @@
 
   <div class="prob-container" style="display:flex; justify-content:center;">
     <div class="prob-container" style="float:left;">
-      KOs prob.:<input id="oddsWin" size="5"> &nbsp
+      KO prob.:<input id="probKO" size="5"> &nbsp
     </div>
     <div class="prob-container" style="float:left;">
-      Points prob.:<input id="oddsDraw" size="5">
+      Not KO prob.:<input id="probNotKO" size="5">
     </div>
   </div>
   <br>
 
   <div class="prob-container" style="display:flex; justify-content:center;">
     <div class="prob-container" style="float:left;">
-      KOs odds:<input id="oddsWin" size="5"> &nbsp
+      KO odds:<input id="oddsKO" size="5"> &nbsp
     </div>
     <div class="prob-container" style="float:left;">
-      Points odds:<input id="oddsDraw" size="5">
+      Not KO odds:<input id="oddsNotKO" size="5">
     </div>
   </div>
   <br>
@@ -305,9 +337,11 @@
     <h4>Defintions</h4>
   </center>
   <br>
-  <center>WIN includes OK win, TKO win and win on points and win by disqualification.</center>
+  <center>WIN includes OK win, TKO win and win on points, win by disqualification and win by retiring.</center>
   <br>
   <center>DRAW includes Unanimous draw, Split draw and Majority draw.</center>
+  <br>
+  <center>KO result includes KO and TKO</center>
   <br>
   <center>Odds limits: Max odds: 99, Min odds: 1.01</center>
 
