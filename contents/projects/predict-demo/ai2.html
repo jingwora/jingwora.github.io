@@ -43,83 +43,83 @@
       img.src = "https://github.com/jingwora/jingwora.github.io/raw/master/contents/projects/predict-demo/img/ai_w_03_C.gif";
 
       // start timeout
-      setTimeout(function() {
+      setTimeout(function () {
         img.src = "https://github.com/jingwora/jingwora.github.io/raw/master/contents/projects/predict-demo/img/ai_w_03.gif";
 
-      // Calculation
+        // Calculation
 
-      var v01, v02, v03, v04, v05, v06, v07;
-      var output;
+        var v01, v02, v03, v04, v05, v06, v07;
+        var output;
 
-      v01 = Number(document.getElementById("v01").value);
-      v02 = Number(document.getElementById("v02").value);
-      v03 = Number(document.getElementById("v03").value);
-      v04 = Number(document.getElementById("v04").value);
-      v05 = Number(document.getElementById("v05").value);
-      v06 = Number(document.getElementById("v06").value);
-      v07 = Number(document.getElementById("v07").value);
+        v01 = Number(document.getElementById("v01").value);
+        v02 = Number(document.getElementById("v02").value);
+        v03 = Number(document.getElementById("v03").value);
+        v04 = Number(document.getElementById("v04").value);
+        v05 = Number(document.getElementById("v05").value);
+        v06 = Number(document.getElementById("v06").value);
+        v07 = Number(document.getElementById("v07").value);
 
-      input_xs = tf.tensor2d([
-        [v01, v02, v03, v04, v05, v06, v07]
-      ]);
+        input_xs = tf.tensor2d([
+          [v01, v02, v03, v04, v05, v06, v07]
+        ]);
 
-      // calculate WLD percentage
+        // calculate WLD percentage
 
-      output = model.predict(input_xs);
-      const outputData = output.dataSync();
-      var outputDataPercentage = [];
+        output = model.predict(input_xs);
+        const outputData = output.dataSync();
+        var outputDataPercentage = [];
 
-      for (var i = 0; i < outputData.length; i++) {
-        var percentage = Number(outputData[i]).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 });;
-        outputDataPercentage.push(percentage);
-      }
-      document.getElementById("probWin").value = outputDataPercentage[0];
-      document.getElementById("probLoss").value = outputDataPercentage[1];
-      document.getElementById("probDraw").value = outputDataPercentage[2];
-
-      // calculate Results
-      const maxIndex = outputData.indexOf(Math.max(...outputData));
-      const outputmaxIndex = maxIndex;
-
-      var resultShow;
-      switch (maxIndex) {
-        case 0:
-          resultShow = "WIN";
-          break;
-        case 1:
-          resultShow = "LOSE";
-          break;
-        case 2:
-          resultShow = "DRAW";
-          break;
-      }
-      document.getElementById("result").value = resultShow;
-
-      // calculate Odds
-      const vig = 0.15;
-      var outputOdds = [];
-      for (var i = 0; i < outputData.length; i++) {
-        var odds = Number((1 - vig) / outputData[i]).toFixed(2);
-        outputOdds.push(odds);
-      }
-
-      // convert odds in limit
-      function convertLimit(num) {
-        if (num > 99) {
-          return 99.00;
-        } else if (num < 1.01) {
-          return 1.01;
-        } else {
-          return num;
+        for (var i = 0; i < outputData.length; i++) {
+          var percentage = Number(outputData[i]).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 });;
+          outputDataPercentage.push(percentage);
         }
-      }
+        document.getElementById("probWin").value = outputDataPercentage[0];
+        document.getElementById("probLoss").value = outputDataPercentage[1];
+        document.getElementById("probDraw").value = outputDataPercentage[2];
 
-      document.getElementById("oddsWin").value = convertLimit(outputOdds[0]);
-      document.getElementById("oddsLoss").value = convertLimit(outputOdds[1]);
-      document.getElementById("oddsDraw").value = convertLimit(outputOdds[2]);
+        // calculate Results
+        const maxIndex = outputData.indexOf(Math.max(...outputData));
+        const outputmaxIndex = maxIndex;
 
-    // End timeout
-    }, 5000); // 5000 milliseconds = 5 seconds
+        var resultShow;
+        switch (maxIndex) {
+          case 0:
+            resultShow = "WIN";
+            break;
+          case 1:
+            resultShow = "LOSE";
+            break;
+          case 2:
+            resultShow = "DRAW";
+            break;
+        }
+        document.getElementById("result").value = resultShow;
+
+        // calculate Odds
+        const vig = 0.15;
+        var outputOdds = [];
+        for (var i = 0; i < outputData.length; i++) {
+          var odds = Number((1 - vig) / outputData[i]).toFixed(2);
+          outputOdds.push(odds);
+        }
+
+        // convert odds in limit
+        function convertLimit(num) {
+          if (num > 99) {
+            return 99.00;
+          } else if (num < 1.01) {
+            return 1.01;
+          } else {
+            return num;
+          }
+        }
+
+        document.getElementById("oddsWin").value = convertLimit(outputOdds[0]);
+        document.getElementById("oddsLoss").value = convertLimit(outputOdds[1]);
+        document.getElementById("oddsDraw").value = convertLimit(outputOdds[2]);
+
+        // End timeout
+      }, 5000); // 5000 milliseconds = 5 seconds
 
     }
   </script>
@@ -145,17 +145,21 @@
 
   <!-- CONTENT -->
 
-  <center> <br><br><br><h1>Odds Prediction</h1><br></center>
+  <center> <br><br><br>
+    <h1>Odds Prediction</h1><br>
+  </center>
 
   <!-- Input -->
-  <center> <h3>Input</h3></center>
+  <center>
+    <h3>Input</h3>
+  </center>
 
   <div class="prob-container" style="display:flex; justify-content:center;">
     <div class="prob-container" style="float:left;">
-      Boxer1  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      Boxer1 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
     </div>
     <div class="prob-container" style="float:left;">
-      Boxer2 
+      Boxer2
     </div>
   </div>
   <br>
@@ -220,26 +224,33 @@
   </div>
   <br>
 
+  <!-- Button -->
+
   <center><button onclick="make_prediction()">Predict!</button></center>
+
+  <!-- Image -->
 
   <center><img id="runImage"
       src="https://github.com/jingwora/jingwora.github.io/raw/master/contents/projects/predict-demo/img/ai_w_03.gif"
       height="300" width="300"></center>
-  
+
   <!-- Output -->
-  <center> <h3>Result</h3></center>
+
+  <center>
+    <h3>Result</h3>
+  </center>
   <br>
 
   <div class="prob-container" style="display:flex; justify-content:center;">
-        <div class="prob-container" style="float:left;">
-              W prob:<input id="probWin" size="5"> &nbsp
-        </div>
-        <div class="prob-container" style="float:left;">
-              L prob:<input id="probLoss" size="5"> &nbsp
-        </div>
-        <div class="prob-container" style="float:left;">
-              D prob:<input id="probDraw" size="5">
-        </div>
+    <div class="prob-container" style="float:left;">
+      W prob:<input id="probWin" size="5"> &nbsp
+    </div>
+    <div class="prob-container" style="float:left;">
+      L prob:<input id="probLoss" size="5"> &nbsp
+    </div>
+    <div class="prob-container" style="float:left;">
+      D prob:<input id="probDraw" size="5">
+    </div>
   </div>
 
   <br>
@@ -248,13 +259,13 @@
 
   <div class="prob-container" style="display:flex; justify-content:center;">
     <div class="prob-container" style="float:left;">
-          W Odds:<input id="oddsWin" size="5"> &nbsp
+      W Odds:<input id="oddsWin" size="5"> &nbsp
     </div>
     <div class="prob-container" style="float:left;">
-          L Odds:<input id="oddsLoss" size="5"> &nbsp
+      L Odds:<input id="oddsLoss" size="5"> &nbsp
     </div>
     <div class="prob-container" style="float:left;">
-          D Odds:<input id="oddsDraw" size="5">
+      D Odds:<input id="oddsDraw" size="5">
     </div>
   </div>
   <br>
