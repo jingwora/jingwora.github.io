@@ -24,7 +24,7 @@
       model2 = undefined;
       model1 = await tf.loadLayersModel("https://raw.githubusercontent.com/jingwora/jingwora.github.io/master/contents/projects/predict-demo/models2/model.json");
       model2 = await tf.loadLayersModel("https://raw.githubusercontent.com/jingwora/jingwora.github.io/master/contents/projects/predict-demo/ko/model.json");
-      console.log("model loaded")
+      console.log("models loaded")
     }
     loadModel();
 
@@ -126,7 +126,6 @@
       }
 
       // calculate Odds
-      const vig = 0.15;
       var outputOdds2 = [];
       for (var i = 0; i < outputData2.length; i++) {
         var odds = Number((1 - vig) / outputData2[i]).toFixed(2);
