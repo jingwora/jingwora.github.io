@@ -42,77 +42,80 @@
 
       img.src = "https://github.com/jingwora/jingwora.github.io/raw/master/contents/projects/predict-demo/img/ai_w_03_C.gif";
 
+
+      // Calculation
+
+      var v01, v02, v03, v04, v05, v06, v07;
+      var output;
+
+      v01 = Number(document.getElementById("v01").value);
+      v02 = Number(document.getElementById("v02").value);
+      v03 = Number(document.getElementById("v03").value);
+      v04 = Number(document.getElementById("v04").value);
+      v05 = Number(document.getElementById("v05").value);
+      v06 = Number(document.getElementById("v06").value);
+      v07 = Number(document.getElementById("v07").value);
+
+      input_xs = tf.tensor2d([
+        [v01, v02, v03, v04, v05, v06, v07]
+      ]);
+
+      // calculate WLD percentage
+
+      output = model.predict(input_xs);
+      const outputData = output.dataSync();
+      var outputDataPercentage = [];
+
+      for (var i = 0; i < outputData.length; i++) {
+        var percentage = Number(outputData[i]).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 });;
+        outputDataPercentage.push(percentage);
+      }
+
+      // calculate Results
+      const maxIndex = outputData.indexOf(Math.max(...outputData));
+      const outputmaxIndex = maxIndex;
+
+      var resultShow;
+      switch (maxIndex) {
+        case 0:
+          resultShow = "Boxer1 WIN";
+          break;
+        case 1:
+          resultShow = "Boxer1 LOSE";
+          break;
+        case 2:
+          resultShow = "DRAW";
+          break;
+      }
+
+      // calculate Odds
+      const vig = 0.15;
+      var outputOdds = [];
+      for (var i = 0; i < outputData.length; i++) {
+        var odds = Number((1 - vig) / outputData[i]).toFixed(2);
+        outputOdds.push(odds);
+      }
+
+      // convert odds in limit
+      function convertLimit(num) {
+        if (num > 99) {
+          return 99.00;
+        } else if (num < 1.01) {
+          return 1.01;
+        } else {
+          return num;
+        }
+      }
+
       // start timeout
       setTimeout(function () {
         img.src = "https://github.com/jingwora/jingwora.github.io/raw/master/contents/projects/predict-demo/img/ai_w_03.gif";
 
-        // Calculation
-
-        var v01, v02, v03, v04, v05, v06, v07;
-        var output;
-
-        v01 = Number(document.getElementById("v01").value);
-        v02 = Number(document.getElementById("v02").value);
-        v03 = Number(document.getElementById("v03").value);
-        v04 = Number(document.getElementById("v04").value);
-        v05 = Number(document.getElementById("v05").value);
-        v06 = Number(document.getElementById("v06").value);
-        v07 = Number(document.getElementById("v07").value);
-
-        input_xs = tf.tensor2d([
-          [v01, v02, v03, v04, v05, v06, v07]
-        ]);
-
-        // calculate WLD percentage
-
-        output = model.predict(input_xs);
-        const outputData = output.dataSync();
-        var outputDataPercentage = [];
-
-        for (var i = 0; i < outputData.length; i++) {
-          var percentage = Number(outputData[i]).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 });;
-          outputDataPercentage.push(percentage);
-        }
+        // Ouput 
         document.getElementById("probWin").value = outputDataPercentage[0];
         document.getElementById("probLoss").value = outputDataPercentage[1];
         document.getElementById("probDraw").value = outputDataPercentage[2];
-
-        // calculate Results
-        const maxIndex = outputData.indexOf(Math.max(...outputData));
-        const outputmaxIndex = maxIndex;
-
-        var resultShow;
-        switch (maxIndex) {
-          case 0:
-            resultShow = "Boxer1 WIN";
-            break;
-          case 1:
-            resultShow = "Boxer1 LOSE";
-            break;
-          case 2:
-            resultShow = "DRAW";
-            break;
-        }
         document.getElementById("result").value = resultShow;
-
-        // calculate Odds
-        const vig = 0.15;
-        var outputOdds = [];
-        for (var i = 0; i < outputData.length; i++) {
-          var odds = Number((1 - vig) / outputData[i]).toFixed(2);
-          outputOdds.push(odds);
-        }
-
-        // convert odds in limit
-        function convertLimit(num) {
-          if (num > 99) {
-            return 99.00;
-          } else if (num < 1.01) {
-            return 1.01;
-          } else {
-            return num;
-          }
-        }
 
         document.getElementById("oddsWin").value = convertLimit(outputOdds[0]);
         document.getElementById("oddsLoss").value = convertLimit(outputOdds[1]);
