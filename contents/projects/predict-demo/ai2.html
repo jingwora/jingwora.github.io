@@ -27,6 +27,18 @@
     loadModel();
 
     function make_prediction() {
+
+      // replace image
+      var img = document.getElementById("runImage");
+
+      img.src = "https://github.com/jingwora/jingwora.github.io/raw/master/contents/projects/predict-demo/img/ai_w_03_10X.gif";
+
+      setTimeout(function() {
+        img.src = "https://github.com/jingwora/jingwora.github.io/raw/master/contents/projects/predict-demo/img/ai_w_03.gif";
+      }, 3000); // 3000 milliseconds = 3 seconds
+
+      // Calculation
+
       var v01, v02, v03, v04, v05, v06, v07;
       var output;
 
@@ -113,8 +125,6 @@
   <center>
     <br><br><br>
     <h1>Odds Prediction</h1><br>
-    <p>Input 7 variables</p><br>
-    <p>Output 3 probabilities (W:L:D)</p><br>
 
     <br>
   </center>
@@ -132,9 +142,9 @@
   <center>age2:  <input id="v07" value="44.0"></center> <br>
 
   <center><button onclick="make_prediction()">predict</button></center>
-  <center><img
+  <center><img id="runImage"
       src="https://github.com/jingwora/jingwora.github.io/raw/master/contents/projects/predict-demo/img/ai_w_03.gif"
-      height="300"></center>
+      height="300" width="300"></center>
 
   <div class="prob-container" style="display:flex; justify-content:center;">
         <div class="prob-container" style="float:left;">
