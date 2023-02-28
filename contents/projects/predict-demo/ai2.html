@@ -28,14 +28,23 @@
 
     function make_prediction() {
 
+      // reset
+      document.getElementById("probWin").value = "-";
+      document.getElementById("probLoss").value = "-";
+      document.getElementById("probDraw").value = "-";
+      document.getElementById("result").value = "-";
+      document.getElementById("oddsWin").value = "-";
+      document.getElementById("oddsLoss").value = "-";
+      document.getElementById("oddsDraw").value = "-";
+
       // replace image
       var img = document.getElementById("runImage");
 
-      img.src = "https://github.com/jingwora/jingwora.github.io/raw/master/contents/projects/predict-demo/img/ai_w_03_10X.gif";
+      img.src = "https://github.com/jingwora/jingwora.github.io/raw/master/contents/projects/predict-demo/img/ai_w_03_C.gif";
 
+      // start timeout
       setTimeout(function() {
         img.src = "https://github.com/jingwora/jingwora.github.io/raw/master/contents/projects/predict-demo/img/ai_w_03.gif";
-      }, 5000); // 5000 milliseconds = 5 seconds
 
       // Calculation
 
@@ -53,7 +62,6 @@
       input_xs = tf.tensor2d([
         [v01, v02, v03, v04, v05, v06, v07]
       ]);
-
 
       // calculate WLD percentage
 
@@ -97,6 +105,10 @@
       document.getElementById("oddsWin").value = outputOdds[0];
       document.getElementById("oddsLoss").value = outputOdds[1];
       document.getElementById("oddsDraw").value = outputOdds[2];
+
+    // End timeout
+    }, 5000); // 5000 milliseconds = 5 seconds
+
 
     }
   </script>
