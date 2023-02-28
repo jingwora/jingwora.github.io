@@ -146,11 +146,11 @@
         document.getElementById("oddsLoss").value = convertLimit(outputOdds[1]);
         document.getElementById("oddsDraw").value = convertLimit(outputOdds[2]);
 
-        document.getElementById("probKO").value = outputDataPercentage2[0];
-        document.getElementById("probNotKO").value = outputDataPercentage2[1];
+        document.getElementById("probKO").value = outputDataPercentage2[1];
+        document.getElementById("probNotKO").value = outputDataPercentage2[0];
         
-        document.getElementById("oddsKO").value = convertLimit(outputOdds2[0]);
-        document.getElementById("oddsNotKO").value = convertLimit(outputOdds2[1]);
+        document.getElementById("oddsKO").value = convertLimit(outputOdds2[1]);
+        document.getElementById("oddsNotKO").value = convertLimit(outputOdds2[0]);
 
         // End timeout
       }, 5000); // 5000 milliseconds = 5 seconds
