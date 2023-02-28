@@ -87,7 +87,7 @@
           resultShow = "WIN";
           break;
         case 1:
-          resultShow = "LOSS";
+          resultShow = "LOSE";
           break;
         case 2:
           resultShow = "DRAW";
@@ -145,24 +145,76 @@
 
   <!-- CONTENT -->
 
-  <center>
-    <br><br><br>
-    <h1>Odds Prediction</h1><br>
+  <center> <br><br><br><h1>Odds Prediction</h1><br><br></center>
+  <div class="prob-container" style="display:flex; justify-content:center;">
+    <div class="prob-container" style="float:left;">
+      Boxer1  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    </div>
+    <div class="prob-container" style="float:left;">
+      Boxer2 
+    </div>
+  </div>
+  <br>
 
-    <br>
-  </center>
-  <center>lbs1:  <input id="v01" value="154.25"></center> <br>
-  <center>lbs2:  <input id="v02" value="159.25"></center> <br>
-  <center>win1:  <input id="v10" value="-"></center> <br>
-  <center>lose1: <input id="v10" value="-"></center> <br>
-  <center>draw1: <input id="v10" value="-"></center> <br>
-  <center>win2:  <input id="v03" value="6"></center> <br>
-  <center>lose2: <input id="v04" value="3"></center> <br>
-  <center>draw2: <input id="v05" value="1"></center> <br>
-  <center>KOs1:  <input id="v10" value="-"></center> <br>
-  <center>KOs2:  <input id="v06" value="0.2041"></center> <br>
-  <center>age1:  <input id="v10" value="-"></center> <br>
-  <center>age2:  <input id="v07" value="44.0"></center> <br>
+  <div class="prob-container" style="display:flex; justify-content:center;">
+    <div class="prob-container" style="float:left;">
+      lbs: <input id="v01" value="154.25" size="5"> &nbsp
+    </div>
+    <div class="prob-container" style="float:left;">
+      lbs: <input id="v02" value="159.25" size="5">
+    </div>
+  </div>
+  <br>
+
+  <div class="prob-container" style="display:flex; justify-content:center;">
+    <div class="prob-container" style="float:left;">
+      win: <input id="v10" value="-" size="5"> &nbsp
+    </div>
+    <div class="prob-container" style="float:left;">
+      win: <input id="v03" value="6" size="5">
+    </div>
+  </div>
+  <br>
+
+  <div class="prob-container" style="display:flex; justify-content:center;">
+    <div class="prob-container" style="float:left;">
+      lose: <input id="v10" value="-" size="5"> &nbsp
+    </div>
+    <div class="prob-container" style="float:left;">
+      lose: <input id="v04" value="3" size="5">
+    </div>
+  </div>
+  <br>
+
+  <div class="prob-container" style="display:flex; justify-content:center;">
+    <div class="prob-container" style="float:left;">
+      draw: <input id="v10" value="-" size="5"> &nbsp
+    </div>
+    <div class="prob-container" style="float:left;">
+      draw: <input id="v05" value="1" size="5">
+    </div>
+  </div>
+  <br>
+
+  <div class="prob-container" style="display:flex; justify-content:center;">
+    <div class="prob-container" style="float:left;">
+      KOs: <input id="v10" value="-" size="5"> &nbsp
+    </div>
+    <div class="prob-container" style="float:left;">
+      KOs: <input id="v06" value="0.2041" size="5">
+    </div>
+  </div>
+  <br>
+
+  <div class="prob-container" style="display:flex; justify-content:center;">
+    <div class="prob-container" style="float:left;">
+      age: <input id="v10" value="-" size="5"> &nbsp
+    </div>
+    <div class="prob-container" style="float:left;">
+      age: <input id="v07" value="44.0" size="5">
+    </div>
+  </div>
+  <br>
 
   <center><button onclick="make_prediction()">predict</button></center>
   <center><img id="runImage"
