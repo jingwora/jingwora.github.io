@@ -102,9 +102,22 @@
         var odds = Number((1 - vig) / outputData[i]).toFixed(2);
         outputOdds.push(odds);
       }
-      document.getElementById("oddsWin").value = outputOdds[0];
-      document.getElementById("oddsLoss").value = outputOdds[1];
-      document.getElementById("oddsDraw").value = outputOdds[2];
+
+      // convert odds in limit
+      function convertLimit(num) {
+        if (num > 100) {
+          return 100.00;
+        } else if (num < 1.01) {
+          return 1.01;
+        } else {
+          return num;
+        }
+      }
+
+
+      document.getElementById("oddsWin").value = convertLimit(outputOdds[0]);
+      document.getElementById("oddsLoss").value = convertLimit(outputOdds[1]);
+      document.getElementById("oddsDraw").value = convertLimit(outputOdds[2]);
 
     // End timeout
     }, 5000); // 5000 milliseconds = 5 seconds
