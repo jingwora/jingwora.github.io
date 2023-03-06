@@ -22,8 +22,8 @@
     async function loadModel() {
       model1 = undefined;
       model2 = undefined;
-      model1 = await tf.loadLayersModel("https://raw.githubusercontent.com/jingwora/jingwora.github.io/master/contents/projects/predict-demo/models2/model.json");
-      model2 = await tf.loadLayersModel("https://raw.githubusercontent.com/jingwora/jingwora.github.io/master/contents/projects/predict-demo/ko/model.json");
+      model1 = await tf.loadLayersModel("https://raw.githubusercontent.com/jingwora/jingwora.github.io/master/contents/projects/predict-demo/WLD/model.json");
+      model2 = await tf.loadLayersModel("https://raw.githubusercontent.com/jingwora/jingwora.github.io/master/contents/projects/predict-demo/KO/model.json");
       console.log("models loaded")
     }
     loadModel();
@@ -52,7 +52,7 @@
 
       // Calculation
 
-      var v01, v02, v03, v04, v05, v06, v07;
+      var v01, v02, v03, v04, v05, v06, v07, v08, v09, v10;
       var output;
 
       v01 = Number(document.getElementById("v01").value);
@@ -62,9 +62,23 @@
       v05 = Number(document.getElementById("v05").value);
       v06 = Number(document.getElementById("v06").value);
       v07 = Number(document.getElementById("v07").value);
+      v08 = Number(document.getElementById("v08").value);
+      v09 = Number(document.getElementById("v09").value);
+      v10 = Number(document.getElementById("v10").value);
 
       input_xs = tf.tensor2d([
-        [v01, v02, v03, v04, v05, v06, v07]
+        [
+          v01 / 7.6, 
+          v02 / 1.7, 
+          v03 / 0.3, 
+          v04 / 25.5, 
+          v05 / 0.4, 
+          v06 / 6.8, 
+          v07 / 8.5, 
+          v08 / 0.7, 
+          v09 / 27.8, 
+          v10 / 0.2
+        ]
       ]);
 
       // calculate WLD percentage
@@ -200,60 +214,50 @@
 
   <div class="prob-container" style="display:flex; justify-content:center;">
     <div class="prob-container" style="float:left;">
-      lbs: <input id="v01" value="154.25" size="5"> &nbsp
+      win: <input id="v01" value="3" size="5"> &nbsp
     </div>
     <div class="prob-container" style="float:left;">
-      lbs: <input id="v02" value="159.25" size="5">
-    </div>
-  </div>
-  <br>
-
-  <div class="prob-container" style="display:flex; justify-content:center;">
-    <div class="prob-container" style="float:left;">
-      win: <input id="v10" value="-" size="5"> &nbsp
-    </div>
-    <div class="prob-container" style="float:left;">
-      win: <input id="v03" value="6" size="5">
+      win: <input id="v06" value="8" size="5">
     </div>
   </div>
   <br>
 
   <div class="prob-container" style="display:flex; justify-content:center;">
     <div class="prob-container" style="float:left;">
-      lose: <input id="v10" value="-" size="5"> &nbsp
+      lose: <input id="v02" value="1" size="5"> &nbsp
     </div>
     <div class="prob-container" style="float:left;">
-      lose: <input id="v04" value="3" size="5">
-    </div>
-  </div>
-  <br>
-
-  <div class="prob-container" style="display:flex; justify-content:center;">
-    <div class="prob-container" style="float:left;">
-      draw: <input id="v10" value="-" size="5"> &nbsp
-    </div>
-    <div class="prob-container" style="float:left;">
-      draw: <input id="v05" value="1" size="5">
+      lose: <input id="v07" value="0" size="5">
     </div>
   </div>
   <br>
 
   <div class="prob-container" style="display:flex; justify-content:center;">
     <div class="prob-container" style="float:left;">
-      KOs: <input id="v10" value="-" size="5"> &nbsp
+      draw: <input id="v03" value="0" size="5"> &nbsp
     </div>
     <div class="prob-container" style="float:left;">
-      KOs: <input id="v06" value="0.2041" size="5">
+      draw: <input id="v08" value="1" size="5">
     </div>
   </div>
   <br>
 
   <div class="prob-container" style="display:flex; justify-content:center;">
     <div class="prob-container" style="float:left;">
-      age: <input id="v10" value="-" size="5"> &nbsp
+      age: <input id="v04" value="20" size="5"> &nbsp
     </div>
     <div class="prob-container" style="float:left;">
-      age: <input id="v07" value="32.0" size="5">
+      age: <input id="v09" value="19" size="5">
+    </div>
+  </div>
+  <br>
+
+  <div class="prob-container" style="display:flex; justify-content:center;">
+    <div class="prob-container" style="float:left;">
+      KOs: <input id="v05" value="0.61" size="5"> &nbsp
+    </div>
+    <div class="prob-container" style="float:left;">
+      KOs: <input id="v10" value="0.33" size="5">
     </div>
   </div>
   <br>
