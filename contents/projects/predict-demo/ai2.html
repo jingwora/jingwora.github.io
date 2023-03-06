@@ -23,7 +23,7 @@
       model1 = undefined;
       model2 = undefined;
       model1 = await tf.loadLayersModel("https://raw.githubusercontent.com/jingwora/jingwora.github.io/master/contents/projects/predict-demo/WLD/model.json");
-      model2 = await tf.loadLayersModel("https://raw.githubusercontent.com/jingwora/jingwora.github.io/master/contents/projects/predict-demo/KO/model.json");
+      model2 = await tf.loadLayersModel("https://raw.githubusercontent.com/jingwora/jingwora.github.io/master/contents/projects/predict-demo/ko/model.json");
       console.log("models loaded")
     }
     loadModel();
@@ -77,10 +77,10 @@
           v07 / 8.5, 
           v08 / 0.7, 
           v09 / 27.8, 
-          v10 / 0.2
+          v10 / 0.2        
         ]
       ]);
-
+      
       // calculate WLD percentage
 
       output = model1.predict(input_xs);
@@ -162,12 +162,12 @@
 
         document.getElementById("probKO").value = outputDataPercentage2[1];
         document.getElementById("probNotKO").value = outputDataPercentage2[0];
-        
+
         document.getElementById("oddsKO").value = convertLimit(outputOdds2[1]);
         document.getElementById("oddsNotKO").value = convertLimit(outputOdds2[0]);
 
         // End timeout
-      }, 5000); // 5000 milliseconds = 5 seconds
+      }, 3000); // 5000 milliseconds = 5 seconds
 
     }
   </script>
@@ -340,7 +340,8 @@
     <h4>Definitions</h4>
   </center>
   <br>
-  <center><span style="color: blue;">WIN</span> includes OK win, TKO win, win on points, win by disqualification and win by retiring.</center>
+  <center><span style="color: blue;">WIN</span> includes OK win, TKO win, win on points, win by disqualification and win
+    by retiring.</center>
   <br>
   <center><span style="color: blue;">DRAW</span> includes Unanimous draw, Split draw and Majority draw.</center>
   <br>
